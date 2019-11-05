@@ -1,0 +1,38 @@
+120 20
+0{1{0{QOLTUQ{  Divanın əl qoyulan yeri.{
+4{0{1{VURUŞ{  Savaş.{
+1{0{1{MOLEKUL{Maddəninbütün kimyəvi xüsusiyyətlərinə malikən kiçik hissəciyi.{
+3{3{0{QURUTMAQ{  Rütubətini nəmliyi yox etmək.{
+7{1{1{BÜTÜNLÜK{ Tamamlıq.{
+9{0{1{SAMAN{  Ot.{
+2{8{0{MƏZHƏKƏ{   Lətifə.{
+3{5{1{TƏSƏVVÜR{   Xəyala gətirmə.{
+1{12{0{QARTMAQ{  Sağalmaq üzrə olan yaranın üzündə əmələ gələn qabıq.{
+6{11{1{BAĞÇA{  Kiçik bağ.{
+3{15{0{MARAQ{  Bir şeyi bilmək həvəsi.{
+6{6{0{İLANCIQ{ Ayaqda, qolda yara şəklində baş verən sümük vərəminin xalqarasında adı.{
+1{12{1{QUMBARA{  Bomba.{
+12{0{1{ANLAMAQ{  Qanmaq.{
+0{18{0{DAĞDAĞA{ Kiçik taxta parçasından düzəldilən və fırladarkən uğultulu səs çıxaran uşaq oyuncağı.{
+4{14{1{PARÇA{ Çit, bez.{
+11{2{0{ALÇAQBOY{ Bəstəboy.{
+15{0{1{HOQQABAZ{ Oyunbaz.{
+14{4{0{BASMAQ{  Ağırlıq vermək.{
+14{6{0{SAQQA{ Keçmişdə çiynində, yaxud da araba ilə bulaqdan su daşıyan adam.{
+1{10{0{DÖVRƏ{  Çevrə, dairə.{
+17{1{1{QOYMAQ{  Bir şeyi bir yerə yerləşdirmək.{
+0{6{0{İLGƏK{  Paltarın yaxasında  düyməni keçirmək üçün sapdan düzəldilən balaca yarıq və ya halqa.{
+10{5{1{UCALMAQ{  Yüksəlmək.{
+7{10{0{ÇOXALMA{Artma.{
+12{8{1{CAMAAT{  Xalq kütləsi.{
+9{13{0{FAYTON{  At arabası.{
+14{11{1{SONRALAR{ Bir hadisədən sonrakı vaxt.{
+8{16{0{NEYTRAL{Nə turşu, nə qələvi reaksiyası verməyən.{
+12{18{0{MÜRƏBBƏ{  Şəkər şərbətində bişirilmiş meyvə.{
+18{14{1{QÜVVƏT{ Güc.{
+14{11{0{SƏMƏR{ De görüm,onların nədir *****i? Bəlkə də hər kəsə çatır zərəri! M.{
+17{8{1{XƏBƏR{   Hadisə haqqında məlumat.{
+14{9{0{FƏRƏH{   Sevinc, şadlıq.{
+9{15{1{METAL{Döyülüb yastılana bilən maddə.{
+7{19{0{OĞLAN{  Kişi cinsdən olan uşaq.{
+16{15{1{ZƏRBƏ{   Qolaylayaraq bir şeylə şiddətlə vurma.{

@@ -1,0 +1,21 @@
+{
+  "name": "vacibler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "4bil.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "crosswords-generator": "0.0.3",
+    "fast-xml-parser": "^3.12.13",
+    "he": "^1.2.0",
+    "image-downloader": "^3.4.1",
+    "readline-sync": "^1.4.9",
+    "request": "^2.88.0",
+    "sync-request": "^6.0.0"
+  }
+}
