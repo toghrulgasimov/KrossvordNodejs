@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/sadas.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azall.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/0" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/26" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/5" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/50" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/51" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/51" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/9" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/9" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,50 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KrossvordServer/adminpanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/sadas.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="125">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
           <provider editor-type-id="csv-table-editor">
@@ -76,12 +37,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ortata</find>
       <find>35.231.39.26</find>
       <find>@</find>
       <find>65az.xml</find>
-      <find>unde</find>
+      <find>ortata</find>
+      <find>hündüş</find>
+      <find>sarmı</find>
+      <find>8{12{1{,QA{Ev quşu.{</find>
       <find>QORA</find>
+      <find>unde</find>
     </findStrings>
     <replaceStrings>
       <replace>35.202.245.19</replace>
@@ -100,6 +64,13 @@
         <option value="$PROJECT_DIR$/KrossvordServer/adminpanel.js" />
         <option value="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" />
         <option value="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/26" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/9" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/5" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/50" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/4" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/0" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/51" />
       </list>
     </option>
   </component>
@@ -125,20 +96,13 @@
             <path>
               <item name="Nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="krasvordazGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="KrossvordServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="krasvordazGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="vacibler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="krasvordazGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="vacibler" type="462c0819:PsiDirectoryNode" />
-              <item name="trprocess" type="462c0819:PsiDirectoryNode" />
+              <item name="KrossvordServer" type="462c0819:PsiDirectoryNode" />
+              <item name="missions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,7 +113,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/missions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -158,6 +122,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
     </key>
   </component>
@@ -193,19 +158,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572950321441</updated>
-      <workItem from="1572950322649" duration="4849000" />
+      <workItem from="1572950322649" duration="5830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4849000" />
+    <option name="totallyTimeSpent" value="5830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.43691275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43691275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -213,7 +178,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44192636" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44192636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -231,7 +196,7 @@
     <entry file="file://$PROJECT_DIR$/KrossvordServer/adminpanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-67">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -241,7 +206,7 @@
     <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/sadas.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
@@ -251,25 +216,81 @@
     <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/50">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/51">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="14" column="76" lean-forward="true" selection-start-line="14" selection-start-column="76" selection-end-line="14" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/26">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/9">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
   </component>
