@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/0" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/26" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/26" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/5" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/50" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/50" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/51" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/51" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/9" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/93" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/93" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="125">
@@ -30,6 +24,15 @@
           </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -44,8 +47,8 @@
       <find>hündüş</find>
       <find>sarmı</find>
       <find>8{12{1{,QA{Ev quşu.{</find>
-      <find>QORA</find>
       <find>unde</find>
+      <find>QORA</find>
     </findStrings>
     <replaceStrings>
       <replace>35.202.245.19</replace>
@@ -71,6 +74,7 @@
         <option value="$PROJECT_DIR$/KrossvordServer/missions/4" />
         <option value="$PROJECT_DIR$/KrossvordServer/missions/0" />
         <option value="$PROJECT_DIR$/KrossvordServer/missions/51" />
+        <option value="$PROJECT_DIR$/KrossvordServer/missions/93" />
       </list>
     </option>
   </component>
@@ -158,12 +162,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572950321441</updated>
-      <workItem from="1572950322649" duration="5830000" />
+      <workItem from="1572950322649" duration="6139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5830000" />
+    <option name="totallyTimeSpent" value="6139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -269,13 +273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -291,6 +288,13 @@
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
       </provider>
     </entry>
   </component>
