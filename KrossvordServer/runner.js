@@ -4,8 +4,7 @@ var exec = require('child_process').exec;
 var child;
 // executes `pwd`
 child = exec("pwd", function (error, stdout, stderr) {
-    sys.print('stdout: ' + stdout);
-    sys.print('stderr: ' + stderr);
+
     if (error !== null) {
         console.log('exec error: ' + error);
     }
@@ -23,8 +22,8 @@ async function  puts(error, stdout, stderr) {
 setInterval(async function () {
 
     try {
-
-        var res = request('GET', 'http://35.231.39.26/versia' , {timeout:3000});
+//http://35.202.245.19/
+        var res = request('GET', 'http://35.202.245.19/versia' , {timeout:3000});
         let s = res.getBody() + "";
         console.log(s);
     }catch (e) {

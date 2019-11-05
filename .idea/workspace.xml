@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/93" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/93" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/runner.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/runner.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="-7">
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KrossvordServer/runner.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -40,7 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>35.231.39.26</find>
       <find>@</find>
       <find>65az.xml</find>
       <find>ortata</find>
@@ -49,6 +57,10 @@
       <find>8{12{1{,QA{Ev quşu.{</find>
       <find>unde</find>
       <find>QORA</find>
+      <find>sys.pr</find>
+      <find>sys.</find>
+      <find>DUL</find>
+      <find>35.231.39.26</find>
     </findStrings>
     <replaceStrings>
       <replace>35.202.245.19</replace>
@@ -75,6 +87,7 @@
         <option value="$PROJECT_DIR$/KrossvordServer/missions/0" />
         <option value="$PROJECT_DIR$/KrossvordServer/missions/51" />
         <option value="$PROJECT_DIR$/KrossvordServer/missions/93" />
+        <option value="$PROJECT_DIR$/KrossvordServer/runner.js" />
       </list>
     </option>
   </component>
@@ -101,12 +114,6 @@
               <item name="Nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Nodejs" type="462c0819:PsiDirectoryNode" />
               <item name="KrossvordServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="KrossvordServer" type="462c0819:PsiDirectoryNode" />
-              <item name="missions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,12 +169,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572950321441</updated>
-      <workItem from="1572950322649" duration="6139000" />
+      <workItem from="1572950322649" duration="6884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6139000" />
+    <option name="totallyTimeSpent" value="6884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -292,8 +299,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/93">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="-7">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/runner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>
