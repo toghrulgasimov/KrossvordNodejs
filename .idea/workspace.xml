@@ -2,7 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/10old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/10old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/11old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/11old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/12" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/13" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/13" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/13old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/13old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/14old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/14old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/15old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/15old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/16" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/16old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/16old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/17" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/17" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/18" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/18" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/19" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/19" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/19old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/19old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/1old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/1old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/20" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/20" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/21old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/21old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/22old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/22old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/24" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/24" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/24old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/24old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/26old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/26old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/27old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/27old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/28" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/28" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/29" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/29" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/29old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/29old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/30" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/32" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/32" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/32old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/32old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/33" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/33" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/33old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/33old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/34old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/34old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/35old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/35old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/36" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/36" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/36old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/36old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/37old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/37old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/38old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/38old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/3old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/3old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/40old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/40old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/42old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/42old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/43old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/43old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/44" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/44" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/48" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/48" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4old2" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4old2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/53" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/53" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/54" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/54" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/55" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/55" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/57" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/57" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/59" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/59" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/70" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/70" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/7old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/7old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/8" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/84" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/84" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/8old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/8old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/9" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/9old" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/9old" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/1">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -72,16 +128,34 @@
         <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/2">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/4">
+        <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/86">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -103,6 +177,8 @@
       <find>DUL</find>
       <find>35.231.39.26</find>
       <find>6{23{1{HESAB{Hər hansı hesablamanın rəqəmlərlə ifadə olunan nəticəsi.{</find>
+      <find>{{</find>
+      <find>;</find>
     </findStrings>
     <replaceStrings>
       <replace>35.202.245.19</replace>
@@ -220,16 +296,15 @@
       <updated>1572950321441</updated>
       <workItem from="1572950322649" duration="7485000" />
       <workItem from="1572964343020" duration="178000" />
-      <workItem from="1573008571162" duration="817000" />
+      <workItem from="1573008571162" duration="1142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8480000" />
+    <option name="totallyTimeSpent" value="8805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45033556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -317,13 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -358,7 +426,7 @@
     <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -375,14 +443,28 @@
     <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KrossvordServer/missions/86">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
