@@ -3,43 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/23" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/23" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/5" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/8" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/8" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>@</find>
-      <find>65az.xml</find>
-      <find>ortata</find>
-      <find>hündüş</find>
-      <find>sarmı</find>
-      <find>8{12{1{,QA{Ev quşu.{</find>
-      <find>unde</find>
-      <find>QORA</find>
-      <find>sys.pr</find>
-      <find>sys.</find>
-      <find>DUL</find>
-      <find>35.231.39.26</find>
-      <find>6{23{1{HESAB{Hər hansı hesablamanın rəqəmlərlə ifadə olunan nəticəsi.{</find>
-      <find>{{</find>
-      <find>;</find>
-      <find>Peyöəmbər</find>
-      <find>&amp;&amp;</find>
-      <find>satqın</find>
-      <find>xərbi</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>35.202.245.19</replace>
-      <replace>,</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,6 +76,7 @@
       <workItem from="1573385949769" duration="148000" />
       <workItem from="1573659439792" duration="69000" />
       <workItem from="1573659559843" duration="580000" />
+      <workItem from="1573751436437" duration="130000" />
     </task>
     <servers />
   </component>
