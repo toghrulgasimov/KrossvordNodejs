@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/4" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/5" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/8" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +18,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/missions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -32,6 +30,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
     </key>
@@ -76,7 +75,8 @@
       <workItem from="1573385949769" duration="148000" />
       <workItem from="1573659439792" duration="69000" />
       <workItem from="1573659559843" duration="580000" />
-      <workItem from="1573751436437" duration="130000" />
+      <workItem from="1573751436437" duration="243000" />
+      <workItem from="1573764978269" duration="121000" />
     </task>
     <servers />
   </component>
