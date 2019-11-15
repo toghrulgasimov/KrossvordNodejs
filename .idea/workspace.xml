@@ -3,7 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/10" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/24" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/24" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/27" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/29" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/29" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/30" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/35" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/35" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/37" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/37" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/38" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/38" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/40" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/40" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/41" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/42" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/43" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/43" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/50" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/51" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/51" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/53" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/53" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/58" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/58" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/59" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/59" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/60" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/60" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/63" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/63" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/64" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/65" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/65" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/7" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/73" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/73" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/74" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/74" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/85" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/85" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/93" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/93" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/94" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/94" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +102,8 @@
       <workItem from="1573659439792" duration="69000" />
       <workItem from="1573659559843" duration="580000" />
       <workItem from="1573751436437" duration="243000" />
-      <workItem from="1573764978269" duration="121000" />
+      <workItem from="1573764978269" duration="264000" />
+      <workItem from="1573806611388" duration="927000" />
     </task>
     <servers />
   </component>
