@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/missions/95" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/0" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/17" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/50" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/50" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/53" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/53" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/57" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/57" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/66" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/66" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/68" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/68" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/84" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/84" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/87" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/87" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/92" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/92" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +86,9 @@
       <workItem from="1573817454739" duration="1065000" />
       <workItem from="1573828936601" duration="66000" />
       <workItem from="1574000625505" duration="37000" />
-      <workItem from="1574067140497" duration="332000" />
+      <workItem from="1574067140497" duration="435000" />
+      <workItem from="1574151844954" duration="534000" />
+      <workItem from="1574163610113" duration="4191000" />
     </task>
     <servers />
   </component>

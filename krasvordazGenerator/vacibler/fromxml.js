@@ -73,7 +73,7 @@ for(let i = 0; i < CVB.length; i++) {
     let t = CVB[i].split(',');
     console.log(t);
     if(t[0].length < 2) continue;
-    CVBD[t[0]] = t[1].substring(0, t[1].length-1);
+    CVBD[t[0]] = t[1].substring(0, t[1].length);
 }
 let Crossword  = (N+2) + " " + (M+2) + "\n";
 for(let i = 0; i < w.length; i++) {
