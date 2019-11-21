@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/missions/95" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/fromxml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/1" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/19" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/19" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,7 +86,10 @@
       <workItem from="1574000625505" duration="37000" />
       <workItem from="1574067140497" duration="435000" />
       <workItem from="1574151844954" duration="534000" />
-      <workItem from="1574163610113" duration="4191000" />
+      <workItem from="1574163610113" duration="4611000" />
+      <workItem from="1574169655755" duration="44000" />
+      <workItem from="1574340522007" duration="1122000" />
+      <workItem from="1574372311020" duration="927000" />
     </task>
     <servers />
   </component>
