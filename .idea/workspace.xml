@@ -4,8 +4,6 @@
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/1" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/19" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/19" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +87,8 @@
       <workItem from="1574163610113" duration="4611000" />
       <workItem from="1574169655755" duration="44000" />
       <workItem from="1574340522007" duration="1122000" />
-      <workItem from="1574372311020" duration="927000" />
+      <workItem from="1574372311020" duration="1131000" />
+      <workItem from="1574374151568" duration="77000" />
     </task>
     <servers />
   </component>
