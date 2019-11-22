@@ -857,7 +857,22 @@ app.get('/xeta', async function(req, res){
 	});
 
 });
+app.get('/missions', async function(req, res){
 
+	MongoClient.connect(url, async function(err, db) {
+		if (err){ if(db != null)db.close(); return;}
+		var dbo = db.db("mydb");
+		let ans = "";
+		for(let i = 1; ;i++) {
+			let c = await dbo.collection("mycol").find({level: (i+"")}).count();
+			if(c == 0) break;
+			ans += (i + " " + c + "<br>");
+		}
+		res.send(ans);
+
+	});
+
+});
 
 
 
