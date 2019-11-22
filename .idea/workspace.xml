@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/1" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +48,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="fromxml.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="fromxml.js" working-dir="$PROJECT_DIR$/krasvordazGenerator/vacibler">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/index.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.fromxml.js" />
       </list>
     </recent_temporary>
@@ -88,7 +93,8 @@
       <workItem from="1574169655755" duration="44000" />
       <workItem from="1574340522007" duration="1122000" />
       <workItem from="1574372311020" duration="1131000" />
-      <workItem from="1574374151568" duration="77000" />
+      <workItem from="1574374151568" duration="820000" />
+      <workItem from="1574415523354" duration="1532000" />
     </task>
     <servers />
   </component>

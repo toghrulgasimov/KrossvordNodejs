@@ -864,7 +864,8 @@ app.get('/missions', async function(req, res){
 		var dbo = db.db("mydb");
 		let ans = "";
 		for(let i = 1; ;i++) {
-			let c = await dbo.collection("mycol").find({level: (i+"")}).count();
+			let c = await dbo.collection("mycol").find({level: (i)}).count();
+			console.log(c);
 			if(c == 0) break;
 			ans += (i + " " + c + "<br>");
 		}
