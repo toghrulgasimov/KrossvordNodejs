@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/5" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/50" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/50" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +101,7 @@
       <workItem from="1574443455591" duration="246000" />
       <workItem from="1574541831131" duration="1586000" />
       <workItem from="1574545093122" duration="300000" />
-      <workItem from="1574590408391" duration="671000" />
+      <workItem from="1574590408391" duration="862000" />
     </task>
     <servers />
   </component>
