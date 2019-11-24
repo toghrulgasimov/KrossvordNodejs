@@ -387,6 +387,7 @@ app.get('/g41', (req, res) =>{
 				let p = req.query.name+"::"+req.connection.remoteAddress+" Bu ad artiq movcuddur XXXXXXXXXXX";
 				console.log(p);
 				while (true) {
+					console.log("sonsuz dovr");
 					let ex = getRandom(0,1000000000);
 					let newname = req.query.name + ex;
 					us = await dbo.collection("mycol").findOne({ name: newname });
