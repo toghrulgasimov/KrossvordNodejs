@@ -369,7 +369,7 @@ app.get('/g41', (req, res) =>{
 		}
 
 		let u = await dbo.collection("mycol").findOne({ device: req.query.device });
-		if(u != undefined) {
+		if(u != undefined && req.query.device != undefined) {
 			console.log(u);
 			let score = u.score - u.missiascore;
 			if(score < 0) score = 0;
@@ -384,13 +384,26 @@ app.get('/g41', (req, res) =>{
 		}else {
 			let us = await dbo.collection("mycol").findOne({ name: req.query.name });
 			if(us != undefined) {
-				res.send("Bu ad artiq movcuddur");
 				let p = req.query.name+"::"+req.connection.remoteAddress+" Bu ad artiq movcuddur XXXXXXXXXXX";
 				console.log(p);
-				fs.appendFile('log',new Date().getTime()+"&&"+ p+"\n", function (err) {
-					if (err){ if(db != null)db.close(); return;}
-					//console.log('Saved!');
-				});
+				while (true) {
+					let ex = getRandom(0,1000000000);
+					let newname = req.query.name + ex;
+					us = await dbo.collection("mycol").findOne({ name: newname });
+					if(us == undefined) {
+						// yeni qeydiyyat
+						let ans = "5601373|" + newname + "|" + "0" + "|" + "1";
+						res.send(ans);
+						await dbo.collection("mycol").insertOne({ name: newname, score : 0.0, elo:500, wowelo:500, device: req.query.device, missiascore:0})
+						let p = newname+"::"+req.connection.remoteAddress+" Qeydiyyat-----------------------------------------------------";
+						console.log(p);
+						fs.appendFile('log',new Date().getTime()+"&&"+ p+"\n", function (err) {
+							if (err){ if(db != null)db.close(); return;}
+							//console.log('Saved!');
+						});
+						break;
+					}
+				}
 			}else {
 				// yeni qeydiyyat
 				let ans = "5601373|" + req.query.name + "|" + "0" + "|" + "1";
