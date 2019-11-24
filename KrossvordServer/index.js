@@ -369,7 +369,7 @@ app.get('/g41', (req, res) =>{
 		}
 
 		let u = await dbo.collection("mycol").findOne({ device: req.query.device });
-		if(u != undefined && req.query.device != undefined) {
+		if(u != undefined) {
 			console.log(u);
 			let score = u.score - u.missiascore;
 			if(score < 0) score = 0;
