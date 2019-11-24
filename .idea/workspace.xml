@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/24" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/24" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1574541831131" duration="1586000" />
       <workItem from="1574545093122" duration="300000" />
       <workItem from="1574590408391" duration="2701000" />
-      <workItem from="1574608164723" duration="2288000" />
+      <workItem from="1574608164723" duration="2694000" />
     </task>
     <servers />
   </component>
