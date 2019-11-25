@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +33,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
@@ -48,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.index.js">
+  <component name="RunManager" selected="Node.js.fromxml.js">
     <configuration name="fromxml.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="fromxml.js" working-dir="$PROJECT_DIR$/krasvordazGenerator/vacibler">
       <method v="2" />
     </configuration>
@@ -57,8 +60,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.fromxml.js" />
+        <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +105,11 @@
       <workItem from="1574545093122" duration="300000" />
       <workItem from="1574590408391" duration="2701000" />
       <workItem from="1574608164723" duration="2848000" />
-      <workItem from="1574616913192" duration="25000" />
+      <workItem from="1574616913192" duration="242000" />
+      <workItem from="1574619723284" duration="985000" />
+      <workItem from="1574630210672" duration="2687000" />
+      <workItem from="1574661452538" duration="542000" />
+      <workItem from="1574682400320" duration="688000" />
     </task>
     <servers />
   </component>
