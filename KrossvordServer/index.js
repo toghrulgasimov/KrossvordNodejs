@@ -239,7 +239,7 @@ app.get('/newmissia', (req, res) =>{
 					if(dd == undefined) {
 						await dbo.collection("sozsaniye").insertOne({soz:req.body.soz, cnt:1, sec:sozs});
 					}else {
-						await dbo.collection("sozsaniye").updateOne(sozq, {cnt:dd.cnt + 1, sec:dd.sec + sozs});
+						await dbo.collection("sozsaniye").updateOne(sozq,{ $set:{cnt:dd.cnt + 1, sec:dd.sec + sozs}});
 					}
 					if(db != null)db.close();
 				})
