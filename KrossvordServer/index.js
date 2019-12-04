@@ -173,7 +173,7 @@ app.get('/sozler', (req, res) =>{
 			return a.orta < b.orta ? 1 : -1;
 		});
 		let ans = "";
-		for(let i = 0; i < 70; i++) {
+		for(let i = 0; i < 200; i++) {
 			ans += a[i].soz + "--" + a[i].orta + "<br>";
 		}
 		res.send(ans);
