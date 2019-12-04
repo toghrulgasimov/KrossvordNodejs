@@ -154,6 +154,33 @@ app.get('/xal', (req, res) =>{
 
 
 });
+app.get('/sozler', (req, res) =>{
+	//res.send('Hello World!');
+
+	MongoClient.connect(url, async function(err, db) {
+		if (err){ if(db != null)db.close(); return;}
+		var dbo = db.db("mydb");
+		var myquery = { name: req.query.reg};
+		let add = parseInt(req.query.muss);
+		//console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+ add +"--" + myquery.name+"-"+req.query.name+ "::"+req.connection.remoteAddress);
+
+		let a = await dbo.collection("mycol").find({});
+
+		for(let i = 0; i < a.length(); i++) {
+			a[i].orta = a[i].sec / a[i].cnt;
+		}
+		a.sort(function(a,b){
+			return a.orta > b.orta ? 1 : -1;
+		});
+		let ans = "";
+		for(let i = 0; i < 70; i++) {
+			ans += a[i].soz + "--" + a[i].orta + "<br>";
+		}
+		res.send(ans);
+
+		if(db != null)db.close();
+	});
+});
 app.get('/newmissia', (req, res) =>{
 	  //res.send('Hello World!');
 	  let p = "newmissia " + req.query.l+ "::" + req.query.name;
