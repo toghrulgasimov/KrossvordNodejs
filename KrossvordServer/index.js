@@ -215,9 +215,9 @@ app.get('/newmissia', (req, res) =>{
 			var newvalues = {$set : nv};
 			//if(reg != undefined) newvalues = { $set: { score : parseInt(req.query.score), reg:reg, missiascore: parseInt(req.query.missiascore)}};
 			//else newvalues = { $set: { name: req.query.name, score : parseInt(req.query.score)}}
-			dbo.collection("mycol").updateOne(myquery, newvalues,{upsert:true}, function(err, res) {
+			dbo.collection("mycol").updateOne(myquery, newvalues,{upsert:true},  function(err, res) {
 				if (err){ if(db != null)db.close(); return;}
-				dbo.collection("mycol").count({"score" : parseInt(req.body.score)-1 },function(err, result){
+				dbo.collection("mycol").count({"score" : parseInt(req.body.score)-1 },async function(err, result){
 					if (err){ if(db != null)db.close(); return;}
 					//console.log(req.query.name + ": " + req.query.score + " " + result);
 					fs.appendFile('log',new Date().getTime()+"&&"+ req.body.name + ": " + req.body.score + " " + result.toString()+reg + "::"+req.connection.remoteAddress+"\n", function (err) {
@@ -233,7 +233,14 @@ app.get('/newmissia', (req, res) =>{
 
 						resserver.send(result+"");
 					}
-
+					let sozq = {soz:req.body.soz};
+					let sozs = parseInt(req.body.sozSecond);
+					let dd = await dbo.collection("sozsaniye").findOne(sozq);
+					if(dd == undefined) {
+						await dbo.collection("sozsaniye").insertOne({soz:req.body.soz, cnt:1, sec:sozs});
+					}else {
+						await dbo.collection("sozsaniye").updateOne(sozq, {cnt:dd.cnt + 1, sec:dd.sec + sozs});
+					}
 					if(db != null)db.close();
 				})
 
