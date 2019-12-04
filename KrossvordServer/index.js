@@ -166,7 +166,7 @@ app.get('/sozler', (req, res) =>{
 
 		let a = await dbo.collection("mycol").find({});
 
-		for(let i = 0; i < a.length(); i++) {
+		for(let i = 0; i < a.length; i++) {
 			a[i].orta = a[i].sec / a[i].cnt;
 		}
 		a.sort(function(a,b){
