@@ -170,7 +170,7 @@ app.get('/sozler', (req, res) =>{
 			a[i].orta = a[i].sec / a[i].cnt;
 		}
 		a.sort(function(a,b){
-			return a.orta > b.orta ? 1 : -1;
+			return a.orta < b.orta ? 1 : -1;
 		});
 		let ans = "";
 		for(let i = 0; i < 70; i++) {
