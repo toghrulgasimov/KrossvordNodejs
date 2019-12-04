@@ -164,7 +164,7 @@ app.get('/sozler', (req, res) =>{
 		let add = parseInt(req.query.muss);
 		//console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+ add +"--" + myquery.name+"-"+req.query.name+ "::"+req.connection.remoteAddress);
 
-		let a = await dbo.collection("mycol").find({});
+		let a = await dbo.collection("sozler").find({});
 
 		for(let i = 0; i < a.length; i++) {
 			a[i].orta = a[i].sec / a[i].cnt;
