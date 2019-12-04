@@ -1,14 +1,14 @@
 27 27
 1{0{1{QÜVVƏ{Bir işi görə bilmək qabiliyyəti.{
-1{6{1{BOYUNDURUQ{İş heyvanlarını arabaya qoşmaq üçün onların boynuna keçirilən qoşqu cihazı.{
+1{6{1{BOYUNDURUQ{İş heyvanlarını arabaya qoşmaq üçün onların boynuna keçirilən qoşqu cihazı.(BOYUN*****){
 2{18{1{DULUSÇU{Saxsı qab düzəldən.{
 3{0{1{DƏHŞƏT{Böyük bir təhlükə.{
-4{10{1{NƏHAYƏT{Son{
+4{10{1{NƏHAYƏT{Son.{
 5{0{1{QAVAL{Daş.{
-6{14{1{MƏQSƏD{ Niyyət{
+6{14{1{MƏQSƏD{Niyyət{
 8{22{1{KÖMÜR{Yanacaq.{
 9{2{1{ƏQRƏBƏ{Qohum.{
-10{14{1{SƏRKƏRDƏLİK{Böyükqoşun hissələrinə başçılıq etmə.{
+10{14{1{SƏRKƏRDƏLİK{Böyük qoşun hissələrinə başçılıq etmə. (SƏRK*******){
 12{0{1{LEYTENANT{Hərbi rütbə.{
 13{9{1{PULEMYOT{Güllə atan avtomatik silah.{
 13{18{1{DÜŞKÜN{Rifahını itirmiş.{
@@ -17,7 +17,7 @@
 17{7{1{QILMAN{Behişt xidmətçiləri.{
 18{0{1{TALAMAQ{Qarət etmək.{
 18{17{1{MƏKTƏB{Təlim-tərbiyə müəssisəsi.{
-20{8{1{QARAÜRƏKLİK{Paxıllıq.{
+20{8{1{QARAÜRƏKLİK{Paxıllıq.(QARAÜR*****){
 22{13{1{GORANBOY{Azərbaycanda rayon.{
 23{20{1{NARINCI{Rəng{
 24{1{1{KƏNAR{Qıraq.{
@@ -27,24 +27,24 @@
 0{20{0{BALACA{Kiçik.{
 1{8{0{YOĞUN{En etibarilə böyük.{
 1{15{0{QƏLƏMƏ{Uca ağac.{
-2{18{0{DƏYMƏDÜŞƏR{Tez küsən.{
+2{18{0{DƏYMƏDÜŞƏR{Tez küsən.(DƏYMƏD****){
 4{26{0{HASAR{Çəpər.{
 5{0{0{QIZILGÜL{Kolda bitən gül.{
 6{7{0{ZADƏGAN{Hakim sinfin yüksək kübarlar təbəqəsi.{
 6{16{0{QUBERNATOR{1917-ci il inqilabından əvvəl Rusiyada quberniya(vilayət) rəisi.{
-6{24{0{ZAMOK{Qapı.{
+6{24{0{ZAMOK{Kilit.{
 8{11{0{DÖZÜMLÜ{Davamlı.{
 9{4{0{REFERENDUM{Xüsusi əhəmiyyətli dövlət məsələlərinin həlli üçün ümumxalq sorğusu.{
-9{21{0{MƏLİKMƏMMƏD{Nağıl qəhrəmanı.{
+9{21{0{MƏLİKMƏMMƏD{Nağıl qəhrəmanı.(MƏ********){
 10{23{0{İLAN{Ayaqsız heyvan.{
-13{9{0{PROBLEMATİK{Sübut olunmamış.{
+13{9{0{PROBLEMATİK{Sübut olunmamış.(PROBLEM****){
 15{0{0{POÇTALYON{Poçtda işləyən.{
 15{14{0{TƏRK{Atın belində 2ci adamın oturduğu yer.{
-15{18{0{MÜRƏKKƏB{Sadə ziddi.{
+15{18{0{MÜRƏKKƏB{Sadə olmayan.{
 16{11{0{TAPMACA{Qeyrimüəyyən.{
 18{3{0{AŞSÜZƏN{Deşik qab.{
 18{24{0{DOLĞUN{Ətli-canlı.{
 20{20{0{QAYNAQ{Metalda qaynayıb bitişən yer.{
 20{22{0{UĞURSUZ{Bədbəxtlik  gətirən.{
-21{7{0{QAZMAQ{Aş.{
+21{7{0{QAZMAQ{Aşın dibi.{
 22{13{0{GÜNAH{ Dini-əxlaqi normaların pozulması.{
