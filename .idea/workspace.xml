@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/32" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/32" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/33" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/33" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/34" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/34" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/35" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/35" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/36" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/36" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/37" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/37" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/39" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/39" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/40" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/40" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,7 +121,7 @@
       <workItem from="1575031577907" duration="790000" />
       <workItem from="1575375834944" duration="15000" />
       <workItem from="1575461856353" duration="17959000" />
-      <workItem from="1575534444388" duration="1462000" />
+      <workItem from="1575534444388" duration="3222000" />
     </task>
     <servers />
   </component>
