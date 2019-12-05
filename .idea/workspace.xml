@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/25" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/25" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/26" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/27" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/28" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/28" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/29" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/29" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/30" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/31" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/31" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/65az.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" beforeDir="false" afterPath="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess/azalll.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +37,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
+      <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
     </key>
@@ -112,7 +116,11 @@
       <workItem from="1574682400320" duration="784000" />
       <workItem from="1574855421077" duration="1428000" />
       <workItem from="1574867442129" duration="960000" />
-      <workItem from="1575025236706" duration="4564000" />
+      <workItem from="1575025236706" duration="4919000" />
+      <workItem from="1575031577907" duration="790000" />
+      <workItem from="1575375834944" duration="15000" />
+      <workItem from="1575461856353" duration="17959000" />
+      <workItem from="1575534444388" duration="1228000" />
     </task>
     <servers />
   </component>
