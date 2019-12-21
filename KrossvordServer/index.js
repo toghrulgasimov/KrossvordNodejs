@@ -282,13 +282,14 @@ app.get('/newmissia', (req, res) =>{
 						mmm = '0' + mmm;
 					}
 					today = ddd + '/' + mmm + '/' + yyyy;
-					let tttttt = await dbo.collection("gunoyun").findOne({day:today});
-					console.log(tttttt);
-					if(tttttt == undefined) {
-						await dbo.collection("gunoyun").insertOne({day:today, sec:parseInt(req.body.sozSecond)});
-					}else {
-						await dbo.collection("gunoyun").updateOne({day:today},{ $set:{sec:(tttttt.sec + parseInt(req.body.sozSecond))}});
-					}
+					// let tttttt = await dbo.collection("gunoyun").findOne({day:today});
+					// console.log(tttttt);
+					// if(tttttt == undefined) {
+					// 	await dbo.collection("gunoyun").insertOne({day:today, sec:parseInt(req.body.sozSecond)});
+					// }else {
+					// 	await dbo.collection("gunoyun").updateOne({day:today},{ $set:{sec:(tttttt.sec + parseInt(req.body.sozSecond))}});
+					// }
+					await dbo.collection("gunoyun").updateOne({day:today},{ $inc:{sec:parseInt(req.body.sozSecond)}}, {upsert:true});
 
 					if(db != null)db.close();
 				})
