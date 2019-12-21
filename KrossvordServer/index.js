@@ -270,7 +270,19 @@ app.get('/newmissia', (req, res) =>{
 					}
 					//let day = await dbo.collection("sozsaniye").findOne(sozq);
 					//await dbo.collection("gunoyun").updateOne(sozq,{ $set:{cnt:dd.cnt + 1, sec:dd.sec + sozs}}, {upsert:true});
-					console.log(new Date());
+					let today = new Date();
+					let ddd = today.getDate();
+					var mmm = today.getMonth() + 1; //January is 0!
+
+					var yyyy = today.getFullYear();
+					if (ddd < 10) {
+						dd = '0' + dd;
+					}
+					if (mmm < 10) {
+						mmm = '0' + mmm;
+					}
+					today = ddd + '/' + mmm + '/' + yyyy;
+					console.log(today);
 					if(db != null)db.close();
 				})
 
