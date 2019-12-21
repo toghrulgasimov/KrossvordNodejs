@@ -200,7 +200,9 @@ app.get('/gun', (req, res) =>{
 		for(let i = 0; i < a.length; i++) {
 			let sec = a[i].sec;
 			let hours = sec / (60 * 60);
-			let minutes = (sec / 60) - (hours * 60);
+			hours = parseInt(hours);
+			let minutes = parseInt(sec / 60) - (hours * 60);
+			minutes = parseInt(minutes);
 			a[i].sec = hours + "h " + minutes + "m";
 			a[i].day2 = toDate(a[i].day);
 		}
