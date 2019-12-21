@@ -287,7 +287,7 @@ app.get('/newmissia', (req, res) =>{
 					if(tttttt == undefined) {
 						await dbo.collection("gunoyun").insertOne({day:today, sec:parseInt(req.body.sozSecond)});
 					}else {
-						await dbo.collection("gunoyun").updateOne({day:today},{ $set:{san:(tttttt.sec + parseInt(req.body.sozSecond))}});
+						await dbo.collection("gunoyun").updateOne({day:today},{ $set:{sec:(tttttt.sec + parseInt(req.body.sozSecond))}});
 					}
 
 					if(db != null)db.close();
