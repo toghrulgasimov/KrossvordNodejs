@@ -283,6 +283,7 @@ app.get('/newmissia', (req, res) =>{
 					}
 					today = ddd + '/' + mmm + '/' + yyyy;
 					console.log(today);
+					await dbo.collection("gunoyun").updateOne({today:today},{ $inc:{san:parseInt(req.body.sozSecond)}}, {upsert:true});
 					if(db != null)db.close();
 				})
 
