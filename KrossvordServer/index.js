@@ -181,6 +181,53 @@ app.get('/sozler', (req, res) =>{
 		if(db != null)db.close();
 	});
 });
+function toDate(s) {
+	let a = s.split("/");
+	return {day:parseInt(a[0]), month:parseInt(a[1]), year:parseInt(a[2])};
+}
+app.get('/gun', (req, res) =>{
+	//res.send('Hello World!');
+
+	MongoClient.connect(url, async function(err, db) {
+		if (err){ if(db != null)db.close(); return;}
+		var dbo = db.db("mydb");
+		var myquery = { name: req.query.reg};
+		let add = parseInt(req.query.muss);
+		//console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+ add +"--" + myquery.name+"-"+req.query.name+ "::"+req.connection.remoteAddress);
+
+		let a = await dbo.collection("gunoyun").find().toArray();
+		console.log(a);
+		for(let i = 0; i < a.length; i++) {
+			let sec = a[i].sec;
+			let hours = sec / (60 * 60);
+			let minutes = (sec / 60) - (hours * 60);
+			a[i].sec = hours + "h " + minutes + "m";
+			a[i].day2 = toDate(a[i].day);
+		}
+		a.sort(function(a,b){
+			if(a.day2.year < b.day2.year) {
+				return 1;
+			}else if(a.day2.year > b.day2.year) {
+				return -1;
+			}else if(a.day2.month < b.day2.month) {
+				return 1;
+			}else if(a.day2.month > b.day2.month) {
+				return -1;
+			}else if(a.day2.day < b.day2.day) {
+				return 1;
+			}else {
+				return -1;
+			}
+		});
+		let ans = "";
+		for(let i = 0; i < a.length; i++) {
+			ans += a[i].day + "--" + a[i].sec + "<br>";
+		}
+		res.send(ans);
+
+		if(db != null)db.close();
+	});
+});
 app.get('/newmissia', (req, res) =>{
 	  //res.send('Hello World!');
 	  let p = "newmissia " + req.query.l+ "::" + req.query.name;
