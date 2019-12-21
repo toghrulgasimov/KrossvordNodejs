@@ -283,6 +283,7 @@ app.get('/newmissia', (req, res) =>{
 					}
 					today = ddd + '/' + mmm + '/' + yyyy;
 					let tttttt = await dbo.collection("gunoyun").findOne({day:today});
+					console.log(tttttt);
 					if(tttttt == undefined) {
 						await dbo.collection("gunoyun").insertOne({day:today, sec:parseInt(req.body.sozSecond)});
 					}else {
