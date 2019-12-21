@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/missions/90" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/missions/90" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +118,13 @@
       <workItem from="1575896654609" duration="914000" />
       <workItem from="1575929932482" duration="248000" />
       <workItem from="1575978934628" duration="17000" />
+      <workItem from="1575988675035" duration="9000" />
+      <workItem from="1576060403647" duration="262000" />
+      <workItem from="1576071883614" duration="19000" />
+      <workItem from="1576155584092" duration="14000" />
+      <workItem from="1576273741257" duration="71000" />
+      <workItem from="1576600486150" duration="298000" />
+      <workItem from="1576960504414" duration="695000" />
     </task>
     <servers />
   </component>

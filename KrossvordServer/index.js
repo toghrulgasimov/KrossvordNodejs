@@ -268,6 +268,9 @@ app.get('/newmissia', (req, res) =>{
 					}else {
 						await dbo.collection("sozsaniye").updateOne(sozq,{ $set:{cnt:dd.cnt + 1, sec:dd.sec + sozs}});
 					}
+					//let day = await dbo.collection("sozsaniye").findOne(sozq);
+					//await dbo.collection("gunoyun").updateOne(sozq,{ $set:{cnt:dd.cnt + 1, sec:dd.sec + sozs}}, {upsert:true});
+					console.log(new Date());
 					if(db != null)db.close();
 				})
 
