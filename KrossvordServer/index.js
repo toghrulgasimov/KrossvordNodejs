@@ -203,7 +203,8 @@ app.get('/gun', (req, res) =>{
 			hours = parseInt(hours);
 			let minutes = parseInt(sec / 60) - (hours * 60);
 			minutes = parseInt(minutes);
-			a[i].sec = hours + "h " + minutes + "m";
+			let secc = sec % 60;
+			a[i].sec = hours + "h " + minutes + "m " + "s " + secc;
 			a[i].day2 = toDate(a[i].day);
 		}
 		a.sort(function(a,b){
