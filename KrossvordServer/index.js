@@ -93,7 +93,7 @@ app.post('/ailep', (req, res) =>{
 		"</html>";
 	res.send(s)
 	console.log(req.query);
-	res.send(s);
+	console.log(req.body);
 });
 app.get('/profil', (req, res) =>{
 	//res.send('Hello World!');
