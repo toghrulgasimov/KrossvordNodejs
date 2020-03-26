@@ -82,6 +82,11 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 var colors = require('colors');
+
+app.post('/ailep', (req, res) =>{
+	//res.send('Hello World!');
+	console.log(req.query);
+});
 app.get('/profil', (req, res) =>{
 	//res.send('Hello World!');
 	console.log(req.query);
