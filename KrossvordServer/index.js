@@ -91,7 +91,7 @@ app.get('/ailep', (req, res) =>{
 		"Hello world\n" +
 		"</body>\n" +
 		"</html>";
-	res.send(200)
+	res.send(s)
 	console.log(req.query);
 	res.send(s);
 });
