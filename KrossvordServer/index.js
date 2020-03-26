@@ -86,6 +86,7 @@ var colors = require('colors');
 app.get('/ailep', (req, res) =>{
 	//res.send('Hello World!');
 	console.log(req.query);
+	res.send("QQqqqQDdsadas;daslda;slsdasddass");
 });
 app.get('/profil', (req, res) =>{
 	//res.send('Hello World!');
