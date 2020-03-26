@@ -83,7 +83,7 @@ function getRandom(min, max) {
 }
 var colors = require('colors');
 
-app.post('/ailep', (req, res) =>{
+app.get('/ailep', (req, res) =>{
 	//res.send('Hello World!');
 	console.log(req.query);
 });
