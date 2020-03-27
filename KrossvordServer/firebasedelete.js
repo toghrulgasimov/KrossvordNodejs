@@ -5,7 +5,7 @@ async function f() {
         app.post("/fbt", async function (req, res) {
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
-            let o = JSON(req.body.PostData);
+            let o = JSON.parse(req.body.PostData);
             console.log(o);
             //let imei = req.query.imei;
             //let token = req.query.t;
