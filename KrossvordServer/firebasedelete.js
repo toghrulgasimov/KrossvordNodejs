@@ -13,7 +13,7 @@ async function f() {
             res.send("1");
         })
 
-        app.post("/fbm", async function (req, res) {
+        app.get("/fbm", async function (req, res) {
             let admin = require('firebase-admin');
             let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
