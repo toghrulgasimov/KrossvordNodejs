@@ -11,7 +11,7 @@ async function f() {
     let registrationToken = 'fZXVjhjIQ4SoYnV4LpCJhS:APA91bGOgGhN3InPx6mN-hyyx0Z4X4GNqcCXNlIlLbO9LCbOQ8v75f3Wk8FBBQBTmUXADmNGr450Ro761nD6OLxSvDZbnrhIVeUhLxNABqiufsOtQ-yDtssfQQ6q1pmijvSKXyxeexn9';
 
     let s = "";
-    for(let i = 0; i < 3500; i++) {
+    for(let i = 0; i < 10; i++) {
         s += "a";
     }
     let message = {
