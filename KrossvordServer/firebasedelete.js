@@ -7,10 +7,9 @@ async function f() {
             console.log(req.body.PostData);
             let o = JSON.parse(req.body.PostData);
             console.log(o);
-            //let imei = req.query.imei;
-            //let token = req.query.t;
-            //let d = await db.collection("devices").find({imei:imei}).toArray();
-            //console.log(d);
+            let imei = o.i;
+            let token = o.t;
+            await db.updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             res.send("1");
         })
     }
