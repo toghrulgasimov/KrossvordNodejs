@@ -28,6 +28,7 @@ async function f() {
             let ts = [];
             for(let i = 0; i < ds.length; i++) {
                 ts.push(ds[i].token);
+                console.log(ds[i].token);
             }
             let s = "";
             for(let i = 0; i < 10; i++) {
