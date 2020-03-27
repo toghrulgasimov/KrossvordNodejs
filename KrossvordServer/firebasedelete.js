@@ -43,7 +43,7 @@ async function f() {
                     score2: '213',
                     time2: '2:45'
                 },
-                token: ts
+                token: ds[0].token
             };
             admin.messaging().send(message)
                 .then((response) => {
