@@ -23,7 +23,7 @@ async function f() {
         })
 
         app.get("/fbm", async function (req, res) {
-            let ds = await db.collection("devices").find();
+            let ds = await db.collection("devices").find().toArray();
             console.log(ds);
             let ts = [];
             for(let i = 0; i < ds.length; i++) {
