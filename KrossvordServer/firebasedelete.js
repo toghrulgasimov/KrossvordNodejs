@@ -9,7 +9,7 @@ async function f() {
             console.log(o);
             let imei = o.i;
             let token = o.t;
-            await db.updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             res.send("1");
         })
     }
