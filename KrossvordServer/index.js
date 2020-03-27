@@ -85,6 +85,12 @@ async function f() {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 	var colors = require('colors');
+
+	let mongoUtil = require( './mongoUtil' );
+	let cilentM = await mongoUtil.connectToServer();
+	console.log("connected");
+
+	let dbMo = await mongoUtil.getDb();
 	let admin = require('firebase-admin');
 	let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
@@ -92,7 +98,7 @@ async function f() {
 		credential: admin.credential.cert(serviceAccount),
 		databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
 	});
-	require('./firebasedelete').routes(app);
+	require('./firebasedelete').routes(app, dbMo);
 	app.post('/ailep', (req, res) =>{
 		//res.send('Hello World!');
 		let s = "<html>\n" +

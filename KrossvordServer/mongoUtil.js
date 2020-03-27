@@ -7,7 +7,7 @@ module.exports = {
 
     connectToServer: async function() {
         let client = await MongoClient.connect( url,  { useNewUrlParser: true });
-        _db  = await client.db('mydb');
+        _db  = await client.db('fprotector');
         return _db;
     },
 

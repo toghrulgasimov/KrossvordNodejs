@@ -1,22 +1,17 @@
 async function f() {
 
 
-    module.exports.routes = function(app){
-        app.get("/fbaset", function (req, res) {
+    module.exports.routes = function(app, db){
+        app.get("/fbt", async function (req, res) {
             console.log("ddddan cagrildi");
-            //res.send("salamlar" + I.mongoc);
-            res.send("asdasd");
+            console.log(req.query);
+            let imei = req.query.imei;
+            let token = req.query.t;
+            let d = await db.collection("devices").find({imei:imei}).toArray();
+            console.log(d);
+            res.send("1");
         })
     }
-
-
-module.exports.interval = function (db) {
-    setInterval(async function () {
-        let c = await db.collection("mycol").find().count()
-        console.log(c);
-    }, 1000);
-}
-
 }
 
 f();
