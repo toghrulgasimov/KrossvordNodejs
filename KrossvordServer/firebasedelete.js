@@ -2,6 +2,15 @@ async function f() {
 
 
     module.exports.routes = function(app, db){
+        let admin = require('firebase-admin');
+        let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
+
+        admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount),
+            databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
+        });
+
+
         app.post("/fbt", async function (req, res) {
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
@@ -14,13 +23,6 @@ async function f() {
         })
 
         app.get("/fbm", async function (req, res) {
-            let admin = require('firebase-admin');
-            let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
-
-            admin.initializeApp({
-                credential: admin.credential.cert(serviceAccount),
-                databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
-            });
             let ds = await db.collection("devices").find({}).toArray();
             let ts = [];
             for(let i = 0; i < ds.length; i++) {
