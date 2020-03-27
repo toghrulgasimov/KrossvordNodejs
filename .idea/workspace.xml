@@ -28,6 +28,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
@@ -47,7 +50,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.fromxml.js">
+  <component name="RunManager" selected="Node.js.firebaseindex.js">
+    <configuration name="firebaseindex.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebaseindex.js" working-dir="$PROJECT_DIR$/KrossvordServer">
+      <method v="2" />
+    </configuration>
     <configuration name="fromxml.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="fromxml.js" working-dir="$PROJECT_DIR$/krasvordazGenerator/vacibler">
       <method v="2" />
     </configuration>
@@ -56,8 +62,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.fromxml.js" />
+        <item itemvalue="Node.js.firebaseindex.js" />
         <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.fromxml.js" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +133,7 @@
       <workItem from="1576600486150" duration="298000" />
       <workItem from="1576960504414" duration="5376000" />
       <workItem from="1576972825673" duration="111000" />
-      <workItem from="1585223911055" duration="3418000" />
+      <workItem from="1585223911055" duration="6702000" />
     </task>
     <servers />
   </component>

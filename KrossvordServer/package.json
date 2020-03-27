@@ -1,0 +1,22 @@
+{
+  "name": "krossvordserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.16.3",
+    "firebase-admin": "^8.10.0",
+    "line-reader": "^0.4.0",
+    "mongodb": "^3.1.4",
+    "nodemailer": "^4.7.0",
+    "sync-request": "^6.0.0",
+    "youtube-audio-stream": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

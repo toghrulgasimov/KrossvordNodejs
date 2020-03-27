@@ -82,7 +82,13 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 var colors = require('colors');
+let admin = require('firebase-admin');
+let serviceAccount = require("familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
+admin.initializeApp({
+	credential: admin.credential.cert(serviceAccount),
+	databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
+});
 app.post('/ailep', (req, res) =>{
 	//res.send('Hello World!');
 	let s = "<html>\n" +
@@ -91,6 +97,7 @@ app.post('/ailep', (req, res) =>{
 		"Hello world\n" +
 		"</body>\n" +
 		"</html>";
+
 	res.send(s)
 	console.log(req.query);
 	console.log(req.body);
