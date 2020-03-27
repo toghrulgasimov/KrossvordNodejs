@@ -50,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.firebaseindex.js">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="firebaseindex.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebaseindex.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
@@ -62,8 +62,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.firebaseindex.js" />
         <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.firebaseindex.js" />
         <item itemvalue="Node.js.fromxml.js" />
       </list>
     </recent_temporary>
@@ -133,7 +133,7 @@
       <workItem from="1576600486150" duration="298000" />
       <workItem from="1576960504414" duration="5376000" />
       <workItem from="1576972825673" duration="111000" />
-      <workItem from="1585223911055" duration="6702000" />
+      <workItem from="1585223911055" duration="7270000" />
     </task>
     <servers />
   </component>

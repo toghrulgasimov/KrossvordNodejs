@@ -83,12 +83,13 @@ function getRandom(min, max) {
 }
 var colors = require('colors');
 let admin = require('firebase-admin');
-let serviceAccount = require("familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
+let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
 	databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
 });
+require('./firebasedelete')(app);
 app.post('/ailep', (req, res) =>{
 	//res.send('Hello World!');
 	let s = "<html>\n" +
