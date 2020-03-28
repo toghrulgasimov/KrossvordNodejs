@@ -64,8 +64,8 @@ async function f() {
             let O = {apps:[]}
             for(let i = 0; i < a.length; i++) {
                 try {
-                    let path = "icons/"+a[i];
-                    anew.push({name:a[i], blocked:0});
+                    let path = "icons/"+a[i].package;
+                    anew.push({name:a[i].name,package:a[i].package, blocked:0});
                     if (!fs.existsSync(path)) {
                         //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
@@ -125,6 +125,16 @@ async function f() {
 
             res.send(JSON.stringify(d));
         });
+        app.post("/updateApp", async function (req, res) {
+            //also push notification to user
+            let imei = req.body.imei;
+            let token = req.body.token;
+            let name = req.body.name;
+            let d = await db.collection("devices").findOne({imei:imei});
+            db.collection("devices").updateOne({imei:imei},);
+            res.send(JSON.stringify(d));
+        });
+
 
 
     }
