@@ -24,6 +24,7 @@ async function f() {
         });
         app.post("/uploadIcon", async function (req, res) {
             console.log("upload Icon cagrildi");
+            console.log(req.body.PostData);
             let o = JSON.parse(req.body.PostData);
             console.log(o);
             let icon = o.icon;
