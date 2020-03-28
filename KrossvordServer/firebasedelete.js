@@ -29,7 +29,7 @@ async function f() {
             let icon = o.icon;
             let name = o.name;
             try {
-                let path = "./icons/"+name;
+                let path = "./icons/"+"wp";
                 if (!fs.existsSync(path)) {
                     await fs.writeFileSync(path, icon);
                 }
