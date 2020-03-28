@@ -66,10 +66,11 @@ async function f() {
                     let path = "icons/"+a[i];
                     if (!fs.existsSync(path)) {
                         //await fs.writeFileSync(path, icon);
-                        console.log(path + " exist");
-                    }else {
                         console.log(path + " not exist");
                         O.apps.push(a[i]);
+                    }else {
+
+                        console.log(path + " exist");
                     }
                 } catch(err) {
                     console.error(err)
