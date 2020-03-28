@@ -119,9 +119,11 @@ async function f() {
         app.post("/uploadIcon", async function (req, res) {
             res.send("1");
         });
-        app.post("/ussagestat", async function (req, res) {
+        app.get("/getApps", async function (req, res) {
+            let imei = req.query.imei;
+            let d = await db.collection("devices").findOne({imei:imei});
 
-            res.send("1");
+            res.send(JSON.stringify(d));
         });
 
 
