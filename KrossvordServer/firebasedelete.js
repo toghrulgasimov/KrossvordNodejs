@@ -53,11 +53,11 @@ async function f() {
         app.post("/removeApp", async function (req, res) {
             res.send("1");
         });
-        app.get("/blockApp", async function (req, res) {
+        app.post("/blockApp", async function (req, res) {
             // let imei = req.query.imei;
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
-            console.log(req.query);
+            console.log(req.body);
             res.send(res.query);
         });
 
