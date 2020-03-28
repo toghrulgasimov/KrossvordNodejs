@@ -9,6 +9,7 @@ async function f() {
 	let fs = require('fs')
 
 
+	app.use(express.limit('50mb'));
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
