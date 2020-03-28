@@ -81,11 +81,7 @@ async function f() {
             let imei = data.imei;
 
             d = await db.collection("device").findOne({imei:imei});
-            if(d == null) {
-                await db.collection("devices").updateOne({imei:imei}, {$set:{apps:anew}}, {upsert:true});
-            }else {
-                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
-            }
+            await db.collection("devices").updateOne({imei:imei}, {$set:{apps:anew}}, {upsert:true});
             console.log(JSON.stringify(O));
             res.send(JSON.stringify(O));
         });
