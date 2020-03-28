@@ -29,14 +29,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -135,7 +136,7 @@
       <workItem from="1576960504414" duration="5376000" />
       <workItem from="1576972825673" duration="111000" />
       <workItem from="1585223911055" duration="21371000" />
-      <workItem from="1585384935530" duration="11068000" />
+      <workItem from="1585384935530" duration="19333000" />
     </task>
     <servers />
   </component>
