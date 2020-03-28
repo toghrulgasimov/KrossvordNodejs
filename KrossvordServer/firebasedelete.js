@@ -1,6 +1,7 @@
 async function f() {
 
 
+    const fs = require('fs');
     module.exports.routes = function(app, db){
         let admin = require('firebase-admin');
         let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
@@ -23,11 +24,18 @@ async function f() {
         });
         app.post("/uploadIcon", async function (req, res) {
             console.log("upload Icon cagrildi");
-            console.log(req.body.PostData);
             let o = JSON.parse(req.body.PostData);
             console.log(o);
             let icon = o.icon;
             let name = o.name;
+            try {
+                let path = "./icons/"+name;
+                if (!fs.existsSync(path)) {
+                    await fs.writeFileSync(path, icon);
+                }
+            } catch(err) {
+                console.error(err)
+            }
             res.send("1");
         });
         app.post("/removeApp", async function (req, res) {
