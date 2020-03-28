@@ -58,7 +58,24 @@ async function f() {
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
             console.log(req.body);
-            res.send(res.query);
+            let data = JSON.parse(req.body);
+            let a = data.apps;
+            let O = {apps:[]}
+            for(let i = 0; i < a.length; i++) {
+                try {
+                    let path = "icons/"+a[i];
+                    if (!fs.existsSync(path)) {
+                        //await fs.writeFileSync(path, icon);
+                        console.log(path + " exist");
+                    }else {
+                        console.log(path + " not exist");
+                        O.apps.push(a[i]);
+                    }
+                } catch(err) {
+                    console.error(err)
+                }
+            }
+            res.send(O.toString());
         });
 
         app.get("/sendCommand", async function (req, res) {
