@@ -57,7 +57,7 @@ async function f() {
             // let imei = req.query.imei;
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
-            console.log(req.body);
+            console.log(req.body.PostData);
             let data = JSON.parse(req.body.PostData);
             let a = data.apps;
             let anew = [];
