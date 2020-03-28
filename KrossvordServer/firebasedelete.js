@@ -21,6 +21,15 @@ async function f() {
             await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             res.send("1");
         });
+        app.post("/uploadIcon", async function (req, res) {
+            console.log("upload Icon cagrildi");
+            console.log(req.body.PostData);
+            let o = JSON.parse(req.body.PostData);
+            console.log(o);
+            let icon = o.icon;
+            let name = o.name;
+            res.send("1");
+        });
         app.post("/removeApp", async function (req, res) {
             res.send("1");
         });
