@@ -75,7 +75,7 @@ async function f() {
                     console.error(err)
                 }
             }
-            console.log(O.toString());
+            console.log(JSON.stringify(O));
             res.send(JSON.stringify(O));
         });
 
