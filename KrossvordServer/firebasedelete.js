@@ -19,7 +19,15 @@ async function f() {
             console.log(o);
             let imei = o.i;
             let token = o.t;
-            await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
+            await d = db.collection("device").findOne({imei:imei});
+            if(d == null) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[{"name":"com.whatsapp", blocked:0},
+                            {"name":"com.android.chrome", blocked:0}]}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
+            }
+
+
             res.send("1");
         });
         app.post("/uploadIcon", async function (req, res) {
@@ -45,7 +53,10 @@ async function f() {
         app.post("/removeApp", async function (req, res) {
             res.send("1");
         });
-        app.post("/blockApp", async function (req, res) {
+        app.get("/blockApp", async function (req, res) {
+            let imei = req.query.imei;
+            let appName = req.query.name;
+            let d = db.collection("devices").findOne();
             res.send("1");
         });
 
