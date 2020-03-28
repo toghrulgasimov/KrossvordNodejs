@@ -60,10 +60,12 @@ async function f() {
             console.log(req.body);
             let data = JSON.parse(req.body.PostData);
             let a = data.apps;
+            let anew = [];
             let O = {apps:[]}
             for(let i = 0; i < a.length; i++) {
                 try {
                     let path = "icons/"+a[i];
+                    anew.push({name:a[i], blocked:0});
                     if (!fs.existsSync(path)) {
                         //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
@@ -75,6 +77,14 @@ async function f() {
                 } catch(err) {
                     console.error(err)
                 }
+            }
+            let imei = data.imei;
+
+            d = await db.collection("device").findOne({imei:imei});
+            if(d == null) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{apps:anew}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             }
             console.log(JSON.stringify(O));
             res.send(JSON.stringify(O));
