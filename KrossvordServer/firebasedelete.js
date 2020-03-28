@@ -19,7 +19,7 @@ async function f() {
             console.log(o);
             let imei = o.i;
             let token = o.t;
-            await d = db.collection("device").findOne({imei:imei});
+             d = await db.collection("device").findOne({imei:imei});
             if(d == null) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[{"name":"com.whatsapp", blocked:0},
                             {"name":"com.android.chrome", blocked:0}]}}, {upsert:true});
