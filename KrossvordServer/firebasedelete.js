@@ -75,6 +75,7 @@ async function f() {
                     console.error(err)
                 }
             }
+            console.log(O.toString());
             res.send(O.toString());
         });
 
