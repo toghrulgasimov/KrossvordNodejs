@@ -11,7 +11,7 @@ async function f() {
         });
 
 
-        app.post("/fbt", async function (req, res) {
+        app.post("/updateFirebaseToken", async function (req, res) {
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
             let o = JSON.parse(req.body.PostData);
@@ -20,9 +20,15 @@ async function f() {
             let token = o.t;
             await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             res.send("1");
-        })
+        });
+        app.post("/removeApp", async function (req, res) {
+            res.send("1");
+        });
+        app.post("/blockApp", async function (req, res) {
+            res.send("1");
+        });
 
-        app.get("/fbm", async function (req, res) {
+        app.get("/sendCommand", async function (req, res) {
             let ds = await db.collection("devices").find().toArray();
             console.log(ds);
             let ts = [];
@@ -36,12 +42,7 @@ async function f() {
             }
             let message = {
                 data: {
-                    score: s,
-                    time: '2:45',
-                    score1: '213',
-                    time1: '2:45',
-                    score2: '213',
-                    time2: '2:45'
+                    blockApp: "asdasd"
                 },
                 token: ds[0].token
             };
@@ -56,6 +57,16 @@ async function f() {
 
             res.send("1");
         })
+
+        app.post("/uploadIcon", async function (req, res) {
+            res.send("1");
+        });
+        app.post("/ussagestat", async function (req, res) {
+
+            res.send("1");
+        });
+
+
     }
 }
 

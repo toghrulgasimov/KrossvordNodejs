@@ -26,6 +26,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -133,7 +134,7 @@
       <workItem from="1576600486150" duration="298000" />
       <workItem from="1576960504414" duration="5376000" />
       <workItem from="1576972825673" duration="111000" />
-      <workItem from="1585223911055" duration="17433000" />
+      <workItem from="1585223911055" duration="21371000" />
     </task>
     <servers />
   </component>
