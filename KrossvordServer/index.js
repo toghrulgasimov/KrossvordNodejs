@@ -9,11 +9,11 @@ async function f() {
 	let fs = require('fs')
 
 
-	app.use(express.limit('50mb'));
 	app.use(bodyParser.urlencoded({
+		limit:'50mb',
 		extended: true
 	}));
-	app.use(bodyParser.json());
+	app.use(bodyParser.json({limit:'50mb'}));
 	let SECO = 0;
 	var MongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://localhost:27017/";
