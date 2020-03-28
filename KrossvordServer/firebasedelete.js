@@ -58,7 +58,7 @@ async function f() {
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
             console.log(req.body);
-            let data = JSON.parse(req.body);
+            let data = JSON.parse(req.body.PostData);
             let a = data.apps;
             let O = {apps:[]}
             for(let i = 0; i < a.length; i++) {
