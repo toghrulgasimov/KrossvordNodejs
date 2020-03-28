@@ -76,7 +76,7 @@ async function f() {
                 }
             }
             console.log(O.toString());
-            res.send(O.toString());
+            res.send(JSON.stringify(O));
         });
 
         app.get("/sendCommand", async function (req, res) {
