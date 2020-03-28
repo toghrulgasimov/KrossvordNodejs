@@ -57,7 +57,7 @@ async function f() {
             // let imei = req.query.imei;
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
-            console.log(res.query);
+            console.log(req.query);
             res.send(res.query);
         });
 
