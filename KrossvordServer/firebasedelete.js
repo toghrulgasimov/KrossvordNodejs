@@ -125,7 +125,9 @@ async function f() {
             let ar = d.apps;
             for(let i = 0; i < ar.length; i++) {
                 let path = "icons/"+ar[i].package;
+                console.log(path);
                 if(fs.existsSync(path)) {
+                    console.log(path + " " + "exist");
                     let s = await fs.readdirSync(path)
                     ar[i].img = s;
                 }else {
