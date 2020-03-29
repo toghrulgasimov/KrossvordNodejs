@@ -154,7 +154,7 @@ async function f() {
 
 
         function rawBody(req, res, next) {
-            let chunks = [];
+
             console.log("Raw bady called-----");
 
             req.socket.on('data', function(chunk) {
@@ -176,7 +176,8 @@ async function f() {
             });
         }
 
-        app.post('/abram', rawBody, function (req, res) {
+        let data = []
+        app.post('/abram', function (req, res) {
 
             // if (req.rawBody && req.bodyLength > 0) {
             //
@@ -193,9 +194,17 @@ async function f() {
 
             req.socket.on('data', function(chunk) {
 
+                data.push(chunk);
                 console.log("chunk" + chunk);
             });
             console.log("----------------ABRAHAN CALLED");
+
+            req.socket.on('end', function() {
+
+                console.log("ENDER");
+                console.log(data);
+                data = [];
+            });
             res.send("123");
 
         });
