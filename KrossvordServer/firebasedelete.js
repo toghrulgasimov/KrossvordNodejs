@@ -126,7 +126,7 @@ async function f() {
             for(let i = 0; i < ar.length; i++) {
                 let path = "icons/"+ar[i].package;
                 if(fs.existsSync(path)) {
-                    let s = fs.readdirSync(path)
+                    let s = await fs.readdirSync(path)
                     ar[i].img = s;
                 }else {
                     ar[i].img = "uncnow";
