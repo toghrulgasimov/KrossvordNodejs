@@ -41,7 +41,7 @@ async function f() {
             let icon = o.icon.replace(/^data:image\/png;base64,/, "");
 
 
-            icon = o.icon.replace(/\n/g, " ");
+            icon = o.icon.replace(/\n/g, "+");
 
             let name = o.package;
             try {
