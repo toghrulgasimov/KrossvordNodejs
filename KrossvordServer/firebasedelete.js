@@ -65,7 +65,7 @@ async function f() {
             let O = {apps:[]}
             for(let i = 0; i < a.length; i++) {
                 try {
-                    let path = "icons/"+a[i].package;
+                    let path = "icons/"+a[i].package+".png";
                     anew.push({name:a[i].name,package:a[i].package, blocked:0});
                     if (!fs.existsSync(path)) {
                         //await fs.writeFileSync(path, icon);
@@ -125,7 +125,7 @@ async function f() {
             let d = await db.collection("devices").findOne({imei:imei});
             let ar = d.apps;
             for(let i = 0; i < ar.length; i++) {
-                let path = "icons/"+ar[i].package;
+                let path = "icons/"+ar[i].package + ".png";
                 console.log(path);
                 if(fs.existsSync(path)) {
                     console.log(path + " " + "exist");
