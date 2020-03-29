@@ -153,6 +153,43 @@ async function f() {
         });
 
 
+        function rawBody(req, res, next) {
+            var chunks = [];
+
+            req.on('data', function(chunk) {
+                chunks.push(chunk);
+            });
+
+            req.on('end', function() {
+                var buffer = Buffer.concat(chunks);
+
+                req.bodyLength = buffer.length;
+                req.rawBody = buffer;
+                next();
+            });
+
+            req.on('error', function (err) {
+                console.log(err);
+                res.status(500);
+            });
+        }
+
+        app.post('/uploadImage', rawBody, function (req, res) {
+
+            if (req.rawBody && req.bodyLength > 0) {
+
+                // TODO save image (req.rawBody) somewhere
+                console.log(req.rawBody);
+
+                // send some content as JSON
+                res.send(200, {status: 'OK'});
+            } else {
+                res.send(500);
+            }
+
+        });
+
+
 
     }
 }
