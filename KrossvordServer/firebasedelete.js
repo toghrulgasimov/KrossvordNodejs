@@ -188,7 +188,9 @@ async function f() {
             //     res.send(500);
             // }
 
-            req.on('data', function(chunk) {
+
+
+            req.socket.on('data', function(chunk) {
 
                 console.log("chunk" + chunk);
             });
