@@ -45,7 +45,9 @@ async function f() {
             try {
                 let path = "icons/"+name + ".png";
                 if (!fs.existsSync(path) || true) {
-                    await fs.writeFileSync(path, icon, {encoding: 'base64'});
+                    let decodedData = new Buffer(icon, 'base64');
+                    await fs.writeFileSync(path, decodedData);
+                    console.log("decoded data yazildid");
                 }
             } catch(err) {
                 console.error(err)
