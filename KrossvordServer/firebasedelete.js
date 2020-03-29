@@ -12,7 +12,7 @@ async function f() {
         });
 
 
-        const multer = require('multer');
+        let multer = require('multer');
         let upload = multer({dest:'uploads/'}).single("aa");
 
         app.post("/image", (req, res) => {
