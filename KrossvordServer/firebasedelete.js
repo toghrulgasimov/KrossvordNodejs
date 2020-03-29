@@ -174,7 +174,7 @@ async function f() {
             });
         }
 
-        app.post('/uploadImage', rawBody, function (req, res) {
+        app.post('/abram', rawBody, function (req, res) {
 
             if (req.rawBody && req.bodyLength > 0) {
 
