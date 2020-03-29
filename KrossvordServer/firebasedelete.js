@@ -57,28 +57,7 @@ async function f() {
 
             res.send("1");
         });
-        app.post("/uploadIcon", async function (req, res) {
-            console.log("upload Icon cagrildi");
-            console.log(req.body.PostData);
 
-            let o = JSON.parse(req.body.PostData.toString('base64'));
-            console.log("line 38");
-            console.log(o);
-            let icon = o.icon + "";
-
-
-            let name = o.package;
-            try {
-                let path = "icons/"+name + ".png";
-                if (!fs.existsSync(path) || true) {
-                    let decodedData = new Buffer(icon, 'base64');
-                    await fs.writeFileSync(path, decodedData);
-                }
-            } catch(err) {
-                console.error(err)
-            }
-            res.send("1");
-        });
         app.post("/removeApp", async function (req, res) {
             res.send("1");
         });
@@ -149,7 +128,7 @@ async function f() {
         app.post("/uploadIcon", async function (req, res) {
             res.send("1");
         });
-        app.get("/getApps", async function (req, res) {
+        app.get("/getDevice", async function (req, res) {
             let imei = req.query.imei;
             let d = await db.collection("devices").findOne({imei:imei});
             let ar = d.apps;
@@ -159,14 +138,10 @@ async function f() {
                 if(fs.existsSync(path)) {
                     console.log(path + " " + "exist");
                     let s = await fs.readFileSync(path);
-                    ar[i].img = s.toString();
                 }else {
-                    ar[i].img = "uncnow";
                 }
                 d.apps = ar;
             }
-            //console.log(d.apps);
-
             res.send(JSON.stringify(d));
         });
         app.post("/updateApp", async function (req, res) {
