@@ -19,7 +19,7 @@ async function f() {
                 cb(null, 'icons')
             },
             filename: function (req, file, cb) {
-                cb(null, file.fieldname + '-' + Date.now())
+                cb(null, file.originalname)
             }
         })
 
