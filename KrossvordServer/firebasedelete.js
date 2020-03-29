@@ -158,6 +158,7 @@ async function f() {
 
             req.on('data', function(chunk) {
                 chunks.push(chunk);
+                console.log("chunk" + chunk);
             });
 
             req.on('end', function() {
