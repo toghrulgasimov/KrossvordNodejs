@@ -13,18 +13,28 @@ async function f() {
 
 
         let multer = require('multer');
-        let upload = multer({dest:'icons/',
-            filename: function (req, file, cb) {
-                cb(null , file.originalname);
-            }}, ).single("aa");
 
-        app.post("/image", (req, res) => {
-            upload(req, res, (err) => {
-                if(err) {
-                    res.status(400).send("Something went wrong!");
-                }
-                res.send(req.file);
-            });
+        var storage = multer.diskStorage({
+            destination: function (req, file, cb) {
+                cb(null, 'icons')
+            },
+            filename: function (req, file, cb) {
+                cb(null, file.fieldname + '-' + Date.now())
+            }
+        })
+
+        var upload = multer({ storage: storage })
+
+        app.post("/image",upload.single('aa'), (req, res) => {
+            const file = req.file;
+            if (!file) {
+                const error = new Error('Please upload a file')
+                error.httpStatusCode = 400;
+
+            }else {
+                console.log(file);
+            }
+            res.send(file)
         });
 
 
