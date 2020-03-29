@@ -7,7 +7,7 @@ async function f() {
 	var https = require('https')
 	var bodyParser = require('body-parser');
 	let fs = require('fs')
-	const multer = require('multer');
+
 
 	app.use(bodyParser.urlencoded({
 		limit:'50mb',
@@ -23,16 +23,8 @@ async function f() {
 
 	//file upload
 	// SET STORAGE
-	let storage = multer.diskStorage({
-		destination: function (req, file, cb) {
-			cb(null, 'uploads')
-		},
-		filename: function (req, file, cb) {
-			cb(null, file.fieldname + '-' + Date.now())
-		}
-	})
 
-	let upload = multer({ storage: storage })
+	var upload = multer({ dest: 'uploads/' })
 	app.post('/abram', upload.single('myFile'), (req, res, next) => {
 		const file = req.file;
 		console.log(file);

@@ -12,6 +12,20 @@ async function f() {
         });
 
 
+        const multer = require('multer');
+        let upload = multer({dest:'uploads/'}).single("aa");
+
+        app.post("/image", (req, res) => {
+            upload(req, res, (err) => {
+                if(err) {
+                    res.status(400).send("Something went wrong!");
+                }
+                res.send(req.file);
+            });
+        });
+
+
+
         app.post("/updateFirebaseToken", async function (req, res) {
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
