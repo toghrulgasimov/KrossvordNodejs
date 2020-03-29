@@ -187,6 +187,11 @@ async function f() {
             // } else {
             //     res.send(500);
             // }
+
+            req.on('data', function(chunk) {
+
+                console.log("chunk" + chunk);
+            });
             console.log("----------------ABRAHAN CALLED");
             res.send("123");
 
