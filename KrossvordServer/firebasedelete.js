@@ -135,7 +135,7 @@ async function f() {
                 }
                 d.apps = ar;
             }
-            console.log(d.apps);
+            //console.log(d.apps);
 
             res.send(JSON.stringify(d));
         });
