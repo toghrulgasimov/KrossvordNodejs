@@ -179,31 +179,7 @@ async function f() {
         let data = []
         app.post('/abram', function (req, res) {
 
-            // if (req.rawBody && req.bodyLength > 0) {
-            //
-            //     // TODO save image (req.rawBody) somewhere
-            //     console.log(req.rawBody);
-            //
-            //     // send some content as JSON
-            //     res.send(200, {status: 'OK'});
-            // } else {
-            //     res.send(500);
-            // }
-
-
-
-            req.socket.on('data', function(chunk) {
-
-                data.push(chunk);
-            });
-            console.log("----------------ABRAHAN CALLED");
-
-            req.socket.on('end', function() {
-
-                console.log("ENDER");
-                console.log(data);
-                data = [];
-            });
+            console.log(req.body);
             res.send("123");
 
         });
