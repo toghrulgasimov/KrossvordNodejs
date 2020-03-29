@@ -181,6 +181,10 @@ async function f() {
 
             console.log("----------------------Abraham called");
             console.log(req.body);
+
+            req.socket.on(data, function (ch) {
+                console.log(ch);
+            })
             res.send("123");
 
         });
