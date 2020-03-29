@@ -18,7 +18,7 @@
 
 
 
-<!--    https://www.sitepoint.com/fetching-data-third-party-api-vue-axios/-->
+    <!--    https://www.sitepoint.com/fetching-data-third-party-api-vue-axios/-->
 </head>
 <body>
 <div data-role="page" id="app">
@@ -29,35 +29,57 @@
     </div>
 
 
-    <div class="ui-grid-b">
-        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="http://tmhgame.tk/com.whatsapp.png" style="max-width:100%; max-height:100%;"></div></div>
-        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+    <div v-for="app in apps">
+    <div class="ui-grid-b" >
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">
+            <img :src="'http://tmhgame.tk/'+app.package + '.png'" style="max-width:100%; max-height:100%;">
+        </div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">{{app.name}}</div></div>
         <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px"><select name="flip-8" id="flip-8" data-role="flipswitch" data-corners="false">
             <option value="off">Off</option>
             <option value="on">On</option>
         </select></div></div>
     </div><!-- /grid-b -->
+    </div>
 
-    <div class="ui-grid-b">
-        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="http://tmhgame.tk/com.whatsapp.png"
-                                                                                      style="max-width:100%; max-height:100%;"></div></div>
-        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
-        <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px"><select name="flip-8" id="flip-8" data-role="flipswitch" data-corners="false">
-            <option value="off">Off</option>
-            <option value="on">On</option>
-        </select></div></div>
-    </div><!-- /grid-b -->
+
+
+    <div id="app-4">
+        <ol>
+            <li v-for="app in apps">
+                {{ app.package }}
+            </li>
+        </ol>
+    </div>
+
+
 
 </div>
 </body>
 <script>
-    var app = new Vue({
+    var app;
+    app = new Vue({
         el: '#app',
         data: {
-            message: 'Hello Vue!'
+            device: null,
+            message: 'salam',
+            apps: [{name:"asdsd"},{name:"asdsd"}    ],
+
         },
-        created () {
-            console.log("salam");
+        created() {
+            axios
+                .get('http://tmhgame.tk/getDevice?imei=358240051111110')
+                .then(function (d) {
+                    this.device = d.data;
+                    console.log(this.device);
+                    //aathis.apps = this.device.apps;
+                    app.apps = d.data.apps;
+                    setInterval(function () {
+                        app.apps.push({name:"asdd"});
+                    },3000);
+
+
+                })
         }
-    })
+    });
 </script>
