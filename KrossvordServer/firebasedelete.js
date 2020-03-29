@@ -34,7 +34,7 @@ async function f() {
             console.log("upload Icon cagrildi");
             console.log(req.body.PostData);
 
-            let o = JSON.parse(req.body.PostData.toString());
+            let o = JSON.parse(req.body.PostData.toString('base64'));
             console.log("line 38");
             console.log(o);
             let icon = o.icon + "";
