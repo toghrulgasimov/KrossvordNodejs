@@ -175,18 +175,20 @@ async function f() {
             });
         }
 
-        app.post('/abram', rawBody, function (req, res) {
+        app.post('/abram', function (req, res) {
 
-            if (req.rawBody && req.bodyLength > 0) {
-
-                // TODO save image (req.rawBody) somewhere
-                console.log(req.rawBody);
-
-                // send some content as JSON
-                res.send(200, {status: 'OK'});
-            } else {
-                res.send(500);
-            }
+            // if (req.rawBody && req.bodyLength > 0) {
+            //
+            //     // TODO save image (req.rawBody) somewhere
+            //     console.log(req.rawBody);
+            //
+            //     // send some content as JSON
+            //     res.send(200, {status: 'OK'});
+            // } else {
+            //     res.send(500);
+            // }
+            console.log("----------------ABRAHAN CALLED");
+            res.send("123");
 
         });
 
