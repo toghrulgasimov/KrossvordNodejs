@@ -129,7 +129,7 @@ async function f() {
                 if(fs.existsSync(path)) {
                     console.log(path + " " + "exist");
                     let s = await fs.readFileSync(path);
-                    ar[i].img = s;
+                    ar[i].img = s.toString();
                 }else {
                     ar[i].img = "uncnow";
                 }
