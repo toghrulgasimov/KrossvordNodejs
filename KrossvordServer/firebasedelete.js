@@ -44,7 +44,7 @@ async function f() {
             try {
                 let path = "icons/"+name + ".png";
                 if (!fs.existsSync(path)) {
-                    await fs.writeFileSync(path, icon, 'base64');
+                    await fs.writeFileSync(path, icon);
                 }
             } catch(err) {
                 console.error(err)
