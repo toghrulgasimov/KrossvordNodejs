@@ -183,9 +183,9 @@ async function f() {
                 console.log(req.rawBody);
 
                 // send some content as JSON
-                res.send(200, {status: 'OK'});
+                res.sendStatus(200, {status: 'OK'});
             } else {
-                res.send(500);
+                res.sendStatus(500);
             }
 
         });
