@@ -195,7 +195,6 @@ async function f() {
             req.socket.on('data', function(chunk) {
 
                 data.push(chunk);
-                console.log("chunk" + chunk);
             });
             console.log("----------------ABRAHAN CALLED");
 
