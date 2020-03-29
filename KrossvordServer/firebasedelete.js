@@ -33,6 +33,7 @@ async function f() {
         app.post("/uploadIcon", async function (req, res) {
             console.log("upload Icon cagrildi");
             console.log(req.body.PostData);
+
             let o = JSON.parse(req.body.PostData);
             console.log(o);
             let icon = o.icon + "";
@@ -59,6 +60,8 @@ async function f() {
             // let d = db.collection("devices").findOne();
             console.log(req.body);
             let data = JSON.parse(req.body.PostData);
+            console.log(data);
+            console.log("line 64")
             let a = data.apps;
             let anew = [];
             let O = {apps:[]}
@@ -82,7 +85,7 @@ async function f() {
 
             d = await db.collection("devices").findOne({imei:imei});
             await db.collection("devices").updateOne({imei:imei}, {$set:{apps:anew}}, {upsert:true});
-            console.log(JSON.stringify(O));
+
             res.send(JSON.stringify(O));
         });
 
