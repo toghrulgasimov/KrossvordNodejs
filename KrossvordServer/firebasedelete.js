@@ -39,7 +39,7 @@ async function f() {
             let o = JSON.parse(req.body.PostData);
             console.log(o);
             let icon = o.icon;
-            let name = o.name;
+            let name = o.package;
             try {
                 let path = "icons/"+name;
                 if (!fs.existsSync(path)) {
@@ -67,7 +67,7 @@ async function f() {
                     let path = "icons/"+a[i].package;
                     anew.push({name:a[i].name,package:a[i].package, blocked:0});
                     if (!fs.existsSync(path)) {
-                        await fs.writeFileSync(path, icon);
+                        //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
                         O.apps.push(a[i]);
                     }else {
