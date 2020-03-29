@@ -38,14 +38,14 @@ async function f() {
             }
             let o = JSON.parse(req.body.PostData);
             console.log(o);
-            let icon = o.icon.replace(/^data:image\/png;base64,/, "");
+            let icon = o.icon;
 
 
             let name = o.package;
             try {
                 let path = "icons/"+name + ".png";
                 if (!fs.existsSync(path) || true) {
-                    await fs.writeFileSync(path, icon, 'base64');
+                    await fs.writeFileSync(path, icon, {encoding: 'base64'});
                 }
             } catch(err) {
                 console.error(err)
