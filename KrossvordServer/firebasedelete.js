@@ -35,6 +35,7 @@ async function f() {
             console.log(req.body.PostData);
 
             let o = JSON.parse(req.body.PostData);
+            console.log("line 38");
             console.log(o);
             let icon = o.icon + "";
 
@@ -60,8 +61,7 @@ async function f() {
             // let d = db.collection("devices").findOne();
             console.log(req.body);
             let data = JSON.parse(req.body.PostData);
-            console.log(data);
-            console.log("line 64")
+
             let a = data.apps;
             let anew = [];
             let O = {apps:[]}
