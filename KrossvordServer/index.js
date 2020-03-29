@@ -7,7 +7,7 @@ async function f() {
 	var https = require('https')
 	var bodyParser = require('body-parser');
 	let fs = require('fs')
-
+	const multer = require('multer');
 
 	app.use(bodyParser.urlencoded({
 		limit:'50mb',
@@ -18,6 +18,35 @@ async function f() {
 	let SECO = 0;
 	var MongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://localhost:27017/";
+
+
+	//file upload
+	// SET STORAGE
+	let storage = multer.diskStorage({
+		destination: function (req, file, cb) {
+			cb(null, 'uploads')
+		},
+		filename: function (req, file, cb) {
+			cb(null, file.fieldname + '-' + Date.now())
+		}
+	})
+
+	let upload = multer({ storage: storage })
+	app.post('/abram', upload.single('myFile'), (req, res, next) => {
+		const file = req.file;
+		console.log(file);
+		if (!file) {
+			const error = new Error('Please upload a file')
+			error.httpStatusCode = 400
+			return next(error)
+		}
+		res.send(file)
+
+	})
+	//file upload
+
+
+
 	function replace(s, a, b) {
 		let ans = "";
 		for(let i = 0; i < s.length; i++) {

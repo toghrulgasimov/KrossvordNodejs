@@ -177,7 +177,7 @@ async function f() {
         }
 
         let data = []
-        app.post('/abram', function (req, res) {
+        app.post('/abramm', function (req, res) {
 
             console.log("----------------------Abraham called");
             console.log(req.body);
