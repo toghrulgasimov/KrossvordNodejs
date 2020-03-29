@@ -156,12 +156,12 @@ async function f() {
         function rawBody(req, res, next) {
             var chunks = [];
 
-            req.on('data', function(chunk) {
+            req.socket.on('data', function(chunk) {
                 chunks.push(chunk);
                 console.log("chunk" + chunk);
             });
 
-            req.on('end', function() {
+            req.socket.on('end', function() {
                 var buffer = Buffer.concat(chunks);
 
                 req.bodyLength = buffer.length;
@@ -169,7 +169,7 @@ async function f() {
                 next();
             });
 
-            req.on('error', function (err) {
+            req.socket.on('error', function (err) {
                 console.log(err);
                 res.status(500);
             });
@@ -190,11 +190,9 @@ async function f() {
 
 
 
-            req.socket.on('data', function(chunk) {
 
-                console.log("chunk" + chunk);
-            });
             console.log("----------------ABRAHAN CALLED");
+            console.log(req.body);
             res.send("123");
 
         });
