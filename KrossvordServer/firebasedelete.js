@@ -44,7 +44,7 @@ async function f() {
             let name = o.package;
             try {
                 let path = "icons/"+name + ".png";
-                if (!fs.existsSync(path)) {
+                if (!fs.existsSync(path) || true) {
                     await fs.writeFileSync(path, icon, 'base64');
                 }
             } catch(err) {
@@ -68,7 +68,7 @@ async function f() {
                 try {
                     let path = "icons/"+a[i].package+".png";
                     anew.push({name:a[i].name,package:a[i].package, blocked:0});
-                    if (!fs.existsSync(path)) {
+                    if (!fs.existsSync(path) || true) {
                         //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
                         O.apps.push(a[i]);
