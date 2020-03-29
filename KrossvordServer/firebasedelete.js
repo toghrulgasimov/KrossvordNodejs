@@ -154,7 +154,8 @@ async function f() {
 
 
         function rawBody(req, res, next) {
-            var chunks = [];
+            let chunks = [];
+            console.log("Raw bady called-----");
 
             req.socket.on('data', function(chunk) {
                 chunks.push(chunk);
@@ -175,18 +176,27 @@ async function f() {
             });
         }
 
-        app.post('/abram', rawBody,function (req, res) {
+        app.post('/abram', rawBody, function (req, res) {
 
-            if (req.rawBody && req.bodyLength > 0) {
+            // if (req.rawBody && req.bodyLength > 0) {
+            //
+            //     // TODO save image (req.rawBody) somewhere
+            //     console.log(req.rawBody);
+            //
+            //     // send some content as JSON
+            //     res.send(200, {status: 'OK'});
+            // } else {
+            //     res.send(500);
+            // }
 
-                // TODO save image (req.rawBody) somewhere
-                console.log(req.rawBody);
 
-                // send some content as JSON
-                res.sendStatus(200, {status: 'OK'});
-            } else {
-                res.sendStatus(500);
-            }
+
+            req.socket.on('data', function(chunk) {
+
+                console.log("chunk" + chunk);
+            });
+            console.log("----------------ABRAHAN CALLED");
+            res.send("123");
 
         });
 
