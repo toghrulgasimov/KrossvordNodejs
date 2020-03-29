@@ -67,7 +67,7 @@ async function f() {
                     let path = "icons/"+a[i].package;
                     anew.push({name:a[i].name,package:a[i].package, blocked:0});
                     if (!fs.existsSync(path)) {
-                        //await fs.writeFileSync(path, icon);
+                        await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
                         O.apps.push(a[i]);
                     }else {
