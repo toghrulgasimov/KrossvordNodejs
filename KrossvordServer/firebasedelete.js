@@ -166,6 +166,22 @@ async function f() {
             cur = cur ^ true;
             console.log(cur);
 
+            let message = {
+                data: {
+                    package: package,
+
+                },
+                token: d.token
+            };
+            admin.messaging().send(message)
+                .then((response) => {
+                    // Response is a message ID string.
+                    console.log('Successfully sent message:', response);
+                })
+                .catch((error) => {
+                    console.log('Error sending message:', error);
+                });
+
 
 
             await db.collection("devices").updateOne({imei:imei,"apps.package": package },

@@ -60,11 +60,11 @@
         }
 
         input:checked + .slider {
-            background-color: #2196F3;
+            background-color: #006af3;
         }
 
         input:focus + .slider {
-            box-shadow: 0 0 1px #2196F3;
+            box-shadow: 0 0 1px #004cf3;
         }
 
         input:checked + .slider:before {
@@ -114,8 +114,9 @@
                 <h3>{{m[$index].blocked}}</h3>
             </td>
             <td>
+                <h2>{{m.blocked == false?'Aciq':'Bagli' }}</h2>
                 <label class="switch">
-                    <input type="checkbox"  ng-click="block(scope, m.package, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >
+                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >
                     <span class="slider"></span>
                 </label>
             </td>
@@ -149,11 +150,12 @@
             $scope.count++;
             console.log("asdads");
         };
-        $scope.block = function(a,b,c) {
+        $scope.block = function(a,b,c,d) {
             console.log(b);
             $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b).then(function (d) {
                 console.log(d.data.apps + " " + $scope.imei);
 
+                c.blocked = c.blocked ^ true;
 
             }, function () {
 
@@ -167,10 +169,10 @@
             $scope.d = d.data;
             console.log(d.data.imei);
             $scope.aa = d.data.apps;
-            $scope.aa[0].blocked = false;
-            for(let i=1;i<$scope.aa.length; i++) {
-                $scope.aa[i].blocked = 1;
-            }
+            // $scope.aa[0].blocked = false;
+            // for(let i=1;i<$scope.aa.length; i++) {
+            //     $scope.aa[i].blocked = 1;
+            // }
             //$scope.message.push('asdasd')
 
         }, function () {
