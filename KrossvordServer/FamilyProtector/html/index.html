@@ -2,86 +2,155 @@
 
 <head>
 
-    <!-- Include meta tag to ensure proper rendering and touch zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link  rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">&ndash;&gt;-->
+<!--    <script src="angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>-->
 
-    <!-- Include jQuery Mobile stylesheets -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
 
-    <!-- Include the jQuery library -->
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-    <!-- Include the jQuery Mobile library -->
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >
+    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
 
+    <style>
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
 
-    <!--    https://www.sitepoint.com/fetching-data-third-party-api-vue-axios/-->
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+
 </head>
-<body>
-<div data-role="page" id="app">
+<body ng-app="app">
 
-    <div data-role="header">
-        <h1>{{message}}}e</h1>
-        <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-left">Search</a>
+<div ng-controller="myCtrl">
+
+
+
+
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
     </div>
+<!--    <toggle ng-model="v" ></toggle>-->
+    <table class="table">
+        <thead>
 
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in aa">
+            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 200px; height: 200px"></td>
+            <td>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </td>
+            <td><button type="button" class="btn btn-primary"><div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
 
-    <div v-for="app in apps">
-    <div class="ui-grid-b" >
-        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">
-            <img :src="'http://tmhgame.tk/'+app.package + '.png'" style="max-width:100%; max-height:100%;">
-        </div></div>
-        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">{{app.name}}</div></div>
-        <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px"><select name="flip-8" id="flip-8" data-role="flipswitch" data-corners="false">
-            <option value="off">Off</option>
-            <option value="on">On</option>
-        </select></div></div>
-    </div><!-- /grid-b -->
-    </div>
-
-
-
-    <div id="app-4">
-        <ol>
-            <li v-for="app in apps">
-                {{ app.package }}
-            </li>
-        </ol>
-    </div>
-
-
-
+                <button type="button" class='btn btn-default' ng-click="addAlert()" id="addalert">Add Alert</button></button></td>
+            <input class="toggle" type="checkbox" />
+        </tr>
+        </tbody>
+    </table>
 </div>
 
-</body>
+
 <script>
-    var app;
-    app = new Vue({
-        el: '#app',
-        data: {
-            device: null,
-            message: 'salam',
-            apps: [{name:"asdsd"},{name:"asdsd"}   ,{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{} ],
+    $('.qwe').bootstrapToggle();
+    angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
+        $scope.message=["Hello Wdsdorld",'dasdas'];
+        $scope.v = true;
 
-        },
-        created() {
-            axios
-                .get('http://tmhgame.tk/getDevice?imei=358240051111110')
-                .then(function (d) {
-                    this.device = d.data;
-                    console.log(this.device);
-                    //aathis.apps = this.device.apps;
-                    app.apps = d.data.apps;
-                    setInterval(function () {
-                        app.apps.push({name:"asdd"});
-                    },3000);
+        $scope.alerts = [
+            { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
+            { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+        ];
+
+        $scope.addAlert = function() {
+            $scope.alerts.push({msg: 'Another alert!'});
+        };
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        };
+
+        //$scope.aa=[];
+        $http.get('http://tmhgame.tk/getDevice?imei=358240051111110').then(function (d) {
+            console.log(d.data.apps);
+            $scope.aa = d.data.apps;
+            //$scope.message.push('asdasd')
+        }, function () {
+
+        });
+    } )
 
 
-                })
-        }
-    });
 </script>
+</body>

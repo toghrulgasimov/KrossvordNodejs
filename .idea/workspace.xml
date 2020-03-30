@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -17,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -29,15 +36,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -137,7 +145,7 @@
       <workItem from="1576972825673" duration="111000" />
       <workItem from="1585223911055" duration="21371000" />
       <workItem from="1585384935530" duration="25535000" />
-      <workItem from="1585468847994" duration="27549000" />
+      <workItem from="1585468847994" duration="39396000" />
     </task>
     <servers />
   </component>
