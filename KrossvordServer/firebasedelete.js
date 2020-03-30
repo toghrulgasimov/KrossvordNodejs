@@ -159,6 +159,7 @@ async function f() {
             for(let i = 0; i < d.apps.length; i++) {
                 if(d.apps[i].package == package) {
                     cur = d.apps[i].blocked;
+                    console.log("Tapildi")
                     break;
                 }
             }
@@ -167,7 +168,7 @@ async function f() {
 
 
 
-            db.collection("devices").updateOne({imei:imei,"apps.pckage": package },
+            await db.collection("devices").updateOne({imei:imei,"apps.pckage": package },
             {$set:{"apps.$.blocked":cur}});
             console.log(req.query);
             res.send(JSON.stringify(d));
