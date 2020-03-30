@@ -154,6 +154,15 @@ async function f() {
             res.send(JSON.stringify(d));
         });
 
+        app.get("/blockApp", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let d = await db.collection("devices").findOne({imei:imei});
+            //db.collection("devices").updateOne({imei:imei},);
+            console.log(req.query);
+            res.send(JSON.stringify(d));
+        });
+
 
         function rawBody(req, res, next) {
 

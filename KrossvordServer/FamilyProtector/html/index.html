@@ -91,13 +91,15 @@
 
 
 
-    <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div>
+    <input type="text" ng-change="myFunc()" ng-model="txt" />
+    <label class="switch">
+        <input type="checkbox"  ng-click="select(scope, option.value, $event)" ng-model="v" ng-checked="aa[0].blocked">
+        <span class="slider"></span>
+    </label>
+    <label class="switch">
+        <input type="checkbox"  ng-change="myFunc()" ng-model="v">
+        <span class="slider"></span>
+    </label>
 <!--    <toggle ng-model="v" ></toggle>-->
     <table class="table">
         <thead>
@@ -107,14 +109,16 @@
         <tr ng-repeat="m in aa">
             <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 200px; height: 200px"></td>
             <td>
+                <h1 >{{m.name}}</h1>
+                <h3>{{$index}}</h3>
+                <h3>{{m[$index].blocked}}</h3>
+            </td>
+            <td>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox"  ng-click="block(scope, m.package, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >
                     <span class="slider"></span>
                 </label>
             </td>
-            <td><button type="button" class="btn btn-primary"><div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
-
-                <button type="button" class='btn btn-default' ng-click="addAlert()" id="addalert">Add Alert</button></button></td>
             <input class="toggle" type="checkbox" />
         </tr>
         </tbody>
@@ -127,7 +131,7 @@
     angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.v = true;
-
+        $scope.txt = "asdsd";
         $scope.alerts = [
             { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
             { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
@@ -141,11 +145,34 @@
             $scope.alerts.splice(index, 1);
         };
 
+        $scope.myFunc = function() {
+            $scope.count++;
+            console.log("asdads");
+        };
+        $scope.block = function(a,b,c) {
+            console.log(b);
+            $http.post('http://tmhgame.tk/blockApp', {imei:$scope.d.imei, package:b}).then(function (d) {
+                console.log(d.data.apps + " " + $scope.imei);
+
+
+            }, function () {
+
+            });
+
+        };
+
         //$scope.aa=[];
         $http.get('http://tmhgame.tk/getDevice?imei=358240051111110').then(function (d) {
             console.log(d.data.apps);
+            $scope.d = d.data;
+            console.log(d.data.imei);
             $scope.aa = d.data.apps;
+            $scope.aa[0].blocked = false;
+            for(let i=1;i<$scope.aa.length; i++) {
+                $scope.aa[i].blocked = 1;
+            }
             //$scope.message.push('asdasd')
+
         }, function () {
 
         });
