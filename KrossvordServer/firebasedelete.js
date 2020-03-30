@@ -159,7 +159,7 @@ async function f() {
             for(let i = 0; i < d.apps.length; i++) {
                 if(d.apps[i].package == package) {
                     cur = d.apps[i].blocked;
-                    console.log("Tapildi")
+                    console.log("Tapildi");
                     break;
                 }
             }
@@ -168,7 +168,7 @@ async function f() {
 
             let message = {
                 data: {
-                    package: package,
+                    package: package,block:req.query.block
 
                 },
                 token: d.token

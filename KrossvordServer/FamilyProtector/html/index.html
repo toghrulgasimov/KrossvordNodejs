@@ -151,8 +151,11 @@
             console.log("asdads");
         };
         $scope.block = function(a,b,c,d) {
+            let block = (c.blocked) ? 1 : 0;
             console.log(b);
-            $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b).then(function (d) {
+            console.log("block status gonderildi " + block)
+
+            $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
                 console.log(d.data.apps + " " + $scope.imei);
 
                 c.blocked = c.blocked ^ true;
