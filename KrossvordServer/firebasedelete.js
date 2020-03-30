@@ -165,14 +165,13 @@ async function f() {
             }
             cur = cur ^ true;
             console.log(cur);
-            console.log("orginal token" + d.token);
 
             let message = {
                 data: {
                     package: package,
 
                 },
-                token: 'feUYyY5UQX-n1evPa0WgfT:APA91bF8RhI70nMExfPCNGn9pgSMWCY0bzvx7JRIeNYr5aMBdDDFTcETAfPeH5FdrfbG-wp9n4KP17VEsEwuPx7PIjNi5RiBvtgpT0kGTtt1j5xTVQvtaRZft6WLLJELfu9Tz9FBJxSU'
+                token: d.token
             };
             admin.messaging().send(message)
                 .then((response) => {
