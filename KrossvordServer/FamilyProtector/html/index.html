@@ -1,6 +1,7 @@
 
 
 <head>
+    <meta name="viewport" content="user-scalable=no" />
 
 <!--    <link  rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 <!--&lt;!&ndash;    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">&ndash;&gt;-->
@@ -151,7 +152,7 @@
             console.log("asdads");
         };
         $scope.block = function(a,b,c,d) {
-            let block = (c.blocked) ? 1 : 0;
+            let block = (c.blocked) ? 0 : 1;
             console.log(b);
             console.log("block status gonderildi " + block)
 
@@ -182,6 +183,8 @@
 
         });
     } )
+
+
 
 
 </script>
