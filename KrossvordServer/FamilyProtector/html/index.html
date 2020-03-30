@@ -151,7 +151,7 @@
         };
         $scope.block = function(a,b,c) {
             console.log(b);
-            $http.get('http://tmhgame.tk/blockApp', {imei:$scope.d.imei, package:b}).then(function (d) {
+            $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b).then(function (d) {
                 console.log(d.data.apps + " " + $scope.imei);
 
 

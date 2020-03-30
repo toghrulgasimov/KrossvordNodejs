@@ -74,7 +74,7 @@ async function f() {
             for(let i = 0; i < a.length; i++) {
                 try {
                     let path = "icons/"+a[i].package+".png";
-                    anew.push({name:a[i].name,package:a[i].package, blocked:0});
+                    anew.push({name:a[i].name,package:a[i].package, blocked:false});
                     if (!fs.existsSync(path) || true) {
                         //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
@@ -144,21 +144,31 @@ async function f() {
             }
             res.send(JSON.stringify(d));
         });
-        app.post("/updateApp", async function (req, res) {
-            //also push notification to user
-            let imei = req.body.imei;
-            let token = req.body.token;
-            let name = req.body.name;
-            let d = await db.collection("devices").findOne({imei:imei});
-            db.collection("devices").updateOne({imei:imei},);
-            res.send(JSON.stringify(d));
-        });
+
 
         app.get("/blockApp", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
+            let package = req.query.package;
             let d = await db.collection("devices").findOne({imei:imei});
-            //db.collection("devices").updateOne({imei:imei},);
+            if(d == null) {
+                res.sendStatus(500);
+                return;
+            }
+            let cur = false;
+            for(let i = 0; i < d.apps.length; i++) {
+                if(d.apps[i].package == package) {
+                    cur = d.apps[i].blocked;
+                    break;
+                }
+            }
+            cur = cur ^ true;
+            console.log(cur);
+
+
+
+            db.collection("devices").updateOne({imei:imei,"apps.pckage": package },
+            {$set:{"apps.$.blocked":cur}});
             console.log(req.query);
             res.send(JSON.stringify(d));
         });
