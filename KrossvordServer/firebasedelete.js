@@ -122,7 +122,7 @@ async function f() {
 
         let CommandResults = {};
         app.post("/sendActivity", async function (req, res) {
-            console.log(req.query);
+            console.log(req.query + " in sendActivity");
             //also push notification to user
             let imei = req.body.imei;
             let data = req.body.data;
