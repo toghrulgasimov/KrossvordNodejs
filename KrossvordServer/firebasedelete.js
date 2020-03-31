@@ -122,14 +122,14 @@ async function f() {
 
         let CommandResults = {};
         app.post("/sendActivity", async function (req, res) {
-            //console.log("in sendActivity");
+            console.log("in sendActivity");
             //also push notification to user
             let data = req.body.PostData;
             data = JSON.parse(data);
             let imei = data.imei;
             CommandResults[imei] = data;
-            //console.log(data);
-            //console.log("in sendActivity");
+            console.log(data);
+            console.log("in sendActivity");
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
