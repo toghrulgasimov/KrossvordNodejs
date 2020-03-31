@@ -122,11 +122,12 @@ async function f() {
 
         let CommandResults = {};
         app.post("/sendActivity", async function (req, res) {
+            console.log(req.query);
             //also push notification to user
             let imei = req.body.imei;
             let data = req.body.data;
             CommandResults[imei] = req.query;
-            console.log(req.query);
+
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
@@ -168,7 +169,7 @@ async function f() {
 
 
 
-            console.log(req.query);
+            console.log(req.query + " in sendCommand");
             //res.send(JSON.stringify(d));
         });
         app.get("/blockApp", async function (req, res) {
