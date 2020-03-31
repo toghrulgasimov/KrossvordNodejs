@@ -143,8 +143,7 @@ async function f() {
 
 
 
-            await db.collection("devices").updateOne({imei:imei,"apps.package": package },
-                {$set:{"apps.$.blocked":cur}});
+
             console.log(req.query);
             res.send(JSON.stringify(d));
         });
