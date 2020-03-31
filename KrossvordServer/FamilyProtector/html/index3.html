@@ -187,15 +187,15 @@
             <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
-                <h5>{{$index}}</h5>
+                <p>{{toTime(m.start)}}</p>
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td>
-                <h5>{{m.blocked == false?'Aciq':'Bagli' }}</h5>
-                <label class="switch">
-                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >
-                    <span class="slider"></span>
-                </label>
+                <h5>{{m.end == 9007199254740992 ? 'Activ' : (divide(m.end-m.start, 1000) + ' San')}}  </h5>
+<!--                <label class="switch">-->
+<!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+<!--                    <span class="slider"></span>-->
+<!--                </label>-->
             </td>
         </tr>
         </tbody>
@@ -221,6 +221,13 @@
             $scope.alerts.push({msg: 'Another alert!'});
         };
 
+        $scope.toTime = function(d) {
+            return new Date(d).toLocaleString();
+        }
+        $scope.divide = function(a,b) {
+            let ans = a / b;
+            return parseInt(ans);
+        }
         $scope.closeAlert = function(index) {
             $scope.alerts.splice(index, 1);
         };
@@ -244,20 +251,34 @@
             });
 
         };
+
         $scope.gundelik = function() {
 
             $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
                 console.log(d.data.data);
                 $scope.gunluk = d.data.data;
+                let t = [];
+                for(let i = 0; i < $scope.aa.length; i++) {
+                    t[$scope.aa[i].package] = 1;
+                }
+                let ans = [];
                 for(let i = 0; i < $scope.gunluk.length; i++) {
+                    if(t[$scope.gunluk[i].package] == undefined)continue;
                     $scope.gunluk[i].start = parseInt($scope.gunluk[i].start);
                     $scope.gunluk[i].end = parseInt($scope.gunluk[i].end);
                     $scope.gunluk[i].duration = $scope.gunluk[i].end - $scope.gunluk[i].start;
-                    $scope.gunluk[i].duration /= 1000;
-                    $scope.gunluk[i].duration = parseInt($scope.gunluk[i].duration);
+                    $scope.gunluk[i].duration = $scope.divide($scope.gunluk[i].duration, 1000);
+                    if($scope.gunluk[i].end == -1) {
+                        $scope.gunluk[i].end = 9007199254740992;
+                        //$scope.gunluk[i] = 9007199254740992;
+
+                    }
+                    ans.push($scope.gunluk[i]);
+
                     console.log($scope.gunluk[i].duration);
 
                 }
+                $scope.gunluk = ans;
                 
                 $scope.gunluk.sort(function (a,b) {
                     return b.end-a.end;
