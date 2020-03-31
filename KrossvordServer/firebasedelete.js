@@ -126,7 +126,7 @@ async function f() {
             //also push notification to user
             let imei = req.body.imei;
             let data = req.body.data;
-            CommandResults[imei] = req.query;
+            CommandResults[imei] = req.body;
 
             res.send("1");
         });
