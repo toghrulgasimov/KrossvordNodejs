@@ -95,35 +95,7 @@ async function f() {
             res.send(JSON.stringify(O));
         });
 
-        app.get("/sendCommand", async function (req, res) {
-            let ds = await db.collection("devices").find().toArray();
-            console.log(ds);
-            let ts = [];
-            for(let i = 0; i < ds.length; i++) {
-                ts.push(ds[i].token);
-                console.log(ds[i].token);
-            }
-            let s = "";
-            for(let i = 0; i < 10; i++) {
-                s += "a";
-            }
-            let message = {
-                data: {
-                    blockApp: "asdasd"
-                },
-                token: ds[0].token
-            };
-            admin.messaging().send(message)
-                .then((response) => {
-                    // Response is a message ID string.
-                    console.log('Successfully sent message:', response);
-                })
-                .catch((error) => {
-                    console.log('Error sending message:', error);
-                });
 
-            res.send("1");
-        })
 
         app.post("/uploadIcon", async function (req, res) {
             res.send("1");
@@ -146,6 +118,36 @@ async function f() {
         });
 
 
+
+        app.get("/sendCommand", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let d = await db.collection("devices").findOne({imei:imei});
+
+
+            let message = {
+                data: {
+                    command: "sendActivity"
+
+                },
+                token: d.token
+            };
+            admin.messaging().send(message)
+                .then((response) => {
+                    // Response is a message ID string.
+                    console.log('Successfully sent message:', response);
+                })
+                .catch((error) => {
+                    console.log('Error sending message:', error);
+                });
+
+
+
+            await db.collection("devices").updateOne({imei:imei,"apps.package": package },
+                {$set:{"apps.$.blocked":cur}});
+            console.log(req.query);
+            res.send(JSON.stringify(d));
+        });
         app.get("/blockApp", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
