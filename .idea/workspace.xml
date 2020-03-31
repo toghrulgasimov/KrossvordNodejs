@@ -42,10 +42,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
-      <recent name="C:\Users\toghr\UnityProjects\Nodejs\krasvordazGenerator\vacibler\trprocess" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -60,7 +60,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.index.js">
+  <component name="RunManager" selected="JavaScript Debug.index3.html">
+    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="firebaseindex.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebaseindex.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
@@ -72,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.firebaseindex.js" />
         <item itemvalue="Node.js.fromxml.js" />
@@ -145,7 +149,7 @@
       <workItem from="1576972825673" duration="111000" />
       <workItem from="1585223911055" duration="21371000" />
       <workItem from="1585384935530" duration="25535000" />
-      <workItem from="1585468847994" duration="51840000" />
+      <workItem from="1585468847994" duration="61997000" />
     </task>
     <servers />
   </component>

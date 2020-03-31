@@ -1,8 +1,9 @@
 
 
 <head>
-    <meta name="viewport" content="user-scalable=no" />
 
+
+    <meta name="viewport" content="user-scalable=no" />
 <!--    <link  rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 <!--&lt;!&ndash;    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">&ndash;&gt;-->
 <!--    <script src="angular.min.js"></script>-->
@@ -16,8 +17,26 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
     <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >
     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+
+
 
     <style>
         /* The switch - the box around the slider */
@@ -85,23 +104,29 @@
     </style>
 
 </head>
-<body ng-app="app">
+<body >
 
-<div ng-controller="myCtrl">
-
-
+<div ng-app="app" ng-controller="myCtrl">
 
 
-    <input type="text" ng-change="myFunc()" ng-model="txt" />
-    <label class="switch">
-        <input type="checkbox"  ng-click="select(scope, option.value, $event)" ng-model="v" ng-checked="aa[0].blocked">
-        <span class="slider"></span>
-    </label>
-    <label class="switch">
-        <input type="checkbox"  ng-change="myFunc()" ng-model="v">
-        <span class="slider"></span>
-    </label>
-<!--    <toggle ng-model="v" ></toggle>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--    <toggle ng-model="v" ></toggle>-->
     <table class="table">
         <thead>
 
@@ -121,7 +146,6 @@
                     <span class="slider"></span>
                 </label>
             </td>
-            <input class="toggle" type="checkbox" />
         </tr>
         </tbody>
     </table>
@@ -183,8 +207,6 @@
 
         });
     } )
-
-
 
 
 </script>
