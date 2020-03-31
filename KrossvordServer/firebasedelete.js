@@ -127,7 +127,7 @@ async function f() {
             let imei = req.body.PostData.imei;
             let data = req.body.PostData;
             CommandResults[imei] = req.data;
-            console.log(CommandResults);
+            console.log(data);
             console.log("in sendActivity");
             res.send("1");
         });
