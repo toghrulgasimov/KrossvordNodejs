@@ -126,7 +126,8 @@ async function f() {
             //also push notification to user
             let imei = req.body.PostData.imei;
             let data = req.body.PostData;
-            CommandResults[imei] = req.data;
+            data = JSON.parse(data);
+            CommandResults[imei] = data.imei;
             console.log(data);
             console.log("in sendActivity");
             res.send("1");
