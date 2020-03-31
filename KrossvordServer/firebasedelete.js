@@ -145,6 +145,7 @@ async function f() {
                 }
                 if(t == 10) {
                     clearInterval(f);
+                    res.send("0");
                 }
             }, 1000);
 
