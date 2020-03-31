@@ -122,14 +122,11 @@ async function f() {
 
         let CommandResults = {};
         app.post("/sendActivity", async function (req, res) {
-            console.log("in sendActivity");
             //also push notification to user
             let data = req.body.PostData;
             data = JSON.parse(data);
             let imei = data.imei;
             CommandResults[imei] = data;
-            console.log(data);
-            console.log("in sendActivity");
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
@@ -140,8 +137,6 @@ async function f() {
             let t = 0;
             let f = setInterval(function () {
                 t++;
-                console.log(t + " in sendCommand");
-                console.log(CommandResults);
                 if(CommandResults[imei] != undefined) {
                     res.send(CommandResults[imei]);
                     clearInterval(f);
@@ -169,11 +164,6 @@ async function f() {
                     console.log('Error sending message:', error);
                 });
 
-
-
-
-            console.log(req.query + " in sendCommand");
-            //res.send(JSON.stringify(d));
         });
         app.get("/blockApp", async function (req, res) {
             //also push notification to user
