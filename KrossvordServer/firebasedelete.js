@@ -121,13 +121,13 @@ async function f() {
 
 
         let CommandResults = {};
-        app.get("/sendActivity", async function (req, res) {
+        app.post("/sendActivity", async function (req, res) {
             //also push notification to user
-            let imei = req.query.imei;
-            let data = req.query.data;
+            let imei = req.body.imei;
+            let data = req.body.data;
             CommandResults[imei] = req.query;
             console.log(req.query);
-            res.send(JSON.stringify(d));
+            res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
