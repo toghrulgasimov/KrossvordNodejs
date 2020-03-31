@@ -135,6 +135,7 @@ async function f() {
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
+            console.log(imei);
             let d = await db.collection("devices").findOne({imei:imei});
 
             let t = 0;
