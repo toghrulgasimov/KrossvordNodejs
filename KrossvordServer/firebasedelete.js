@@ -119,11 +119,34 @@ async function f() {
 
 
 
+
+        let CommandResults = {};
+        app.get("/sendActivity", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let data = req.query.data;
+            CommandResults[imei] = req.query;
+            console.log(req.query);
+            res.send(JSON.stringify(d));
+        });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
             let d = await db.collection("devices").findOne({imei:imei});
 
+            let t = 0;
+            let f = setInterval(function () {
+                t++;
+                console.log(t + " in sendCommand");
+                if(CommandResults[imei] != undefined) {
+                    res.send(CommandResults[imei]);
+                    clearInterval(f);
+                    CommandResults[imei] = undefined;
+                }
+                if(t == 10) {
+                    clearInterval(f);
+                }
+            }, 1000);
 
             let message = {
                 data: {
@@ -145,7 +168,7 @@ async function f() {
 
 
             console.log(req.query);
-            res.send(JSON.stringify(d));
+            //res.send(JSON.stringify(d));
         });
         app.get("/blockApp", async function (req, res) {
             //also push notification to user
