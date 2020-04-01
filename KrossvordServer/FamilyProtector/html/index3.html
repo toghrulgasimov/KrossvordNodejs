@@ -111,13 +111,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;">Xerite</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Whatsapp</a>
@@ -126,7 +126,7 @@
                 <a class="nav-link disabled" href="#">Facebook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true; yact()">Youtube</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Saytlar</a>
@@ -202,6 +202,30 @@
         </tbody>
     </table>
 
+    <table class="table" ng-show="y">
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in youtubes">
+            <td><img ng-src="http://tmhgame.tk/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
+            <td>
+                <h5 >{{m.name}}</h5>
+                <p>{{toTime(m.start)}}</p>
+<!--                <h5>{{m[$index].blocked}}</h5>-->
+            </td>
+            <td>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)">Bax</button>
+<!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                <!--                <label class="switch">-->
+                <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                <!--                    <span class="slider"></span>-->
+                <!--                </label>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 </div>
 
 
@@ -215,15 +239,22 @@
         $scope.v = true;
         $scope.m = false;
         $scope.g = false;
+       $scope.y = false;
         $scope.txt = "asdsd";
 
 
         $scope.addAlert = function() {
             $scope.alerts.push({msg: 'Another alert!'});
         };
+       $scope.openy = function(url) {
+           window.location.href =url;
+       };
 
         $scope.toTime = function(d) {
+            d = parseInt(d);
+            console.log(d);
             let ans = new Date(d).toLocaleString();
+
             ans = ans.substring(0,ans.length-3)
             return ans;
         }
@@ -305,6 +336,30 @@
             });
 
         }
+
+       $scope.yact = function() {
+
+           $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
+               console.log(d.data.data);
+
+               $scope.youtubes = d.data.data;
+               $scope.youtubes.reverse();
+               if($scope.youtubes == undefined) {
+                   console.log("SendCommand Time out");
+                   return;
+               }
+               for(let i = 0; i < $scope.youtubes.length; i++) {
+                   //https://www.youtube.com/results?search_query=the+show+must+go+on
+                   $scope.youtubes[i].url = "https://www.youtube.com/results?search_query=" + encodeURI($scope.youtubes[i].name);
+                   console.log($scope.youtubes[i].url)
+               }
+               console.log($scope.youtubes);
+           }, function () {
+
+           });
+
+       }
+       $scope.yact();
 
         //$scope.aa=[];
         $http.get('http://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
