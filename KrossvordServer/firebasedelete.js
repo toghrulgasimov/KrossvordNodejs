@@ -137,7 +137,7 @@ async function f() {
             //also push notification to user
             let data = req.body;
             console.log(data);
-            data = JSON.parse(data);
+            //data = JSON.parse(data);
             let imei = data.imei;
             CommandResults[imei] = data;
             console.log(data);
