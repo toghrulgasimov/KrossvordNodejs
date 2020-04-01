@@ -2,6 +2,7 @@
 <head>
 
 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -168,7 +169,7 @@
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td>
-                <h5>{{m.blocked == false?'Aciq':'Bagli' }}</h5>
+                <h5>{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
                 <label class="switch">
                     <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
                     <span class="slider"></span>
@@ -191,7 +192,7 @@
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td>
-                <h5>{{m.end == 9007199254740992 ? 'Activ' : (divide(m.end-m.start, 1000) + ' San')}}  </h5>
+                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>
 <!--                <label class="switch">-->
 <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
 <!--                    <span class="slider"></span>-->
@@ -209,7 +210,7 @@
 
 <script>
 
-    angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
+   let an= angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.v = true;
         $scope.m = false;
@@ -222,7 +223,18 @@
         };
 
         $scope.toTime = function(d) {
-            return new Date(d).toLocaleString();
+            let ans = new Date(d).toLocaleString();
+            ans = ans.substring(0,ans.length-3)
+            return ans;
+        }
+        $scope.toDuration = function(d) {
+
+            if(d < 60) {
+                return d + " San";
+            }else {
+                d = $scope.divide(d, 60);
+                return d + " Dəq";
+            }
         }
         $scope.divide = function(a,b) {
             let ans = a / b;
@@ -256,7 +268,12 @@
 
             $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
                 console.log(d.data.data);
+
                 $scope.gunluk = d.data.data;
+                if($scope.gunluk == undefined) {
+                    console.log("SendCommand Time out");
+                    return;
+                }
                 let t = [];
                 for(let i = 0; i < $scope.aa.length; i++) {
                     t[$scope.aa[i].package] = 1;
