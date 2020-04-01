@@ -144,6 +144,18 @@ async function f() {
             console.log("-------in sendYoutube");
             res.send("1");
         });
+        app.post("/sendWebSites", async function (req, res) {
+            console.log("----------in sendWebSites");
+            //also push notification to user
+            let data = req.body;
+            console.log(data);
+            //data = JSON.parse(data);
+            let imei = data.imei;
+            CommandResults[imei] = data;
+            console.log(data);
+            console.log("-------in sendWebSites");
+            res.send("1");
+        });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
@@ -171,6 +183,8 @@ async function f() {
             let cmd;
             if(req.query.youtube != undefined) {
                cmd = 'sendYoutube'
+            }else if(req.query.sendWebsites){
+                cmd = 'sendWebsites';
             }else {
                 cmd = 'sendActivity';
             }
