@@ -136,6 +136,7 @@ async function f() {
             console.log("----------in sendYoutube");
             //also push notification to user
             let data = req.body.PostData;
+            console.log(data);
             data = JSON.parse(data);
             let imei = data.imei;
             CommandResults[imei] = data;
