@@ -132,6 +132,17 @@ async function f() {
             console.log("in sendActivity");
             res.send("1");
         });
+        app.post("/sendYoutube", async function (req, res) {
+            console.log("in sendYoutube");
+            //also push notification to user
+            let data = req.body.PostData;
+            data = JSON.parse(data);
+            let imei = data.imei;
+            CommandResults[imei] = data;
+            console.log(data);
+            console.log("in sendYoutube");
+            res.send("1");
+        });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
@@ -156,9 +167,16 @@ async function f() {
 
             console.log(imei + "---" + d.token);
 
+            let cmd;
+            if(req.query.youtube != undefined) {
+               cmd = 'sendYoutube'
+            }else {
+                cmd = 'sendActivity';
+            }
+
             let message = {
                 data: {
-                    command: "sendActivity"
+                    command: cmd
 
                 },
                 token: d.token
@@ -175,7 +193,7 @@ async function f() {
 
 
 
-            //console.log(req.query + " in sendCommand");
+            console.log(req.query + " in sendCommand");
             //res.send(JSON.stringify(d));
         });
         app.get("/blockApp", async function (req, res) {
