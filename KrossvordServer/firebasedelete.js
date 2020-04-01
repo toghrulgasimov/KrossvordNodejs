@@ -133,14 +133,14 @@ async function f() {
             res.send("1");
         });
         app.post("/sendYoutube", async function (req, res) {
-            console.log("in sendYoutube");
+            console.log("----------in sendYoutube");
             //also push notification to user
             let data = req.body.PostData;
             data = JSON.parse(data);
             let imei = data.imei;
             CommandResults[imei] = data;
             console.log(data);
-            console.log("in sendYoutube");
+            console.log("-------in sendYoutube");
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
