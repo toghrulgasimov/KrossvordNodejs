@@ -327,6 +327,9 @@
 
             $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
                 console.log(d.data.data);
+                if(d.data.data == undefined) {
+                    return;
+                }
 
                 $scope.websites = d.data.data;
                 $scope.websites.reverse();
@@ -385,6 +388,9 @@
 
            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
                console.log(d.data.data);
+               if(d.data.data == undefined) {
+                   return;
+               }
 
                $scope.youtubes = d.data.data;
                $scope.youtubes.reverse();
@@ -409,6 +415,9 @@
         //$scope.aa=[];
         $http.get('http://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
             console.log(d.data.apps);
+            if(d.data.apps == undefined) {
+                return;
+            }
             $scope.d = d.data;
             console.log(d.data.imei);
             $scope.aa = d.data.apps;
@@ -435,7 +444,16 @@
         var marker = new google.maps.Marker({
             position: {lat: 40.6506034, lng: 46.5340354},
             map: map,
-            title: 'Hello World!'
+            label: {
+                text: '1',
+                color: "#0006eb",
+                fontSize: "16px"
+            },
+            icon: {
+                url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                labelOrigin: new google.maps.Point(0, 0)
+            },
+            labelAnchor: new google.maps.Point(200, 0)
         });
     }
 
