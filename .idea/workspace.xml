@@ -36,16 +36,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
       <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -151,7 +152,7 @@
       <workItem from="1585384935530" duration="25535000" />
       <workItem from="1585468847994" duration="78208000" />
       <workItem from="1585733237179" duration="7651000" />
-      <workItem from="1585815741733" duration="5191000" />
+      <workItem from="1585815741733" duration="5511000" />
     </task>
     <servers />
   </component>
