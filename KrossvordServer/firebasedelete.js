@@ -156,6 +156,18 @@ async function f() {
             console.log("-------in sendWebSites");
             res.send("1");
         });
+        app.post("/sendLocation", async function (req, res) {
+            console.log("----------in sendLocation");
+            //also push notification to user
+            let data = req.body;
+            console.log(data);
+            //data = JSON.parse(data);
+            let imei = data.imei;
+            CommandResults[imei] = data;
+            console.log(data);
+            console.log("-------in sendLocation");
+            res.send("1");
+        });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
@@ -185,6 +197,8 @@ async function f() {
                cmd = 'sendYoutube'
             }else if(req.query.sendWebsites){
                 cmd = 'sendWebsites';
+            }else if(req.query.sendLocation){
+                cmd = 'sendLocation';
             }else {
                 cmd = 'sendActivity';
             }
@@ -256,41 +270,6 @@ async function f() {
         });
 
 
-        function rawBody(req, res, next) {
-
-            console.log("Raw bady called-----");
-
-            req.socket.on('data', function(chunk) {
-                chunks.push(chunk);
-                console.log("chunk" + chunk);
-            });
-
-            req.socket.on('end', function() {
-                var buffer = Buffer.concat(chunks);
-
-                req.bodyLength = buffer.length;
-                req.rawBody = buffer;
-                next();
-            });
-
-            req.socket.on('error', function (err) {
-                console.log(err);
-                res.status(500);
-            });
-        }
-
-        let data = []
-        app.post('/abramm', function (req, res) {
-
-            console.log("----------------------Abraham called");
-            console.log(req.body);
-
-            req.socket.on(data, function (ch) {
-                console.log(ch);
-            })
-            res.send("123");
-
-        });
 
 
 

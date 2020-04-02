@@ -25,6 +25,15 @@
     <style>
         /* The switch - the box around the slider */
 
+        .labels {
+            color: white;
+            background-color: red;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            font-size: 10px;
+            text-align: center;
+            width: 10px;
+            white-space: nowrap;
+        }
         #map {
             height: 100%;
         }
@@ -445,16 +454,34 @@
             position: {lat: 40.6506034, lng: 46.5340354},
             map: map,
             label: {
-                text: '1',
+                text: '1)   12:13',
                 color: "#0006eb",
-                fontSize: "16px"
+                fontSize: "20px"
             },
             icon: {
-                url: 'http://tmhgame.tk/maps-and-flags.png',
-                labelOrigin: new google.maps.Point(0, 0)
+                url: 'http://tmhgame.tk/googlemapicon.png',
+                origin: new google.maps.Point(0, 0),
+                labelOrigin: new google.maps.Point(20, -10)
             },
-            labelAnchor: new google.maps.Point(200, 0)
+            labelClass:'labels'
+
         });
+
+        var flightPlanCoordinates = [
+            {lat: 40.6506034, lng: 46.5340354},
+            {lat: 40.6552034, lng: 46.5352354},
+            {lat: -18.142, lng: 178.431},
+            {lat: -27.467, lng: 153.027}
+        ];
+        var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#ff0005',
+            strokeOpacity: 1.0,
+            strokeWeight: 5
+        });
+
+        flightPath.setMap(map);
     }
 
     $('.navbar-nav>li>a').on('click', function(){
