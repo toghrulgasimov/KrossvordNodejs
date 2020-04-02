@@ -111,13 +111,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;">Xerite</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Whatsapp</a>
@@ -126,10 +126,10 @@
                 <a class="nav-link disabled" href="#">Facebook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true; yact()">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false; yact()">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true; Web()">Saytlar</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -226,6 +226,30 @@
         </tbody>
     </table>
 
+    <table class="table" ng-show="w">
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in websites">
+            <td><img ng-src="http://tmhgame.tk/com.android.chrome.png" style="width: 60px; height: 60px"></td>
+            <td>
+                <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
+                <p>{{toTime(m.start)}}</p>
+                <!--                <h5>{{m[$index].blocked}}</h5>-->
+            </td>
+            <td>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)">Bax</button>
+                <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                <!--                <label class="switch">-->
+                <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                <!--                    <span class="slider"></span>-->
+                <!--                </label>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 </div>
 
 
@@ -237,9 +261,10 @@
    let an= angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.v = true;
+        $scope.w = true;
         $scope.m = false;
         $scope.g = false;
-       $scope.y = false;
+        $scope.y = false;
         $scope.txt = "asdsd";
 
 
@@ -247,7 +272,10 @@
             $scope.alerts.push({msg: 'Another alert!'});
         };
        $scope.openy = function(url) {
-           window.location.href =url;
+           if(!url.startsWith('http://')) {
+               url = 'http://' + url;
+           }
+           window.open(url);
        };
 
         $scope.toTime = function(d) {
@@ -295,6 +323,22 @@
 
         };
 
+        $scope.Web = function() {
+
+            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
+                console.log(d.data.data);
+
+                $scope.websites = d.data.data;
+                $scope.websites.reverse();
+                if($scope.websites == undefined) {
+                    console.log("SendCommand Time out");
+                    return;
+                }
+            }, function () {
+
+            });
+
+        }
         $scope.gundelik = function() {
 
             $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
@@ -360,6 +404,7 @@
 
        }
        $scope.yact();
+        $scope.Web();
 
         //$scope.aa=[];
         $http.get('http://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
