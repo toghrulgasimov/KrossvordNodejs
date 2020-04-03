@@ -123,7 +123,8 @@ async function f() {
             CommandResults[imei] = data;
             console.log(data);
             console.log("in sendActivity");
-            let d = await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+            let d = await db.collection("devices").findOne({imei:imei});
             console.log(d);
             res.send("1");
         });
