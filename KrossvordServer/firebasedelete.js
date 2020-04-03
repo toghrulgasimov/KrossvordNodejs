@@ -185,7 +185,7 @@ async function f() {
                 t++;
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
-                if(CommandResults[imei] != undefined) {
+                if(false) {
                     res.send(CommandResults[imei]);
                     clearInterval(f);
                     CommandResults[imei] = undefined;
