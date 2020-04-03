@@ -167,6 +167,16 @@ async function f() {
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
+            let cmd;
+            if(req.query.youtube != undefined) {
+                cmd = 'sendYoutube'
+            }else if(req.query.sendWebsites){
+                cmd = 'sendWebsites';
+            }else if(req.query.sendLocation){
+                cmd = 'sendLocation';
+            }else {
+                cmd = 'sendActivity';
+            }
 
             let d = await db.collection("devices").findOne({imei:imei});
 
@@ -182,22 +192,18 @@ async function f() {
                 }
                 if(t == 10) {
                     clearInterval(f);
-                    res.send("0");
+                    let ans;
+                    if(cmd == 'sendActivity') {
+                        res.send(JSON.stringify(d.activity));
+                    }else {
+                        res.send("0");
+                    }
                 }
             }, 1000);
 
             console.log(imei + "---" + d.token);
 
-            let cmd;
-            if(req.query.youtube != undefined) {
-               cmd = 'sendYoutube'
-            }else if(req.query.sendWebsites){
-                cmd = 'sendWebsites';
-            }else if(req.query.sendLocation){
-                cmd = 'sendLocation';
-            }else {
-                cmd = 'sendActivity';
-            }
+
 
             let message = {
                 data: {
