@@ -126,7 +126,7 @@
                 <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;location();">Xerite</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Whatsapp</a>
@@ -275,6 +275,8 @@
         $scope.g = false;
         $scope.y = false;
         $scope.txt = "asdsd";
+        $scope.markers = [];
+        $scope.flightPath = null;
 
 
         $scope.addAlert = function() {
@@ -331,6 +333,86 @@
             });
 
         };
+
+
+       $scope.location = function() {
+
+           console.log("Location Called");
+
+           $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
+               console.log(d.data.locations);
+               if(d.data.locations == undefined) {
+                   return;
+               }
+
+               $scope.locations = d.data.locations;
+
+               $scope.locations.reverse();
+               if($scope.locations == undefined) {
+                   console.log("SendCommand Time out" + map);
+
+                   return;
+               }
+               let l = $scope.locations;
+
+               let flightPlanCoordinates = [];
+
+               for(let i = 0; i < $scope.markers.length; i++) {
+                   $scope.markers[i].setMap(null);
+               }
+               if($scope.flightPath != null) {
+                   $scope.flightPath.setMap(null);
+               }
+               for(let i = 0; i < l.length; i++) {
+                   console.log("marker added");
+                   l[i].lo = parseFloat(l[i].lo);
+                   l[i].la = parseFloat(l[i].la);
+
+                   if(i == l.length-1) {
+                       map.setCenter({lat: l[i].la, lng: l[i].lo});
+                   }
+                   flightPlanCoordinates.push( {lat: l[i].la, lng: l[i].lo});
+                   let time = $scope.toTime(parseInt(l[i].time));
+                   time = time.substring(time.length - 5)
+                   let marker = new google.maps.Marker({
+                       position: {lat: l[i].la, lng: l[i].lo},
+                       map: map,
+                       label: {
+                           text: (i+1) +") " + time,
+                           color: "#0006eb",
+                           fontSize: "20px"
+                       },
+                       draggable:true,
+                       icon: {
+                           url: 'http://tmhgame.tk/googlemapicon.png',
+                           origin: new google.maps.Point(0, 0),
+                           labelOrigin: new google.maps.Point(20, -10)
+                       },
+                       labelClass:'labels'
+                   });
+                   $scope.markers.push(marker);
+               }
+
+
+
+
+
+               $scope.flightPath = new google.maps.Polyline({
+                   path: flightPlanCoordinates,
+                   geodesic: true,
+                   strokeColor: '#ff0005',
+                   strokeOpacity: 1.0,
+                   strokeWeight: 5
+               });
+
+               $scope.flightPath.setMap(map);
+
+
+           }, function () {
+
+           });
+
+       }
 
         $scope.Web = function() {
 
@@ -409,7 +491,7 @@
                }
                for(let i = 0; i < $scope.youtubes.length; i++) {
                    //https://www.youtube.com/results?search_query=the+show+must+go+on
-                   $scope.youtubes[i].url = "https://www.youtube.com/results?search_query=" + encodeURI($scope.youtubes[i].name);
+                   $scope.youtubes[i].url = "www.youtube.com/results?search_query=" + encodeURI($scope.youtubes[i].name);
                    console.log($scope.youtubes[i].url)
                }
                console.log($scope.youtubes);
@@ -450,38 +532,7 @@
             center: {lat: 40.6506034, lng: 46.5340354},
             zoom: 15
         });
-        var marker = new google.maps.Marker({
-            position: {lat: 40.6506034, lng: 46.5340354},
-            map: map,
-            label: {
-                text: '1)   12:13',
-                color: "#0006eb",
-                fontSize: "20px"
-            },
-            icon: {
-                url: 'http://tmhgame.tk/googlemapicon.png',
-                origin: new google.maps.Point(0, 0),
-                labelOrigin: new google.maps.Point(20, -10)
-            },
-            labelClass:'labels'
 
-        });
-
-        var flightPlanCoordinates = [
-            {lat: 40.6506034, lng: 46.5340354},
-            {lat: 40.6552034, lng: 46.5352354},
-            {lat: -18.142, lng: 178.431},
-            {lat: -27.467, lng: 153.027}
-        ];
-        var flightPath = new google.maps.Polyline({
-            path: flightPlanCoordinates,
-            geodesic: true,
-            strokeColor: '#ff0005',
-            strokeOpacity: 1.0,
-            strokeWeight: 5
-        });
-
-        flightPath.setMap(map);
     }
 
     $('.navbar-nav>li>a').on('click', function(){

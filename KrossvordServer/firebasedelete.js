@@ -34,7 +34,7 @@ async function f() {
             }else {
                 console.log(file);
             }
-            res.send(file)
+            res.send("1")
         });
 
 
@@ -48,8 +48,7 @@ async function f() {
             let token = o.t;
              d = await db.collection("devices").findOne({imei:imei});
             if(d == null) {
-                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[{"name":"com.whatsapp", blocked:0},
-                            {"name":"com.android.chrome", blocked:0}]}}, {upsert:true});
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[]}}, {upsert:true});
             }else {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             }
@@ -58,9 +57,7 @@ async function f() {
             res.send("1");
         });
 
-        app.post("/removeApp", async function (req, res) {
-            res.send("1");
-        });
+
         app.post("/initApp", async function (req, res) {
             // let imei = req.query.imei;
             // let appName = req.query.name;
@@ -75,12 +72,11 @@ async function f() {
                 try {
                     let path = "icons/"+a[i].package+".png";
                     anew.push({name:a[i].name,package:a[i].package, blocked:false});
-                    if (!fs.existsSync(path) || true) {
+                    if (!fs.existsSync(path)) {
                         //await fs.writeFileSync(path, icon);
                         console.log(path + " not exist");
                         O.apps.push(a[i]);
                     }else {
-
                         console.log(path + " exist");
                     }
                 } catch(err) {
@@ -97,9 +93,7 @@ async function f() {
 
 
 
-        app.post("/uploadIcon", async function (req, res) {
-            res.send("1");
-        });
+
         app.get("/getDevice", async function (req, res) {
             let imei = req.query.imei;
             let d = await db.collection("devices").findOne({imei:imei});
@@ -112,7 +106,6 @@ async function f() {
                     let s = await fs.readFileSync(path);
                 }else {
                 }
-                d.apps = ar;
             }
             res.send(JSON.stringify(d));
         });
@@ -130,6 +123,8 @@ async function f() {
             CommandResults[imei] = data;
             console.log(data);
             console.log("in sendActivity");
+            let d = await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+            console.log(d);
             res.send("1");
         });
         app.post("/sendYoutube", async function (req, res) {
