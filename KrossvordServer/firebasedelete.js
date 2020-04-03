@@ -185,7 +185,7 @@ async function f() {
                 t++;
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
-                if(false) {
+                if(CommandResults[imei] != undefined) {
                     res.send(CommandResults[imei]);
                     clearInterval(f);
                     CommandResults[imei] = undefined;
@@ -194,7 +194,6 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity') {
-                        console.log('mongodan gonderildi');
                         res.send(JSON.stringify(d.activity));
                     }else {
                         res.send("0");
