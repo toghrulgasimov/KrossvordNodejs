@@ -16,6 +16,7 @@ async function f() {
 	app.use(bodyParser.json({limit:'50mb'}));
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(express.static('icons'));
+	app.use(express.static('googleadmob'));
 	let SECO = 0;
 	var MongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://localhost:27017/";
