@@ -120,25 +120,25 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;location();">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;location();">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=true;whatsappf();">Whatsapp</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Facebook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false; yact()">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false; yact()">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true; Web()">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false; Web()">Saytlar</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -259,6 +259,30 @@
         </tbody>
     </table>
 
+
+    <table class="table" ng-show="whatsapp">
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in aa">
+            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+            <td>
+                <h5 >{{m.name}}</h5>
+                <h5>{{$index}}</h5>
+                <h5>{{m[$index].blocked}}</h5>
+            </td>
+            <td>
+                <h5>{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
+                <label class="switch">
+                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
+                    <span class="slider"></span>
+                </label>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 </div>
 
 
@@ -269,6 +293,7 @@
 
    let an = angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
+        $scope.whatsapp = false;
         $scope.v = true;
         $scope.w = true;
         $scope.m = false;
@@ -433,6 +458,16 @@
             });
 
         }
+       $scope.whatsappf = function() {
+
+           $http.get('http://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
+               console.log(d);
+
+           }, function () {
+
+           });
+
+       }
         $scope.gundelik = function() {
 
             $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
