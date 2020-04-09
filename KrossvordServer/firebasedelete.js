@@ -114,6 +114,33 @@ async function f() {
 
 
         let CommandResults = {};
+        app.post("/Whatsapp", async function (req, res) {
+
+            let imei = data.imei;
+            CommandResults[imei] = data;
+            console.log(data);
+            console.log("in sendActivity");
+            let d = await db.collection("devices").findOne({imei:imei});
+            let data = {con : d.con}
+            console.log(d);
+            res.send(data);
+        });
+
+        app.post("/sendWhatsapp", async function (req, res) {
+            console.log("----------in sendWhatsapp");
+            //also push notification to user
+            let data = req.body;
+            console.log(data);
+            let imei = data.imei;
+            //CommandResults[imei] = data;
+            console.log(data);
+            //console.log("-------in sendLocation");
+            await db.collection("devices").updateOne({imei:imei}, {$set:{con:data}}, {upsert:true});
+            let d = await db.collection("devices").findOne({imei:imei});
+            console.log(d);
+            res.send("1");
+        });
+
         app.post("/sendActivity", async function (req, res) {
             console.log("in sendActivity");
             //also push notification to user
@@ -285,6 +312,8 @@ async function f() {
             console.log(req.query);
             res.send(JSON.stringify(d));
         });
+
+
 
 
 
