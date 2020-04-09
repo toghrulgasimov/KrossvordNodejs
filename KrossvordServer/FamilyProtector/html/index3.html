@@ -129,7 +129,7 @@
                 <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;location();">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"  ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=true;whatsappf();">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappf();">Whatsapp</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Facebook</a>
@@ -265,19 +265,15 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in aa">
-            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+        <tr ng-repeat="m in whatsaps">
+            <td><img ng-src="http://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
-                <h5 >{{m.name}}</h5>
-                <h5>{{$index}}</h5>
-                <h5>{{m[$index].blocked}}</h5>
+                <h5 >{{m.sender}}</h5>
+                <p>{{m.number}}</p>
             </td>
             <td>
-                <h5>{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
-                <label class="switch">
-                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
-                    <span class="slider"></span>
-                </label>
+                <p>{{toHour(m.con[m.con.length-1].time)}}</p>
+                <p>{{m.con.length}} SMS</p>
             </td>
         </tr>
         </tbody>
@@ -302,8 +298,28 @@
         $scope.txt = "asdsd";
         $scope.markers = [];
         $scope.flightPath = null;
+        $scope.whatsaps = [];
 
 
+       $scope.isToday = function(someDate){
+           const today = new Date();
+           return someDate.getDate() == today.getDate() &&
+               someDate.getMonth() == today.getMonth() &&
+               someDate.getFullYear() == today.getFullYear()
+       }
+        $scope.toHour = function(time) {
+            let d = new Date(time);
+            if(!$scope.isToday(d)) {
+                return ((d.getMonth() > 8) ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '/' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '/' + d.getFullYear();
+            }
+            let h = d.getHours();
+            let m = d.getMinutes();
+
+            h = (h<10) ? '0' + h : h;
+            m = (m<10) ? '0' + m : m;
+
+            return h + ':' + m;
+        }
         $scope.addAlert = function() {
             $scope.alerts.push({msg: 'Another alert!'});
         };
@@ -462,7 +478,11 @@
 
            $http.get('http://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
                console.log(d);
-
+               $scope.whatsaps = d.data.con;
+               $scope.whatsaps.sort(function (a, b) {
+                   return b.con[b.con.length - 1].time - a.con[a.con.length - 1].time;
+               })
+               console.log($scope.whatsaps)
            }, function () {
 
            });
