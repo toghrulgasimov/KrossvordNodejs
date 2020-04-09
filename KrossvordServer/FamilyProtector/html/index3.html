@@ -120,25 +120,25 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;gundelik()" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;location();">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;location();">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappf();">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;whatsappf();">Whatsapp</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Facebook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false; yact()">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false; yact()">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false; Web()">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false; Web()">Saytlar</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -265,7 +265,7 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in whatsaps">
+        <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
             <td><img ng-src="http://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.sender}}</h5>
@@ -273,6 +273,26 @@
             </td>
             <td>
                 <p>{{toHour(m.con[m.con.length-1].time)}}</p>
+                <p>{{m.con.length}} SMS</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table id="ctable" class="table" ng-show="whatsappc" >
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in curConversation.con" >
+            <td><img ng-src="http://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+            <td>
+                <h5 >{{m.sender}}</h5>
+                <p>{{m.content}}</p>
+            </td>
+            <td>
+<!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
                 <p>{{m.con.length}} SMS</p>
             </td>
         </tr>
@@ -290,6 +310,7 @@
    let an = angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.whatsapp = false;
+        $scope.whatsappc = false;
         $scope.v = true;
         $scope.w = true;
         $scope.m = false;
@@ -299,8 +320,22 @@
         $scope.markers = [];
         $scope.flightPath = null;
         $scope.whatsaps = [];
+        $scope.curConversation = null;
 
-
+        $scope.openc = function(m) {
+            console.log("Openc called");
+            $scope.whatsapp = false;
+            $scope.whatsappc = true;
+            $scope.v = false;
+            $scope.w = false;
+            $scope.m = false;
+            $scope.g = false;
+            $scope.y = false;
+            $scope.curConversation = m;
+            setTimeout(function () {
+                $( "body" ).scrollTop(1000000);
+            }, 100);
+        }
        $scope.isToday = function(someDate){
            const today = new Date();
            return someDate.getDate() == today.getDate() &&
