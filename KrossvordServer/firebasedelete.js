@@ -118,6 +118,7 @@ async function f() {
             let r = req.body;
             let imei = r.imei;
             console.log("in Whatsapp");
+            conosole.log(req.body);
             let d = await db.collection("devices").findOne({imei:req.body.imei});
 
             console.log(d);
