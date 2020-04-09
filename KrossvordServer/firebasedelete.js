@@ -121,9 +121,9 @@ async function f() {
             console.log(data);
             console.log("in sendActivity");
             let d = await db.collection("devices").findOne({imei:imei});
-            let data = {con : d.con}
-            console.log(d);
-            res.send(data);
+
+            console.log(d.con);
+            res.send(d.con);
         });
 
         app.post("/sendWhatsapp", async function (req, res) {
@@ -135,8 +135,8 @@ async function f() {
             //CommandResults[imei] = data;
             //console.log(data);
             //console.log("-------in sendLocation");
-            await db.collection("devices").updateOne({imei:imei}, {$set:{con:data}}, {upsert:true});
-            let d = await db.collection("devices").findOne({imei:imei});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{con:data.data}}, {upsert:true});
+            //let d = await db.collection("devices").findOne({imei:imei});
 
             res.send("1");
         });
