@@ -133,11 +133,11 @@ async function f() {
             console.log(data);
             let imei = data.imei;
             //CommandResults[imei] = data;
-            console.log(data);
+            //console.log(data);
             //console.log("-------in sendLocation");
             await db.collection("devices").updateOne({imei:imei}, {$set:{con:data}}, {upsert:true});
             let d = await db.collection("devices").findOne({imei:imei});
-            console.log(d);
+
             res.send("1");
         });
 
