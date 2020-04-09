@@ -117,13 +117,13 @@ async function f() {
         app.post("/Whatsapp", async function (req, res) {
 
             let imei = data.imei;
-            CommandResults[imei] = data;
             console.log(data);
             console.log("in sendActivity");
             let d = await db.collection("devices").findOne({imei:imei});
 
             console.log(d.con);
-            res.send(d.con);
+            let data = {imei: imei, con: d.con}
+            res.send(data);
         });
 
         app.post("/sendWhatsapp", async function (req, res) {
