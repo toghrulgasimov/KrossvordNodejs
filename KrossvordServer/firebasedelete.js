@@ -114,12 +114,12 @@ async function f() {
 
 
         let CommandResults = {};
-        app.post("/Whatsapp", async function (req, res) {
-            let r = req.body;
+        app.get("/Whatsapp", async function (req, res) {
+            let r = req.query;
             let imei = r.imei;
             console.log("in Whatsapp");
-            console.log(req.body);
-            let d = await db.collection("devices").findOne({imei:req.body.imei});
+            console.log(req.query);
+            let d = await db.collection("devices").findOne({imei:req.query.imei});
 
             console.log(d);
             let data = {imei: imei, con: d.con}
