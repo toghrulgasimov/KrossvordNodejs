@@ -22,6 +22,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.js"></script>
+
+
     <style>
         /* The switch - the box around the slider */
 
@@ -154,6 +162,7 @@
     <option value="3">Three</option>
 </select>
 
+
 <div >
 
     <select class="browser-default custom-select custom-select-lg mb-3">
@@ -183,6 +192,7 @@
                     <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
                     <span class="slider"></span>
                 </label>
+
             </td>
         </tr>
         </tbody>
@@ -307,7 +317,7 @@
 
 <script>
 
-   let an = angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
+   let an = angular.module("app", ['ui.bootstrap','ui.toggle']).controller("myCtrl", function($scope, $http) {
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.whatsapp = false;
         $scope.whatsappc = false;
@@ -440,6 +450,7 @@
                    $scope.flightPath.setMap(null);
                }
                for(let i = 0; i < l.length; i++) {
+
                    console.log("marker added");
                    l[i].lo = parseFloat(l[i].lo);
                    l[i].la = parseFloat(l[i].la);
@@ -449,39 +460,50 @@
                    }
                    flightPlanCoordinates.push( {lat: l[i].la, lng: l[i].lo});
                    let time = $scope.toTime(parseInt(l[i].time));
-                   time = time.substring(time.length - 5)
-                   let marker = new google.maps.Marker({
-                       position: {lat: l[i].la, lng: l[i].lo},
-                       map: map,
-                       label: {
-                           text: (i+1) +") " + time,
-                           color: "#0006eb",
-                           fontSize: "20px"
-                       },
-                       draggable:true,
-                       icon: {
-                           url: 'http://tmhgame.tk/googlemapicon.png',
-                           origin: new google.maps.Point(0, 0),
-                           labelOrigin: new google.maps.Point(20, -10)
-                       },
-                       labelClass:'labels'
-                   });
-                   $scope.markers.push(marker);
+                   time = time.substring(time.length - 5);
+
+                   if(i == 0 || i == l.length - 1) {
+                       let marker = new google.maps.Marker({
+                           position: {lat: l[i].la, lng: l[i].lo},
+                           map: map,
+                           label: {
+                               text: (i+1) +") " + time,
+                               color: "#0006eb",
+                               fontSize: "20px"
+                           },
+                           draggable:true,
+                           icon: {
+                               url: 'http://tmhgame.tk/googlemapicon.png',
+                               origin: new google.maps.Point(0, 0),
+                               labelOrigin: new google.maps.Point(20, -10)
+                           },
+                           labelClass:'labels'
+                       });
+                       $scope.markers.push(marker);
+                   }
                }
 
 
 
 
 
-               $scope.flightPath = new google.maps.Polyline({
+               let lineSymbol = {
+                   path: 'M -2,0 0,-2 2,0 0,2 z',
+                   strokeOpacity: 1,
+                   scale: 4
+               };
+               scope.flightPath = new google.maps.Polyline({
                    path: flightPlanCoordinates,
-                   geodesic: true,
-                   strokeColor: '#ff0005',
-                   strokeOpacity: 1.0,
-                   strokeWeight: 5
+                   strokeOpacity: 0,
+                   icons: [{
+                       icon: lineSymbol,
+                       offset: '0',
+                       repeat: '20px'
+                   }],
+                   map: map
                });
 
-               $scope.flightPath.setMap(map);
+
 
 
            }, function () {
@@ -559,6 +581,7 @@
                 $scope.gunluk.sort(function (a,b) {
                     return b.end-a.end;
                 })
+
             }, function () {
 
             });
@@ -602,6 +625,10 @@
             $scope.d = d.data;
             console.log(d.data.imei);
             $scope.aa = d.data.apps;
+
+            
+
+
             
         }, function () {
 
@@ -609,6 +636,7 @@
 
 
     } )
+
 
 
 </script>
