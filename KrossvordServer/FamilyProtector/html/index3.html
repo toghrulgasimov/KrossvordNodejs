@@ -482,17 +482,13 @@
                        $scope.markers.push(marker);
                    }
                }
-
-
-
-
-
+               
                let lineSymbol = {
-                   path: 'M -2,0 0,-2 2,0 0,2 z',
+                   path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
                    strokeOpacity: 1,
                    scale: 4
                };
-               scope.flightPath = new google.maps.Polyline({
+               $scope.flightPath = new google.maps.Polyline({
                    path: flightPlanCoordinates,
                    strokeOpacity: 0,
                    icons: [{
@@ -626,7 +622,7 @@
             console.log(d.data.imei);
             $scope.aa = d.data.apps;
 
-            
+
 
 
             
