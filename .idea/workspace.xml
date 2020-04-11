@@ -61,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.boot.html">
+  <component name="RunManager" selected="JavaScript Debug.index3.html">
     <configuration name="boot.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/boot.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -79,8 +79,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.boot.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
+        <item itemvalue="JavaScript Debug.boot.html" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.firebaseindex.js" />
         <item itemvalue="Node.js.fromxml.js" />
@@ -163,7 +163,8 @@
       <workItem from="1586102040760" duration="1000" />
       <workItem from="1586168469481" duration="663000" />
       <workItem from="1586438343652" duration="12087000" />
-      <workItem from="1586510332178" duration="5225000" />
+      <workItem from="1586510332178" duration="5362000" />
+      <workItem from="1586597157011" duration="795000" />
     </task>
     <servers />
   </component>
