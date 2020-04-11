@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-
+    <!--    my scripts-->
+    <script src="js/stringUtil.js"></script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -139,7 +140,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;whatsappf();">Whatsapp</a>
             </li>
-            
+
             <li class="nav-item">
                 <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false; yact()">Youtube</a>
             </li>
@@ -205,7 +206,7 @@
             <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
-                <p>{{toTime(m.start)}}</p>
+                <p>{{stringUtil.toTime(m.start)}}</p>
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td>
@@ -228,7 +229,7 @@
             <td><img ng-src="http://tmhgame.tk/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
-                <p>{{toTime(m.start)}}</p>
+                <p>{{stringUtil.toTime(m.start)}}</p>
 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
@@ -252,7 +253,7 @@
             <td><img ng-src="http://tmhgame.tk/com.android.chrome.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
-                <p>{{toTime(m.start)}}</p>
+                <p>{{stringUtil.toTime(m.start)}}</p>
                 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
@@ -301,7 +302,7 @@
             </td>
             <td>
 <!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
-                <p>{{toTime(m.time)}}</p>
+                <p>{{stringUtil.toTime(m.time)}}</p>
             </td>
         </tr>
         </tbody>
@@ -315,7 +316,8 @@
 
 <script>
 
-   let an = angular.module("app", ['ui.bootstrap','ui.toggle']).controller("myCtrl", function($scope, $http) {
+   let an = angular.module("app", ['ui.bootstrap','ui.toggle', 'stringUtil']).controller("myCtrl", function($scope, $http, stringUtil) {
+
         $scope.message=["Hello Wdsdorld",'dasdas'];
         $scope.whatsapp = false;
         $scope.whatsappc = false;
@@ -329,6 +331,8 @@
         $scope.flightPath = null;
         $scope.whatsaps = [];
         $scope.curConversation = null;
+
+        $scope.stringUtil = stringUtil;
 
         $scope.openc = function(m) {
             console.log("Openc called");
@@ -344,15 +348,9 @@
                 $( "body" ).scrollTop(1000000);
             }, 100);
         }
-       $scope.isToday = function(someDate){
-           const today = new Date();
-           return someDate.getDate() == today.getDate() &&
-               someDate.getMonth() == today.getMonth() &&
-               someDate.getFullYear() == today.getFullYear()
-       }
         $scope.toHour = function(time) {
             let d = new Date(time);
-            if(!$scope.isToday(d)) {
+            if(!$scope.stringUtil.isToday(d)) {
                 return ((d.getMonth() > 8) ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '/' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '/' + d.getFullYear();
             }
             let h = d.getHours();
@@ -373,14 +371,7 @@
            window.open(url);
        };
 
-        $scope.toTime = function(d) {
-            d = parseInt(d);
-            console.log(d);
-            let ans = new Date(d).toLocaleString();
 
-            ans = ans.substring(0,ans.length-3)
-            return ans;
-        }
         $scope.toDuration = function(d) {
 
             if(d < 60) {
@@ -398,10 +389,7 @@
             $scope.alerts.splice(index, 1);
         };
 
-        $scope.myFunc = function() {
-            $scope.count++;
-            console.log("asdads");
-        };
+
         $scope.block = function(a,b,c,d) {
             let block = (c.blocked) ? 0 : 1;
             console.log(b);
@@ -422,6 +410,7 @@
        $scope.location = function() {
 
            console.log("Location Called");
+           stringUtil.simple();
 
            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
                console.log(d.data.locations);
@@ -643,6 +632,13 @@
 
     } )
 
+
+   var loadMe = angular.module('stringUtil',[]);
+
+   loadMe.factory('stringUtil', [function(){
+
+       return stringUtil;
+       }]);
 
 
 </script>
