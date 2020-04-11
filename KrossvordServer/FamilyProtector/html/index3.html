@@ -410,7 +410,6 @@
        $scope.location = function() {
 
            console.log("Location Called");
-           stringUtil.simple();
 
            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
                console.log(d.data.locations);
