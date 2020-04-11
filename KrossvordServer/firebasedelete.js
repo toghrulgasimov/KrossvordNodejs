@@ -222,9 +222,9 @@ async function f() {
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
                 if(CommandResults[imei+cmd] != undefined) {
-                    res.send(CommandResults[imei]);
+                    res.send(CommandResults[imei+cmd]);
                     clearInterval(f);
-                    CommandResults[imei] = undefined;
+                    CommandResults[imei+cmd] = undefined;
                 }
                 if(t == 10) {
                     clearInterval(f);
