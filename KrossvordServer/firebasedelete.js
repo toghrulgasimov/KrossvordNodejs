@@ -147,7 +147,7 @@ async function f() {
             let data = req.body.PostData;
             data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei] = data;
+            CommandResults[imei+'sendActivity'] = data;
             console.log(data);
             console.log("in sendActivity");
             await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
@@ -162,7 +162,7 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei] = data;
+            CommandResults[imei+'sendYoutube'] = data;
             console.log(data);
             console.log("-------in sendYoutube");
             await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
@@ -177,7 +177,7 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei] = data;
+            CommandResults[imei+'sendWebsites'] = data;
             console.log(data);
             console.log("-------in sendWebSites");
             await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
@@ -192,7 +192,7 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei] = data;
+            CommandResults[imei+'sendLocation'] = data;
             console.log(data);
             console.log("-------in sendLocation");
             await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
@@ -221,7 +221,7 @@ async function f() {
                 t++;
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
-                if(CommandResults[imei] != undefined) {
+                if(CommandResults[imei+cmd] != undefined) {
                     res.send(CommandResults[imei]);
                     clearInterval(f);
                     CommandResults[imei] = undefined;
