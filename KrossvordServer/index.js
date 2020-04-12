@@ -2367,7 +2367,7 @@ async function f() {
 
 	//secure
 
-	httpServer.listen(3000);
+	httpServer.listen(80);
 	httpsServer.listen(8443);
 	//secure
 
