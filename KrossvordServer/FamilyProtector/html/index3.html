@@ -233,7 +233,7 @@
 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)">Bax</button>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px">Bax</button>
 <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
                 <!--                <label class="switch">-->
                 <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
@@ -257,7 +257,7 @@
                 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)">Bax</button>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px">Bax</button>
                 <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
                 <!--                <label class="switch">-->
                 <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
@@ -460,13 +460,13 @@
                    let time = $scope.stringUtil.toTime(parseInt(l[i].time));
                    time = time.substring(time.length - 5);
 
-                   if(i == 0 || i == l.length - 1) {
+                   if(true) {
                        let marker = new google.maps.Marker({
                            position: {lat: l[i].la, lng: l[i].lo},
                            map: map,
                            label: {
                                text: (i+1) +") " + time,
-                               color: "#0006eb",
+                               color: "#2c3e0f",
                                fontSize: "20px"
                            },
                            draggable:true,
@@ -480,22 +480,24 @@
                        $scope.markers.push(marker);
                    }
                }
-               
+
                let lineSymbol = {
-                   path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                   strokeOpacity: 1,
-                   scale: 4
+                   path: 1,
+                   strokeOpacity: 1
                };
                $scope.flightPath = new google.maps.Polyline({
                    path: flightPlanCoordinates,
-                   strokeOpacity: 0,
+                   // strokeOpacity: 0,
                    icons: [{
                        icon: lineSymbol,
-                       offset: '0',
-                       repeat: '20px'
+                       offset: '100',
+                       repeat: '20px',
                    }],
-                   map: map
+                   map: map,
+                   strokeColor: 'blue'
                });
+
+               map.panTo(flightPlanCoordinates[flightPlanCoordinates.length]);
 
 
 
@@ -650,7 +652,7 @@
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 40.6506034, lng: 46.5340354},
-            zoom: 15
+            zoom: 18
         });
 
     }

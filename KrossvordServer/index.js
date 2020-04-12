@@ -3,11 +3,20 @@ async function f() {
 
 	const express = require('express')
 	const app = express()
-	var http = require('http')
-	var https = require('https')
+
 	var bodyParser = require('body-parser');
 	let fs = require('fs')
 
+	//secure
+	var http = require('http')
+	var https = require('https')
+	var privateKey  = fs.readFileSync('ssh/key.pem', 'utf8');
+	var certificate = fs.readFileSync('ssh/cert.pem', 'utf8');
+
+	var credentials = {key: privateKey, cert: certificate};
+	var httpServer = http.createServer(app);
+	var httpsServer = https.createServer(credentials, app);
+	//secure
 
 	app.use(bodyParser.urlencoded({
 		limit:'50mb',
@@ -2354,7 +2363,13 @@ async function f() {
 	});
 
 //tr------------------------------------------
-	app.listen(80, () => console.log('Example app listening on port 80!'))
+	//app.listen(80, () => console.log('Example app listening on port 80!'))
+
+	//secure
+
+	httpServer.listen(80);
+	httpsServer.listen(8443);
+	//secure
 
 // var httpServer = http.createServer(app);
 // var httpsServer = https.createServer(credentials, app);
