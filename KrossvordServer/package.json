@@ -11,6 +11,7 @@
     "mongodb": "^3.5.5",
     "multer": "^1.4.2",
     "nodemailer": "^4.7.0",
+    "stripe": "^8.39.2",
     "sync-request": "^6.0.0",
     "youtube-audio-stream": "^0.2.0"
   },
