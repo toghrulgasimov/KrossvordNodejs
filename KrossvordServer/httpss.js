@@ -21,5 +21,5 @@ app.get('/', function(req,res) {
 });
 
 
-httpServer.listen(8080);
+httpServer.listen(3000);
 httpsServer.listen(8443);
