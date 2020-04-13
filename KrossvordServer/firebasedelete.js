@@ -344,7 +344,7 @@ async function f() {
             }
         });
 
-        app.post('/webhook', bodyParser.raw({type: 'application/json'}), (request, response) => {
+        app.post('/webhook', (request, response) => {
             const sig = request.headers['stripe-signature'];
 
             let event;
