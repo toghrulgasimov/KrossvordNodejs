@@ -4,7 +4,7 @@ async function f() {
     const fs = require('fs');
     //sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS
     //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
-    const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
+    const stripe = require('stripe')('sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK');
 
 
     module.exports.routes = function(app, db){
