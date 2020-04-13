@@ -178,7 +178,7 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in aa">
+        <tr ng-repeat="m in aa track by m.name">
             <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
@@ -277,12 +277,12 @@
         <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
-                <h5 >{{m.sender}}</h5>
-                <p>{{m.number}}</p>
+                <h5 >{{::m.sender}}</h5>
+                <p>{{::m.number}}</p>
             </td>
             <td>
                 <p>{{toHour(m.con[m.con.length-1].time)}}</p>
-                <p>{{m.con.length}} SMS</p>
+                <p>{{::m.con.length}} SMS</p>
             </td>
         </tr>
         </tbody>
@@ -297,8 +297,8 @@
         <tr ng-repeat="m in curConversation.con" >
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
-                <h5 >{{m.sender}}</h5>
-                <p>{{m.content}}</p>
+                <h5 >{{::m.sender}}</h5>
+                <p>{{::m.content}}</p>
             </td>
             <td>
 <!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
@@ -620,7 +620,7 @@
             }
             $scope.d = d.data;
             console.log(d.data.imei);
-            //$scope.aa = d.data.apps;
+            $scope.aa = d.data.apps;
 
 
 
