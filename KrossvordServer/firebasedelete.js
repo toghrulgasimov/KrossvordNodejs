@@ -346,21 +346,25 @@ async function f() {
 
         app.post("/checkout", (req, res) => {
             console.log(req.body);
-            (async () => {
-                const customer = await stripe.customers.create({
-                    email: req.body.stripeEmail,
-                    source: req.body.stripeToken,
-                });
+            try {
+                stripe.customers
+                    .create({
+                        email: req.body.stripeEmail,
+                        source: req.body.stripeToken
+                    })
+                    .then(customer =>
+                        stripe.charges.create({
+                            amount: 199,
+                            currency: "eur",
+                            customer: customer.id
+                        })
+                    )
+                    .then(() => res.send("DONE"))
+                    .catch(err => console.log(err));
+            } catch (err) {
+                res.send(err);
+            }
 
-                const charge = await stripe.charges.create({
-                    customer: customer.id,
-                    description: 'Family Protector App',
-                    amount: 199,
-                    currency: 'eur',
-                });
-            })();
-
-            res.send("1");
         });
 
 
