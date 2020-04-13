@@ -360,7 +360,10 @@ async function f() {
                         })
                     )
                     .then(() => res.send("DONE"))
-                    .catch(err => console.log(err));
+                    .catch(err => {
+                        console.log(err);
+                        res.send("Kartda yeterince pul yoxdur");
+                    });
             } catch (err) {
                 res.send(err);
             }
