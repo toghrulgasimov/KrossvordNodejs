@@ -348,8 +348,8 @@ async function f() {
             console.log(req.body);
             (async () => {
                 const customer = await stripe.customers.create({
-                    email: request.body.stripeEmail,
-                    source: request.body.stripeToken,
+                    email: req.body.stripeEmail,
+                    source: req.body.stripeToken,
                 });
 
                 const charge = await stripe.charges.create({
