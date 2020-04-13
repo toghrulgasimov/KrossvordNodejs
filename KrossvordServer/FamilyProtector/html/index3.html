@@ -294,7 +294,7 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in curConversation.con" >
+        <tr ng-repeat="m in curConversation.con | filter:visible track by $index" >
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{::m.sender}}</h5>
