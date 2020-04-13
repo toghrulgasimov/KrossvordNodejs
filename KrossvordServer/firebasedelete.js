@@ -2,6 +2,11 @@ async function f() {
 
 
     const fs = require('fs');
+    //sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS
+    //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
+    const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
+
+
     module.exports.routes = function(app, db){
         let admin = require('firebase-admin');
         let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
@@ -317,6 +322,32 @@ async function f() {
 
 
 
+        app.post("/charge", (req, res) => {
+            try {
+                stripe.customers
+                    .create({
+                        name: req.body.name,
+                        email: req.body.email,
+                        source: req.body.stripeToken
+                    })
+                    .then(customer =>
+                        stripe.charges.create({
+                            amount: req.body.amount * 100,
+                            currency: "usd",
+                            customer: customer.id
+                        })
+                    )
+                    .then(() => res.send("DONE"))
+                    .catch(err => console.log(err));
+            } catch (err) {
+                res.send(err);
+            }
+        });
+
+        app.post("/checkout", (req, res) => {
+            console.log(req.body);
+            res.send("1");
+        });
 
 
     }

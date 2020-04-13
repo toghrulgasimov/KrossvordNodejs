@@ -68,7 +68,7 @@
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="firebaseindex.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebaseindex.js" working-dir="$PROJECT_DIR$/KrossvordServer">
+    <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
     <configuration name="httpss.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/httpss.js" working-dir="$PROJECT_DIR$/KrossvordServer">
@@ -80,10 +80,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.httpss.js" />
         <item itemvalue="JavaScript Debug.index3.html" />
+        <item itemvalue="Node.js.firebasedelete.js" />
+        <item itemvalue="Node.js.httpss.js" />
         <item itemvalue="JavaScript Debug.boot.html" />
-        <item itemvalue="Node.js.firebaseindex.js" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,7 @@
       <workItem from="1586168469481" duration="663000" />
       <workItem from="1586438343652" duration="12087000" />
       <workItem from="1586510332178" duration="5362000" />
-      <workItem from="1586597157011" duration="20878000" />
+      <workItem from="1586597157011" duration="32625000" />
     </task>
     <servers />
   </component>
