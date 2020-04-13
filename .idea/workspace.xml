@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,17 +36,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
-      <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
-      <recent name="C:\Users\toghr\UnityProjects\Nodejs\KrossvordServer\missions" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
+      <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -164,7 +164,7 @@
       <workItem from="1586168469481" duration="663000" />
       <workItem from="1586438343652" duration="12087000" />
       <workItem from="1586510332178" duration="5362000" />
-      <workItem from="1586597157011" duration="53139000" />
+      <workItem from="1586597157011" duration="53419000" />
     </task>
     <servers />
   </component>

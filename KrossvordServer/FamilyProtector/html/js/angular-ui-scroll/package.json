@@ -1,0 +1,96 @@
+{
+  "_from": "angular-ui-scroll",
+  "_id": "angular-ui-scroll@1.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-of9JAWjrQFTiHTXnKFjTjrWE2Ru82JBwpQUhm5jquSShGGYwwL7sbys1YhVCB2YM9tOnxUH2Eece2ACZToNUXg==",
+  "_location": "/angular-ui-scroll",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "angular-ui-scroll",
+    "name": "angular-ui-scroll",
+    "escapedName": "angular-ui-scroll",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-ui-scroll/-/angular-ui-scroll-1.8.0.tgz",
+  "_shasum": "649e94d39841a5f754e191da3e20337f9e799e4f",
+  "_spec": "angular-ui-scroll",
+  "_where": "/Users/toghrulgasimov/Desktop/KrossvordNodejs/KrossvordServer",
+  "author": {
+    "name": "Michael Feingold",
+    "email": "mfeingold@hill30.com"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-scroll/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "AngularJS infinite scrolling module",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^5.1.1",
+    "jasmine-core": "^2.8.0",
+    "jshint": "^2.10.1",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
+    "npm-run-all": "^4.1.2",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "homepage": "https://github.com/angular-ui/ui-scroll",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular.ui",
+    "angular-ui",
+    "ui.scroll",
+    "ui-scroll",
+    "angular-ui-scroll",
+    "unlimited",
+    "infinite",
+    "live",
+    "perpetual",
+    "scroll",
+    "scroller",
+    "scrolling"
+  ],
+  "license": "MIT",
+  "main": "./dist/ui-scroll.js",
+  "name": "angular-ui-scroll",
+  "public": "./dist/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-ui/ui-scroll.git"
+  },
+  "scripts": {
+    "build": "npm run hint-src && npm run prod-build && npm run hint-test && npm run prod-test",
+    "dev": "npm-run-all --parallel dev-server dev-test",
+    "dev-server": "webpack-dev-server --color",
+    "dev-test": "karma start test/config/karma.conf.js",
+    "hint-src": "jshint --verbose src",
+    "hint-test": "jshint --verbose test",
+    "prod-build": "webpack --color",
+    "prod-test": "karma start test/config/karma.conf.js",
+    "publish": "npm run build && npm publish",
+    "start": "npm run dev-server",
+    "test": "npm run dev-test"
+  },
+  "src": "./src/",
+  "version": "1.8.0"
+}
