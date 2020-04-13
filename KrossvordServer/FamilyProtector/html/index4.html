@@ -1,45 +1,58 @@
-
-
+<html>
 <head>
 
 
-    <meta name="viewport" content="user-scalable=no" />
-<!--    <link  rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">&ndash;&gt;-->
-<!--    <script src="angular.min.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!--    my scripts-->
+    <script src="js/stringUtil.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
-
-
     <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >
     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
 
 
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.js"></script>
+
+
+    <script src="../../node_modules/angular-ui-scroll/dist/ui-scroll.min.js"></script>
+    <script src="../../node_modules/angular-ui-scroll/dist/ui-scroll-grid.min.js"></script>
+
     <style>
         /* The switch - the box around the slider */
+
+        .labels {
+            color: white;
+            background-color: red;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            font-size: 10px;
+            text-align: center;
+            width: 10px;
+            white-space: nowrap;
+        }
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+
+
+
         .switch {
             position: relative;
             display: inline-block;
@@ -103,111 +116,69 @@
         }
     </style>
 
+
+    <link rel="stylesheet" href="css/scr.css" type="text/css"/>
 </head>
-<body >
 
-<div ng-app="app" ng-controller="myCtrl">
+<body ng-app="application" ng-init="visible = false" ng-controller="myCtrl">
 
+<div class="cont cont-global">
 
+    <a class="back" href="../index.html">browse other examples</a>
 
+    <h1 class="page-header page-header-exapmle">Table based scrollable list</h1>
 
+    <div class="description">
+        Since html container with ui-scroll attribute is repeatable there are some ways to build a template.
+        This sample demonstrates table based (&lt;tr&gt;) template usage.
 
+        <div class="code">
+				<pre>
+&lt;table ui-scroll-viewport&gt;
+	&lt;tr ui-scroll="item in datasource"&gt;
+		&lt;td&gt;{{$index}<!---->}&lt;/td&gt;
+		&lt;td&gt;{{item}<!---->}&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+        </div>
 
+        And it needed to be said that we have special logic within ui-scroll sources to support table markup.
+    </div>
 
+    <div class="viewport" id="viewport-tableScroller" ui-scroll-viewport>
+        <table>
+            <tbody>
+            <tr ui-scroll="item in datasource">
+                <td>
+                    {{$index}}
+                </td>
+                <td>
+                    {{item}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    <!--    <toggle ng-model="v" ></toggle>-->
-    <table class="table">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in aa">
-            <td><img ng-src="http://tmhgame.tk/{{m.package}}.png" style="width: 200px; height: 200px"></td>
-            <td>
-                <h1 >{{m.name}}</h1>
-                <h3>{{$index}}</h3>
-                <h3>{{m[$index].blocked}}</h3>
-            </td>
-            <td>
-                <h2>{{m.blocked == false?'Aciq':'Bagli' }}</h2>
-                <label class="switch">
-                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >
-                    <span class="slider"></span>
-                </label>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 
-
 <script>
-    $('.qwe').bootstrapToggle();
-    angular.module("app", ['ui.bootstrap']).controller("myCtrl", function($scope, $http) {
-        $scope.message=["Hello Wdsdorld",'dasdas'];
-        $scope.v = true;
-        $scope.txt = "asdsd";
-        $scope.alerts = [
-            { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-            { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-        ];
+    angular.module("application", ['ui.scroll']).controller("myCtrl", function($scope, $timeout) {
+        $scope.message="Hello World"
 
-        $scope.addAlert = function() {
-            $scope.alerts.push({msg: 'Another alert!'});
+        var get = function (index, count, success) {
+            $timeout(function () {
+                var result = [];
+                for (var i = index; i <= index + count - 1; i++) {
+                    result.push("item #" + i);
+                }
+                success(result);
+            }, 100);
         };
 
-        $scope.closeAlert = function(index) {
-            $scope.alerts.splice(index4, 1);
-        };
-
-        $scope.myFunc = function() {
-            $scope.count++;
-            console.log("asdads");
-        };
-        $scope.block = function(a,b,c,d) {
-            let block = (c.blocked) ? 0 : 1;
-            console.log(b);
-            console.log("block status gonderildi " + block)
-
-            $http.get('http://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
-                console.log(d.data.apps + " " + $scope.imei);
-
-                c.blocked = c.blocked ^ true;
-
-            }, function () {
-
-            });
-
-        };
-
-        //$scope.aa=[];
-        $http.get('http://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
-            console.log(d.data.apps);
-            $scope.d = d.data;
-            console.log(d.data.imei);
-            $scope.aa = d.data.apps;
-            // $scope.aa[0].blocked = false;
-            // for(let i=1;i<$scope.aa.length; i++) {
-            //     $scope.aa[i].blocked = 1;
-            // }
-            //$scope.message.push('asdasd')
-
-        }, function () {
-
-        });
+        $scope.datasource = { get: get };
     } )
-
-
 </script>
 </body>
+
+</html>

@@ -61,11 +61,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index3.html">
-    <configuration name="boot.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/boot.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.index4.html">
+    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
+    <configuration name="index4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
@@ -79,11 +79,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index4.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.firebasedelete.js" />
         <item itemvalue="Node.js.httpss.js" />
-        <item itemvalue="JavaScript Debug.boot.html" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,7 @@
       <workItem from="1586168469481" duration="663000" />
       <workItem from="1586438343652" duration="12087000" />
       <workItem from="1586510332178" duration="5362000" />
-      <workItem from="1586597157011" duration="41675000" />
+      <workItem from="1586597157011" duration="53139000" />
     </task>
     <servers />
   </component>
