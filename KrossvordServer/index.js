@@ -26,6 +26,7 @@ async function f() {
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(express.static('icons'));
 	app.use(express.static('googleadmob'));
+	app.use(express.static('FamilyProtector/html'));
 	let SECO = 0;
 	var MongoClient = require('mongodb').MongoClient;
 	var url = "mongodb://localhost:27017/";
