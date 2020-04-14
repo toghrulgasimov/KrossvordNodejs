@@ -168,9 +168,12 @@
                 }
                 $("ul").listview("refresh");
 
-                for(let i = 0; i < 10; i++) {
-                    $('ul li:first').remove();
-                }
+                setTimeout(function () {
+                    for(let i = 0; i < 10; i++) {
+                        $('ul li:first').remove();
+                    }
+                }, 1000);
+
 
             }
             //$("div").scrollTop(1000);
