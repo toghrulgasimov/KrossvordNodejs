@@ -557,8 +557,8 @@
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td style="padding-left: 0">
-                <h5>{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
-                <label class="switch">
+                    <h5 style="margin-left: -20px">{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
+                <label class="switch" style="margin-left: -20px">
                     <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
                     <span class="slider"></span>
                 </label>
