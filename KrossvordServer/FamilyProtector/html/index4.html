@@ -1,184 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <!--    my scripts-->
-    <script src="js/stringUtil.js"></script>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-    <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >
-    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.js"></script>
-
-
-    <script src="../../node_modules/angular-ui-scroll/dist/ui-scroll.min.js"></script>
-    <script src="../../node_modules/angular-ui-scroll/dist/ui-scroll-grid.min.js"></script>
-
-    <style>
-        /* The switch - the box around the slider */
-
-        .labels {
-            color: white;
-            background-color: red;
-            font-family: "Lucida Grande", "Arial", sans-serif;
-            font-size: 10px;
-            text-align: center;
-            width: 10px;
-            white-space: nowrap;
-        }
-        #map {
-            height: 100%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-
-
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-
-        /* Hide default HTML checkbox */
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        /* The slider */
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked + .slider {
-            background-color: #006af3;
-        }
-
-        input:focus + .slider {
-            box-shadow: 0 0 1px #004cf3;
-        }
-
-        input:checked + .slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-
-        /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
-    </style>
-
-
-    <link rel="stylesheet" href="css/scr.css" type="text/css"/>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
-<body ng-app="application" ng-init="visible = false" ng-controller="myCtrl">
 
-<div class="cont cont-global">
 
-    <a class="back" href="../index.html">browse other examples</a>
-
-    <h1 class="page-header page-header-exapmle">Table based scrollable list</h1>
-
-    <div class="description">
-        Since html container with ui-scroll attribute is repeatable there are some ways to build a template.
-        This sample demonstrates table based (&lt;tr&gt;) template usage.
-
-        <div class="code">
-				<pre>
-&lt;table ui-scroll-viewport&gt;
-	&lt;tr ui-scroll="item in datasource"&gt;
-		&lt;td&gt;{{$index}<!---->}&lt;/td&gt;
-		&lt;td&gt;{{item}<!---->}&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</pre>
-        </div>
-
-        And it needed to be said that we have special logic within ui-scroll sources to support table markup.
+<body>
+<div data-role = "page" id = "pageone">
+    <div data-role = "header">
+        <h1>Header Text</h1>
     </div>
 
-    <div class="viewport" id="viewport-tableScroller" ui-scroll-viewport>
-        <table>
-            <tbody>
-            <tr ui-scroll="item in datasource">
-                <td>
-                    {{$index}}
-                </td>
-                <td>
-                    {{item}}
-                </td>
-            </tr>
-            </tbody>
-        </table>
+    <div data-role = "main" class = "ui-content">
+        <h2>Welcome to TutorialsPoint</h2>
     </div>
 
+    <div data-role = "footer">
+        <h1>Footer Text</h1>
+    </div>
 </div>
-
-<script>
-    angular.module("application", ['ui.scroll']).controller("myCtrl", function($scope, $timeout) {
-        $scope.message="Hello World"
-
-        var get = function (index, count, success) {
-            $timeout(function () {
-                var result = [];
-                for (var i = index; i <= index + count - 1; i++) {
-                    result.push("item #" + i);
-                }
-                success(result);
-            }, 100);
-        };
-
-        $scope.datasource = { get: get };
-    } )
-</script>
 </body>
-
 </html>
