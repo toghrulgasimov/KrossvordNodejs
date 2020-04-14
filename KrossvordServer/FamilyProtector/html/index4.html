@@ -168,11 +168,9 @@
                 }
                 $("ul").listview("refresh");
 
-                setTimeout(function () {
-                    for(let i = 0; i < 1; i++) {
-                        $('ul li:first').remove();
-                    }
-                }, 1000);
+                for(let i = 0; i < 10; i++) {
+                    $('ul li:first').remove();
+                }
 
 
             }
