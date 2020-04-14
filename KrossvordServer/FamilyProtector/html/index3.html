@@ -36,6 +36,9 @@
 
     <link rel="stylesheet" href="css/scr.css" type="text/css"/>
     <style>
+
+        .table-responsive { overflow-x: initial; }
+
         /* The switch - the box around the slider */
 
         .labels {
@@ -533,6 +536,7 @@
 </select>
 
 
+
 <div >
 
     <select class="browser-default custom-select custom-select-lg mb-3">
@@ -551,14 +555,14 @@
         <tbody>
         <tr ng-repeat="m in aa">
             <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
-            <td>
+            <td style="word-break: break-word; padding: 0.25rem">
                 <h5 >{{m.name}}</h5>
                 <h5>{{$index}}</h5>
                 <h5>{{m[$index].blocked}}</h5>
             </td>
             <td style="padding-left: 0">
-                    <h5 style="margin-left: -20px">{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
-                <label class="switch" style="margin-left: -20px">
+                    <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
+                <label class="switch" >
                     <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
                     <span class="slider"></span>
                 </label>
@@ -640,6 +644,10 @@
     </table>
 
 
+
+
+
+
     <table class="table" ng-show="whatsapp">
         <thead>
 
@@ -647,18 +655,19 @@
         <tbody>
         <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
-            <td>
-                <h5 >{{::m.sender}}</h5>
+            <td style="word-break: break-word">
+                <h5 >{{::m.sender}}saksjdaksjdnakjsdnaksjdnaksjdnakjsdnaksjdnaksjdnaksdjnaksjdnakjsdnakjsndkasjndkajsndkajnsdkjn
+
+                </h5>
                 <p>{{::m.number}}</p>
             </td>
-            <td>
+            <td >
                 <p>{{toHour(m.con[m.con.length-1].time)}}</p>
                 <p>{{::m.con.length}} SMS</p>
             </td>
         </tr>
         </tbody>
     </table>
-
 
     <table id="ctable" class="table" ng-show="whatsappc" >
         <thead>
@@ -667,12 +676,13 @@
         <tbody>
         <tr ng-repeat="m in curConversation.con" >
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
-            <td>
+            <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
                 <p>{{m.content}}</p>
             </td>
             <td>
-                <p>{{toHour(m.con[m.con.length-1].time)}}</p>
+<!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
+                <p>123</p>
                 <p>{{stringUtil.toTime(m.time)}}</p>
             </td>
         </tr>
