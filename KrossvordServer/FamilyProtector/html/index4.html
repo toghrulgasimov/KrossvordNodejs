@@ -8,17 +8,42 @@
 
 
 
-    <link href="MegaList/lib/google-code-prettify/prettify.css" rel="stylesheet">
-    <script src="MegaList/lib/google-code-prettify/prettify.js"></script>
-    <script src="MegaList/lib/raf.js"></script>
+
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+
+    <script>
+        angular.module("app", []).controller("HelloWorldCtrl", function($scope,$interval ) {
+            $scope.message="Hello Worlddd"
+
+            $scope.a = ["asdaasdsd","Asasddasd","Asdaaaasd","Asdaaaaasd"];
+            for(let i = 0; i < 2; i++) {
+                $scope.a.push(i + "");
+            }
+
+            $interval(function () {
+                $scope.message = "asd";
+                console.log("angulardan");
+                console.log($scope.name);
+            }, 1000);
+        } )
+    </script>
 </head>
 
 
 
-<body>
+<body ng-app="app"ng-controller="HelloWorldCtrl">
+
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>Hello {{name}}</h1>
+
+
+<h1 >{{message}}</h1>
+
+
 <div data-role = "page" id = "pageone" >
     <div data-role = "header">
-        <h1>Header Text</h1>
+        <h1>{{message}}</h1>
     </div>
 
     <div data-role = "main" class = "ui-content">
@@ -27,158 +52,86 @@
 
     <div >
         <ul data-role="listview" data-inset="true" id="ll">
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Broken Bells</h2>
-                <p>Broken Bells</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Warning</h2>
-                <p>Hot Chip</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li><li><a href="#">
-            <img src="https://tmhgame.tk/com.whatsapp.png">
-            <h2>Wolfgang Amadeus Phoenix</h2>
-            <p>Phoenix</p></a>
-        </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li><li><a href="#">
-            <img src="https://tmhgame.tk/com.whatsapp.png">
-            <h2>Wolfgang Amadeus Phoenix</h2>
-            <p>Phoenix</p></a>
-        </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li><li><a href="#">
-            <img src="https://tmhgame.tk/com.whatsapp.png">
-            <h2>Wolfgang Amadeus Phoenix</h2>
-            <p>Phoenix</p></a>
-        </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li><li><a href="#">
-            <img src="https://tmhgame.tk/com.whatsapp.png">
-            <h2>Wolfgang Amadeus Phoenix</h2>
-            <p>Phoenix</p></a>
-        </li>
-            <li><a href="#">
-                <img src="https://tmhgame.tk/com.whatsapp.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-            </li>
+            <li class="ui-field-contain" ng-repeat="x in a">
+                        <input type="checkbox" data-role="flipswitch" name="flip-checkbox-1" >
+                    </li>
+
+                
+
+
         </ul>
     </div>
 </div>
 
+
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>Hello {{name}}</h1>
+
+
+<h1 >{{message}}</h1>
+
+
 <script>
-    $(window).scroll(function() {
-        console.log("aslalsdamsd");
-        if($(window).scrollTop() == $(document).height() - $(window).height()) {
-            // ajax call get data from server and append to the div
 
 
-        }
-    });
 
-    // $(document).on('scrollstart', function(){     //or 'scrollstop'
-    //     console.log("I'm scrolling!");
-    //     for(let i = 0; i < 10; i++) {
-    //         $("ul").append("<li><a href=\"#\">\n" +
-    //             "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
-    //             "                <h2>Wolfgang Amadeus Phoenix</h2>\n" +
-    //             "                <p>Phoenix</p></a>\n" +
-    //             "            </li>")
+
+    // $(window).scroll(function() {
+    //     console.log("aslalsdamsd");
+    //     if($(window).scrollTop() == $(document).height() - $(window).height()) {
+    //         // ajax call get data from server and append to the div
+    //
+    //
     //     }
-    //     $("ul").listview("refresh");
     // });
-    $(function() {
-        let k = 0;
-        let d = new Date();
-        $(window).on('scroll',function(e) {
-            let now = new Date();
-            if(now.getTime() - d.getTime()< 1000) {
-                return;
-            }
-            d = now;
-            if(Math.abs($(window).scrollTop() - ($(document).height() - $(window).height())) <= 100) {
-                console.log("scroooasdasd");
-                // for(let i = 0; i < 10; i++) {
-                //     $('ul li:first').remove();
-                // }
-                for(let i = 0; i < 100; i++) {
-                    $("ul").prepend("<li><a href=\"#\">\n" +
-                        "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
-                        "                <h2>"+(k++)+"Wolfgang Amadeus Phoenix"+(k)+"</h2>\n" +
-                        "                <p>Phoenix</p></a>\n" +
-                        "            </li>")
-                }
-                $("ul").listview("refresh");
-
-
-
-
-            }
-            //$("div").scrollTop(1000);
-            //window.scrollBy(100, 0); // for scroll horizontally.
-        });
-    });
+    //
+    // // $(document).on('scrollstart', function(){     //or 'scrollstop'
+    // //     console.log("I'm scrolling!");
+    // //     for(let i = 0; i < 10; i++) {
+    // //         $("ul").append("<li><a href=\"#\">\n" +
+    // //             "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
+    // //             "                <h2>Wolfgang Amadeus Phoenix</h2>\n" +
+    // //             "                <p>Phoenix</p></a>\n" +
+    // //             "            </li>")
+    // //     }
+    // //     $("ul").listview("refresh");
+    // // });
+    // $(function() {
+    //     let k = 0;
+    //     let d = new Date();
+    //     $(window).on('scroll',function(e) {
+    //         let now = new Date();
+    //         if(now.getTime() - d.getTime()< 1000) {
+    //             return;
+    //         }
+    //         d = now;
+    //         if(Math.abs($(window).scrollTop() - ($(document).height() - $(window).height())) <= 100) {
+    //             console.log("scroooasdasd");
+    //             // for(let i = 0; i < 10; i++) {
+    //             //     $('ul li:first').remove();
+    //             // }
+    //             for(let i = 0; i < 100; i++) {
+    //                 $("ul").prepend("<li><a href=\"#\">\n" +
+    //                     "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
+    //                     "                <h2>"+(k++)+"Wolfgang Amadeus Phoenix"+(k)+"</h2>\n" +
+    //                     "                <p>Phoenix</p></a>\n" +
+    //                     "            </li>")
+    //             }
+    //             $("ul").listview("refresh");
+    //
+    //
+    //
+    //
+    //         }
+    //         //$("div").scrollTop(1000);
+    //         //window.scrollBy(100, 0); // for scroll horizontally.
+    //     });
+    // });
+    setInterval(function () {
+        $("ul").listview("refresh");
+        console.log("123");
+    }, 100);
 </script>
 </body>
 </html>
