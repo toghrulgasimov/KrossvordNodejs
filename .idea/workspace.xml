@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,8 +42,8 @@
       <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
       <recent name="$PROJECT_DIR$/krasvordazGenerator/vacibler/trprocess" />
@@ -61,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index3.html">
+  <component name="RunManager" selected="JavaScript Debug.index4.html">
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -79,8 +79,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="JavaScript Debug.index4.html" />
+        <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.firebasedelete.js" />
         <item itemvalue="Node.js.httpss.js" />
@@ -164,7 +164,7 @@
       <workItem from="1586168469481" duration="663000" />
       <workItem from="1586438343652" duration="12087000" />
       <workItem from="1586510332178" duration="5362000" />
-      <workItem from="1586597157011" duration="58088000" />
+      <workItem from="1586597157011" duration="63404000" />
     </task>
     <servers />
   </component>

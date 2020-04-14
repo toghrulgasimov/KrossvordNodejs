@@ -5,12 +5,18 @@
     <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+    <link href="MegaList/lib/google-code-prettify/prettify.css" rel="stylesheet">
+    <script src="MegaList/lib/google-code-prettify/prettify.js"></script>
+    <script src="MegaList/lib/raf.js"></script>
 </head>
 
 
 
 <body>
-<div data-role = "page" id = "pageone">
+<div data-role = "page" id = "pageone" >
     <div data-role = "header">
         <h1>Header Text</h1>
     </div>
@@ -19,9 +25,152 @@
         <h2>Welcome to TutorialsPoint</h2>
     </div>
 
-    <div data-role = "footer">
-        <h1>Footer Text</h1>
+    <div >
+        <ul data-role="listview" data-inset="true" id="ll">
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Broken Bells</h2>
+                <p>Broken Bells</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Warning</h2>
+                <p>Hot Chip</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li><li><a href="#">
+            <img src="https://tmhgame.tk/com.whatsapp.png">
+            <h2>Wolfgang Amadeus Phoenix</h2>
+            <p>Phoenix</p></a>
+        </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li><li><a href="#">
+            <img src="https://tmhgame.tk/com.whatsapp.png">
+            <h2>Wolfgang Amadeus Phoenix</h2>
+            <p>Phoenix</p></a>
+        </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li><li><a href="#">
+            <img src="https://tmhgame.tk/com.whatsapp.png">
+            <h2>Wolfgang Amadeus Phoenix</h2>
+            <p>Phoenix</p></a>
+        </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li><li><a href="#">
+            <img src="https://tmhgame.tk/com.whatsapp.png">
+            <h2>Wolfgang Amadeus Phoenix</h2>
+            <p>Phoenix</p></a>
+        </li>
+            <li><a href="#">
+                <img src="https://tmhgame.tk/com.whatsapp.png">
+                <h2>Wolfgang Amadeus Phoenix</h2>
+                <p>Phoenix</p></a>
+            </li>
+        </ul>
     </div>
 </div>
+
+<script>
+    $(window).scroll(function() {
+        console.log("aslalsdamsd");
+        if($(window).scrollTop() == $(document).height() - $(window).height()) {
+            // ajax call get data from server and append to the div
+
+
+        }
+    });
+
+    // $(document).on('scrollstart', function(){     //or 'scrollstop'
+    //     console.log("I'm scrolling!");
+    //     for(let i = 0; i < 10; i++) {
+    //         $("ul").append("<li><a href=\"#\">\n" +
+    //             "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
+    //             "                <h2>Wolfgang Amadeus Phoenix</h2>\n" +
+    //             "                <p>Phoenix</p></a>\n" +
+    //             "            </li>")
+    //     }
+    //     $("ul").listview("refresh");
+    // });
+    $(function() {
+        let k = 0;
+        $(window).on('scroll',function(e) {
+            if(Math.abs($(window).scrollTop() - ($(document).height() - $(window).height())) <= 5) {
+                console.log("scroooasdasd");
+                for(let i = 0; i < 10; i++) {
+                    $("ul").append("<li><a href=\"#\">\n" +
+                        "                <img src=\"https://tmhgame.tk/com.whatsapp.png\">\n" +
+                        "                <h2>Wolfgang Amadeus Phoenix"+(k++)+"</h2>\n" +
+                        "                <p>Phoenix</p></a>\n" +
+                        "            </li>")
+                }
+                $("ul").listview("refresh");
+
+                for(let i = 0; i < 10; i++) {
+                    $('ul li:first').remove();
+                }
+
+            }
+            //$("div").scrollTop(1000);
+            //window.scrollBy(100, 0); // for scroll horizontally.
+        });
+    });
+</script>
 </body>
 </html>
