@@ -149,32 +149,33 @@
 
     <script>
 
-        let an = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
-                                                                                                                              $timeout) {
+        let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtrl", function($scope, $http, stringUtil,
+                                                                                                                              $timeout, Server) {
 
             $scope.aa = [];
             //
-            $scope.adapter = {};
+            var datasource = {};
+
+
             let test = [];
-            for(let i = 0; i < 100; i++) {
+            for(let i = 0; i < 100000; i++) {
                 test.push("salamlar" + i);
             }
-            var get = function (index, count, success) {
-                $timeout(function () {
-                    var result = [];
-                    console.log("TIME OUT cagrildi");
-                    for (var i = index; i <= index + count - 1; i++) {
-                        if(i < $scope.aa.length && i >= 0)
-                        result.push($scope.aa[i]);
-                    }
+            Server.init(test);
+            datasource.get = function (index, count, success) {
+                console.log('index = ' + index + '; count = ' + count);
 
-                    success(result);
+                var start = index;
+                var end = Math.min(index + count - 1, 1);
+                var res = [];
+                for(let i = start; i <= end; i++) {
+                    res.push(test[i]);
+                }
 
-                }, 100);
+                success(Server.request(start,end));
             };
 
-
-            $scope.datasource = { get: get };
+            $scope.datasource = datasource;
             //
 
 
@@ -483,7 +484,7 @@
                 console.log(d.data.imei);
                 $scope.aa = d.data.apps;
 
-                $scope.adapter.append($scope.aa);
+                //$scope.adapter.append($scope.aa);
 
 
 
@@ -506,6 +507,47 @@
 
             return stringUtil;
         }]);
+
+        app.factory('Server', [
+            '$timeout', '$q', function ($timeout, $q) {
+
+                return {
+
+                    max: 99,
+
+                    first: 1,
+
+                    delay: 100,
+
+                    data: [],
+
+                    init: function (a) {
+                        for (var i = 1; i <= a.length; i++) {
+                            this.data.push("salam");
+                        }
+                    },
+
+                    request: function (start, end) {
+                        var result = [];
+                        var self = this;
+                        if (start <= end) {
+                            for (var i = start; i <= end; i++) {
+                                var serverDataIndex = (-1) * i + self.first;
+                                var item = self.data[serverDataIndex];
+                                if (item) {
+                                    result.push(item);
+                                }
+                            }
+                        }
+
+                        return result;
+                    }
+                };
+
+            }
+        ]);
+
+
 
 
     </script>
@@ -568,6 +610,32 @@
         <option value="2">Qalib</option>
         <option value="3">Semed</option>
     </select>
+
+<!--    <div ui-scroll-viewport>-->
+<!--        <h1>salam</h1>-->
+<!--        <div ui-scroll="item in datasource"-->
+<!--             buffer-size="5"-->
+<!--             padding="1"-->
+<!--             start-index="0"-->
+<!--             adapter="adapter"-->
+<!--        >{{item}}</div>-->
+
+<!--    </div>-->
+
+    <div class="viewport" id="viewport-tableScroller" ui-scroll-viewport style="height: 100%">
+        <table>
+            <tbody>
+            <tr ui-scroll="item in datasource">
+                <td>
+                    <img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px">
+                </td>
+                <td>
+                    {{item + $index}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 <!--    Taryel-->
 
@@ -763,30 +831,8 @@
 
 
 
-<!--        <table class="table" ng-show="v" ui-scroll-viewport id="viewport-tableScroller" style="width: 100%">-->
-<!--            <thead>-->
 
-<!--            </thead>-->
-<!--            <tbody style="height: 300px">-->
-<!--            <tr  ui-scroll="m in datasource" adapter="adapter"  style="width: 100%">-->
-<!--                <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>-->
-<!--                <td>-->
-<!--                    <h5 >{{m.name}}</h5>-->
-<!--                    <h5>{{$index}}</h5>-->
-<!--                    <h5>{{m[$index].blocked}}</h5>-->
-<!--                </td>-->
-<!--                <td>-->
-<!--                    <h5>{{m.blocked == false?'Açıq':'Bağlı' }}</h5>-->
-<!--                    <label class="switch">-->
-<!--                        <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >-->
-<!--                        <span class="slider"></span>-->
-<!--                    </label>-->
-
-<!--                </td>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
-<!--    </div>-->
+    </div>
 
 
 
