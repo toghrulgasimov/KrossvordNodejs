@@ -572,7 +572,7 @@
             <td style="padding-left: 0">
                     <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
                 <label class="switch" >
-                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"   >
+                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
                     <span class="slider round"></span>
                 </label>
 
