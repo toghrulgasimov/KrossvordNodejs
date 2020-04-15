@@ -13,8 +13,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-    <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >
-    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
+<!--    <link rel="stylesheet" href="ui-bootstrap-2.5.0-csp.css" >-->
+<!--    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>-->
 
 
 
@@ -24,11 +24,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<!--    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">-->
+<!--    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>-->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.js"></script>
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.css">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/angular-bootstrap-toggle@0.4.0/dist/angular-bootstrap-toggle.min.js"></script>-->
 
 
     <script src="js/angular-ui-scroll/dist/ui-scroll.min.js"></script>
@@ -37,6 +37,17 @@
     <link rel="stylesheet" href="css/scr.css" type="text/css"/>
     <style>
 
+        .checkbox-xl .custom-control-label::before,
+        .checkbox-xl .custom-control-label::after {
+            top: 1.2rem;
+            width: 1.85rem;
+            height: 1.85rem;
+        }
+
+        .checkbox-xl .custom-control-label {
+            padding-top: 23px;
+            padding-left: 10px;
+        }
         .table-responsive { overflow-x: initial; }
 
         /* The switch - the box around the slider */
@@ -138,7 +149,7 @@
 
     <script>
 
-        let an = angular.module("app", ['ui.bootstrap','ui.toggle', 'stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
+        let an = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
                                                                                                                               $timeout) {
 
             $scope.aa = [];
@@ -555,6 +566,56 @@
         <option value="3">Semed</option>
     </select>
 
+<!--    Taryel-->
+
+    <table class="table" >
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr >
+
+            <td style="word-break: break-word; padding: 0.25rem;vertical-align: middle">
+                <h5 style="padding-left: 10px;">Silmeye icaze ver</h5>
+            </td>
+            <td style="padding-left: 0;vertical-align: middle">
+                <label class="switch" >
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+            </td>
+        </tr>
+        <tr >
+
+            <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
+                <h5 style="padding-left: 10px;">GPSi sondurmeye icaze ver</h5>
+            </td>
+            <td style="padding-left: 0;vertical-align: middle">
+                <label class="switch" >
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+            </td>
+        </tr>
+        <tr >
+
+            <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
+                <h5 style="padding-left: 10px;">GPSi sondurmeye icaze ver</h5>
+            </td>
+            <td style="padding-left: 0;vertical-align: middle">
+                <label class="switch" >
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+<!--    Taryel-->
+
     <div id="map" ng-show="m" ></div>
 
     <table class="table" ng-show="v">
@@ -563,13 +624,13 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in aa">
-            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
-            <td style="word-break: break-word; padding: 0.25rem">
+            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+            <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                 <h5 >{{m.name}}</h5>
                 <h5>{{$index}}</h5>
                 <h5>{{m[$index].blocked}}</h5>
             </td>
-            <td style="padding-left: 0">
+            <td style="padding-left: 0; vertical-align: middle;">
                     <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
                 <label class="switch" >
                     <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
