@@ -120,7 +120,7 @@
         }
 
         input:checked + .slider {
-            background-color: #006af3;
+            background-color: rgba(6, 94, 83, 0.76);
         }
 
         input:focus + .slider {
@@ -327,7 +327,7 @@
                                 map: map,
                                 label: {
                                     text:  time,
-                                    color: "#2c3e0f",
+                                    color: "rgb(255,0,5)",
                                     fontSize: "20px"
                                 },
                                 draggable:true,
@@ -355,7 +355,7 @@
                             repeat: '20px',
                         }],
                         map: map,
-                        strokeColor: 'blue'
+                        strokeColor: 'rgb(46,131,237)'
                     });
 
                     map.panTo(flightPlanCoordinates[flightPlanCoordinates.length]);
@@ -513,7 +513,7 @@
 
 
 
-<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false">
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #f8f9fa">
 
 
 <nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
@@ -526,23 +526,26 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;gundelik()" style="color: white" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;gundelik()" style="color: white" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;"style="color: white">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;"style="color: white">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;location();"style="color: white">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;location();"style="color: white">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;whatsappf();"style="color: white">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;whatsappf();"style="color: white">Whatsapp</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false; yact()"style="color: white">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false; yact()"style="color: white">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false; Web()"style="color: white">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false; Web()"style="color: white">Saytlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;"style="color: white">Icazeler</a>
             </li>
         </ul>
 
@@ -559,7 +562,7 @@
 
 <div >
 
-    <select style="margin:0 0 8px 0!important;" class="browser-default custom-select custom-select-lg ">
+    <select style="margin:0 0 8px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
         <option selected>Ulvi</option>
         <option value="1">Kamal</option>
         <option value="2">Qalib</option>
@@ -568,7 +571,7 @@
 
 <!--    Taryel-->
 
-    <table class="table" >
+    <table class="table" ng-show="icazeler">
         <thead>
 
         </thead>
@@ -678,7 +681,7 @@
 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px">Bax</button>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
 <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
                 <!--                <label class="switch">-->
                 <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
@@ -702,7 +705,7 @@
                 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px">Bax</button>
+                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
                 <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
                 <!--                <label class="switch">-->
                 <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
@@ -726,7 +729,7 @@
         <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td style="word-break: break-word">
-                <h5 >{{::m.sender}}saksjdaksjdnakjsdnaksjdnaksjdnakjsdnaksjdnaksjdnaksdjnaksjdnakjsdnakjsndkasjndkajsndkajnsdkjn
+                <h5 >{{::m.sender}}
 
                 </h5>
                 <p>{{::m.number}}</p>
@@ -744,7 +747,7 @@
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in curConversation.con" >
+        <tr ng-repeat="m in curConversation.con"style="padding-top: 12px;" >
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
