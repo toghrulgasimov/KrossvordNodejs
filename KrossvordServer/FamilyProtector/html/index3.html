@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="css/scr.css" type="text/css"/>
     <style>
 
+
         .checkbox-xl .custom-control-label::before,
         .checkbox-xl .custom-control-label::after {
             top: 1.2rem;
@@ -74,7 +75,7 @@
             white-space: nowrap;
         }
         #map {
-            height: 100%;
+            height: 81%;
         }
         /* Optional: Makes the sample page fill the window. */
 
@@ -587,7 +588,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" ></span>
     </button>
-    <a class="navbar-brand" href="#" style="color: white">Familyprotector</a>
+    <a class="navbar-brand" href="#" style="color: white">Lookin24</a>
 
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -777,13 +778,13 @@
         </tbody>
     </table>
 
-    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 80%" ng-show="whatsappc">
-    <table id="ctable" class="table table-striped"  >
+    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%" ng-show="whatsappc">
+    <table id="ctable" class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
         <thead>
 
         </thead>
         <tbody>
-        <tr class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="20" style="padding-top: 12px;" >
+        <tr ng-style="m.sender=='Men'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="20" style="padding-top: 12px;" >
 <!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
             <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
@@ -881,6 +882,10 @@
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
+
+
+
 </script>
 
 
