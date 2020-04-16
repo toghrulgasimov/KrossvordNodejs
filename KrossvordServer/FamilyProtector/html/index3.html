@@ -170,6 +170,12 @@
                 var end = Math.min(index + count - 1, Server.first);
 
                 Server.request(start, end).then(success);
+                let now = new Date();
+
+                // if(pp)
+                // $scope.adapter.reload();
+                // pp = !pp;
+                console.log("GET CAGRILDIASDASDASDASDASDASDASD");
             };
 
             $scope.datasource = datasource;
@@ -802,14 +808,14 @@
         </tbody>
     </table>
 
-    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 80%">
-    <table id="ctable" class="table" ng-show="whatsappc" >
+    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 80%" ng-show="whatsappc">
+    <table id="ctable" class="table "  >
         <thead>
 
         </thead>
         <tbody>
-        <tr ui-scroll="m in datasource" adapter="adapter" buffer-size="20" style="padding-top: 12px;" >
-            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+        <tr class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="50" style="padding-top: 12px;" >
+<!--            <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
             <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
                 <p>{{m.content}}</p>

@@ -14,11 +14,17 @@ app.factory('Server', [
 			data: [],
 
 			init: function () {
+
 				for (var i = this.first; i <= this.max; i++) {
+					let s = "";
+					let c = Math.random() * 20;
+					for(let j = 0; j < c; j++) {
+						s += "salam ";
+					}
 					this.data.push({
 						number: i,
 						title: 'Message #' + i,
-						text: Math.random().toString(36).substring(7)
+						text: s
 					});
 				}
 			},
