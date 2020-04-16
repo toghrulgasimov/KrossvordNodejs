@@ -42,7 +42,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;openActivity()" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;gundelik()" style="color: white;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
@@ -268,20 +268,11 @@
 
             </thead>
             <tbody>
-            <tr ng-repeat="m in aa">
-                <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+            <tr ng-repeat="m in activityHelper.day">
+                <td><img ng-src="https://lookin24.com/{{m.pn}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
                 <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                     <h5 >{{m.name}}</h5>
-                    <h5>{{$index}}</h5>
-                    <h5>{{m[$index].blocked}}</h5>
-                </td>
-                <td style="padding-left: 0; vertical-align: middle;">
-                    <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
-                    <label class="switch" >
-                        <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
-                        <span class="slider round"></span>
-                    </label>
-
+                    <h5>{{DateHelper.toDuration(m.sum)}}</h5>
                 </td>
             </tr>
             </tbody>

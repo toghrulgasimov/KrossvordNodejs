@@ -38,6 +38,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     $scope.curConversation = null;
 
     $scope.stringUtil = stringUtil;
+    $scope.DateHelper = DateHelper;
 
     $scope.openc = function(m) {
         //console.log("Openc called");
@@ -96,9 +97,6 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         let ans = a / b;
         return parseInt(ans);
     }
-    $scope.closeAlert = function(index) {
-        $scope.alerts.splice(index, 1);
-    };
 
 
     $scope.block = function(a,b,c,d) {
@@ -287,8 +285,6 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
             }
 
             $scope.gunluk = ans;
-            let ah = new ActivityHelper();
-            ah.init($scope.gunluk);
 
             $scope.gunluk.sort(function (a,b) {
                 return b.end-a.end;
@@ -324,6 +320,11 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
 
         });
 
+    }
+    $scope.openActivity = function() {
+        let ah = new ActivityHelper();
+        ah.init($scope.gunluk);
+        $scope.activityHelper = ah;
     }
     //$scope.yact();
     //$scope.Web();
