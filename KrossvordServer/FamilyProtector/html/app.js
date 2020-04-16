@@ -5,13 +5,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     //
     var datasource = {};
     let adapter = {};
-
     Server.init();
-
-
-
-
-
     datasource.get = function (index, count, success) {
         console.log('index = ' + index + '; count = ' + count);
 
@@ -20,11 +14,6 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
 
         Server.request(start, end).then(success);
         let now = new Date();
-
-        // if(pp)
-        // $scope.adapter.reload();
-        // pp = !pp;
-        //console.log("GET CAGRILDIASDASDASDASDASDASDASD");
     };
 
     $scope.datasource = datasource;
@@ -40,6 +29,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     $scope.m = false;
     $scope.g = false;
     $scope.y = false;
+    $scope.istifadeler = false;
     $scope.icazeler = false;
     $scope.txt = "asdsd";
     $scope.markers = [];
