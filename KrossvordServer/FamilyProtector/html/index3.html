@@ -39,29 +39,29 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;" style="color: white" >Istifadeler <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;gundelik()" style="color: white" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;gundelik()" style="color: white;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;"style="color: white">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;"style="color: white;font-size: 20px;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;location();"style="color: white">Xerite</a>
+                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;location();"style="color: white;font-size: 20px;">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;whatsappf();"style="color: white">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;whatsappf();"style="color: white;font-size: 20px;">Whatsapp</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false; yact()"style="color: white">Youtube</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false; yact()"style="color: white;font-size: 20px;">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false; Web()"style="color: white">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false; Web()"style="color: white;font-size: 20px;">Saytlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;"style="color: white">Icazeler</a>
+                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;"style="color: white;font-size: 20px;">Icazeler</a>
             </li>
         </ul>
 
@@ -260,20 +260,6 @@
     </table>
     <div  ng-show="istifadeler" >
 
-        <div class="container-fluid fixed-bottom" style="background-color: #bed2cf">
-            <div class="row">
-                <div class="col-4" text-left >
-<!--                    <p class="text-left">asd</p>-->
-                    <button type="button" class="btn btn-link"> < </button>
-                </div>
-                <div class="col-4" style="text-align: center">
-                    <div  style="text-align: center; padding-top: 4px">12.08.2020</div>
-                </div>
-                <div class="col-4 text-right">
-                    <button type="button" class="btn btn-link"> > </button>
-                </div>
-            </div>
-        </div>
         <table class="table">
             <thead>
 
@@ -297,6 +283,21 @@
             </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="container-fluid fixed-bottom" ng-show="w || istifadeler || g || m" style="background-color: #bed2cf;">
+        <div class="row">
+            <div class="col-4" text-left >
+                <!--                    <p class="text-left">asd</p>-->
+                <button type="button" class="btn btn-link"> < </button>
+            </div>
+            <div class="col-4" style="text-align: center">
+                <div  style="text-align: center; padding-top: 4px">12.08.2020</div>
+            </div>
+            <div class="col-4 text-right">
+                <button type="button" class="btn btn-link"> > </button>
+            </div>
+        </div>
     </div>
 
     </div>
