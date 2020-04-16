@@ -150,29 +150,26 @@
     <script>
 
         let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtrl", function($scope, $http, stringUtil,
-                                                                                                                              $timeout, Server) {
+                                                                                                                              $timeout, $interval, Server) {
 
             $scope.aa = [];
             //
             var datasource = {};
+            let adapter = {};
+
+            Server.init();
 
 
-            let test = [];
-            for(let i = 0; i < 100; i++) {
-                test.push("salamlar" + i);
-            }
-            Server.init(test);
+
+
+
             datasource.get = function (index, count, success) {
                 console.log('index = ' + index + '; count = ' + count);
 
                 var start = index;
-                var end = Math.min(index + count - 1, 1);
-                var res = [];
-                for(let i = start; i <= end; i++) {
-                    res.push(test[i]);
-                }
+                var end = Math.min(index + count - 1, Server.first);
 
-                success(Server.request(start,end));
+                Server.request(start, end).then(success);
             };
 
             $scope.datasource = datasource;
@@ -198,6 +195,7 @@
 
             $scope.openc = function(m) {
                 console.log("Openc called");
+                console.log(m.con);
                 $scope.whatsapp = false;
                 $scope.whatsappc = true;
                 $scope.v = false;
@@ -205,7 +203,12 @@
                 $scope.m = false;
                 $scope.g = false;
                 $scope.y = false;
+
                 $scope.curConversation = m;
+                Server.data = m.con;
+                $scope.adapter.reload()
+
+
                 setTimeout(function () {
                     $( "body" ).scrollTop(1000000);
                 }, 100);
@@ -391,9 +394,11 @@
             }
             $scope.whatsappf = function() {
 
+
                 $http.get('https://tmhgame.tk/Whatsapp?imei=356769106360753').then(function (d) {
                     console.log(d);
                     $scope.whatsaps = d.data.con;
+                    //$scope.adapter.prepend($scope.whatsaps);
                     $scope.whatsaps.sort(function (a, b) {
                         return b.con[b.con.length - 1].time - a.con[a.con.length - 1].time;
                     })
@@ -513,7 +518,7 @@
 
                 return {
 
-                    max: 99,
+                    max: 100,
 
                     first: 1,
 
@@ -521,31 +526,44 @@
 
                     data: [],
 
-                    init: function (a) {
-                        for (var i = 1; i <= a.length; i++) {
-                            this.data.push("salam");
+                    init: function () {
+                        for (var i = this.first; i <= this.max; i++) {
+                            // this.data.push({
+                            //     number: i,
+                            //     title: 'Message #' + i,
+                            //     text: Math.random().toString(36).substring(7)
+                            // });
                         }
                     },
 
                     request: function (start, end) {
-                        var result = [];
                         var self = this;
-                        if (start <= end) {
-                            for (var i = start; i <= end; i++) {
-                                var serverDataIndex = (-1) * i + self.first;
-                                var item = self.data[serverDataIndex];
-                                if (item) {
-                                    result.push(item);
+                        var deferred = $q.defer();
+
+                        $timeout(function () {
+                            var result = [];
+                            if (start <= end) {
+                                for (var i = start; i <= end; i++) {
+                                    var serverDataIndex = (-1) * i + self.first;
+                                    //if(serverDataIndex >= 0 && serverDataIndex <= self.data.length)
+                                    console.log(serverDataIndex)
+                                    var item = self.data[serverDataIndex];
+                                    if (item) {
+                                        result.push(item);
+                                    }
                                 }
                             }
-                        }
+                            deferred.resolve(result);
+                        }, self.delay);
 
-                        return result;
+                        return deferred.promise;
                     }
                 };
 
             }
         ]);
+
+
 
 
 
@@ -622,20 +640,7 @@
 
 <!--    </div>-->
 
-    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%">
-        <table class="table">
-            <tbody>
-            <tr ui-scroll="item in datasource">
-                <td>
-                    <img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px">
-                </td>
-                <td>
-                    {{item + $index}}
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+
 
 <!--    Taryel-->
 
@@ -797,12 +802,13 @@
         </tbody>
     </table>
 
+    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 80%">
     <table id="ctable" class="table" ng-show="whatsappc" >
         <thead>
 
         </thead>
         <tbody>
-        <tr ng-repeat="m in curConversation.con"style="padding-top: 12px;" >
+        <tr ui-scroll="m in datasource" adapter="adapter" buffer-size="70" style="padding-top: 12px;" >
             <td><img ng-src="https://tmhgame.tk/com.whatsapp.png" style="width: 60px; height: 60px"></td>
             <td style="word-break: break-word">
                 <h5 >{{m.sender}}</h5>
@@ -816,6 +822,9 @@
         </tr>
         </tbody>
     </table>
+    </div>
+
+
 
     <!--<h1>{{adapter.bufferLength}}</h1>-->
 <!--    <div class="viewport" id="viewport-listScroller"  ui-scroll-viewport >-->
