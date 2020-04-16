@@ -3,6 +3,8 @@ async function f() {
 
 	const express = require('express')
 	const app = express()
+	var cors = require('cors');
+	app.use(cors());
 
 	var bodyParser = require('body-parser');
 	let fs = require('fs')
