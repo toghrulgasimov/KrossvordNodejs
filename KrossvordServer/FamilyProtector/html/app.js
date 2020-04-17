@@ -40,26 +40,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;
 
-    $scope.openc = function(m) {
-        //console.log("Openc called");
-        console.log(m.con);
-        $scope.whatsapp = false;
-        $scope.whatsappc = true;
-        $scope.v = false;
-        $scope.w = false;
-        $scope.m = false;
-        $scope.g = false;
-        $scope.y = false;
 
-        $scope.curConversation = m;
-        Server.data = m.con;
-        $scope.adapter.reload()
-
-
-        setTimeout(function () {
-            $( "body" ).scrollTop(1000000);
-        }, 100);
-    }
     $scope.toHour = function(time) {
         let d = new Date(time);
         if(!$scope.stringUtil.isToday(d)) {
@@ -251,6 +232,24 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
 
         });
 
+    }
+    $scope.openc = function(m) {
+        //console.log("Openc called");
+        console.log(m.con);
+        $scope.whatsapp = false;
+        $scope.whatsappc = true;
+        $scope.v = false;
+        $scope.w = false;
+        $scope.m = false;
+        $scope.g = false;
+        $scope.y = false;
+        m.con = m.con.reverse();
+        $scope.curConversation = m;
+        Server.data = m.con;
+        $scope.adapter.reload()
+        setTimeout(function () {
+            $( "body" ).scrollTop(1000000);
+        }, 100);
     }
     $scope.gundelik = function() {
 
