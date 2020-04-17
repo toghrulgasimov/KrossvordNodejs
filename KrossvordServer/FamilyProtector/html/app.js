@@ -37,6 +37,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     $scope.whatsaps = [];
     $scope.curConversation = null;
     $scope.loadingdiv = false;
+    $scope.gpsI = false;
+    $scope.silI = false;
 
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;
@@ -332,6 +334,27 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         let ah = new ActivityHelper();
         ah.init($scope.gunluk);
         $scope.activityHelper = ah;
+    }
+    $scope.gpsIcaze = function(d) {
+        $scope.gpsI = !$scope.gpsI;
+        console.log($scope.gpsI);
+        let data = $scope.gpsI ? 1 : 0;
+        $http.get('https://lookin24.com/gpsIcaze?imei=356769106360753&data='+data).then(function (d) {
+            console.log(d.data.data);
+
+        }, function () {
+
+        });
+    }
+    $scope.silIcaze = function(d) {
+        $scope.silI = !$scope.silI;
+        console.log($scope.silI);
+        let data = $scope.silI ? 1 : 0;
+        $http.get('https://lookin24.com/silIcaze?imei=356769106360753&data='+data).then(function (d) {
+            console.log(d.data.data);
+        }, function () {
+
+        });
     }
     //$scope.yact();
     //$scope.Web();
