@@ -4,10 +4,10 @@ let stringUtil = {
         //console.log("TOTIME cagrildi --------------");
         let ans = new Date(d).toLocaleString();
 
-        let t = ans.substring(0,ans.length-4);
+        let t = ans.substring(0,ans.length-3);
         ans = t;
-        if(ans.split(":").length == 2) {
-            //ans = ans.substring(0, ans.length-3);
+        if(ans.split(":").length == 3) {
+            ans = ans.substring(0, ans.length-3);
         }
         return ans;
     },
