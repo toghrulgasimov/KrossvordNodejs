@@ -36,6 +36,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     $scope.flightPath = null;
     $scope.whatsaps = [];
     $scope.curConversation = null;
+    $scope.loadingdiv = false;
 
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;
@@ -84,9 +85,11 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         let block = (c.blocked) ? 0 : 1;
         console.log(b);
         console.log("block status gonderildi " + block)
+        $scope.loadingdiv = true;
 
         $http.get('https://lookin24.com/blockApp?imei='+$scope.d.imei+'&package='+b+'&block='+block).then(function (d) {
             console.log(d.data.apps + " " + $scope.imei);
+            $scope.loadingdiv = false;;
 
             c.blocked = c.blocked ^ true;
 
@@ -98,11 +101,12 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
 
 
     $scope.location = function() {
-
+        $scope.loadingdiv = true;
         console.log("Location Called");
 
         $http.get('https://lookin24.com/sendCommand?imei=356769106360753&sendLocation=1').then(function (d) {
             console.log(d.data.locations);
+            $scope.loadingdiv = false;
             //test data
             d.data.locations = [
                 {time: "1586602656081", lo: "10.373508", la: "52.061589"},
@@ -199,9 +203,10 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
     }
 
     $scope.Web = function() {
-
+        $scope.loadingdiv = true;
         $http.get('https://lookin24.com/sendCommand?imei=356769106360753&sendWebsites=1').then(function (d) {
             console.log(d.data.data);
+            $scope.loadingdiv = false;
             if(d.data.data == undefined) {
                 return;
             }
@@ -218,9 +223,10 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
 
     }
     $scope.whatsappf = function() {
-
+        $scope.loadingdiv = true;
 
         $http.get('https://lookin24.com/Whatsapp?imei=356769106360753').then(function (d) {
+            $scope.loadingdiv = false;
             console.log(d);
             $scope.whatsaps = d.data.con;
             //$scope.adapter.prepend($scope.whatsaps);
@@ -252,8 +258,10 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         }, 100);
     }
     $scope.gundelik = function() {
+        $scope.loadingdiv = true;
 
         $http.get('https://lookin24.com/sendCommand?imei=356769106360753').then(function (d) {
+            $scope.loadingdiv = false;
             console.log(d.data.data);
 
             $scope.gunluk = d.data.data;
