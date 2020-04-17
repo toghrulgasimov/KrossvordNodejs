@@ -81,7 +81,7 @@
 
 <div >
 
-    <select style="margin:0 0 8px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
+    <select style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
         <option selected>Ulvi</option>
         <option value="1">Kamal</option>
         <option value="2">Qalib</option>
@@ -263,6 +263,16 @@
     </table>
     <div  ng-show="istifadeler" >
 
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked class="btn-danger"> Bu gun
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Bu hefte
+            </label>
+        </div>
+<!--        <p class="text-left">Left </p><p class="text-center">Left </p><p class="text-right">Left </p>-->
+        <p class="text-center" style="font-size: 25px">{{DateHelper.toDuration(activityHelper.todaySum)}}</p>
         <table class="table">
             <thead>
 
