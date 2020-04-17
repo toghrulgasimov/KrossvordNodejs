@@ -4,7 +4,7 @@ let stringUtil = {
         //console.log("TOTIME cagrildi --------------");
         let ans = new Date(d).toLocaleString();
 
-        let t = ans.substring(0,ans.length-3);
+        let t = ans.substring(0,ans.length-4);
         ans = t;
         if(ans.split(":").length == 2) {
             //ans = ans.substring(0, ans.length-3);
