@@ -51,6 +51,10 @@ async function f() {
             console.log(o);
             let imei = o.i;
             let token = o.t;
+            if(imei == "erorrororororroro") {
+                res.send("Imei null gelmishdi");
+                return;
+            }
             console.log(imei + "&&&&&&&&&&&&&&&&&&&&&");
             d = await db.collection("devices").findOne({imei:imei});
             if(d == null) {
