@@ -323,6 +323,72 @@ async function f() {
             res.send(JSON.stringify(d));
         });
 
+        app.get("/gpsIcaze", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let icaze = req.query.icaze;
+            let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null) {
+                res.sendStatus(500);
+                return;
+            }
+
+            // let message = {
+            //     data: {
+            //         package: package,block:req.query.block
+            //
+            //     },
+            //     token: d.token
+            // };
+            // admin.messaging().send(message)
+            //     .then((response) => {
+            //         // Response is a message ID string.
+            //         console.log('Successfully sent message:', response);
+            //     })
+            //     .catch((error) => {
+            //         console.log('Error sending message:', error);
+            //     });
+
+
+
+            await db.collection("devices").updateOne({imei:imei},
+                {$set:{"gpsIcaze":icaze}});
+            res.send(JSON.stringify(d));
+        });
+
+        app.get("/silIcaze", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let icaze = req.query.icaze;
+            let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null) {
+                res.sendStatus(500);
+                return;
+            }
+
+            // let message = {
+            //     data: {
+            //         package: package,block:req.query.block
+            //
+            //     },
+            //     token: d.token
+            // };
+            // admin.messaging().send(message)
+            //     .then((response) => {
+            //         // Response is a message ID string.
+            //         console.log('Successfully sent message:', response);
+            //     })
+            //     .catch((error) => {
+            //         console.log('Error sending message:', error);
+            //     });
+
+
+
+            await db.collection("devices").updateOne({imei:imei},
+                {$set:{"silIcaze":icaze}});
+            res.send(JSON.stringify(d));
+        });
+
 
 
 

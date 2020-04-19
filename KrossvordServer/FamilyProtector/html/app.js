@@ -339,7 +339,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         $scope.gpsI = !$scope.gpsI;
         console.log($scope.gpsI);
         let data = $scope.gpsI ? 1 : 0;
-        $http.get('https://lookin24.com/gpsIcaze?imei=356769106360753&data='+data).then(function (d) {
+        $http.get('https://lookin24.com/gpsIcaze?imei=356769106360753&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
