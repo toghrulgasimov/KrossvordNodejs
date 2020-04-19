@@ -350,7 +350,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         $scope.silI = !$scope.silI;
         console.log($scope.silI);
         let data = $scope.silI ? 1 : 0;
-        $http.get('https://lookin24.com/silIcaze?imei=356769106360753&data='+data).then(function (d) {
+        $http.get('https://lookin24.com/silIcaze?imei=356769106360753&icaze='+data).then(function (d) {
             console.log(d.data.data);
         }, function () {
 
@@ -368,6 +368,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
         $scope.d = d.data;
         console.log(d.data.imei);
         $scope.aa = d.data.apps;
+        $scope.gpsI = parseInt(d.data.gpsIcaze);
+        $scope.silI = parseInt(d.data.silIcaze);
 
         //$scope.adapter.append($scope.aa);
 
