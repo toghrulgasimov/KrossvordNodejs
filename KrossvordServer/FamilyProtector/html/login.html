@@ -136,11 +136,14 @@
                         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
                     }
                 }
-                $http.post("/login", {email:"salam@gmail.com"}, config)
-                    .then(function (data, status, headers, config) {
+                $http.post("/login", {email:"salam@gmail.com"}, config).then(
+                    function(response){
+                        console.log(response);
                     },
-                    function (data, status, header, config) {
-                    });
+                    function(response){
+                        // failure callback
+                    }
+                );
             }else {
                 console.log("Invalid Email");
                 $scope.ev = false;
