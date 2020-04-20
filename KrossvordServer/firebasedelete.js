@@ -26,7 +26,7 @@ async function f() {
 
 
     module.exports.routes = function(app, db){
-        app.use(cookieParser());
+        app.use(cookieParser('secreteee'));
         let admin = require('firebase-admin');
         let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
@@ -466,7 +466,7 @@ async function f() {
             let options = {
                 maxAge: 1000 * 60 * 15, // would expire after 15 minutes
                 httpOnly: true, // The cookie only accessible by the web server
-                //signed: true // Indicates if the cookie should be signed
+                signed: true // Indicates if the cookie should be signed
             }
 
             // Set cookie
