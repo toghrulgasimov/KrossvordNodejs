@@ -468,7 +468,7 @@ async function f() {
 
             let u = await db.collection("devices").findOne({email:req.body.email, pass:req.body.password});
             if(u == undefined) {
-                res.redirect("/login");
+                res.redirect("/login.html");
                 return;
             }
 
