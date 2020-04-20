@@ -131,6 +131,11 @@
             if($scope.e != undefined && $scope.e.indexOf("@") != -1) {
                 console.log("Valid Email");
                 $scope.ev = true;
+                var config = {
+                    headers : {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                    }
+                }
                 $http.post("/login", {email:"salam@gmail.com"}, config)
                     .success(function (data, status, headers, config) {
                     })
