@@ -1,6 +1,8 @@
 async function f() {
 
 
+    var cookieParser = require('cookie-parser');
+    app.use(cookieParser());
 
     const mailgun = require("mailgun-js");
     const DOMAIN = "mg.lookin24.com";
@@ -455,6 +457,11 @@ async function f() {
                 res.send(err);
             }
 
+        });
+
+        app.post("/login", async function (req, res) {
+            console.log('Cookies: ', req.cookies)
+            res.send("1");
         });
 
 

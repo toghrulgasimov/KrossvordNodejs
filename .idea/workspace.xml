@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,18 +40,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,7 +172,7 @@
       <workItem from="1586597157011" duration="104672000" />
       <workItem from="1587024223764" duration="13496000" />
       <workItem from="1587065191508" duration="18804000" />
-      <workItem from="1587382655082" duration="8896000" />
+      <workItem from="1587382655082" duration="9769000" />
     </task>
     <servers />
   </component>
