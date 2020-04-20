@@ -140,6 +140,7 @@
                 $http.post("/login", data).then(
                     function(response){
                         console.log(response);
+                        $window.location.href = 'https://www.lookin24.com/index3.html';
                     },
                     function(response){
                         // failure callback
