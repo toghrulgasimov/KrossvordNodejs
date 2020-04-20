@@ -2,6 +2,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', ]).controller("myCtr
                                                                                              $timeout, $interval, Server) {
 
     $scope.aa = [];
+    $scope.aktivleshdir = false;
     //
     var datasource = {};
     let adapter = {};

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +75,7 @@
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index4.html" useBuiltInWebServerPort="true">
+    <configuration name="payment.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/payment.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
@@ -82,10 +87,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index3.html" />
-        <item itemvalue="JavaScript Debug.chat.html" />
-        <item itemvalue="JavaScript Debug.index4.html" />
-        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.payment.html" />
         <item itemvalue="Node.js.firebasedelete.js" />
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.chat.html" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +173,8 @@
       <workItem from="1586510332178" duration="5362000" />
       <workItem from="1586597157011" duration="104672000" />
       <workItem from="1587024223764" duration="13496000" />
-      <workItem from="1587065191508" duration="18617000" />
+      <workItem from="1587065191508" duration="18804000" />
+      <workItem from="1587382655082" duration="5691000" />
     </task>
     <servers />
   </component>

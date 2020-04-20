@@ -1,6 +1,22 @@
 async function f() {
 
 
+
+    const mailgun = require("mailgun-js");
+    const DOMAIN = "mg.lookin24.com";
+    const mg = mailgun({apiKey: "6d3b67e2434192b5277e46b39e601277-f135b0f1-ae549850", domain: DOMAIN});
+    const data = {
+        from: "Xeberdarliqlara<admin@mg.lookin24.com>",
+        to: "zeylikzeylik2@gmail.com",
+        subject: "Parolu Deyish",
+        text: "Parolu deyishmek ucun link budur"
+    };
+    mg.messages().send(data, function (error, body) {
+        console.log(body);
+    });
+
+
+
     const fs = require('fs');
     //sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS
     //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
