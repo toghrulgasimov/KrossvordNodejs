@@ -137,9 +137,9 @@
                     }
                 }
                 $http.post("/login", {email:"salam@gmail.com"}, config)
-                    .success(function (data, status, headers, config) {
-                    })
-                    .error(function (data, status, header, config) {
+                    .then(function (data, status, headers, config) {
+                    },
+                    function (data, status, header, config) {
                     });
             }else {
                 console.log("Invalid Email");
