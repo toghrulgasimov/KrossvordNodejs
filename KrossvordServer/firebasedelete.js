@@ -462,6 +462,7 @@ async function f() {
 
         app.post("/login", async function (req, res) {
             console.log(req.signedCookies);
+            console.log(req.body);
 
             let options = {
                 maxAge: 1000 * 60 * 15, // would expire after 15 minutes
@@ -470,7 +471,9 @@ async function f() {
             }
 
             // Set cookie
-            res.cookie('cookieName', 'deyer', options) // options is optional
+            res.cookie('email', req.body.email, options) // options is optional
+            res.cookie('pass', req.body.password, options) // options is optional
+            res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
             res.send("1");
         });
 
