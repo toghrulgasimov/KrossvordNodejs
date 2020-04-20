@@ -461,8 +461,16 @@ async function f() {
         });
 
         app.post("/login", async function (req, res) {
+
+
             console.log(req.signedCookies);
             console.log(req.body);
+
+            let u = await db.collection("devices").findOne({email:req.body.email, pass:req.body.password});
+            if(u == undefined) {
+                res.redirect("/login");
+                return;
+            }
 
             let options = {
                 maxAge: 1000 * 60 * 15, // would expire after 15 minutes
