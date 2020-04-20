@@ -2,7 +2,7 @@ async function f() {
 
 
     var cookieParser = require('cookie-parser');
-    app.use(cookieParser());
+
 
     const mailgun = require("mailgun-js");
     const DOMAIN = "mg.lookin24.com";
@@ -26,6 +26,7 @@ async function f() {
 
 
     module.exports.routes = function(app, db){
+        app.use(cookieParser());
         let admin = require('firebase-admin');
         let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
 
