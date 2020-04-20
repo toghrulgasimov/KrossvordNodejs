@@ -136,7 +136,8 @@
                         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
                     }
                 }
-                $http.post("/login", {email:"salam@gmail.com"}, config).then(
+                let data = {email:"qwe@gmail.com"};
+                $http.post("/login", data).then(
                     function(response){
                         console.log(response);
                     },
