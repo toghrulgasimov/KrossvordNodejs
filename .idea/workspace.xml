@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/registration.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,13 +67,13 @@
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/login.html" useBuiltInWebServerPort="true">
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/login.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="payment.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/payment.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="registration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/registration.html" useBuiltInWebServerPort="true">
+    <configuration name="registration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/registration.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
@@ -171,7 +169,7 @@
       <workItem from="1586597157011" duration="104672000" />
       <workItem from="1587024223764" duration="13496000" />
       <workItem from="1587065191508" duration="18804000" />
-      <workItem from="1587382655082" duration="8701000" />
+      <workItem from="1587382655082" duration="8896000" />
     </task>
     <servers />
   </component>
