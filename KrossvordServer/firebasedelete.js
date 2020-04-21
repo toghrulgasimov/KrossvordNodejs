@@ -516,6 +516,13 @@ async function f() {
 
 
         app.get("/index3", async function (req, res) {
+            let email = req.signedCookies.email;
+            let password = req.signedCookies.password;
+            let c = await db.collection("devices").find({email:email, password:password}).count();
+            if(c == 0 || email == undefined || password == undefined) {
+                res.redirect("/login.html");
+                return;
+            }
             let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
             res.send(s);
         });
