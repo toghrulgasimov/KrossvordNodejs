@@ -515,6 +515,11 @@ async function f() {
         });
 
 
+        app.get("/index3", async function (req, res) {
+            let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+            res.send(s);
+        });
+
     }
 }
 
