@@ -474,7 +474,7 @@ async function f() {
                 return;
             }
 
-            let u = await db.collection("devices").findOne({email:req.body.email, pass:req.body.password});
+            let u = await db.collection("devices").findOne({email:req.body.email, password:req.body.password});
             if(u == undefined) {
                 res.send("PASWORD YANLISHDIR");
                 return;
@@ -506,10 +506,11 @@ async function f() {
                 res.cookie('email', req.body.email, options) // options is optional
                 res.cookie('password', req.body.password, options) // options is optional
                 res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
+                await db.collection("devices").insertOne({email:req.body.email, password: req.body.password});
                 res.send("1");
                 return;
             }else {
-                res.send("0");
+                res.send("BU Email artiq movcuddur");
             }
         });
 
