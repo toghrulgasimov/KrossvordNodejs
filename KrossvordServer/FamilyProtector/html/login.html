@@ -128,7 +128,7 @@
         //$scope.message="Hello World";
         $scope.ev = true;
         $scope.login = function () {
-            if(true) {
+            if($scope.le != undefined && $scope.le.indexOf("@") != -1 && $scope.firstTime != undefined) {
                 console.log("Valid Email");
                 $scope.ev = true;
                 let data = {email:$scope.le, password: $scope.lp};
@@ -178,6 +178,7 @@
             }
         }
         $scope.login();
+        $scope.firstTime = false;
     } )
 </script>
 
