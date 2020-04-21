@@ -131,6 +131,7 @@
         $scope.lm = '';
         $scope.firstTime = true;
         $scope.login = function () {
+            $scope.lm = '';
             if($scope.firstTime == false) {
                 if($scope.le == undefined || $scope.le.indexOf("@") == -1) {
                     $scope.lm = 'Email daxil edin.'
