@@ -200,6 +200,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
+                            <form id="login-form" action="/login" method="post" role="form" style="display: block;">
                                 <div class="form-group">
                                     <input type="text" name="email" id="username" tabindex="1" class="form-control" placeholder="Email"  ng-model="le">
                                 </div>
@@ -215,6 +216,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            </form>
+                            <form id="register-form" action="/registration" method="post" role="form" style="display: none;">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -241,6 +244,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -268,6 +272,10 @@
         });
 
         $('#login-form').submit(function (evt) {
+            evt.preventDefault();
+            //window.history.back();
+        });
+        $('#registration-form').submit(function (evt) {
             evt.preventDefault();
             //window.history.back();
         });
