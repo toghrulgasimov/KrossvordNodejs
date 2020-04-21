@@ -516,6 +516,18 @@ async function f() {
 
 
         app.get("/index3", async function (req, res) {
+
+            let imei = req.query.imei;
+            if(imei != undefined) {
+                let options = {
+                    maxAge: 253402300000000, // would expire after 15 minutes
+                    //httpOnly: true, // The cookie only accessible by the web server
+                    signed: true // Indicates if the cookie should be signed
+                }
+
+                // Set cookie
+                res.cookie('imei', imei, options) // options is optional
+            }
             let email = req.signedCookies.email;
             let password = req.signedCookies.password;
             let c = await db.collection("devices").find({email:email, password:password}).count();
