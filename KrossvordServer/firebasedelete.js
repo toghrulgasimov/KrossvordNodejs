@@ -126,6 +126,7 @@ async function f() {
         app.get("/getDevice", async function (req, res) {
             let imei = req.query.imei;
             let d = await db.collection("devices").findOne({imei:imei});
+
             let ar = d.apps;
             for(let i = 0; i < ar.length; i++) {
                 let path = "icons/"+ar[i].package + ".png";
