@@ -134,15 +134,17 @@
                 let data = {email:$scope.le, password: $scope.lp};
                 $http.post("/login", data).then(
                     function(res){
+
                         console.log(res);
                         if(res.data == "1") {
                             $window.location.href = 'https://www.lookin24.com/index3.html';
                         }else {
                             //$window.location.href = 'https://www.lookin24.com/login.html';
-                            if($scope.firstTime != undefined) {
+                            if($scope.firstTime == false) {
                                 $scope.ev = false;
                             }
                         }
+                        $scope.firstTime = false;
 
                     },
                     function(response){
@@ -152,6 +154,7 @@
             }else {
                 console.log("Invalid Email");
                 $scope.ev = false;
+                $scope.firstTime = false;
             }
         }
 
@@ -181,7 +184,6 @@
             }
         }
         $scope.login();
-        $scope.firstTime = false;
     } )
 </script>
 
