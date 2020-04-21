@@ -150,9 +150,11 @@
 
                         console.log(res);
                         if(res.data == "1") {
-                            console.log($cookies["parent"]);
-                            console.log($cookies["email"]);
-                            //$window.location.href = 'https://www.lookin24.com/index3';
+                            if($cookies["parent"] == undefined) {
+                                $window.location.href = 'https://www.lookin24.com/parentorchild.html';
+                            }else {
+                                $window.location.href = 'https://www.lookin24.com/index3';
+                            }
                         }else {
                             //$window.location.href = 'https://www.lookin24.com/login.html';
                             if($scope.firstTime == false) {
@@ -200,7 +202,11 @@
                 function(res){
                     console.log(res);
                     if(res.data == "1") {
-                        $window.location.href = 'https://www.lookin24.com/index3';
+                        if($cookies["parent"] == undefined) {
+                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
+                        }else {
+                            $window.location.href = 'https://www.lookin24.com/index3';
+                        }
                     }else {
                         //$window.location.href = 'https://www.lookin24.com/login.html';
                         $scope.rem = 'Bu Email artiq movcuddur';
