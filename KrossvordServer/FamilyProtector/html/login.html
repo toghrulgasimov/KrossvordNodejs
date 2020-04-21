@@ -141,7 +141,7 @@
                     return;
                 }
             }
-                $scope.firstTime = false;
+
 
                 let data = {email:$scope.le, password: $scope.lp};
                 $http.post("/login", data).then(
@@ -152,13 +152,17 @@
                             $window.location.href = 'https://www.lookin24.com/index3.html';
                         }else {
                             //$window.location.href = 'https://www.lookin24.com/login.html';
-                            $scope.lm = 'Email ve ya shifre yanlishir';
+                            if($scope.firstTime == false) {
+                                $scope.lm = 'Email ve ya shifre yanlishir';
+                            }
                         }
+                        $scope.firstTime = false;
 
                     },
                     function(response){
                         // failure callback
                         $scope.lm = 'Server Error';
+                        $scope.firstTime = false;
                     }
                 );
         }
