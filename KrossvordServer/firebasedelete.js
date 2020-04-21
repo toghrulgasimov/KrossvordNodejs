@@ -549,6 +549,27 @@ async function f() {
             res.send(s);
         });
 
+        app.post("/parent", async function (req, res) {
+            let parent = req.body.parent;
+            console.log(req.body);
+            if(parent != "0" && parent != "1") {
+                res.send("ERROR");
+                return;
+            }
+
+            let options = {
+                maxAge: 253402300000000, // would expire after 15 minutes
+                //httpOnly: true, // The cookie only accessible by the web server
+                signed: true // Indicates if the cookie should be signed
+            }
+            res.cookie('parent', parent, options) // options is optional
+            let imei = req.signedCookies.imei;
+
+            await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}});
+            res.send("Parent Seted");
+
+        });
+
     }
 }
 
