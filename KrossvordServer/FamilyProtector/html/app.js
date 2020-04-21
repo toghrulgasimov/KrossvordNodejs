@@ -91,6 +91,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
             document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
+        $window.location.href = 'https://www.lookin24.com/login.html';
     }
 
 
