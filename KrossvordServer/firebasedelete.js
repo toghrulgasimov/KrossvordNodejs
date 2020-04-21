@@ -463,6 +463,7 @@ async function f() {
         app.post("/login", async function (req, res) {
 
 
+
             console.log(req.signedCookies);
             console.log(req.body);
             if(req.body.email == undefined) {
@@ -490,6 +491,10 @@ async function f() {
             res.cookie('email', req.body.email, options) // options is optional
             res.cookie('password', req.body.password, options) // options is optional
             res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
+            let imei = req.signedCookies.imei;
+            if(imei != undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.body.email, password:req.body.password}}, {upsert:true});
+            }
             res.send("1");
         });
         app.post("/registration", async function (req, res) {
@@ -507,6 +512,11 @@ async function f() {
                 res.cookie('password', req.body.password, options) // options is optional
                 res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
                 await db.collection("devices").insertOne({email:req.body.email, password: req.body.password});
+
+                let imei = req.signedCookies.imei;
+                if(imei != undefined) {
+                    await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.body.email,password: req.body.password}}, {upsert:true});
+                }
                 res.send("1");
                 return;
             }else {
