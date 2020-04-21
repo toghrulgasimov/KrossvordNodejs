@@ -84,6 +84,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }
     $scope.cixish = function() {
         var cookies = $.cookie();
+        console.log(cookies);
         for(var cookie in cookies) {
             $.removeCookie(cookie);
         }
