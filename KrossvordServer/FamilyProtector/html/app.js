@@ -1,5 +1,5 @@
 let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
-                                                                                             $timeout, $interval, Server) {
+                                                                                             $timeout, $interval, Server, $window) {
 
     $scope.aa = [];
     $scope.aktivleshdir = false;
