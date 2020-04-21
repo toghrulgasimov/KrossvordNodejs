@@ -465,7 +465,7 @@ async function f() {
 
             console.log(req.signedCookies);
             console.log(req.body);
-            if(req.body.email == udnefined) {
+            if(req.body.email == undefined) {
                 req.body.email = req.signedCookies.email;
                 req.body.password = req.signedCookies.password;
             }
