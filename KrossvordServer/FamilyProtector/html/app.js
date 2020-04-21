@@ -1,5 +1,5 @@
-let app = angular.module("app", ['stringUtil', 'ui.scroll', 'ngCookies']).controller("myCtrl", function($scope, $http, stringUtil,
-                                                                                             $timeout, $interval, Server, $cookies) {
+let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
+                                                                                             $timeout, $interval, Server) {
 
     $scope.aa = [];
     $scope.aktivleshdir = false;
@@ -83,10 +83,10 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll', 'ngCookies']).contro
         return parseInt(ans);
     }
     $scope.cixish = function() {
-        var cookies = $cookies.getAll();
-        angular.forEach(cookies, function (v, k) {
-            $cookies.remove(k);
-        });
+        var cookies = $.cookie();
+        for(var cookie in cookies) {
+            $.removeCookie(cookie);
+        }
     }
 
 
