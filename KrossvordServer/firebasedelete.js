@@ -465,10 +465,18 @@ async function f() {
 
             console.log(req.signedCookies);
             console.log(req.body);
+            if(req.body.email == udnefined) {
+                req.body.email = req.signedCookies.email;
+                req.body.password = req.signedCookies.password;
+            }
+            if(req.body.password == undefined || req.body.password == undefined) {
+                res.send("EMAIL OR PASSWORD ARE NOT DEFINED");
+                return;
+            }
 
             let u = await db.collection("devices").findOne({email:req.body.email, pass:req.body.password});
             if(u == undefined) {
-                res.redirect("/login.html");
+                res.send("PASWORD YANLISHDIR");
                 return;
             }
 
@@ -480,9 +488,29 @@ async function f() {
 
             // Set cookie
             res.cookie('email', req.body.email, options) // options is optional
-            res.cookie('pass', req.body.password, options) // options is optional
+            res.cookie('password', req.body.password, options) // options is optional
             res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
             res.send("1");
+        });
+        app.post("/registration", async function (req, res) {
+
+            console.log(req.body);
+
+            let u = await db.collection("devices").findOne({email:req.body.email});
+            if(u == undefined) {
+                let options = {
+                    maxAge: 1000 * 60 * 15, // would expire after 15 minutes
+                    //httpOnly: true, // The cookie only accessible by the web server
+                    signed: true // Indicates if the cookie should be signed
+                }
+                res.cookie('email', req.body.email, options) // options is optional
+                res.cookie('password', req.body.password, options) // options is optional
+                res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
+                res.send("1");
+                return;
+            }else {
+                res.send("0");
+            }
         });
 
 
