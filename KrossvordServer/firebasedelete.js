@@ -592,6 +592,15 @@ async function f() {
             res.send("Child Name Seted");
 
         });
+        app.post("/fillSelect", async function (req, res) {
+            let email = req.signedCookies.email;
+
+            let d = await db.collection("devices").find({email:email});
+            console.log(d);
+            console.log(d.toArray());
+            res.send("Fill Select called");
+
+        });
 
     }
 }

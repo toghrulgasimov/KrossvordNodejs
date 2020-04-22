@@ -62,9 +62,6 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         return h + ':' + m;
     }
-    $scope.addAlert = function() {
-        $scope.alerts.push({msg: 'Another alert!'});
-    };
     $scope.openy = function(url) {
         if(!url.startsWith('http')) {
             url = 'http://' + url;
@@ -72,16 +69,6 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         window.open(url);
     };
 
-
-    $scope.toDuration = function(d) {
-
-        if(d < 60) {
-            return d + " San";
-        }else {
-            d = $scope.divide(d, 60);
-            return d + " Dəq";
-        }
-    }
     $scope.divide = function(a,b) {
         let ans = a / b;
         return parseInt(ans);
@@ -368,6 +355,15 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         let data = $scope.silI ? 1 : 0;
         $http.get('https://lookin24.com/silIcaze?imei=356769106360753&icaze='+data).then(function (d) {
             console.log(d.data.data);
+        }, function () {
+
+        });
+    }
+    $scope.fillSelect = function() {
+        let data = $scope.silI ? 1 : 0;
+        $http.post('https://lookin24.com/fillSelect').then(function (d) {
+            console.log("Fill select called");
+            console.log(d.data);
         }, function () {
 
         });
