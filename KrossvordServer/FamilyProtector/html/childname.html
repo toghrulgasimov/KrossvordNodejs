@@ -135,7 +135,10 @@
             $http.post("/childName", {name:$scope.name}).then(
                 function(res){
                     // coocie set in server;
-                    $window.location.href = 'https://www.lookin24.com/done.html';
+                    setTimeout(function () {
+                        $window.location.href = 'https://www.lookin24.com/done.html';
+                    }, 2000);
+
                 },
                 function(response){
                 }
