@@ -130,9 +130,7 @@
             $http.get("/parent", {params:{parent:"1"}}).then(
                 function(res){
                     // coocie set in server;
-                    setTimeout(function () {
-                        $window.location.href = 'https://www.lookin24.com/index3';
-                    }, 2000);
+                    $window.location.href = 'https://www.lookin24.com/index3';
 
                 },
                 function(response){
@@ -142,10 +140,7 @@
         $scope.xeyir = function () {
             $http.get("/parent", {params:{parent:"0"}}).then(
                 function(res){
-                    setTimeout(function () {
-                        $window.location.href = 'https://www.lookin24.com/childname.html';
-                    }, 2000);
-
+                    $window.location.href = 'https://www.lookin24.com/childname.html';
                 },
                 function(response){
                 }
