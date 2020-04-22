@@ -571,6 +571,9 @@ async function f() {
             }
             res.cookie('parent', parent, options) // options is optional
             let imei = req.signedCookies.imei;
+            console.log("in PArent----")
+            console.log(req.signedCookies);
+            console.log("in PArent----")
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}});
             res.send("Parent Seted");
