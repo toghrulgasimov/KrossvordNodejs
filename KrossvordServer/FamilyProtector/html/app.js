@@ -1,6 +1,10 @@
 let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
                                                                                              $timeout, $interval, Server, $window) {
 
+    $scope.names = ["Emil", "Tobias", "Linus"];
+    $scope.selectedName = $scope.names[0];
+
+
     $scope.aa = [];
     $scope.aktivleshdir = false;
     //

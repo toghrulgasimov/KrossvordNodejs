@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/done.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,18 +38,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
       <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -62,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.done.html">
+  <component name="RunManager" selected="JavaScript Debug.index3.html">
     <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -83,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="JavaScript Debug.done.html" />
         <item itemvalue="JavaScript Debug.childname.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="JavaScript Debug.index3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +174,7 @@
       <workItem from="1587024223764" duration="13496000" />
       <workItem from="1587065191508" duration="18804000" />
       <workItem from="1587382655082" duration="16613000" />
-      <workItem from="1587458943207" duration="19689000" />
+      <workItem from="1587458943207" duration="20242000" />
     </task>
     <servers />
   </component>
