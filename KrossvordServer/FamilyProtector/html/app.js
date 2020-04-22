@@ -395,6 +395,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }, function () {
 
     });
+    $scope.fillSelect();
 
 
 } )
