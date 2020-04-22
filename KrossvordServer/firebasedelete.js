@@ -245,6 +245,10 @@ async function f() {
             }
 
             let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined) {
+
+                return;
+            }
 
             let t = 0;
             let f = setInterval(function () {
@@ -568,6 +572,22 @@ async function f() {
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}});
             res.send("Parent Seted");
+
+        });
+        app.post("/childName", async function (req, res) {
+            let name = req.body.name;
+            console.log(req.body);
+
+            let options = {
+                maxAge: 253402300000000, // would expire after 15 minutes
+                //httpOnly: true, // The cookie only accessible by the web server
+                signed: true // Indicates if the cookie should be signed
+            }
+            res.cookie('name', name, options) // options is optional
+            let imei = req.signedCookies.imei;
+
+            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}});
+            res.send("Child Name Seted");
 
         });
 

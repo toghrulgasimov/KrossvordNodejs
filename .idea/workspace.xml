@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/childname.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +66,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.parentorchild.html">
+  <component name="RunManager" selected="JavaScript Debug.childname.html">
+    <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -75,19 +82,16 @@
     <configuration name="parentorchild.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/parentorchild.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="payment.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/payment.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.childname.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="JavaScript Debug.payment.html" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +176,7 @@
       <workItem from="1587024223764" duration="13496000" />
       <workItem from="1587065191508" duration="18804000" />
       <workItem from="1587382655082" duration="16613000" />
-      <workItem from="1587458943207" duration="15919000" />
+      <workItem from="1587458943207" duration="18682000" />
     </task>
     <servers />
   </component>

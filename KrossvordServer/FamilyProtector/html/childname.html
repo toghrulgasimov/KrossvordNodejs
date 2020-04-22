@@ -125,21 +125,17 @@
 
 <script>
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window, $cookies) {
-        $scope.beli = function () {
-
-            $http.post("/parent", {parent:"1"}).then(
+        $scope.em = '';
+        $scope.name = '';
+        $scope.daxilet = function () {
+            console.log($scope.name);
+            if($scope.name == '') {
+                $scope.em = 'Ad daxil edin';
+            }
+            $http.post("/childName", {name:$scope.name}).then(
                 function(res){
                     // coocie set in server;
                     $window.location.href = 'https://www.lookin24.com/index3';
-                },
-                function(response){
-                }
-            );
-        }
-        $scope.xeyir = function () {
-            $http.post("/parent", {parent:"0"}).then(
-                function(res){
-                    $window.location.href = 'https://www.lookin24.com/childname.html';
                 },
                 function(response){
                 }
@@ -151,13 +147,18 @@
 <div class="container">
     <div class="row" style="padding-top: 100px;">
         <div class="col text-center">
-            <span class="text-center" style="font-size: 20px;">Bu cihaz valideyne Aiddir?</span>
+            <span class="text-center" style="font-size: 20px;">Usagin adini daxil edin</span>
         </div>
     </div>
-    <div class="row" style="padding-top: 50px;">
+    <div class="row" style="padding-top: 20px;">
         <div class="col text-center">
-            <button ng-click="beli()" type="button" class="btn btn-success btn-lg" style="width: 80px; margin-right: 10px;">Beli</button>
-            <button ng-click="xeyir()" type="button" class="btn btn-success btn-lg" style="width: 80px;" >Xeyir</button>
+            <input ng-model="name" type="text" class="input-lg" id="exampleInputPassword1" style="text-align:center; width: 100%;" placeholder="Ad">
+        </div>
+    </div>
+    <p class="text-center" style="color: red" ng-bind="em"></p>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col text-center">
+            <button ng-click="daxilet()" type="button" class="btn btn-success btn-lg" style="width: 100%; margin-right: 10px; ">Daxil Et</button>
         </div>
     </div>
 </div>
