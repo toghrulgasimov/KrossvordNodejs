@@ -362,7 +362,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.fillSelect = function () {
         $http.post("/fillSelect", {parent:"1"}, { withCredentials: true }).then(
             function(res){
-                console.log(res);
+                $scope.names = res.data.data;
+                console.log($scope.names)
             },
             function(response){
             }
