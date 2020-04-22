@@ -465,22 +465,22 @@ async function f() {
 
         });
 
-        app.post("/login", async function (req, res) {
+        app.get("/login", async function (req, res) {
 
 
 
             console.log(req.signedCookies);
-            console.log(req.body);
-            if(req.body.email == undefined) {
-                req.body.email = req.signedCookies.email;
-                req.body.password = req.signedCookies.password;
+            console.log(req.query);
+            if(req.query.email == undefined) {
+                req.query.email = req.signedCookies.email;
+                req.query.password = req.signedCookies.password;
             }
-            if(req.body.password == undefined || req.body.password == undefined) {
+            if(req.query.password == undefined || req.query.password == undefined) {
                 res.send("EMAIL OR PASSWORD ARE NOT DEFINED");
                 return;
             }
 
-            let u = await db.collection("devices").findOne({email:req.body.email, password:req.body.password});
+            let u = await db.collection("devices").findOne({email:req.query.email, password:req.query.password});
             if(u == undefined) {
                 res.send("PASWORD YANLISHDIR");
                 return;
@@ -493,18 +493,18 @@ async function f() {
             }
 
             // Set cookie
-            res.cookie('email', req.body.email, options) // options is optional
-            res.cookie('password', req.body.password, options) // options is optional
+            res.cookie('email', req.query.email, options) // options is optional
+            res.cookie('password', req.query.password, options) // options is optional
             res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
             let imei = req.signedCookies.imei;
             if(imei != undefined) {
-                await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.body.email, password:req.body.password}}, {upsert:true});
+                await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email, password:req.query.password}}, {upsert:true});
             }
             res.send("1");
         });
-        app.post("/registration", async function (req, res) {
+        app.get("/registration", async function (req, res) {
 
-            console.log(req.body);
+            console.log(req.query);
 
             let u = await db.collection("devices").findOne({email:req.body.email});
             if(u == undefined) {
@@ -513,16 +513,16 @@ async function f() {
                     //httpOnly: true, // The cookie only accessible by the web server
                     signed: true // Indicates if the cookie should be signed
                 }
-                res.cookie('email', req.body.email, options) // options is optional
-                res.cookie('password', req.body.password, options) // options is optional
+                res.cookie('email', req.query.email, options) // options is optional
+                res.cookie('password', req.query.password, options) // options is optional
                 res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
 
 
                 let imei = req.signedCookies.imei;
                 if(imei != undefined) {
-                    await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.body.email,password: req.body.password}}, {upsert:true});
+                    await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email,password: req.query.password}}, {upsert:true});
                 }else {
-                    await db.collection("devices").insertOne({email:req.body.email, password: req.body.password});
+                    await db.collection("devices").insertOne({email:req.query.email, password: req.query.password});
                 }
                 res.send("1");
                 return;
@@ -556,9 +556,9 @@ async function f() {
             res.send(s);
         });
 
-        app.post("/parent", async function (req, res) {
-            let parent = req.body.parent;
-            console.log(req.body);
+        app.get("/parent", async function (req, res) {
+            let parent = req.query.parent;
+            console.log(req.query);
             if(parent != "0" && parent != "1") {
                 res.send("ERROR");
                 return;
@@ -579,8 +579,8 @@ async function f() {
             res.send("1");
 
         });
-        app.post("/childName", async function (req, res) {
-            let name = req.body.name;
+        app.get("/childName", async function (req, res) {
+            let name = req.query.name;
             console.log(req.body);
 
             let options = {

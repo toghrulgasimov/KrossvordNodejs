@@ -132,7 +132,7 @@
             if($scope.name == '') {
                 $scope.em = 'Ad daxil edin';
             }
-            $http.post("/childName", {name:$scope.name}).then(
+            $http.get("/childName", {params:{name:$scope.name}}).then(
                 function(res){
                     // coocie set in server;
                     setTimeout(function () {

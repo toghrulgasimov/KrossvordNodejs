@@ -145,7 +145,7 @@
 
 
                 let data = {email:$scope.le, password: $scope.lp};
-                $http.post("/login", data).then(
+                $http.get("/login", {params:data}).then(
                     function(res){
 
                         console.log(res);
@@ -198,7 +198,7 @@
             console.log("Valid Email");
 
             let data = {email:$scope.re, password:$scope.rp};
-            $http.post("/registration", data).then(
+            $http.get("/registration", {params:data}).then(
                 function(res){
                     console.log(res);
                     if(res.data == "1") {

@@ -127,7 +127,7 @@
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window, $cookies) {
         $scope.beli = function () {
 
-            $http.post("/parent", {parent:"1"}).then(
+            $http.get("/parent", {params:{parent:"1"}}).then(
                 function(res){
                     // coocie set in server;
                     setTimeout(function () {
@@ -140,7 +140,7 @@
             );
         }
         $scope.xeyir = function () {
-            $http.post("/parent", {parent:"0"}).then(
+            $http.get("/parent", {params:{parent:"0"}}).then(
                 function(res){
                     setTimeout(function () {
                         $window.location.href = 'https://www.lookin24.com/childname.html';
