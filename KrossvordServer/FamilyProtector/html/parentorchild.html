@@ -140,7 +140,7 @@
             );
         }
         $scope.xeyir = function () {
-            $http.post("/parent", {parent:"0"}, { withCredentials: true }).then(
+            $http.post("/parent", {parent:"0"}).then(
                 function(res){
                     setTimeout(function () {
                         $window.location.href = 'https://www.lookin24.com/childname.html';

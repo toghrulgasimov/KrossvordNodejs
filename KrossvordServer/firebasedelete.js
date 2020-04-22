@@ -576,7 +576,7 @@ async function f() {
             console.log("in PArent----")
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}}, {upsert:true});
-            res.send("Parent Seted");
+            res.send("1");
 
         });
         app.post("/childName", async function (req, res) {
@@ -591,9 +591,12 @@ async function f() {
             res.cookie('name', name, options) // options is optional
             let imei = req.signedCookies.imei;
             console.log("--------------------------------" + imei);
+            console.log("in childName----")
+            console.log(req.signedCookies);
+            console.log("in childName----")
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}},{upsert:true});
-            res.send("Child Name Seted");
+            res.send("1");
 
         });
         app.post("/fillSelect", async function (req, res) {
