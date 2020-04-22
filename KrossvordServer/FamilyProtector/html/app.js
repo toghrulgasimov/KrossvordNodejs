@@ -363,6 +363,9 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $http.post("/fillSelect", {parent:"1"}, { withCredentials: true }).then(
             function(res){
                 $scope.names = res.data.data;
+                if($scope.names.length > 0) {
+                    $scope.selectedName = $scope.names[0];
+                }
                 console.log($scope.names)
             },
             function(response){
