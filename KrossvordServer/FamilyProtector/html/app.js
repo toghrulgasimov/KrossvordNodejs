@@ -365,6 +365,20 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 $scope.names = res.data.data;
                 if($scope.names.length > 0) {
                     $scope.selectedName = $scope.names[0];
+                    $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
+                        console.log(d.data.apps);
+                        if(d.data.apps == undefined) {
+                            return;
+                        }
+                        $scope.d = d.data;
+                        console.log(d.data.imei);
+                        $scope.aa = d.data.apps;
+                        $scope.gpsI = parseInt(d.data.gpsIcaze);
+                        $scope.silI = parseInt(d.data.silIcaze);
+                        //$scope.adapter.append($scope.aa);
+                    }, function () {
+
+                    });
                 }
                 console.log($scope.names)
             },
@@ -374,34 +388,26 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }
     $scope.selectChange = function() {
         console.log($scope.selectedName);
+        $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
+            console.log(d.data.apps);
+            if(d.data.apps == undefined) {
+                return;
+            }
+            $scope.d = d.data;
+            console.log(d.data.imei);
+            $scope.aa = d.data.apps;
+            $scope.gpsI = parseInt(d.data.gpsIcaze);
+            $scope.silI = parseInt(d.data.silIcaze);
+            //$scope.adapter.append($scope.aa);
+        }, function () {
+
+        });
     }
     //$scope.yact();
     //$scope.Web();
 
     //$scope.aa=[];
-    $http.get('https://lookin24.com/getDevice?imei=356769106360753').then(function (d) {
-        console.log(d.data.apps);
-        if(d.data.apps == undefined) {
-            return;
-        }
-        $scope.d = d.data;
-        console.log(d.data.imei);
-        $scope.aa = d.data.apps;
-        $scope.gpsI = parseInt(d.data.gpsIcaze);
-        $scope.silI = parseInt(d.data.silIcaze);
 
-        //$scope.adapter.append($scope.aa);
-
-
-
-
-
-
-
-
-    }, function () {
-
-    });
     $scope.fillSelect();
 
 
