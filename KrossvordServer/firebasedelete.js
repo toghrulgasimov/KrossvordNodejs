@@ -594,7 +594,7 @@ async function f() {
         });
         app.post("/fillSelect", async function (req, res) {
             let email = req.signedCookies.email;
-
+            console.log("------------------------------" + email + " Axtarilir");
             let d = await db.collection("devices").find({email:email});
             let ans = await d.toArray();
             console.log(ans);
