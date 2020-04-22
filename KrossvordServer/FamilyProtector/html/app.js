@@ -2,7 +2,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                                                                                              $timeout, $interval, Server, $window) {
 
     //$scope.names = ["Emil", "Tobias", "Linus"];
-    $scope.selectedName = $scope.names[0];
+    //$scope.selectedName = $scope.names[0];
 
 
     $scope.aa = [];
