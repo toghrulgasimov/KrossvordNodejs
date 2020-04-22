@@ -599,7 +599,7 @@ async function f() {
             let email = req.signedCookies.email;
             console.log("------------------------------" + email + " Axtarilir");
             console.log(req.signedCookies);
-            let d = await db.collection("devices").find({email:email, parent:"0"}).project({imei:1, name:1});
+            let d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
             let ans = await d.toArray();
             let data = {data:ans};
             console.log(ans);
