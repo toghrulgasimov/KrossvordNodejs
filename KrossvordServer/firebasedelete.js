@@ -558,6 +558,7 @@ async function f() {
 
         app.get("/parent", async function (req, res) {
             let parent = req.query.parent;
+
             console.log(req.query);
             if(parent != "0" && parent != "1") {
                 res.send("ERROR");
@@ -573,6 +574,7 @@ async function f() {
             let imei = req.signedCookies.imei;
             console.log("in PArent----")
             console.log(req.signedCookies);
+            console.log(req.query);
             console.log("in PArent----")
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}}, {upsert:true});
@@ -581,7 +583,6 @@ async function f() {
         });
         app.get("/childName", async function (req, res) {
             let name = req.query.name;
-            console.log(req.body);
 
             let options = {
                 maxAge: 253402300000000, // would expire after 15 minutes
@@ -593,6 +594,7 @@ async function f() {
             console.log("--------------------------------" + imei);
             console.log("in childName----")
             console.log(req.signedCookies);
+            console.log(req.query);
             console.log("in childName----")
 
             await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}},{upsert:true});
