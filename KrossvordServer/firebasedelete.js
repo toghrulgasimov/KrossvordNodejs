@@ -599,10 +599,11 @@ async function f() {
             let email = req.signedCookies.email;
             console.log("------------------------------" + email + " Axtarilir");
             console.log(req.signedCookies);
-            let d = await db.collection("devices").find({email:email});
+            let d = await db.collection("devices").find({email:email, parent:"0"}, {imei:1, name:1});
             let ans = await d.toArray();
+            let data = {data:ans};
             console.log(ans);
-            res.send("Fill Select called");
+            res.send(data);
 
         });
 
