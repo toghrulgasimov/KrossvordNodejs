@@ -372,6 +372,9 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
         );
     }
+    $scope.selectChange = function() {
+        console.log($scope.selectedName);
+    }
     //$scope.yact();
     //$scope.Web();
 

@@ -87,7 +87,7 @@
 
 <div >
 
-    <select ng-model="selectedName" ng-options="item.name for item in names" ng-show="!aktivleshdir" style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
+    <select ng-change="selectChange()" ng-model="selectedName" ng-options="item.name for item in names" ng-show="!aktivleshdir" style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
     </select>
 
 
