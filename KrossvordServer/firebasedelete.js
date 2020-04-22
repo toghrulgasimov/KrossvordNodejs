@@ -596,8 +596,8 @@ async function f() {
             let email = req.signedCookies.email;
 
             let d = await db.collection("devices").find({email:email});
-            console.log(d);
-            console.log(d.toArray());
+            let ans = await d.toArray();
+            console.log(ans);
             res.send("Fill Select called");
 
         });
