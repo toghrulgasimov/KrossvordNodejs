@@ -92,7 +92,7 @@ async function f() {
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
             console.log(req.body);
-            let data = JSON.parse(req.body.PostData);
+            let data = req.body;
 
             let a = data.apps;
             let anew = [];
