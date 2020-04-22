@@ -575,7 +575,7 @@ async function f() {
             console.log(req.signedCookies);
             console.log("in PArent----")
 
-            await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{parent:parent}}, {upsert:true});
             res.send("Parent Seted");
 
         });
@@ -590,8 +590,9 @@ async function f() {
             }
             res.cookie('name', name, options) // options is optional
             let imei = req.signedCookies.imei;
+            console.log("--------------------------------" + imei);
 
-            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}},{upsert:true});
             res.send("Child Name Seted");
 
         });
