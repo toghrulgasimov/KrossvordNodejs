@@ -359,14 +359,14 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         });
     }
-    $scope.fillSelect = function() {
-        let data = $scope.silI ? 1 : 0;
-        $http.post('https://lookin24.com/fillSelect').then(function (d) {
-            console.log("Fill select called");
-            console.log(d.data);
-        }, function () {
-
-        });
+    $scope.fillSelect = function () {
+        $http.post("/fillSelect", {parent:"1"}, { withCredentials: true }).then(
+            function(res){
+                console.log(res);
+            },
+            function(response){
+            }
+        );
     }
     //$scope.yact();
     //$scope.Web();
