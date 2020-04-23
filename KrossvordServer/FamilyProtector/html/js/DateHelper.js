@@ -26,7 +26,10 @@ let DateHelper = {
         let n = new Date(d);
         let yesterday = new Date();
         yesterday.setDate(yesterday.getDate()-1);
-
+        console.log('--------- isYesterday Begin');
+        console.log(yesterday);
+        console.log(n);
+        console.log('--------- isYesterday End');
         return n.getDate() == yesterday.getDate() &&
             n.getMonth() == yesterday.getMonth() &&
             n.getFullYear() == yesterday.getFullYear();
