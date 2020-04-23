@@ -44,7 +44,7 @@ let DateHelper = {
             return "Bugün " + h + ":" + m;
         }
         if(this.isYesterday(t)) {
-            return "Dünən" + h + ":" + m;
+            return "Dünən " + h + ":" + m;
         }
         return stringUtil.toTime(d);
     }
