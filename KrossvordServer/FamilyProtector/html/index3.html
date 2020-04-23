@@ -77,6 +77,7 @@
 
     </div>
 </nav>
+<span   ng-bind="curMenu"></span>
 <select  class="browser-default custom-select custom-select-lg mb-3" style="height: 40px">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -90,7 +91,7 @@
 
     <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names" ng-show="!aktivleshdir" style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
     </select>
-    <span   ng-bind="curMenu"></span>
+
 
 
     <div id="map" ng-show="m" ></div>
