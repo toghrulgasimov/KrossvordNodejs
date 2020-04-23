@@ -396,7 +396,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                             }
                         }
                         $scope.aa.sort(function (a, b) {
-                            return du[a.package] - du[b.package];
+                            return du[b.package] - du[a.package];
                         })
 
                         //$scope.adapter.append($scope.aa);
