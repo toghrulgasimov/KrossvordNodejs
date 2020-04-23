@@ -42,32 +42,32 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;openActivity()" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="curMenu='Istifadeler'; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;openActivity()" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik()" style="color: white;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="curMenu='Gundelik';m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik()" style="color: white;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Proqramlar</a>
+                <a class="nav-link" href="#" ng-click="curMenu='Proqramlar';m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Proqramlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location();"style="color: white;font-size: 20px;">Xerite</a>
+                <a class="nav-link " href="#" ng-click="curMenu='Xerite';m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location();"style="color: white;font-size: 20px;">Xerite</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"  ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf();"style="color: white;font-size: 20px;">Whatsapp</a>
+                <a class="nav-link" href="#"  ng-click="curMenu='Whatsapp';m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf();"style="color: white;font-size: 20px;">Whatsapp</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact()"style="color: white;font-size: 20px;">Youtube</a>
+                <a class="nav-link " href="#" ng-click="curMenu='Youtube';m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact();"style="color: white;font-size: 20px;">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web()"style="color: white;font-size: 20px;">Saytlar</a>
+                <a class="nav-link " href="#" ng-click="curMenu='Saytlar';m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web();"style="color: white;font-size: 20px;">Saytlar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Icazeler</a>
+                <a class="nav-link " href="#" ng-click="curMenu='Icazeler';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Icazeler</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">Aktivləşdir</a>
+                <a class="nav-link " href="#" ng-click="curMenu='Aktivləşdir';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">Aktivləşdir</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">Çıxış</a>
@@ -86,6 +86,7 @@
 
 
 <div >
+    <span class="fixed-top" style="position: absolute; width: 0px; left: 36%;" ng-bind="curMenu"></span>
 
     <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names" ng-show="!aktivleshdir" style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
     </select>
