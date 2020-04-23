@@ -371,6 +371,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                             return;
                         }
                         $scope.d = d.data;
+                        console.log($scope.d);
                         console.log(d.data.imei);
                         $scope.aa = d.data.apps;
                         $scope.gpsI = parseInt(d.data.gpsIcaze);
