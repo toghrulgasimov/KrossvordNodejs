@@ -34,11 +34,15 @@ let DateHelper = {
     toTime: function (d) {
         d = parseInt(d);
         let t = new Date(d);
+        let h = t.getHours() + "";
+        let m = t.getMinutes() + "";
+        if(h.length == 1) h = '0' + h;
+        if(m.length == 1) m = '0' + m;
         if(this.isToday(t)) {
-            return "Bugun";
+            return "Bugun " + h + ":" + m;
         }
         if(this.isYesterday()) {
-            return "Dunen";
+            return "Dunen" + h + ":" + m;
         }
         return stringUtil.toTime(d);
     }
