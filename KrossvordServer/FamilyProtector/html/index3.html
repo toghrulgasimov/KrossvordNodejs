@@ -150,7 +150,7 @@
             <td><img ng-src="https://lookin24.com/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 >{{m.name}}</h5>
-                <p>{{stringUtil.toTime(m.start)}}</p>
+                <p>{{DateHelper.toTime(m.start)}}</p>
 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
@@ -174,7 +174,7 @@
             <td><img ng-src="https://lookin24.com/com.android.chrome.png" style="width: 60px; height: 60px"></td>
             <td>
                 <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
-                <p>{{stringUtil.toTime(m.start)}}</p>
+                <p>{{DateHelper.toTime(m.start)}}</p>
                 <!--                <h5>{{m[$index].blocked}}</h5>-->
             </td>
             <td>
