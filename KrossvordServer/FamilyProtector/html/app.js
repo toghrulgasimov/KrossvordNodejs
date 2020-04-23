@@ -413,7 +413,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }
     $scope.selectChange = function() {
         console.log($scope.selectedName);
-        curMenu = 'Proqramlar';
+        $scope.curMenu = 'Proqramlar';
         $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
             console.log(d.data.apps);
             if(d.data.apps == undefined) {
