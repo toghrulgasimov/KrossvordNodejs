@@ -47,6 +47,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;
+    $scope.DateHelper.isYesterday(new Date());
 
 
     $scope.toHour = function(time) {
