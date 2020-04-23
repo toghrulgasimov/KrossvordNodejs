@@ -84,9 +84,9 @@
 </select>
 
 
-
+<span class="fixed-top" style="position: absolute; width: 0px; left: 36%;" ng-bind="curMenu"></span>
 <div >
-    <span class="fixed-top" style="position: absolute; width: 0px; left: 36%;" ng-bind="curMenu"></span>
+
 
     <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names" ng-show="!aktivleshdir" style="margin:0 0 0px 0!important;background-color: #065e5342;" class="browser-default custom-select custom-select-lg ">
     </select>
