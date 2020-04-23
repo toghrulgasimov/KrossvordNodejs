@@ -391,8 +391,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                             }
                         }
                         for(let i = 0; i < $scope.aa.length; i++) {
-                            if(du[activity[i].package] == undefined) {
-                                du[activity[i].package] = 0;
+                            if(du[$scope.aa[i].package] == undefined) {
+                                du[$scope.aa[i].package] = 0;
                             }
                         }
                         console.log(du);
