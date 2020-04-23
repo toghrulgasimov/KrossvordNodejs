@@ -395,6 +395,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                                 du[activity[i].package] = 0;
                             }
                         }
+                        console.log(du);
                         $scope.aa.sort(function (a, b) {
                             return du[b.package] - du[a.package];
                         })
