@@ -39,10 +39,10 @@ let DateHelper = {
         if(h.length == 1) h = '0' + h;
         if(m.length == 1) m = '0' + m;
         if(this.isToday(t)) {
-            return "Bugun " + h + ":" + m;
+            return "Bugün " + h + ":" + m;
         }
         if(this.isYesterday()) {
-            return "Dunen" + h + ":" + m;
+            return "Dünən" + h + ":" + m;
         }
         return stringUtil.toTime(d);
     }
