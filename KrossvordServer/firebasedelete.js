@@ -4,18 +4,18 @@ async function f() {
     var cookieParser = require('cookie-parser');
 
 
-    const mailgun = require("mailgun-js");
-    const DOMAIN = "mg.lookin24.com";
-    const mg = mailgun({apiKey: "6d3b67e2434192b5277e46b39e601277-f135b0f1-ae549850", domain: DOMAIN});
-    const data = {
-        from: "Xeberdarliqlara<admin@mg.lookin24.com>",
-        to: "zeylikzeylik2@gmail.com",
-        subject: "Parolu Deyish",
-        text: "Parolu deyishmek ucun link budur"
-    };
-    mg.messages().send(data, function (error, body) {
-        console.log(body);
-    });
+    // const mailgun = require("mailgun-js");
+    // const DOMAIN = "mg.lookin24.com";
+    // const mg = mailgun({apiKey: "6d3b67e2434192b5277e46b39e601277-f135b0f1-ae549850", domain: DOMAIN});
+    // const data = {
+    //     from: "Xeberdarliqlara<admin@mg.lookin24.com>",
+    //     to: "zeylikzeylik2@gmail.com",
+    //     subject: "Parolu Deyish",
+    //     text: "Parolu deyishmek ucun link budur"
+    // };
+    // mg.messages().send(data, function (error, body) {
+    //     console.log(body);
+    // });
 
 
 
