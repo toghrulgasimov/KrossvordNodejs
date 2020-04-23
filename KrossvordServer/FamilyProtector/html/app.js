@@ -370,7 +370,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         if(d.data.apps == undefined) {
                             return;
                         }
-                        $scope.d = d.data;
+                        $scope.d = d.data;//h
                         console.log($scope.d);
                         console.log(d.data.imei);
                         $scope.aa = d.data.apps;
