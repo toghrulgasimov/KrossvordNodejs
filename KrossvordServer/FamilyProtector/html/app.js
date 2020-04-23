@@ -376,6 +376,29 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         $scope.aa = d.data.apps;
                         $scope.gpsI = parseInt(d.data.gpsIcaze);
                         $scope.silI = parseInt(d.data.silIcaze);
+                        let activity = $scope.d.activity.data;
+                        let du = {};
+                        for(let i = 0; i < activity.length; i++) {
+                            let start = activity[i].start;
+                            let end = activity[i].end;
+                            if(end == -1)
+                                end = (new Date()).getTime();
+                            let d = end - start;
+                            if(du[activity[i].package] == undefined) {
+                                du[activity[i].package] = d;
+                            }else {
+                                du[activity[i].package] += d;
+                            }
+                        }
+                        for(let i = 0; i < $scope.aa.length; i++) {
+                            if(du[activity[i].package] == undefined) {
+                                du[activity[i].package] = 0;
+                            }
+                        }
+                        $scope.aa.sort(function (a, b) {
+                            return du[a.package] - du[b.package];
+                        })
+
                         //$scope.adapter.append($scope.aa);
                     }, function () {
 
