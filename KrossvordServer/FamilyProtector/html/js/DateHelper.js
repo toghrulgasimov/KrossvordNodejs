@@ -22,8 +22,7 @@ let DateHelper = {
         }
     },
     isYesterday : function (d) {
-        d = parseInt(d);
-        let n = new Date(d);
+        let n = d;
         let yesterday = new Date();
         yesterday.setDate(yesterday.getDate()-1);
         console.log('--------- isYesterday Begin');
