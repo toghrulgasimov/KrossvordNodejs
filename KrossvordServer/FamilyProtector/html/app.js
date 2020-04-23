@@ -418,12 +418,35 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             if(d.data.apps == undefined) {
                 return;
             }
-            $scope.d = d.data;
+            $scope.d = d.data;//h
+            console.log($scope.d);
             console.log(d.data.imei);
             $scope.aa = d.data.apps;
             $scope.gpsI = parseInt(d.data.gpsIcaze);
             $scope.silI = parseInt(d.data.silIcaze);
-            //$scope.adapter.append($scope.aa);
+            let activity = $scope.d.activity.data;
+            let du = {};
+            for(let i = 0; i < activity.length; i++) {
+                let start = activity[i].start;
+                let end = activity[i].end;
+                if(end == -1)
+                    end = (new Date()).getTime();
+                let d = end - start;
+                if(du[activity[i].package] == undefined) {
+                    du[activity[i].package] = d;
+                }else {
+                    du[activity[i].package] += d;
+                }
+            }
+            for(let i = 0; i < $scope.aa.length; i++) {
+                if(du[$scope.aa[i].package] == undefined) {
+                    du[$scope.aa[i].package] = 0;
+                }
+            }
+            console.log(du);
+            $scope.aa.sort(function (a, b) {
+                return du[b.package] - du[a.package];
+            })
         }, function () {
 
         });
