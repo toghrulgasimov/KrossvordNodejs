@@ -32,6 +32,7 @@ async function f() {
     }
     let filter = function(curDay, of) {
         let ans = [];
+        console.log(of);
         for(let i = 0; i < of.length; i++) {
             if(isSameDay(curDay, of[i].start))
                 ans.push(of[i]);
