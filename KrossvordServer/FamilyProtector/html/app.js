@@ -53,24 +53,26 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.changeData = function() {
         if($scope.g) {
-
+            $scope.gundelik();
         }else if($scope.y) {
-
+            $scope.yact();
         }else if($scope.w) {
-
+            $scope.Web();
         }else if($scope.istifadeler) {
-
+            $scope.gundelik();
         }
     }
     $scope.gunuAzalt = function() {
         $scope.curDay.setDate($scope.curDay.getDate()-1);
         console.log("Gunuazalt basildi");
+        $scope.changeData();
     }
     $scope.gunuArtir = function() {
         if($scope.DateHelper.isToday($scope.curDay)) {
             return;
         }
         $scope.curDay.setDate($scope.curDay.getDate()+1);
+        $scope.changeData();
         console.log("Gunuartir basildi");
     }
     $scope.toHour = function(time) {
