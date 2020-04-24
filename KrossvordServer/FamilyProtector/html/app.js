@@ -48,9 +48,13 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;
-    $scope.DateHelper.isYesterday(new Date());
 
 
+
+    $scope.gunuAzalt = function() {
+        $scope.curDay.setDate($scope.curDay.getDate()-1);
+        console.log("Gunuazalt basildi");
+    }
     $scope.toHour = function(time) {
         let d = new Date(time);
         if(!$scope.stringUtil.isToday(d)) {
