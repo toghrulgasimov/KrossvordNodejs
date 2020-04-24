@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +175,7 @@
       <workItem from="1587458943207" duration="30350000" />
       <workItem from="1587637360995" duration="7282000" />
       <workItem from="1587672331410" duration="1862000" />
-      <workItem from="1587720923858" duration="8125000" />
+      <workItem from="1587720923858" duration="8342000" />
     </task>
     <servers />
   </component>
