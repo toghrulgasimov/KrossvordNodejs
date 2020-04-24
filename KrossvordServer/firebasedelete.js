@@ -26,7 +26,7 @@ async function f() {
 
     let isSameDay = function(a, b) {
         a = new Date(parseInt(a));
-        b = new Date(parseInt(a));
+        b = new Date(parseInt(b));
         console.log(a + " and " + b + "---------------------------- isSameDay function called");
         return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
     }
