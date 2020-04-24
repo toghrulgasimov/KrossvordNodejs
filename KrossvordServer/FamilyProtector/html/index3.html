@@ -97,294 +97,297 @@
     </div>
 
 
-    <div id="map" ng-show="m" ></div>
+    <div>
+        <div id="map" ng-show="m" ></div>
 
-    <table class="table" ng-show="v">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in aa">
-            <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
-            <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
-                <h5 >{{m.name}}</h5>
-                <h5>{{$index}}</h5>
-                <h5>{{m[$index].blocked}}</h5>
-            </td>
-            <td style="padding-left: 0; vertical-align: middle;">
-                    <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
-                <label class="switch" >
-                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
-                    <span class="slider round"></span>
-                </label>
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <table class="table" ng-show="g">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in gunluk">
-            <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px"></td>
-            <td style="word-break: break-word; padding: 0.25rem">
-                <h5 >{{m.name}}</h5>
-                <p>{{DateHelper.toTime(m.start)}}</p>
-                <h5>{{m[$index].blocked}}</h5>
-            </td>
-            <td>
-                <p>{{m.end == 9007199254740992 ? 'Aktiv' : (DateHelper.toDuration(m.duration))}}  </p>
-<!--                <label class="switch">-->
-<!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
-<!--                    <span class="slider"></span>-->
-<!--                </label>-->
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <table class="table" ng-show="y">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in youtubes">
-            <td><img ng-src="https://lookin24.com/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
-            <td>
-                <h5 >{{m.name}}</h5>
-                <p>{{DateHelper.toTime(m.start)}}</p>
-<!--                <h5>{{m[$index].blocked}}</h5>-->
-            </td>
-            <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
-<!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
-                <!--                <label class="switch">-->
-                <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
-                <!--                    <span class="slider"></span>-->
-                <!--                </label>-->
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <table class="table" ng-show="w">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in websites">
-            <td><img ng-src="https://lookin24.com/com.android.chrome.png" style="width: 60px; height: 60px"></td>
-            <td>
-                <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
-                <p>{{DateHelper.toTime(m.start)}}</p>
-                <!--                <h5>{{m[$index].blocked}}</h5>-->
-            </td>
-            <td>
-                <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
-                <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
-                <!--                <label class="switch">-->
-                <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
-                <!--                    <span class="slider"></span>-->
-                <!--                </label>-->
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <table class="table" ng-show="whatsapp">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
-            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>
-            <td style="word-break: break-word">
-                <h5 >{{::m.sender}}
-
-                </h5>
-                <p>{{::m.number}}</p>
-            </td>
-            <td >
-                <p>{{toHour(m.con[m.con.length-1].time)}}</p>
-                <p>{{::m.con.length}} SMS</p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%" ng-show="whatsappc">
-    <table id="ctable" class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr ng-style="m.sender=='Men'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="40" style="padding-top: 12px;" >
-<!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
-            <td style="word-break: break-word">
-                <h5 >{{m.sender == "Men" ? selectedName.name : m.sender}}</h5>
-                <p>{{m.content}}</p>
-            </td>
-            <td>
-<!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
-                <p>{{DateHelper.toTime(m.time)}}</p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    </div>
-
-    <table class="table" ng-show="icazeler">
-        <thead>
-
-        </thead>
-        <tbody>
-        <tr >
-
-            <td style="word-break: break-word; padding:0.15rem 0.25rem;vertical-align: middle">
-                <h5 style="padding:6px 0 0 6px;">Proqrami silməyə icazə ver</h5>
-            </td>
-            <td style="padding:0.15rem 0;vertical-align: middle">
-                <label class="switch" style="margin-top: 7px;">
-                    <input type="checkbox" ng-click="silIcaze($event)"  ng-checked="silI">
-                    <span class="slider round"></span>
-                </label>
-
-            </td>
-        </tr>
-        <tr >
-
-            <td style="word-break: break-word; padding:0.15rem 0.25rem; vertical-align: middle">
-                <h5 style="padding:6px 0 0 6px;">GPS-i söndürməyə icazə ver</h5>
-            </td>
-            <td style="padding:0.15rem 0;vertical-align: middle">
-                <label class="switch" style="margin-top: 7px;">
-                    <input type="checkbox" ng-click="gpsIcaze($event)"  ng-checked="gpsI">
-                    <span class="slider round"></span>
-                </label>
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <div  ng-show="istifadeler" >
-
-<!--        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%">-->
-<!--            <label class="btn btn-secondary active">-->
-<!--                <input type="radio" name="options" id="option1" autocomplete="off" checked class="btn-danger"> Bu gun-->
-<!--            </label>-->
-<!--            <label class="btn btn-secondary">-->
-<!--                <input type="radio" name="options" id="option2" autocomplete="off"> Bu hefte-->
-<!--            </label>-->
-<!--        </div>-->
-<!--        <p class="text-left">Left </p><p class="text-center">Left </p><p class="text-right">Left </p>-->
-        <p class="text-center" style="font-size: 25px; margin-bottom: 0px;background-color: #eaedf0;color:#000000a6;">{{DateHelper.toDuration(activityHelper.todaySum)}}</p>
-        <table class="table">
+        <table class="table" ng-show="v">
             <thead>
 
             </thead>
             <tbody>
-            <tr ng-repeat="m in activityHelper.day">
-                <td><img ng-src="https://lookin24.com/{{m.pn}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+            <tr ng-repeat="m in aa">
+                <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
                 <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                     <h5 >{{m.name}}</h5>
-                    <h5>{{DateHelper.toDuration(m.sum)}}</h5>
+                    <h5>{{$index}}</h5>
+                    <h5>{{m[$index].blocked}}</h5>
+                </td>
+                <td style="padding-left: 0; vertical-align: middle;">
+                    <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
+                    <label class="switch" >
+                        <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
+                        <span class="slider round"></span>
+                    </label>
+
                 </td>
             </tr>
             </tbody>
         </table>
-    </div>
 
-    <div class="container-fluid text-center" ng-show="aktivleshdir">
-        <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
-        <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
-        <form action="/checkout" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button "
-                    data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
-                    data-amount="499"
-                    data-currency="EUR"
-                    data-name="TMH"
-                    data-description="Family Protector App"
-                    data-image="https://lookin24.com/com.whatsapp.png"
-                    data-locale="auto">
-            </script>
-        </form>
+        <table class="table" ng-show="g">
+            <thead>
 
-        <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
-        <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
-        <form action="/checkout" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button "
-                    data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
-                    data-amount="999"
-                    data-currency="EUR"
-                    data-name="TMH"
-                    data-description="Family Protector App"
-                    data-image="https://lookin24.com/com.whatsapp.png"
-                    data-locale="auto">
-            </script>
-        </form>
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in gunluk">
+                <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+                <td style="word-break: break-word; padding: 0.25rem">
+                    <h5 >{{m.name}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <h5>{{m[$index].blocked}}</h5>
+                </td>
+                <td>
+                    <p>{{m.end == 9007199254740992 ? 'Aktiv' : (DateHelper.toDuration(m.duration))}}  </p>
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-        <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
-        <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
-        <form action="/checkout" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button "
-                    data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
-                    data-amount="1999"
-                    data-currency="EUR"
-                    data-name="TMH"
-                    data-description="Family Protector App"
-                    data-image="https://lookin24.com/com.whatsapp.png"
-                    data-locale="auto">
-            </script>
-        </form>
+        <table class="table" ng-show="y">
+            <thead>
 
-        <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
-        <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
-        <form action="/checkout" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button "
-                    data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
-                    data-amount="2999"
-                    data-currency="EUR"
-                    data-name="TMH"
-                    data-description="Family Protector App"
-                    data-image="https://lookin24.com/com.whatsapp.png"
-                    data-locale="auto">
-            </script>
-        </form>
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in youtubes">
+                <td><img ng-src="https://lookin24.com/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
+                <td>
+                    <h5 >{{m.name}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <!--                <h5>{{m[$index].blocked}}</h5>-->
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
+                    <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-        <!-- Default input -->
-        <label for="exampleForm2">Seria nomresi</label>
-        <input type="number" id="exampleForm2" class="form-control">
-        <button type="button" class="btn btn-success" style="margin-top: 20px">Daxil ol</button>
+        <table class="table" ng-show="w">
+            <thead>
 
-    </div>
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in websites">
+                <td><img ng-src="https://lookin24.com/com.android.chrome.png" style="width: 60px; height: 60px"></td>
+                <td>
+                    <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <!--                <h5>{{m[$index].blocked}}</h5>-->
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
+                    <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-    <div class="container-fluid fixed-bottom" ng-show="w || istifadeler || g || m || y" style="background-color: #bed2cf;">
-        <div class="row">
-            <div class="col-4" text-left >
-                <!--                    <p class="text-left">asd</p>-->
-                <button type="button" class="btn btn-link" ng-click="gunuAzalt();"> < </button>
+        <table class="table" ng-show="whatsapp">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
+                <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+                <td style="word-break: break-word">
+                    <h5 >{{::m.sender}}
+
+                    </h5>
+                    <p>{{::m.number}}</p>
+                </td>
+                <td >
+                    <p>{{toHour(m.con[m.con.length-1].time)}}</p>
+                    <p>{{::m.con.length}} SMS</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%" ng-show="whatsappc">
+            <table id="ctable" class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
+                <thead>
+
+                </thead>
+                <tbody>
+                <tr ng-style="m.sender=='Men'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="40" style="padding-top: 12px;" >
+                    <!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
+                    <td style="word-break: break-word">
+                        <h5 >{{m.sender == "Men" ? selectedName.name : m.sender}}</h5>
+                        <p>{{m.content}}</p>
+                    </td>
+                    <td>
+                        <!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
+                        <p>{{DateHelper.toTime(m.time)}}</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table class="table" ng-show="icazeler">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem;vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;">Proqrami silməyə icazə ver</h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="silIcaze($event)"  ng-checked="silI">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem; vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;">GPS-i söndürməyə icazə ver</h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="gpsIcaze($event)"  ng-checked="gpsI">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div  ng-show="istifadeler" >
+
+            <!--        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%">-->
+            <!--            <label class="btn btn-secondary active">-->
+            <!--                <input type="radio" name="options" id="option1" autocomplete="off" checked class="btn-danger"> Bu gun-->
+            <!--            </label>-->
+            <!--            <label class="btn btn-secondary">-->
+            <!--                <input type="radio" name="options" id="option2" autocomplete="off"> Bu hefte-->
+            <!--            </label>-->
+            <!--        </div>-->
+            <!--        <p class="text-left">Left </p><p class="text-center">Left </p><p class="text-right">Left </p>-->
+            <p class="text-center" style="font-size: 25px; margin-bottom: 0px;background-color: #eaedf0;color:#000000a6;">{{DateHelper.toDuration(activityHelper.todaySum)}}</p>
+            <table class="table">
+                <thead>
+
+                </thead>
+                <tbody>
+                <tr ng-repeat="m in activityHelper.day">
+                    <td><img ng-src="https://lookin24.com/{{m.pn}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+                    <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
+                        <h5 >{{m.name}}</h5>
+                        <h5>{{DateHelper.toDuration(m.sum)}}</h5>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container-fluid text-center" ng-show="aktivleshdir">
+            <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
+                        data-amount="499"
+                        data-currency="EUR"
+                        data-name="TMH"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.whatsapp.png"
+                        data-locale="auto">
+                </script>
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
+                        data-amount="999"
+                        data-currency="EUR"
+                        data-name="TMH"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.whatsapp.png"
+                        data-locale="auto">
+                </script>
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
+                        data-amount="1999"
+                        data-currency="EUR"
+                        data-name="TMH"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.whatsapp.png"
+                        data-locale="auto">
+                </script>
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_live_HlAKtzJUOddRISe6pBlcbBTe00Pkr97x2T"
+                        data-amount="2999"
+                        data-currency="EUR"
+                        data-name="TMH"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.whatsapp.png"
+                        data-locale="auto">
+                </script>
+            </form>
+
+            <!-- Default input -->
+            <label for="exampleForm2">Seria nomresi</label>
+            <input type="number" id="exampleForm2" class="form-control">
+            <button type="button" class="btn btn-success" style="margin-top: 20px">Daxil ol</button>
+
+        </div>
+
+        <div class="container-fluid fixed-bottom" ng-show="w || istifadeler || g || m || y" style="background-color: #bed2cf;">
+            <div class="row">
+                <div class="col-4" text-left >
+                    <!--                    <p class="text-left">asd</p>-->
+                    <button type="button" class="btn btn-link" ng-click="gunuAzalt();"> < </button>
+                </div>
+                <div class="col-4" style="text-align: center">
+                    <div  style="text-align: center; padding-top: 4px">{{DateHelper.toMonth(curDay)}}</div>
+                </div>
+                <div class="col-4 text-right">
+                    <button type="button" class="btn btn-link" ng-click="gunuArtir();"> > </button>
+                </div>
             </div>
-            <div class="col-4" style="text-align: center">
-                <div  style="text-align: center; padding-top: 4px">{{DateHelper.toMonth(curDay)}}</div>
-            </div>
-            <div class="col-4 text-right">
-                <button type="button" class="btn btn-link" ng-click="gunuArtir();"> > </button>
+        </div>
+
+        <div class="d-flex justify-content-center fixed-top" style="height: 0px" ng-show="loadingdiv">
+            <div class="spinner-grow text-center" role="status">
+                <span class="sr-only text-center">Loading...</span>
             </div>
         </div>
     </div>
 
-    <div class="d-flex justify-content-center fixed-top" style="height: 0px" ng-show="loadingdiv">
-        <div class="spinner-grow text-center" role="status">
-            <span class="sr-only text-center">Loading...</span>
-        </div>
-    </div>
 
     </div>
 
