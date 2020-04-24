@@ -273,6 +273,8 @@ async function f() {
                 //console.log(CommandResults);
                 if(CommandResults[imei+cmd] != undefined) {
                     let of = CommandResults[imei+cmd];
+                    console.log(of);
+                    console.log("SEND activity bu gelib")
 
                     of.data = filter(req.query.curDay, of.data);
                     res.send(of);
