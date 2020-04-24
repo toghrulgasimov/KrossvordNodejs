@@ -134,7 +134,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
     $scope.location = function(m) {
-        if(m == 0) $scope.curDay = new Date();
+        if(m != 0) $scope.curDay = new Date();
         console.log("cur " + m + "----" + $scope.curDay);
         $scope.loadingdiv = true;
         console.log("Location Called");
