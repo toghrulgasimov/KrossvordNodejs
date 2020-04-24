@@ -63,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index3.html">
+  <component name="RunManager" selected="JavaScript Debug.parentorchild.html">
     <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -84,11 +84,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="Node.js.DateHelper.js" />
         <item itemvalue="JavaScript Debug.done.html" />
         <item itemvalue="JavaScript Debug.childname.html" />
-        <item itemvalue="JavaScript Debug.parentorchild.html" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +176,7 @@
       <workItem from="1587458943207" duration="30350000" />
       <workItem from="1587637360995" duration="7282000" />
       <workItem from="1587672331410" duration="1862000" />
-      <workItem from="1587720923858" duration="11728000" />
+      <workItem from="1587720923858" duration="12840000" />
     </task>
     <servers />
   </component>
