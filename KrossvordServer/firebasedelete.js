@@ -25,6 +25,7 @@ async function f() {
     const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
 
     let isSameDay = function(a, b) {
+        console.log(a, b);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
         console.log(a + " and " + b + "---------------------------- isSameDay function called");
@@ -34,7 +35,7 @@ async function f() {
         let ans = [];
         console.log(of);
         for(let i = 0; i < of.length; i++) {
-            if(true)
+            if(isSameDay(curDay, of[i].start))
                 ans.push(of[i]);
         }
         return ans;
