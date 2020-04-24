@@ -53,13 +53,13 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.changeData = function() {
         if($scope.g) {
-            $scope.gundelik();
+            $scope.gundelik(0);
         }else if($scope.y) {
-            $scope.yact();
+            $scope.yact(0);
         }else if($scope.w) {
-            $scope.Web();
+            $scope.Web(0);
         }else if($scope.istifadeler) {
-            $scope.gundelik();
+            $scope.gundelik(0);
         }
     }
     $scope.gunuAzalt = function() {
@@ -131,7 +131,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     };
 
 
-    $scope.location = function() {
+    $scope.location = function(m) {
+        if(m != 1) $scope.curDay = new Date();
         $scope.loadingdiv = true;
         console.log("Location Called");
 
