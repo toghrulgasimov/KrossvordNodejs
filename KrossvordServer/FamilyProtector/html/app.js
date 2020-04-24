@@ -51,6 +51,17 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
 
+    $scope.changeData = function() {
+        if($scope.g) {
+
+        }else if($scope.y) {
+
+        }else if($scope.w) {
+
+        }else if($scope.istifadeler) {
+
+        }
+    }
     $scope.gunuAzalt = function() {
         $scope.curDay.setDate($scope.curDay.getDate()-1);
         console.log("Gunuazalt basildi");
@@ -123,25 +134,25 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         console.log("Location Called");
 
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1').then(function (d) {
-            console.log(d.data.locations);
+            console.log(d.data.data);
             $scope.loadingdiv = false;
             //test data
-            d.data.locations = [
-                {time: "1586602656081", lo: "10.373508", la: "52.061589"},
-                {time: "1586602697465", lo: "10.3742054", la: "52.0623917"},
-                {time: "1586602757443", lo: "10.3746074", la: "52.060913"},
-                {time: "1586602817456", lo: "10.3751552", la: "52.0575757"},
-                {time: "1586602877461", lo: "10.3716101", la: "52.0564132"},
-                {time: "1586602937462", lo: "10.3731574", la: "52.052786"},
-                {time: "1586602997467", lo: "10.372823", la: "52.0502005"},
-                {time: "1586603174063", lo: "10.3739413", la: "52.0510719"},
-                {time: "1586604423569", lo: "10.373495", la: "52.0615974"}
+            d.data.data = [
+                {start: "1586602656081", lo: "10.373508", la: "52.061589"},
+                {start: "1586602697465", lo: "10.3742054", la: "52.0623917"},
+                {start: "1586602757443", lo: "10.3746074", la: "52.060913"},
+                {start: "1586602817456", lo: "10.3751552", la: "52.0575757"},
+                {start: "1586602877461", lo: "10.3716101", la: "52.0564132"},
+                {start: "1586602937462", lo: "10.3731574", la: "52.052786"},
+                {start: "1586602997467", lo: "10.372823", la: "52.0502005"},
+                {start: "1586603174063", lo: "10.3739413", la: "52.0510719"},
+                {start: "1586604423569", lo: "10.373495", la: "52.0615974"}
             ];
-            if(d.data.locations == undefined) {
+            if(d.data.data == undefined) {
                 return;
             }
 
-            $scope.locations = d.data.locations;
+            $scope.locations = d.data.data;
 
             $scope.locations.reverse();
             if($scope.locations == undefined) {
@@ -169,7 +180,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     map.setCenter({lat: l[i].la, lng: l[i].lo});
                 }
                 flightPlanCoordinates.push( {lat: l[i].la, lng: l[i].lo});
-                let time = $scope.stringUtil.toTime(parseInt(l[i].time));
+                let time = $scope.stringUtil.toTime(parseInt(l[i].start));
                 time = time.substring(time.length - 5);
 
                 if(true) {
@@ -222,7 +233,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.Web = function() {
         $scope.loadingdiv = true;
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1').then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
             $scope.loadingdiv = false;
             if(d.data.data == undefined) {
@@ -323,7 +334,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.yact = function() {
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1').then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
             if(d.data.data == undefined) {
                 return;

@@ -24,6 +24,20 @@ async function f() {
     //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
     const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
 
+    let isSameDay = function(a, b) {
+        a = new Date(parseInt(a));
+        b = new Date(parseInt(a));
+        return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
+    }
+    let filter = function(curDay, of) {
+        let ans = [];
+        for(let i = 0; i < of.length; i++) {
+            if(isSameDay(curDay, of[i].start))
+                ans.push(of[i]);
+        }
+        return ans;
+    }
+
 
     module.exports.routes = function(app, db){
         app.use(cookieParser('secreteee'));
@@ -231,6 +245,7 @@ async function f() {
         });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
+            console.log(req.query);
             let imei = req.query.imei;
             let cmd;
             if(req.query.youtube != undefined) {
@@ -255,7 +270,10 @@ async function f() {
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
                 if(CommandResults[imei+cmd] != undefined) {
-                    res.send(CommandResults[imei+cmd]);
+                    let of = CommandResults[imei+cmd];
+
+                    of.data = filter(req.query.curDay, of.data);
+                    res.send(of);
                     clearInterval(f);
                     CommandResults[imei+cmd] = undefined;
                 }
@@ -263,12 +281,16 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
+                        d.activity.data = filter(req.query.curDay,d.activity.data);
                         res.send(d.activity);
                     }else if(cmd == 'sendLocation' && d.location != undefined){
+                        d.location.data = filter(req.query.curDay,d.location.data);
                         res.send(d.location);
                     } else if(cmd == 'sendWensites' && d.website != undefined){
+                        d.website.data = filter(req.query.curDay,d.website.data);
                         res.send(d.website);
                     }else if(cmd == 'sendYoutube' && d.youtube != undefined) {
+                        d.youtube.data = filter(req.query.curDay,d.youtube.data);
                         res.send(d.youtube);
                     }else {
                         res.send("0");
