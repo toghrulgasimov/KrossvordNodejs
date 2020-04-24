@@ -133,7 +133,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.loadingdiv = true;
         console.log("Location Called");
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1').then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
             $scope.loadingdiv = false;
             //test data
@@ -289,7 +289,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.gundelik = function() {
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei).then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.curDay.getTime()).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d.data.data);
 
