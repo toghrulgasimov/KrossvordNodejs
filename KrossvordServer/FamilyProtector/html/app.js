@@ -44,6 +44,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.loadingdiv = false;
     $scope.gpsI = false;
     $scope.silI = false;
+    $scope.curDay = new Date();
 
     $scope.stringUtil = stringUtil;
     $scope.DateHelper = DateHelper;

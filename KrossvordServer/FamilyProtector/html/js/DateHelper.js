@@ -47,5 +47,19 @@ let DateHelper = {
             return "Dünən " + h + ":" + m;
         }
         return stringUtil.toTime(d);
+    },
+    toMonth: function (d) {
+        if(this.isToday(d)) {
+            return "Bugün";
+        }
+        if(this.isYesterday(d)) {
+            return "Dünən";
+        }
+        let day = d.getDate()+"";
+        let month = d.getMonth()+"";
+        let year = d.getFullYear()+"";
+        if(day.length == 1) day = '0' + day;
+        if(month.length == 1) month = '0' + month;
+        return day + "." + month + "." + year;
     }
 };
