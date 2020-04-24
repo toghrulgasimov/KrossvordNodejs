@@ -237,7 +237,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     }
 
-    $scope.Web = function() {
+    $scope.Web = function(m) {
+        if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
@@ -292,7 +293,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $( "body" ).scrollTop(1000000);
         }, 100);
     }
-    $scope.gundelik = function() {
+    $scope.gundelik = function(m) {
+        if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
 
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.curDay.getTime()).then(function (d) {
@@ -338,8 +340,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     }
 
-    $scope.yact = function() {
-
+    $scope.yact = function(m) {
+        if(m != 0) $scope.curDay = new Date();
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
             if(d.data.data == undefined) {
