@@ -60,6 +60,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.Web(0);
         }else if($scope.istifadeler) {
             $scope.gundelik(0);
+        }else if($scope.m) {
+            $scope.location(0);
         }
     }
     $scope.gunuAzalt = function() {
