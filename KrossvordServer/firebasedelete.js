@@ -34,7 +34,7 @@ async function f() {
         let ans = [];
         console.log(of);
         for(let i = 0; i < of.length; i++) {
-            if(isSameDay(curDay, of[i].start))
+            if(true)
                 ans.push(of[i]);
         }
         return ans;
