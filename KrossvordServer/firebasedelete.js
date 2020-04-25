@@ -196,7 +196,7 @@ async function f() {
 
             console.log("in sendActivity");
             let ar = data.data.slice(0);
-            console.log(ar);
+
 
             let d = await db.collection("devices").findOne({imei:imei});
 
@@ -212,6 +212,7 @@ async function f() {
                 if(le != undefined && le.end != "-1") {
                     ar.push(le);
                 }
+                console.log(ar);
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
             res.send("1");
