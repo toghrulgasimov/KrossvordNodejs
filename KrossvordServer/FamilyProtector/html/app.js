@@ -122,7 +122,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         $http.get('https://lookin24.com/blockApp?imei='+$scope.selectedName.imei+'&package='+b+'&block='+block).then(function (d) {
             console.log(d.data.apps + " " + $scope.imei);
-            $scope.loadingdiv = false;;
+            $scope.loadingdiv = false;
 
             c.blocked = c.blocked ^ true;
 
@@ -342,11 +342,13 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.yact = function(m) {
         if(m != 0) $scope.curDay = new Date();
+        $scope.loadingdiv = true;
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.curDay.getTime()).then(function (d) {
             console.log(d.data.data);
             if(d.data.data == undefined) {
                 return;
             }
+            $scope.loadingdiv = false;
 
             $scope.youtubes = d.data.data;
             $scope.youtubes.reverse();
