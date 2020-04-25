@@ -29,10 +29,10 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.message=["Hello Wdsdorld",'dasdas'];
     $scope.whatsapp = false;
     $scope.whatsappc = false;
-    $scope.v = true;
+    $scope.v = false;
     $scope.w = false;
     $scope.m = false;
-    $scope.g = false;
+    $scope.g = true;
     $scope.y = false;
     $scope.istifadeler = false;
     $scope.icazeler = false;
@@ -493,6 +493,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     //$scope.aa=[];
 
     $scope.fillSelect();
+    $scope.gundelik();
 
 
 } )
