@@ -412,7 +412,8 @@
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 40.6506034, lng: 46.5340354},
             zoom: 18,
-            gestureHandling: "greedy"
+            gestureHandling: "greedy",
+            zoomControl: false
         });
     }
     $('.navbar-nav>li>a').on('click', function(){
