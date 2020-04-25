@@ -368,7 +368,10 @@ async function f() {
                     command: cmd
 
                 },
-                token: d.token
+                token: d.token,
+                android:{
+                    priority:"normal"
+                }
             };
             admin.messaging().send(message)
                 .then((response) => {
