@@ -292,6 +292,10 @@ async function f() {
                 ans.pop();
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:ans}}});
             }
+            if(d.location == undefined) {
+                d.location = {};
+                d.location.data = [];
+            }
             d.location.data = d.location.data.concat(data.data);
             CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
