@@ -28,12 +28,12 @@ async function f() {
         console.log(a, b);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
-        console.log(a + " and " + b + "---------------------------- isSameDay function called");
+        //console.log(a + " and " + b + "---------------------------- isSameDay function called");
         return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
     }
     let filter = function(curDay, of) {
         let ans = [];
-        console.log(of);
+        //console.log(of);
         for(let i = 0; i < of.length; i++) {
             if(isSameDay(curDay, of[i].start))
                 ans.push(of[i]);
