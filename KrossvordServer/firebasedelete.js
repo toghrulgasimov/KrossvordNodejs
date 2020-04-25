@@ -370,7 +370,7 @@ async function f() {
                 },
                 token: d.token,
                 android:{
-                    priority:"normal"
+                    priority:"high"
                 }
             };
             admin.messaging().send(message)
