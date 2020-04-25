@@ -203,6 +203,7 @@ async function f() {
 
 
             if(d == null || d == undefined || d.activity == undefined) {
+                data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
                 CommandResults[imei+'sendActivity'] = data;
             }else {
@@ -213,7 +214,7 @@ async function f() {
                 data.data = d.activity.data.concat(ar);
                 CommandResults[imei+'sendActivity'] = data;
                 let le = ar.pop();
-                
+
                 console.log(ar);
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
@@ -229,6 +230,7 @@ async function f() {
             console.log("-------in sendYoutube");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.youtube == undefined) {
+                data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
@@ -256,6 +258,7 @@ async function f() {
             console.log("-------in sendWebSites");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.website == undefined) {
+                data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
@@ -282,6 +285,7 @@ async function f() {
             console.log("-------in sendLocation");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.location == undefined) {
+                data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
