@@ -224,7 +224,6 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            console.log(data);
             console.log("-------in sendYoutube");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.youtube == undefined) {
@@ -234,8 +233,8 @@ async function f() {
                 ans.pop();
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
             }
-            d.website.data = d.website.data.concat(data.data);
-            CommandResults[imei+'sendWebsites'] = d.website;
+            d.youtube.data = d.youtube.data.concat(data.data);
+            CommandResults[imei+'sendWebsites'] = d.youtube;
 
             res.send("1");
         });
