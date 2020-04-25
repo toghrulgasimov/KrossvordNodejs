@@ -276,7 +276,7 @@ async function f() {
         });
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
-            console.log(req.query);
+            //console.log(req.query);
             let imei = req.query.imei;
             let cmd;
             if(req.query.youtube != undefined) {
@@ -302,8 +302,8 @@ async function f() {
                 //console.log(CommandResults);
                 if(CommandResults[imei+cmd] != undefined) {
                     let of = CommandResults[imei+cmd];
-                    console.log(of);
-                    console.log("SEND activity bu gelib")
+                    //console.log(of);
+                    //console.log("SEND activity bu gelib")
 
                     of.data = filter(req.query.curDay, of.data);
                     res.send(of);
