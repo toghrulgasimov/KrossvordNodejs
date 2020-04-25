@@ -198,7 +198,7 @@ async function f() {
             console.log("in sendActivity");
             let ar = data.data.slice(0);
             let le = ar.pop();
-            if(le.end != "-1") {
+            if(le != undefined && le.end != "-1") {
                 ar.push(le);
             }
 
