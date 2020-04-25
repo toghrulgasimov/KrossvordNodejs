@@ -194,28 +194,26 @@ async function f() {
             let data = req.body;
             let imei = data.imei;
 
-            console.log(data);
             console.log("in sendActivity");
             let ar = data.data.slice(0);
+            console.log(ar);
 
             let d = await db.collection("devices").findOne({imei:imei});
 
 
-            CommandResults[imei+'sendActivity'] = data;
-
-            let le = ar.pop();
-            if(le != undefined && le.end != "-1") {
-                ar.push(le);
-            }
 
             if(d == null || d == undefined || d.activity == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+                CommandResults[imei+'sendActivity'] = data;
             }else {
                 data.data = d.activity.data.concat(ar);
+                CommandResults[imei+'sendActivity'] = data;
+                let le = ar.pop();
+                if(le != undefined && le.end != "-1") {
+                    ar.push(le);
+                }
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
-
-            console.log(d);
             res.send("1");
         });
         app.post("/sendYoutube", async function (req, res) {
