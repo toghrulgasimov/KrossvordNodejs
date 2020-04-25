@@ -196,12 +196,17 @@ async function f() {
             CommandResults[imei+'sendActivity'] = data;
             console.log(data);
             console.log("in sendActivity");
+            let ar = data.data.slice(0);
+            let le = ar.pop();
+            if(le.end != "-1") {
+                ar.push(le);
+            }
 
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.activity == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
             }else {
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:data.data}}});
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
 
             console.log(d);
