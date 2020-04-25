@@ -224,7 +224,6 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei+'sendYoutube'] = data;
             console.log(data);
             console.log("-------in sendYoutube");
             let d = await db.collection("devices").findOne({imei:imei});
@@ -233,7 +232,9 @@ async function f() {
             }else {
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:data.data}}});
             }
-            console.log(d);
+            d.website.data = d.website.data.concat(data.data);
+            CommandResults[imei+'sendWebsites'] = d.website;
+
             res.send("1");
         });
         app.post("/sendWebSites", async function (req, res) {
