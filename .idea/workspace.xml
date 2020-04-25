@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,7 +177,7 @@
       <workItem from="1587637360995" duration="7282000" />
       <workItem from="1587672331410" duration="1862000" />
       <workItem from="1587720923858" duration="21661000" />
-      <workItem from="1587809585054" duration="2475000" />
+      <workItem from="1587809585054" duration="3692000" />
     </task>
     <servers />
   </component>

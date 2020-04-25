@@ -275,9 +275,13 @@ async function f() {
             if(d == null || d == undefined || d.location == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             }else {
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:data.data}}});
+                let ans = data.data.slice(0);
+                ans.pop();
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:ans}}});
             }
-            console.log(d);
+            d.location.data = d.location.data.concat(data.data);
+            CommandResults[imei+'sendYoutube'] = d.location;
+
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
