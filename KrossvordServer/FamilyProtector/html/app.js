@@ -333,6 +333,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.gunluk.sort(function (a,b) {
                 return b.end-a.end;
             })
+            $scope.openActivity(1);
 
         }, function () {
 
