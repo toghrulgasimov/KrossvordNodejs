@@ -199,7 +199,7 @@ async function f() {
             let ar = data.data.slice(0);
 
             let d = await db.collection("devices").findOne({imei:imei});
-            data.data = d.activity.data.concat(ar);
+
 
             CommandResults[imei+'sendActivity'] = data;
 
@@ -211,6 +211,7 @@ async function f() {
             if(d == null || d == undefined || d.activity == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
             }else {
+                data.data = d.activity.data.concat(ar);
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
 
