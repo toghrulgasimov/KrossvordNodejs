@@ -28,7 +28,7 @@ async function f() {
         console.log(a, b);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
-        console.log(a + " and " + b + "---------------------------- isSameDay function called");
+        console.log(a + " and " + b + "---------------------------- isSameDay function called" + a.getTime());
         return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
     }
     let filter = function(curDay, of) {

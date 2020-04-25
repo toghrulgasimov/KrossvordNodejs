@@ -67,7 +67,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.gunuAzalt = function() {
         $scope.curDay.setDate($scope.curDay.getDate()-1);
         console.log("Gunuazalt basildi");
-        console.log($scope.curDay);
+        console.log($scope.curDay + " " + $scope.curDay.getTime());
         $scope.changeData();
     }
     $scope.gunuArtir = function() {
