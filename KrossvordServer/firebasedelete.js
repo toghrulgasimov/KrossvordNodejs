@@ -230,8 +230,9 @@ async function f() {
             if(d == null || d == undefined || d.youtube == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             }else {
-
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:data.data}}});
+                let ans = data.data.slice(0);
+                ans.pop();
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
             }
             d.website.data = d.website.data.concat(data.data);
             CommandResults[imei+'sendWebsites'] = d.website;
