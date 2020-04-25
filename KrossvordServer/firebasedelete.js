@@ -268,7 +268,6 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            CommandResults[imei+'sendLocation'] = data;
             console.log(data);
             console.log("-------in sendLocation");
             let d = await db.collection("devices").findOne({imei:imei});
@@ -280,7 +279,7 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:ans}}});
             }
             d.location.data = d.location.data.concat(data.data);
-            CommandResults[imei+'sendYoutube'] = d.location;
+            CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
 
             res.send("1");
