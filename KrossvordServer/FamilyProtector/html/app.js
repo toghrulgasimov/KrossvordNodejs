@@ -434,6 +434,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         $scope.aa.sort(function (a, b) {
                             return du[b.package] - du[a.package];
                         })
+                        $scope.gundelik();
 
                         //$scope.adapter.append($scope.aa);
                     }, function () {
@@ -493,7 +494,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     //$scope.aa=[];
 
     $scope.fillSelect();
-    $scope.gundelik();
+
 
 
 } )
