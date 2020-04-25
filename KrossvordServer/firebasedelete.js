@@ -226,8 +226,12 @@ async function f() {
             CommandResults[imei+'sendWebsites'] = data;
             console.log(data);
             console.log("-------in sendWebSites");
-            await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
             let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined || d.website == undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$push:{website:{$each:data}}});
+            }
             console.log(d);
             res.send("1");
         });
