@@ -230,7 +230,7 @@ async function f() {
             if(d == null || d == undefined || d.website == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
             }else {
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"website.data":{$each:data}}});
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"website.data":{$each:data.data}}});
             }
             console.log(d);
             res.send("1");
