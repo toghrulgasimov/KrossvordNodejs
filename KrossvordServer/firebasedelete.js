@@ -199,8 +199,9 @@ async function f() {
             let ar = data.data.slice(0);
 
             let d = await db.collection("devices").findOne({imei:imei});
-            d.activity.data = d.activity.data.concat(ar);
-            CommandResults[imei+'sendActivity'] = d.activity.data;
+            data.data = d.activity.data.concat(ar);
+
+            CommandResults[imei+'sendActivity'] = data;
 
             let le = ar.pop();
             if(le != undefined && le.end != "-1") {
