@@ -196,8 +196,14 @@ async function f() {
             CommandResults[imei+'sendActivity'] = data;
             console.log(data);
             console.log("in sendActivity");
-            await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+
             let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined || d.activity == undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:data.data}}});
+            }
+
             console.log(d);
             res.send("1");
         });
@@ -211,8 +217,12 @@ async function f() {
             CommandResults[imei+'sendYoutube'] = data;
             console.log(data);
             console.log("-------in sendYoutube");
-            await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined || d.youtube == undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:data.data}}});
+            }
             console.log(d);
             res.send("1");
         });
@@ -245,8 +255,12 @@ async function f() {
             CommandResults[imei+'sendLocation'] = data;
             console.log(data);
             console.log("-------in sendLocation");
-            await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined || d.location == undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:data.data}}});
+            }
             console.log(d);
             res.send("1");
         });
