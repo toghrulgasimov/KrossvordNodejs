@@ -193,16 +193,20 @@ async function f() {
             //also push notification to user
             let data = req.body;
             let imei = data.imei;
-            CommandResults[imei+'sendActivity'] = data;
+
             console.log(data);
             console.log("in sendActivity");
             let ar = data.data.slice(0);
+
+            let d = await db.collection("devices").findOne({imei:imei});
+            d.activity.data = d.activity.data.concat(ar);
+            CommandResults[imei+'sendActivity'] = d.activity.data;
+
             let le = ar.pop();
             if(le != undefined && le.end != "-1") {
                 ar.push(le);
             }
 
-            let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.activity == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
             }else {
