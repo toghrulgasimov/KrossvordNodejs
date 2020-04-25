@@ -213,9 +213,7 @@ async function f() {
                 data.data = d.activity.data.concat(ar);
                 CommandResults[imei+'sendActivity'] = data;
                 let le = ar.pop();
-                if(le != undefined && le.end != "-1") {
-                    ar.push(le);
-                }
+                
                 console.log(ar);
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
             }
