@@ -281,6 +281,7 @@ async function f() {
             }
             d.location.data = d.location.data.concat(data.data);
             CommandResults[imei+'sendYoutube'] = d.location;
+            console.log(d.location);
 
             res.send("1");
         });
