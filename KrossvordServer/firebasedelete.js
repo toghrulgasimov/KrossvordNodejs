@@ -187,6 +187,7 @@ async function f() {
             //console.log("-------in sendLocation");
             await db.collection("devices").updateOne({imei:imei}, {$set:{con:data.data}}, {upsert:true});
             //let d = await db.collection("devices").findOne({imei:imei});
+            CommandResults[imei+'sendWhatsapp'] = data;
 
             res.send("1");
         });
@@ -317,7 +318,10 @@ async function f() {
                 cmd = 'sendWebsites';
             }else if(req.query.sendLocation){
                 cmd = 'sendLocation';
-            }else {
+            }else if(req.query.whatsapp){
+                cmd = 'sendWhatsapp';
+            }
+            else {
                 cmd = 'sendActivity';
             }
 
@@ -337,7 +341,10 @@ async function f() {
                     //console.log(of);
                     //console.log("SEND activity bu gelib")
 
-                    of.data = filter(req.query.curDay, of.data, req.query.off);
+                    if(cmd != 'sendWhatsapp') {
+                        of.data = filter(req.query.curDay, of.data, req.query.off);
+
+                    }
                     res.send(of);
                     clearInterval(f);
                     CommandResults[imei+cmd] = undefined;
@@ -357,7 +364,10 @@ async function f() {
                     }else if(cmd == 'sendYoutube' && d.youtube != undefined) {
                         d.youtube.data = filter(req.query.curDay,d.youtube.data, req.query.off);
                         res.send(d.youtube);
-                    }else {
+                    }else if(cmd == 'sendWhatsapp' && d.con != undefined){
+
+                    }
+                    else {
                         res.send("0");
                     }
                 }
