@@ -486,7 +486,7 @@ async function f() {
 			}else {
 				res.redirect("/index3");
 			}
-
+			return;
 		}
 		MongoClient.connect(url, function(err, db) {
 			if (err){ if(db != null)db.close(); return;}
