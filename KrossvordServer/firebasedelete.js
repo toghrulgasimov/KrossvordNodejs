@@ -31,7 +31,7 @@ async function f() {
         b = b + (m * 1000*60);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
-        console.log(a + " and " + b + "---------------------------- isSameDay function called" + a.getTime());
+        console.log(a + " and " + b + "---------------------------- isSameDay function called" + a.getTime() + "--" + m);
         return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
     }
     let filter = function(curDay, of) {
