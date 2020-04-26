@@ -480,6 +480,14 @@ async function f() {
 	}, 1000);
 	app.get('/', (req, res) =>{
 		//res.send('Hello World!');
+		if(req.query.name == undefined) {
+			if(req.query.imei != undefined) {
+				res.redirect("/index3?imei=" + req.query.imei);
+			}else {
+				res.redirect("/index3");
+			}
+
+		}
 		MongoClient.connect(url, function(err, db) {
 			if (err){ if(db != null)db.close(); return;}
 			var dbo = db.db("mydb");
