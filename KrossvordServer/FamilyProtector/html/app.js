@@ -265,7 +265,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&whatsapp=1').then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
-            $scope.whatsaps = d.data.con;
+            $scope.whatsaps = d.data.data;
             //$scope.adapter.prepend($scope.whatsaps);
             $scope.whatsaps.sort(function (a, b) {
                 return b.con[b.con.length - 1].time - a.con[a.con.length - 1].time;
