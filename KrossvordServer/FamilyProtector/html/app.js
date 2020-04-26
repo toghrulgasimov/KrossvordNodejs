@@ -369,7 +369,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         });
 
     }
-    $scope.openActivity = function() {
+    $scope.openActivity = function(a) {
         let ah = new ActivityHelper();
         ah.init($scope.gunluk);
         $scope.activityHelper = ah;
