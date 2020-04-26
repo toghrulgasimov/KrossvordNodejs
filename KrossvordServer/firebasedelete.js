@@ -25,7 +25,7 @@ async function f() {
     const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
 
     let isSameDay = function(a, b, m) {
-        console.log(a, b);
+        //console.log(a, b);
         b = parseInt(b);
         m = parseInt(m);
         b = b - (m * 1000*60);
