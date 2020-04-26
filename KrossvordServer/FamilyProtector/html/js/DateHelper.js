@@ -61,5 +61,10 @@ let DateHelper = {
         if(day.length == 1) day = '0' + day;
         if(month.length == 1) month = '0' + month;
         return day + "." + month + "." + year;
+    },
+    toUTC : function (d) {
+        let s = d.getTime();
+        let m = d.getTimezoneOffset();
+        return s + (m * 60 * 1000);
     }
 };

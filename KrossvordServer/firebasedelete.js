@@ -24,7 +24,7 @@ async function f() {
     //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
     const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
 
-    let isSameDay = function(a, b) {
+    let isSameDay = function(a, b, m) {
         console.log(a, b);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
@@ -333,7 +333,7 @@ async function f() {
                     //console.log(of);
                     //console.log("SEND activity bu gelib")
 
-                    of.data = filter(req.query.curDay, of.data);
+                    of.data = filter(req.query.curDay, of.data, req.query.off);
                     res.send(of);
                     clearInterval(f);
                     CommandResults[imei+cmd] = undefined;
@@ -342,16 +342,16 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
-                        d.activity.data = filter(req.query.curDay,d.activity.data);
+                        d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
                         res.send(d.activity);
                     }else if(cmd == 'sendLocation' && d.location != undefined){
-                        d.location.data = filter(req.query.curDay,d.location.data);
+                        d.location.data = filter(req.query.curDay,d.location.data, req.query.off);
                         res.send(d.location);
                     } else if(cmd == 'sendWensites' && d.website != undefined){
-                        d.website.data = filter(req.query.curDay,d.website.data);
+                        d.website.data = filter(req.query.curDay,d.website.data, req.query.off);
                         res.send(d.website);
                     }else if(cmd == 'sendYoutube' && d.youtube != undefined) {
-                        d.youtube.data = filter(req.query.curDay,d.youtube.data);
+                        d.youtube.data = filter(req.query.curDay,d.youtube.data, req.query.off);
                         res.send(d.youtube);
                     }else {
                         res.send("0");
