@@ -65,6 +65,6 @@ let DateHelper = {
     toUTC : function (d) {
         let s = d.getTime();
         let m = d.getTimezoneOffset();
-        return s + (m * 60 * 1000);
+        return s - (m * 60 * 1000);
     }
 };

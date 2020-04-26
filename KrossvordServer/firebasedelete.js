@@ -28,7 +28,7 @@ async function f() {
         console.log(a, b);
         b = parseInt(b);
         m = parseInt(m);
-        b = b + (m * 1000*60);
+        b = b - (m * 1000*60);
         a = new Date(parseInt(a));
         b = new Date(parseInt(b));
         console.log(a + " and " + b + "---------------------------- isSameDay function called" + a.getTime() + "--" + m);
