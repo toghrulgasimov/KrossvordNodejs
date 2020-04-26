@@ -12,12 +12,10 @@ class ActivityHelper {
 
         for(let i = 0; i < gunluk.length; i++) {
             this.Mname[gunluk[i].package] = gunluk[i].name;
-            if(DateHelper.isToday(new Date(gunluk[i].start))) {
-                if(this.Mday[gunluk[i].package] == undefined) {
-                    this.Mday[gunluk[i].package] = gunluk[i].duration;
-                }else {
-                    this.Mday[gunluk[i].package] += gunluk[i].duration;
-                }
+            if(this.Mday[gunluk[i].package] == undefined) {
+                this.Mday[gunluk[i].package] = gunluk[i].duration;
+            }else {
+                this.Mday[gunluk[i].package] += gunluk[i].duration;
             }
         }
         for(let i in this.Mday) {
