@@ -365,7 +365,7 @@ async function f() {
                         d.youtube.data = filter(req.query.curDay,d.youtube.data, req.query.off);
                         res.send(d.youtube);
                     }else if(cmd == 'sendWhatsapp' && d.con != undefined){
-
+                        res.send(d.con);
                     }
                     else {
                         res.send("0");
