@@ -711,6 +711,11 @@ async function f() {
             res.send(data);
 
         });
+        app.post("/WpMsg", async function (req, res) {
+            console.log(req.body);
+            res.send("1");
+
+        });
 
     }
 }
