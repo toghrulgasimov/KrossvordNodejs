@@ -4,7 +4,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     //$scope.names = ["Emil", "Tobias", "Linus"];
     //$scope.selectedName = $scope.names[0];
 
-    $scope.curMenu = 'Programlar';
+    $scope.curMenu = 'Gundelik';
     $scope.aa = [];
     $scope.aktivleshdir = false;
     //
