@@ -308,6 +308,7 @@ async function f() {
         app.get("/sendCommand", async function (req, res) {
             //also push notification to user
             //console.log(req.query);
+            console.log(req.query)
             let imei = req.query.imei;
             let cmd;
             if(req.query.youtube != undefined) {
