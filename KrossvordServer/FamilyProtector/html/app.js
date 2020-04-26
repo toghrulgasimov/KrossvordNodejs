@@ -140,7 +140,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.loadingdiv = true;
         console.log("Location Called");
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.DateHelper.toUTC($scope.curDay.getTime())+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             $scope.loadingdiv = false;
             //test data
@@ -241,7 +241,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.Web = function(m) {
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.DateHelper.toUTC($scope.curDay.getTime())+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             $scope.loadingdiv = false;
             if(d.data.data == undefined) {
@@ -298,7 +298,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay.getTime())+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d.data.data);
 
@@ -345,7 +345,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.yact = function(m) {
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.DateHelper.toUTC($scope.curDay.getTime())+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             if(d.data.data == undefined) {
                 return;
