@@ -34,11 +34,11 @@ async function f() {
         console.log(a + " and " + b + "---------------------------- isSameDay function called" + a.getTime() + "--" + m);
         return a.getDate() == b.getDate() && a.getMonth() == b.getMonth() && a.getFullYear() == b.getFullYear();
     }
-    let filter = function(curDay, of) {
+    let filter = function(curDay, of, m) {
         let ans = [];
         //console.log(of);
         for(let i = 0; i < of.length; i++) {
-            if(isSameDay(curDay, of[i].start))
+            if(isSameDay(curDay, of[i].start, m))
                 ans.push(of[i]);
         }
         return ans;
