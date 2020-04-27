@@ -727,7 +727,7 @@ async function f() {
             res.send("1");
 
         });
-        app.get("/WpCon", async function (req, res) {
+        app.get("/WpCons", async function (req, res) {
             console.log(req.query);
             console.log(req.query.imei);
             let imei = req.query.imei;
@@ -751,6 +751,31 @@ async function f() {
                     m[ar[i].name] = true;
                     ans.push(ar[i]);
                 }
+            }
+            res.send({data:ans});
+
+
+        });
+        app.get("/WpCon", async function (req, res) {
+            console.log(req.query);
+            let imei = req.query.imei;
+            let name = req/query.name;
+            // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
+            // if(d.wp == undefined) {
+            //
+            // }else {
+            //
+            // }
+            let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null) {
+                res.status(400).send("")
+                return;
+            }
+            let ar = d.wp;
+            let ans = [];
+            for(let i = ar.length - 1; i >= 0; i--) {
+                if(ar[i].name == name)
+                    ans.push(ar[i]);
             }
             res.send({data:ans});
 
