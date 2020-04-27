@@ -749,6 +749,9 @@ async function f() {
             for(let i = ar.length - 1; i >= 0; i--) {
                 if(m[ar[i].name] == undefined) {
                     m[ar[i].name] = true;
+                    if(ar[i].content.length > 10) {
+                        ar[i].content = ar[i].content.substring(0, 15) + "..."
+                    }
                     ans.push(ar[i]);
                 }
             }
