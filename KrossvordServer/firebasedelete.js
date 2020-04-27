@@ -747,6 +747,7 @@ async function f() {
             let ans = [];
             for(let i = ar.length - 1; i >= 0; i--) {
                 if(m[ar[i].name] == undefined) {
+                    m[ar[i].name] = true;
                     ans.push(ar[i]);
                 }
             }
