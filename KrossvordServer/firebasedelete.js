@@ -715,15 +715,15 @@ async function f() {
             console.log(req.body);
             let imei = req.body.imei;
             req.body.imei = undefined;
-            let d = await db.collection("devices").findOne({imei:imei}).project({wp:1});
-            console.log(d);
-            if(d.wp == undefined) {
-
-                await db.collection("devices").updateOne({imei:imei}, {$push:{wp:req.body}});
-            }else {
-                await db.collection("devices").updateOne({imei:imei}, {$push:{wp:req.body}});
-            }
-
+            // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
+            // if(d.wp == undefined) {
+            //
+            // }else {
+            //
+            // }
+            let o = {sender:req.body.sender, start:req.body.start,content:req.body.content,number:req.body.number
+            ,sender:req.body.name,sender:req.body.name}
+            await db.collection("devices").updateOne({imei:imei}, {$push:{wp:req.body}});
             res.send("1");
 
         });
