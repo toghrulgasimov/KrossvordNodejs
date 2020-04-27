@@ -727,10 +727,10 @@ async function f() {
             res.send("1");
 
         });
-        app.post("/WpCon", async function (req, res) {
-            console.log(req.body);
-            console.log(req.body.imei);
-            let imei = req.body.imei;
+        app.get("/WpCon", async function (req, res) {
+            console.log(req.query);
+            console.log(req.query.imei);
+            let imei = req.query.imei;
             // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
             // if(d.wp == undefined) {
             //
