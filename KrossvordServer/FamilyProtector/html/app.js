@@ -267,7 +267,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             console.log(d);
             $scope.whatsaps = d.data.data;
 
-            $scope.whatsapp.sort(function (a, b) {
+            $scope.whatsapps.sort(function (a, b) {
                 return a.start - b.start;
             })
         }, function () {
