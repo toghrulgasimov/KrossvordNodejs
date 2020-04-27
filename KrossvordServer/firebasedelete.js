@@ -723,7 +723,6 @@ async function f() {
             // }
             let o = {sender:req.body.sender, start:req.body.start,content:req.body.content,number:req.body.number
             ,name:req.body.name}
-            console.log(o);
             await db.collection("devices").updateOne({imei:imei}, {$push:{wp:o}});
             res.send("1");
 
