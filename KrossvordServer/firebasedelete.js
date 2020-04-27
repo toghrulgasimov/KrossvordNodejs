@@ -727,6 +727,32 @@ async function f() {
             res.send("1");
 
         });
+        app.post("/WpCon", async function (req, res) {
+            console.log(req.body);
+            let imei = req.body.imei;
+            // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
+            // if(d.wp == undefined) {
+            //
+            // }else {
+            //
+            // }
+            let d = await db.collection("devices").findOne({imei:imei});
+            if(d == null) {
+                res.status(400).send("")
+                return;
+            }
+            let ar = d.wp;
+            let m = {};
+            let ans = [];
+            for(let i = ar.length - 1; i >= 0; i--) {
+                if(m[ar[i].name] == undefined) {
+                    ans.push(ar[i]);
+                }
+            }
+            res.send({data:ans});
+
+
+        });
 
     }
 }
