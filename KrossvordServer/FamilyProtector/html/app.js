@@ -285,13 +285,23 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.m = false;
         $scope.g = false;
         $scope.y = false;
-        m.con = m.con.reverse();
-        $scope.curConversation = m;
-        Server.data = m.con;
-        $scope.adapter.reload()
-        setTimeout(function () {
-            $( "body" ).scrollTop(1000000);
-        }, 100);
+        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name).then(function (d) {
+            $scope.loadingdiv = false;
+            console.log(d);
+
+
+            //m.con = m.con.reverse();
+            $scope.curConversation = m;
+            Server.data = d.data.data;
+            $scope.adapter.reload()
+            setTimeout(function () {
+                $( "body" ).scrollTop(1000000);
+            }, 100);
+        }, function () {
+
+        });
+
+
     }
     $scope.gundelik = function(m) {
         if(m != 0) $scope.curDay = new Date();

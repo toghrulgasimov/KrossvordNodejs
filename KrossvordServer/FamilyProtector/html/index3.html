@@ -224,12 +224,12 @@
                 <tr ng-style="m.sender=='Men'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="40" style="padding-top: 12px;" >
                     <!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
                     <td style="word-break: break-word">
-                        <h5 >{{m.sender == "Men" ? selectedName.name : m.sender}}</h5>
+                        <h5 >{{m.sender == "1" ? selectedName.name : m.name}}</h5>
                         <p>{{m.content}}</p>
                     </td>
                     <td>
                         <!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
-                        <p>{{DateHelper.toTime(m.time)}}</p>
+                        <p>{{DateHelper.toTime(m.start)}}</p>
                     </td>
                 </tr>
                 </tbody>
