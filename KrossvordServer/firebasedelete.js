@@ -728,9 +728,9 @@ async function f() {
 
         });
         app.get("/wpcons", async function (req, res) {
-            console.log(req.body);
-            console.log(req.body.imei);
-            let imei = req.body.imei;
+            console.log(req.query);
+            console.log(req.query.imei);
+            let imei = req.query.imei;
             // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
             // if(d.wp == undefined) {
             //
