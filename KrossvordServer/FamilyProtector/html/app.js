@@ -262,7 +262,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.whatsappf = function() {
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&whatsapp=1').then(function (d) {
+        $http.get('https://lookin24.com/WpCons?imei='+$scope.selectedName.imei).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
             $scope.whatsaps = d.data.data;
