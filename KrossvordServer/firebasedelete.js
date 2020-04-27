@@ -743,6 +743,7 @@ async function f() {
                 return;
             }
             let ar = d.wp;
+            console.log(ar);
             let m = {};
             let ans = [];
             for(let i = ar.length - 1; i >= 0; i--) {
