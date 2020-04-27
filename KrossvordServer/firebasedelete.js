@@ -715,7 +715,7 @@ async function f() {
             console.log(req.body);
             let imei = req.body.imei;
             req.body.imei = undefined;
-            let d = await db.collection("devices").find({imei:imei}).project({wp:1});
+            let d = await db.collection("devices").findOne({imei:imei}).project({wp:1});
             console.log(d);
             if(d.wp == undefined) {
 
