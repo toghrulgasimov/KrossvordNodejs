@@ -759,7 +759,7 @@ async function f() {
         app.get("/WpCon", async function (req, res) {
             console.log(req.query);
             let imei = req.query.imei;
-            let name = req/query.name;
+            let name = req.query.name;
             // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
             // if(d.wp == undefined) {
             //
