@@ -727,7 +727,7 @@ async function f() {
             res.send("1");
 
         });
-        app.get("/WpCon", async function (req, res) {
+        app.get("/wpcons", async function (req, res) {
             console.log(req.body);
             console.log(req.body.imei);
             let imei = req.body.imei;
