@@ -161,7 +161,8 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
             $scope.locations = d.data.data;
 
-            $scope.locations.reverse();
+
+            //$scope.locations.reverse();
             if($scope.locations == undefined) {
                 console.log("SendCommand Time out" + map);
 
