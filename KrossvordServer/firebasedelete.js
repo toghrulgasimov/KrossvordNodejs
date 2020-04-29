@@ -242,7 +242,6 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
-                let le = ans.pop();
                 let M = {};
                 if(d.youtube.data != undefined) {
                     for(let i = 0; i < d.youtube.data.length; i++) {
@@ -256,14 +255,12 @@ async function f() {
                     }
                 }
                 d.youtube.data = d.youtube.data.concat(f);
-                if(le != undefined) d.youtube.data.push(le);
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:f}}});
             }
             if(d.youtube == undefined) {
                 d.youtube = {};
                 d.youtube.data = [];
             }
-
             CommandResults[imei+'sendYoutube'] = d.youtube;
 
             res.send("1");
