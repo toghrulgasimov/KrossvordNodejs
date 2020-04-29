@@ -4,6 +4,9 @@ async function f() {
     var cookieParser = require('cookie-parser');
 
 
+    //commandArray dashib tokule biler cunki saatda gelende silinmir ona gorede server dayan biler.
+
+
     // const mailgun = require("mailgun-js");
     // const DOMAIN = "mg.lookin24.com";
     // const mg = mailgun({apiKey: "6d3b67e2434192b5277e46b39e601277-f135b0f1-ae549850", domain: DOMAIN});
