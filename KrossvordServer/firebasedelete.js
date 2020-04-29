@@ -319,7 +319,7 @@ async function f() {
             console.log("-------in sendLocation");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.location == undefined) {
-                data.data = [];
+                //data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             }else {
 
