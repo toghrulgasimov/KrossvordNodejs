@@ -53,7 +53,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.changeData = function() {
         if($scope.g) {
-            $scope.gunluk.length = 0;
+            $scope.gunluk = [];
             $scope.gundelik(0);
         }else if($scope.y) {
             $scope.youtubes = [];
