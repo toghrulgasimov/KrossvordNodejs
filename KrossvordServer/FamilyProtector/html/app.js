@@ -65,6 +65,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.activityHelper.day = [];
             $scope.gundelik(0);
         }else if($scope.m) {
+            $scope.clearLocation();
             $scope.location(0);
         }
     }
@@ -137,7 +138,14 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     };
 
-
+    $scope.clearLocation = function() {
+        for(let i = 0; i < $scope.markers.length; i++) {
+            $scope.markers[i].setMap(null);
+        }
+        if($scope.flightPath != null) {
+            $scope.flightPath.setMap(null);
+        }
+    }
     $scope.location = function(m) {
         if(m != 0) $scope.curDay = new Date();
         console.log("cur " + m + "----" + $scope.curDay);
@@ -146,6 +154,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
+            $scope.clearLocation();
             $scope.loadingdiv = false;
             //test data
             // d.data.data = [
@@ -176,12 +185,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
             let flightPlanCoordinates = [];
 
-            for(let i = 0; i < $scope.markers.length; i++) {
-                $scope.markers[i].setMap(null);
-            }
-            if($scope.flightPath != null) {
-                $scope.flightPath.setMap(null);
-            }
+
             for(let i = 0; i < l.length; i++) {
 
                 console.log("marker added");
