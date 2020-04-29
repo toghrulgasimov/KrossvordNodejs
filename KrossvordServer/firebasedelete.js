@@ -392,7 +392,7 @@ async function f() {
                     clearInterval(f);
                     CommandResults[imei+cmd] = undefined;
                 }
-                if(t == 10) {
+                if(t == 6) {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
