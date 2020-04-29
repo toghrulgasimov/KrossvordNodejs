@@ -220,7 +220,10 @@ async function f() {
                 let le = ar.pop();
 
                 console.log(ar);
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
+                if(d.activity.data.length > 0 && le.length > 0 && d.activity.data[d.activity.data.length-1] != le[le.length-1]) {
+                    await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
+                }
+
             }
             res.send("1");
         });
