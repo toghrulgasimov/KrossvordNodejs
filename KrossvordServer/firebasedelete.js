@@ -215,16 +215,23 @@ async function f() {
                     d.activity = {};
                     d.activity.data = [];
                 }
+                //data.data = d.activity.data.concat(ar);
+                let newdata = data.data;
 
                 let le = ar.pop();
 
                 console.log(ar);
                 if(d.activity.data.length > 0 && ar.length > 0 && d.activity.data[d.activity.data.length-1].start != ar[ar.length-1].start) {
                     await db.collection("devices").updateOne({imei:imei}, {$push:{"activity.data":{$each:ar}}});
-                    data.data = d.activity.data.concat(ar);
-
+                    if(newdata.length > 0 && newdata[newdata.length-1].end == "-1") {
+                        newdata = [newdata[newdata.length-1]];
+                    }else {
+                        newdata = [];
+                    }
                 }
+                data.data = d.activity.data.concat(newdata);
                 CommandResults[imei+'sendActivity'] = data;
+
             }
             res.send("1");
         });
