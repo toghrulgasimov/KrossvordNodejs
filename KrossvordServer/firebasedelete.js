@@ -224,7 +224,8 @@ async function f() {
                     data.data = d.activity.data.concat(ar);
                     CommandResults[imei+'sendActivity'] = data;
                 }else {
-                    CommandResults[imei+'sendActivity'] = [];
+                    data.data = [];
+                    CommandResults[imei+'sendActivity'] = data;
                 }
 
             }
