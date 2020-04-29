@@ -786,6 +786,7 @@ async function f() {
                 return;
             }
             let ar = d.wp;
+            if(ar == undefined)ar = [];
             console.log(ar);
             let m = {};
             let ans = [];
