@@ -281,8 +281,20 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{website:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
-                ans.pop();
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"website.data":{$each:ans}}});
+                let M = {};
+                if(d.website.data != undefined) {
+                    for(let i = 0; i < d.website.data.length; i++) {
+                        M[d.website.data[i].start] = true;
+                    }
+                }
+                let f = [];
+                for(let i = 0; i < ans.length; i++) {
+                    if(M[ans[i].start] == undefined) {
+                        f.push(ans[i]);
+                    }
+                }
+                d.website.data = d.website.data.concat(f);
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"website.data":{$each:f}}});
             }
             if(d.website == undefined) {
                 d.website = {};
