@@ -211,10 +211,7 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{activity:data}}, {upsert:true});
                 CommandResults[imei+'sendActivity'] = data;
             }else {
-                if(d.activity == undefined) {
-                    d.activity = {};
-                    d.activity.data = [];
-                }
+
                 data = d.activity;
                 let le = ar.pop();
 
@@ -238,13 +235,19 @@ async function f() {
             let imei = data.imei;
             console.log("-------in sendYoutube");
             let d = await db.collection("devices").findOne({imei:imei});
-            if(d == null || d == undefined || d.youtube == undefined) {
+            if(d == null || d == undefined || d.youtube == undefined || d.youtube.length == 0) {
                 data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
-                ans.pop();
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
+                let le = ans.pop();
+                if(ans != undefined && ans.length > 0 && ans[ans.length-1].start == d.youtube.data[d.youtube.data.length-1]) {
+                    if(le)
+                    data.data = [le];
+                    else data.data = [];
+                }else {
+                    await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
+                }
             }
             if(d.youtube == undefined) {
                 d.youtube = {};
