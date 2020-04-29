@@ -235,25 +235,35 @@ async function f() {
             let imei = data.imei;
             console.log("-------in sendYoutube");
             let d = await db.collection("devices").findOne({imei:imei});
-            if(d == null || d == undefined || d.youtube == undefined || d.youtube.length == 0) {
+
+
+            if(d == null || d == undefined || d.youtube == undefined) {
                 data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{youtube:data}}, {upsert:true});
             }else {
                 let ans = data.data.slice(0);
                 let le = ans.pop();
-                if(ans != undefined && ans.length > 0 && ans[ans.length-1].start == d.youtube.data[d.youtube.data.length-1]) {
-                    if(le)
-                    data.data = [le];
-                    else data.data = [];
-                }else {
-                    await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:ans}}});
+                let M = {};
+                if(d.youtube.data != undefined) {
+                    for(let i = 0; i < d.youtube.data.length; i++) {
+                        M[d.youtube.data[i].start] = true;
+                    }
                 }
+                let f = [];
+                for(let i = 0; i < ans.length; i++) {
+                    if(M[ans[i].start] == undefined) {
+                        f.push(ans[i]);
+                    }
+                }
+                d.youtube.data = d.youtube.data.concat(f);
+                if(le != undefined) d.youtube.data.push(le);
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"youtube.data":{$each:f}}});
             }
             if(d.youtube == undefined) {
                 d.youtube = {};
                 d.youtube.data = [];
             }
-            d.youtube.data = d.youtube.data.concat(data.data);
+
             CommandResults[imei+'sendYoutube'] = d.youtube;
 
             res.send("1");
