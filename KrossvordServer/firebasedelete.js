@@ -388,6 +388,7 @@ async function f() {
                     res.send(of);
                     clearInterval(f);
                     CommandResults[imei+cmd] = undefined;
+                    return;
                 }
                 if(t == 6) {
                     clearInterval(f);
