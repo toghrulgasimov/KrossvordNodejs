@@ -322,9 +322,22 @@ async function f() {
                 data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             }else {
+
                 let ans = data.data.slice(0);
-                ans.pop();
-                await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:ans}}});
+                let M = {};
+                if(d.location.data != undefined) {
+                    for(let i = 0; i < d.location.data.length; i++) {
+                        M[d.location.data[i].start] = true;
+                    }
+                }
+                let f = [];
+                for(let i = 0; i < ans.length; i++) {
+                    if(M[ans[i].start] == undefined) {
+                        f.push(ans[i]);
+                    }
+                }
+                d.location.data = d.location.data.concat(f);
+                await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:f}}});
             }
             if(d.location == undefined) {
                 d.location = {};
