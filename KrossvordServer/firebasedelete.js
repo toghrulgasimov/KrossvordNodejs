@@ -337,7 +337,7 @@ async function f() {
                     }
                 }
                 d.location.data = d.location.data.concat(f);
-                if(f.location.data.length == 0 && le != undefined) {
+                if(d.location.data.length == 0 && le != undefined) {
                     f.push(le);
                 }
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:f}}});
