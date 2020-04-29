@@ -63,6 +63,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.Web(0);
         }else if($scope.istifadeler) {
             $scope.activityHelper.day = [];
+            $scope.activityHelper.todaySum = undefined;
             $scope.gundelik(0);
         }else if($scope.m) {
             $scope.clearLocation();
