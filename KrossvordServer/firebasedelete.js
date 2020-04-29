@@ -324,6 +324,7 @@ async function f() {
             }else {
 
                 let ans = data.data.slice(0);
+                let le = ans.pop();
                 let M = {};
                 if(d.location.data != undefined) {
                     for(let i = 0; i < d.location.data.length; i++) {
@@ -337,6 +338,9 @@ async function f() {
                     }
                 }
                 d.location.data = d.location.data.concat(f);
+                if(f.length == 0 && le != undefined) {
+                    f.push(le);
+                }
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:f}}});
             }
             if(d.location == undefined) {
