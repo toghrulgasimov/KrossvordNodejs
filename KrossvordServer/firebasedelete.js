@@ -302,7 +302,6 @@ async function f() {
                 d.website = {};
                 d.website.data = [];
             }
-            d.website.data = d.website.data.concat(data.data);
             CommandResults[imei+'sendWebsites'] = d.website;
             res.send("1");
         });
