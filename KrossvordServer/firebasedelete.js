@@ -340,7 +340,6 @@ async function f() {
                 d.location = {};
                 d.location.data = [];
             }
-            d.location.data = d.location.data.concat(data.data);
             CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
 
