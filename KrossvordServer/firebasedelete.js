@@ -40,6 +40,9 @@ async function f() {
     let filter = function(curDay, of, m) {
         let ans = [];
         //console.log(of);
+        if(of == undefined) {
+            return ans;
+        }
         for(let i = 0; i < of.length; i++) {
             if(isSameDay(curDay, of[i].start, m))
                 ans.push(of[i]);
