@@ -315,7 +315,6 @@ async function f() {
             console.log(data);
             //data = JSON.parse(data);
             let imei = data.imei;
-            console.log(data);
             console.log("-------in sendLocation");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.location == undefined) {
@@ -338,7 +337,7 @@ async function f() {
                     }
                 }
                 d.location.data = d.location.data.concat(f);
-                if(f.length == 0 && le != undefined) {
+                if(f.location.data.length == 0 && le != undefined) {
                     f.push(le);
                 }
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:f}}});
