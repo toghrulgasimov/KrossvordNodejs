@@ -276,7 +276,6 @@ async function f() {
             //data = JSON.parse(data);
             let imei = data.imei;
 
-            console.log(data);
             console.log("-------in sendWebSites");
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null || d == undefined || d.website == undefined) {
@@ -305,7 +304,6 @@ async function f() {
             }
             d.website.data = d.website.data.concat(data.data);
             CommandResults[imei+'sendWebsites'] = d.website;
-            console.log(d);
             res.send("1");
         });
         app.post("/sendLocation", async function (req, res) {
