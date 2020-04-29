@@ -196,12 +196,12 @@ async function f() {
         });
 
         app.post("/sendActivity", async function (req, res) {
-            console.log("in sendActivity");
             //also push notification to user
             let data = req.body;
             let imei = data.imei;
 
             console.log("in sendActivity");
+            console.log(data);
             let ar = data.data.slice(0);
 
 
