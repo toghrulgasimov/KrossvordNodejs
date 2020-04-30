@@ -810,6 +810,7 @@ async function f() {
             console.log(req.query);
             let imei = req.query.imei;
             let name = req.query.name;
+            let num = req.query.num;
             // let d = await db.collection("devices").find({imei:imei}).project({wp:1});
             // if(d.wp == undefined) {
             //
@@ -824,7 +825,7 @@ async function f() {
             let ar = d.wp;
             let ans = [];
             for(let i = ar.length - 1; i >= 0; i--) {
-                if(ar[i].name == name)
+                if(ar[i].name == name || ar[i].number == num)
                     ans.push(ar[i]);
             }
             res.send({data:ans});

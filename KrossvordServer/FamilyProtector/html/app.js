@@ -295,7 +295,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.m = false;
         $scope.g = false;
         $scope.y = false;
-        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name).then(function (d) {
+        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
 
