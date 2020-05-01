@@ -10,6 +10,7 @@ let DateHelper = {
     },
     toDuration : function(d) {
         if(d < 60) {
+            if(d == 0) d = 1;
             return d + " San";
         }else {
             d = IntegerUtil.divide(d, 60);
