@@ -338,7 +338,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 $scope.gunluk[i].duration = ($scope.gunluk[i].end == -1 ? (new Date()).getTime() : $scope.gunluk[i].end) - $scope.gunluk[i].start;
                 $scope.gunluk[i].duration = $scope.divide($scope.gunluk[i].duration, 1000);
                 if($scope.gunluk[i].end == -1) {
-                    $scope.gunluk[i].end = 9007199254740992;
+                    $scope.gunluk[i].end = 900719925474099;
                     //$scope.gunluk[i] = 9007199254740992;
 
                 }
