@@ -505,8 +505,7 @@ async function f() {
             let message = {
                 data: {
                     command : 'gpsIcaze',
-                    package: package,block:req.query.block
-
+                    v: icaze
                 },
                 token: d.token
             };
@@ -536,21 +535,21 @@ async function f() {
                 return;
             }
 
-            // let message = {
-            //     data: {
-            //         package: package,block:req.query.block
-            //
-            //     },
-            //     token: d.token
-            // };
-            // admin.messaging().send(message)
-            //     .then((response) => {
-            //         // Response is a message ID string.
-            //         console.log('Successfully sent message:', response);
-            //     })
-            //     .catch((error) => {
-            //         console.log('Error sending message:', error);
-            //     });
+            let message = {
+                data: {
+                    command : 'silIcaze',
+                    v: icaze
+                },
+                token: d.token
+            };
+            admin.messaging().send(message)
+                .then((response) => {
+                    // Response is a message ID string.
+                    console.log('Successfully sent message:', response);
+                })
+                .catch((error) => {
+                    console.log('Error sending message:', error);
+                });
 
 
 
