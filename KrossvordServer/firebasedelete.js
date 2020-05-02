@@ -107,6 +107,38 @@ async function f() {
                 }
                 console.log(pname + " added to apps");
                 await db.collection("devices").updateOne({imei:imei}, {$push:{apps:{name:name, package : pname, blocked: false}}});
+                res.send("1");
+
+            }else {
+                res.send("User Yoxdu");
+            }
+        });
+
+        app.post("/removeApp", async function (req, res) {
+
+            console.log(req.body);
+            let imei = req.body.imei;
+            let ps = req.body.ar;
+            let name = req.body.n;
+            if(imei == "erorrororororroro") {
+                res.send("Imei null gelmishdi");
+                return;
+            }
+
+            let M = {};
+            for(let i = 0; i < ps.length; i++) {
+                M[ps[i]] = true;
+            }
+            d = await db.collection("devices").findOne({imei:imei});
+            if(d != null && d.apps != undefined) {
+                let newApps = [];
+                for(let i = 0; i < d.apps.length; i++) {
+                    if(M[d.apps[i]] == undefined) {
+                        newApps.push(d.apps[i]);
+                    }
+                }
+                await db.collection("devices").updateOne({imei:imei}, {$est:{apps:newApps}});
+                res.send("1");
 
             }else {
                 res.send("User Yoxdu");
