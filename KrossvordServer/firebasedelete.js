@@ -649,27 +649,96 @@ async function f() {
 
         app.post("/checkout", (req, res) => {
             console.log(req.body);
-            try {
-                stripe.customers
-                    .create({
-                        email: req.body.stripeEmail,
-                        source: req.body.stripeToken
-                    })
-                    .then(customer =>
-                        stripe.charges.create({
-                            amount: 499,
-                            currency: "eur",
-                            customer: customer.id
+            if(req.body.type == "1") {
+                try {
+                    stripe.customers
+                        .create({
+                            email: req.body.stripeEmail,
+                            source: req.body.stripeToken
                         })
-                    )
-                    .then(() => res.send("DONE"))
-                    .catch(err => {
-                        console.log(err);
-                        res.send("Kartda yeterince pul yoxdur");
-                    });
-            } catch (err) {
-                res.send(err);
+                        .then(customer =>
+                            stripe.charges.create({
+                                amount: 499,
+                                currency: "eur",
+                                customer: customer.id
+                            })
+                        )
+                        .then(() => res.send("DONE1"))
+                        .catch(err => {
+                            console.log(err);
+                            res.send("Kartda yeterince pul yoxdur");
+                        });
+                } catch (err) {
+                    res.send(err);
+                }
+            }else if(req.body.type == "3") {
+                try {
+                    stripe.customers
+                        .create({
+                            email: req.body.stripeEmail,
+                            source: req.body.stripeToken
+                        })
+                        .then(customer =>
+                            stripe.charges.create({
+                                amount: 1999,
+                                currency: "eur",
+                                customer: customer.id
+                            })
+                        )
+                        .then(() => res.send("DONE3"))
+                        .catch(err => {
+                            console.log(err);
+                            res.send("Kartda yeterince pul yoxdur");
+                        });
+                } catch (err) {
+                    res.send(err);
+                }
+            }else if(req.body.type == "6") {
+                try {
+                    stripe.customers
+                        .create({
+                            email: req.body.stripeEmail,
+                            source: req.body.stripeToken
+                        })
+                        .then(customer =>
+                            stripe.charges.create({
+                                amount: 2999,
+                                currency: "eur",
+                                customer: customer.id
+                            })
+                        )
+                        .then(() => res.send("DONE6"))
+                        .catch(err => {
+                            console.log(err);
+                            res.send("Kartda yeterince pul yoxdur");
+                        });
+                } catch (err) {
+                    res.send(err);
+                }
+            }if(req.body.type == "12"){
+                try {
+                    stripe.customers
+                        .create({
+                            email: req.body.stripeEmail,
+                            source: req.body.stripeToken
+                        })
+                        .then(customer =>
+                            stripe.charges.create({
+                                amount: 499,
+                                currency: "eur",
+                                customer: customer.id
+                            })
+                        )
+                        .then(() => res.send("DONE12"))
+                        .catch(err => {
+                            console.log(err);
+                            res.send("Kartda yeterince pul yoxdur");
+                        });
+                } catch (err) {
+                    res.send(err);
+                }
             }
+
 
         });
 
