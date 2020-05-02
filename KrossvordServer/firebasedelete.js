@@ -87,6 +87,35 @@ async function f() {
             res.send("1")
         });
 
+        app.post("/addApp", async function (req, res) {
+
+            let imei = req.body.imei;
+            let pname = req.query.p;
+            let name = req.query.n;
+            if(imei == "erorrororororroro") {
+                res.send("Imei null gelmishdi");
+                return;
+            }
+            console.log(imei + "&&&&&&&&&&&&&&&&&&&&&");
+            d = await db.collection("devices").findOne({imei:imei});
+            if(d != null && d.apps != undefined) {
+                for(let i = 0; i < d.apps.length; i++) {
+                    if(d.apps[i].package == pname) {
+                        res.send("VAR");
+                        return;
+                    }
+                }
+                await db.collection("devices").updateOne({imei:imei}, {$push:{apps:{name:name, package : pname, blocked: false}}});
+
+            }else {
+                res.send("User Yoxdu");
+            }
+
+
+
+        });
+
+
 
 
         app.post("/updateFirebaseToken", async function (req, res) {
