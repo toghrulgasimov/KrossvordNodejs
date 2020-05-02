@@ -500,7 +500,8 @@ async function f() {
 
             let message = {
                 data: {
-                    package: package,block:req.query.block
+                    package: package,block:req.query.block,
+                    cmd: "blockApp"
 
                 },
                 token: d.token
