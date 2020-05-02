@@ -105,6 +105,7 @@ async function f() {
                         return;
                     }
                 }
+                console.log(pname + " added to apps");
                 await db.collection("devices").updateOne({imei:imei}, {$push:{apps:{name:name, package : pname, blocked: false}}});
 
             }else {
