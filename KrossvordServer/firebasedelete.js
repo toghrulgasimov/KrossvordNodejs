@@ -133,7 +133,7 @@ async function f() {
             if(d != null && d.apps != undefined) {
                 let newApps = [];
                 for(let i = 0; i < d.apps.length; i++) {
-                    if(M[d.apps[i]] == undefined) {
+                    if(M[d.apps[i].package] == undefined) {
                         newApps.push(d.apps[i]);
                     }
                 }
