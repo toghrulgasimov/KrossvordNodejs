@@ -25,7 +25,7 @@ async function f() {
     const fs = require('fs');
     //sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS
     //sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK
-    const stripe = require('stripe')('sk_live_1F3Ksgi8u1xixMtAkE2at33d006RrwEQCS');
+    const stripe = require('stripe')('sk_test_j08lKmmHNZg0EgDDpCKDOF7Q00ZBJHNpgK');
 
     let isSameDay = function(a, b, m) {
         //console.log(a, b);
@@ -657,7 +657,7 @@ async function f() {
                     })
                     .then(customer =>
                         stripe.charges.create({
-                            amount: 199,
+                            amount: 499,
                             currency: "eur",
                             customer: customer.id
                         })
