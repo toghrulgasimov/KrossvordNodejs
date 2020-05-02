@@ -90,8 +90,8 @@ async function f() {
         app.post("/addApp", async function (req, res) {
 
             let imei = req.body.imei;
-            let pname = req.query.p;
-            let name = req.query.n;
+            let pname = req.body.p;
+            let name = req.body.n;
             if(imei == "erorrororororroro") {
                 res.send("Imei null gelmishdi");
                 return;
