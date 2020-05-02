@@ -680,7 +680,7 @@ async function f() {
                         })
                         .then(customer =>
                             stripe.charges.create({
-                                amount: 1999,
+                                amount: 999,
                                 currency: "eur",
                                 customer: customer.id
                             })
@@ -702,7 +702,7 @@ async function f() {
                         })
                         .then(customer =>
                             stripe.charges.create({
-                                amount: 2999,
+                                amount: 1999,
                                 currency: "eur",
                                 customer: customer.id
                             })
@@ -724,7 +724,7 @@ async function f() {
                         })
                         .then(customer =>
                             stripe.charges.create({
-                                amount: 499,
+                                amount: 2999,
                                 currency: "eur",
                                 customer: customer.id
                             })
