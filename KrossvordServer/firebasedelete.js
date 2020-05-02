@@ -137,7 +137,7 @@ async function f() {
                         newApps.push(d.apps[i]);
                     }
                 }
-                await db.collection("devices").updateOne({imei:imei}, {$est:{apps:newApps}});
+                await db.collection("devices").updateOne({imei:imei}, {$set:{apps:newApps}});
                 res.send("1");
 
             }else {
