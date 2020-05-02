@@ -414,6 +414,9 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         });
     }
+    $scope.safariyegore = function(m) {
+        return (m.end == 900719925474099 ? 'Aktiv' : ($scope.DateHelper.toDuration(m.duration)))
+    }
     $scope.fillSelect = function () {
         $http.post("/fillSelect", {parent:"1"}, { withCredentials: true }).then(
             function(res){
