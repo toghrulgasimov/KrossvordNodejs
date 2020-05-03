@@ -853,9 +853,11 @@ async function f() {
             let now = new Date().getTime();
             if(d.until == undefined || d.until < now) {
                 let s = await fs.readFileSync('./FamilyProtector/html/index3deactive.html') + "";
+                res.send(s);
+            }else {
+                let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                res.send(s);
             }
-            let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
-            res.send(s);
         });
 
         app.get("/parent", async function (req, res) {
