@@ -141,47 +141,8 @@
         $scope.lm = '';
         $scope.firstTime = true;
         $scope.login = function () {
-            $scope.lm = '';
-            if($scope.firstTime == false) {
-                if($scope.le == undefined || $scope.le.indexOf("@") == -1) {
-                    $scope.lm = 'Email daxil edin.'
-                    return;
-                }
-                if($scope.lp == undefined || $scope.lp.length == 0) {
-                    $scope.lm = 'Sifre daxil edin.'
-                    return;
-                }
-            }
 
-
-            let data = {email:$scope.le, password: $scope.lp};
-            $http.get("/login", {params:data}).then(
-                function(res){
-
-                    console.log(res);
-                    if(res.data == "1") {
-                        if($cookies["parent"] == undefined) {
-                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
-                        }else {
-                            $window.location.href = 'https://www.lookin24.com/index3';
-                        }
-                    }else {
-                        //$window.location.href = 'https://www.lookin24.com/login.html';
-                        if($scope.firstTime == false) {
-                            $scope.lm = 'Email ve ya shifre yanlishir';
-                        }
-                    }
-                    $scope.firstTime = false;
-
-                },
-                function(response){
-                    // failure callback
-                    $scope.lm = 'Server Error';
-                    $scope.firstTime = false;
-                }
-            );
         }
-
         //$scope.login();
     } )
 </script>
