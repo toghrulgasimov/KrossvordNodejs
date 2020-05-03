@@ -1,52 +1,330 @@
-<!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/com.family.familyprotector.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.angularjs.org/1.2.22/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.22/angular-cookies.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            padding-top: 90px;
+        }
+        .panel-login {
+            border-color: #ccc;
+            -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+        }
+        .panel-login>.panel-heading {
+            color: #00415d;
+            background-color: #fff;
+            border-color: #fff;
+            text-align:center;
+        }
+        .panel-login>.panel-heading a{
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+            font-size: 15px;
+            -webkit-transition: all 0.1s linear;
+            -moz-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+        }
+        .panel-login>.panel-heading a.active{
+            color: #029f5b;
+            font-size: 18px;
+        }
+        .panel-login>.panel-heading hr{
+            margin-top: 10px;
+            margin-bottom: 0px;
+            clear: both;
+            border: 0;
+            height: 1px;
+            background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+            background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+            background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+            background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+        }
+        .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+            height: 45px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            -webkit-transition: all 0.1s linear;
+            -moz-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+        }
+        .panel-login input:hover,
+        .panel-login input:focus {
+            outline:none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            border-color: #ccc;
+        }
+        .btn-login {
+            background-color: #59B2E0;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+            height: auto;
+            font-weight: normal;
+            padding: 14px 0;
+            text-transform: uppercase;
+            border-color: #59B2E6;
+        }
+        .btn-login:hover,
+        .btn-login:focus {
+            color: #fff;
+            background-color: #53A3CD;
+            border-color: #53A3CD;
+        }
+        .forgot-password {
+            text-decoration: underline;
+            color: #888;
+        }
+        .forgot-password:hover,
+        .forgot-password:focus {
+            text-decoration: underline;
+            color: #666;
+        }
+
+        .btn-register {
+            background-color: #1CB94E;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+            height: auto;
+            font-weight: normal;
+            padding: 14px 0;
+            text-transform: uppercase;
+            border-color: #1CB94A;
+        }
+        .btn-register:hover,
+        .btn-register:focus {
+            color: #fff;
+            background-color: #1CA347;
+            border-color: #1CA347;
+        }
+
+    </style>
+</head>
 
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="shortcut icon" type="image/x-icon" href="/com.family.familyprotector.png" />
-<script src="js/stringUtil.js"></script>
+
+<body style="background:linear-gradient(#28a7458f, #305626bd); box-shadow: 0 1px 27px darkslategrey;" ng-app="app" ng-controller="myCtrl">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script>
+    angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window,$cookies) {
+        //$scope.message="Hello World";
+        $scope.ev = true;
+        $scope.rem = '';
+        $scope.lm = '';
+        $scope.firstTime = true;
+        $scope.login = function () {
+            $scope.lm = '';
+            if($scope.firstTime == false) {
+                if($scope.le == undefined || $scope.le.indexOf("@") == -1) {
+                    $scope.lm = 'Email daxil edin.'
+                    return;
+                }
+                if($scope.lp == undefined || $scope.lp.length == 0) {
+                    $scope.lm = 'Sifre daxil edin.'
+                    return;
+                }
+            }
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+            let data = {email:$scope.le, password: $scope.lp};
+            $http.get("/login", {params:data}).then(
+                function(res){
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                    console.log(res);
+                    if(res.data == "1") {
+                        if($cookies["parent"] == undefined) {
+                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
+                        }else {
+                            $window.location.href = 'https://www.lookin24.com/index3';
+                        }
+                    }else {
+                        //$window.location.href = 'https://www.lookin24.com/login.html';
+                        if($scope.firstTime == false) {
+                            $scope.lm = 'Email ve ya shifre yanlishir';
+                        }
+                    }
+                    $scope.firstTime = false;
 
-<script src="js/angular-ui-scroll/dist/ui-scroll.min.js"></script>
-<script src="js/angular-ui-scroll/dist/ui-scroll-grid.min.js"></script>
+                },
+                function(response){
+                    // failure callback
+                    $scope.lm = 'Server Error';
+                    $scope.firstTime = false;
+                }
+            );
+        }
 
-<link rel="stylesheet" href="css/scr.css" type="text/css"/>
-<link rel="stylesheet" href="css/style.css" type="text/css"/>
+        $scope.registration = function () {
+            if($scope.re == undefined || ($scope.re != undefined && $scope.re.indexOf("@") == -1)) {
+                $scope.rem = 'Email daxil edin';
+                return;
+            }
+            if($scope.rp == undefined || $scope.rp.length == 0) {
+                $scope.rem = 'Shifre daxil edin';
+                return;
+            }
+
+            if($scope.rp == undefined ) {
+                $scope.rem = 'Sifre Daxil edin';
+                return;
+            }
+            if($scope.rp2 == undefined ) {
+                $scope.rem = 'Sifreni yeniden Daxil edin';
+                return;
+            }
+            if($scope.rp2 != $scope.rp ) {
+                $scope.rem = 'Sifreler ferqlidir';
+                return;
+            }
+
+            console.log("Valid Email");
+
+            let data = {email:$scope.re, password:$scope.rp};
+            $http.get("/registration", {params:data}).then(
+                function(res){
+                    console.log(res);
+                    if(res.data == "1") {
+                        if($cookies["parent"] == undefined) {
+                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
+                        }else {
+                            $window.location.href = 'https://www.lookin24.com/index3';
+                        }
+                    }else {
+                        //$window.location.href = 'https://www.lookin24.com/login.html';
+                        $scope.rem = 'Bu Email artiq movcuddur';
+                    }
+
+                },
+                function(response){
+                    $scope.rem = 'Server Error';
+                }
+            );
+        }
+        $scope.login();
+    } )
+</script>
 
 
-<script src="js/IntegerUtil.js"></script>
-<script src="js/DateHelper.js"></script>
-<script src="js/activityHelper.js"></script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<body>
-
-<div ng-app="myApp" ng-controller="myCtrl">
-
-    <p>Name: <input type="text" ng-model="firstName"></p>
-    <p ng-show="firstName.length %2 == 0">You wrote: {{ firstName }}</p>
-
+<!------ Include the above in your HEAD tag ---------->
+<div class="container" style="padding-top: 54px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" class="active" id="login-form-link">Daxil ol</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" id="register-form-link">Qeydiyyat</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="login-form" action="/login" method="post" role="form" style="display: block;">
+                                <div class="form-group">
+                                    <input type="text" name="email" id="username" tabindex="1" class="form-control" placeholder="Email"  ng-model="le">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Shifre" ng-model="lp">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3 text-center">
+                                            <!--                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">-->
+                                            <span  style="color: red; margin-bottom: 20px;">{{lm}}</span>
+                                            <button ng-click="login()" style="width: 100%; margin-top: 12px;" type="submit" name="login-submit"  id="login-submit"  tabindex="4" class=" form-control btn btn-success">Daxil ol</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form id="register-form" action="/registration" method="post" role="form" style="display: none;">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" ng-model="re">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Shifre" ng-model="rp">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" ng-model="rp2" placeholder="Shifreni testiqleyin">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3 text-center">
+                                            <span  style="color: red; margin-bottom: 20px;">{{rem}}</span>
+                                            <button ng-click="registration();" style="width: 100%;margin-top: 12px;" type="submit" name="register-submit"  id="register-submit"  tabindex="4" class="btn btn-success">Qeydiyyat</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-</body>
 <script>
+    $(function() {
 
-    var app = angular.module("myApp", []);
+        $('#login-form-link').click(function(e) {
+            $("#login-form").delay(100).fadeIn(100);
+            $("#register-form").fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+        $('#register-form-link').click(function(e) {
+            $("#register-form").delay(100).fadeIn(100);
+            $("#login-form").fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
 
-    app.controller("myCtrl", function($scope) {
-        $scope.firstName = "John";
-        $scope.lastName = "Doe";
+        $('#login-form').submit(function (evt) {
+            evt.preventDefault();
+            //window.history.back();
+        });
+        $('#register-form').submit(function (evt) {
+            evt.preventDefault();
+            //window.history.back();
+        });
+
     });
 
 </script>
+</body>
 </html>
