@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
 
-
-
-<body style="background:linear-gradient(#28a7458f, #305626bd); box-shadow: 0 1px 27px darkslategrey;" >
-
+<div ng-app="">
+    <p>Name: <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p>
+</div>
 
 <script>
     alert("jquery yuxari");
@@ -31,9 +32,6 @@
         $scope.lastName= "Doe";
     });
 </script>
-
-
 </body>
-
-
 </html>
+
