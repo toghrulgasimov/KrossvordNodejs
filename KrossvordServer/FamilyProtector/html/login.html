@@ -145,7 +145,7 @@
             }
 
 
-                let data = {email:$scope.le, password: $scope.lp};
+                var data = {email:$scope.le, password: $scope.lp};
                 $http.get("/login", {params:data}).then(
                     function(res){
 
@@ -198,7 +198,7 @@
 
             console.log("Valid Email");
 
-            let data = {email:$scope.re, password:$scope.rp};
+            var data = {email:$scope.re, password:$scope.rp};
             $http.get("/registration", {params:data}).then(
                 function(res){
                     console.log(res);
