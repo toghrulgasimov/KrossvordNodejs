@@ -10,7 +10,7 @@ class ActivityHelper {
     }
     init(gunluk) {
 
-        for(let i = 0; i < gunluk.length; i++) {
+        for(var i = 0; i < gunluk.length; i++) {
             this.Mname[gunluk[i].package] = gunluk[i].name;
             if(this.Mday[gunluk[i].package] == undefined) {
                 this.Mday[gunluk[i].package] = gunluk[i].duration;
@@ -18,7 +18,7 @@ class ActivityHelper {
                 this.Mday[gunluk[i].package] += gunluk[i].duration;
             }
         }
-        for(let i in this.Mday) {
+        for(var i in this.Mday) {
             this.todaySum += this.Mday[i];
             this.day.push({pn:i, name:this.Mname[i],sum: this.Mday[i]} );
         }
@@ -26,7 +26,7 @@ class ActivityHelper {
             return b.sum - a.sum;
         })
         console.log("Day----" + DateHelper.toDuration(this.todaySum));
-        for(let i = 0; i < this.day.length; i++) {
+        for(var i = 0; i < this.day.length; i++) {
             console.log(this.day[i].name + "-" + DateHelper.toDuration(this.day[i].sum));
         }
 

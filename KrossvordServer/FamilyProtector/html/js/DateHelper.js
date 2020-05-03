@@ -1,5 +1,5 @@
 
-let DateHelper = {
+var DateHelper = {
 
     isToday: function(someDate){
         //console.log("is time cagrildi");
@@ -14,17 +14,17 @@ let DateHelper = {
             return d + " San";
         }else {
             d = IntegerUtil.divide(d, 60);
-            let s = IntegerUtil.divide(d,60);
+            var s = IntegerUtil.divide(d,60);
             d = d % 60;
-            let ans = "";
+            var ans = "";
             if(s > 0) ans = s + " Saat ";
             if(d > 0) ans += (d + " Dəq");
             return ans;
         }
     },
     isYesterday : function (d) {
-        let n = d;
-        let yesterday = new Date();
+        var n = d;
+        var yesterday = new Date();
         yesterday.setDate(yesterday.getDate()-1);
         console.log('--------- isYesterday Begin');
         console.log(yesterday);
@@ -36,9 +36,9 @@ let DateHelper = {
     },
     toTime: function (d) {
         d = parseInt(d);
-        let t = new Date(d);
-        let h = t.getHours() + "";
-        let m = t.getMinutes() + "";
+        var t = new Date(d);
+        var h = t.getHours() + "";
+        var m = t.getMinutes() + "";
         if(h.length == 1) h = '0' + h;
         if(m.length == 1) m = '0' + m;
         if(this.isToday(t)) {
@@ -56,16 +56,16 @@ let DateHelper = {
         if(this.isYesterday(d)) {
             return "Dünən";
         }
-        let day = d.getDate()+"";
-        let month = d.getMonth()+"";
-        let year = d.getFullYear()+"";
+        var day = d.getDate()+"";
+        var month = d.getMonth()+"";
+        var year = d.getFullYear()+"";
         if(day.length == 1) day = '0' + day;
         if(month.length == 1) month = '0' + month;
         return day + "." + month + "." + year;
     },
     toUTC : function (d) {
-        let s = d.getTime();
-        let m = d.getTimezoneOffset();
+        var s = d.getTime();
+        var m = d.getTimezoneOffset();
         return s - (m * 60 * 1000);
     }
 };

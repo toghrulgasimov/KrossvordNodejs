@@ -1,4 +1,4 @@
-let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
+var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
                                                                                              $timeout, $interval, Server, $window) {
 
     //$scope.names = ["Emil", "Tobias", "Linus"];
@@ -9,7 +9,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.aktivleshdir = false;
     //
     var datasource = {};
-    let adapter = {};
+    var adapter = {};
     Server.init();
     datasource.get = function (index, count, success) {
         console.log('index = ' + index + '; count = ' + count);
@@ -18,7 +18,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         var end = Math.min(index + count - 1, Server.first);
 
         Server.request(start, end).then(success);
-        let now = new Date();
+        var now = new Date();
     };
 
     $scope.datasource = datasource;
@@ -85,12 +85,12 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         console.log("Gunuartir basildi");
     }
     $scope.toHour = function(time) {
-        let d = new Date(time);
+        var d = new Date(time);
         if(!$scope.stringUtil.isToday(d)) {
             return ((d.getMonth() > 8) ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '/' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '/' + d.getFullYear();
         }
-        let h = d.getHours();
-        let m = d.getMinutes();
+        var h = d.getHours();
+        var m = d.getMinutes();
 
         h = (h<10) ? '0' + h : h;
         m = (m<10) ? '0' + m : m;
@@ -105,7 +105,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     };
 
     $scope.divide = function(a,b) {
-        let ans = a / b;
+        var ans = a / b;
         return parseInt(ans);
     }
     $scope.cixish = function() {
@@ -122,7 +122,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
     $scope.block = function(a,b,c,d) {
-        let block = (c.blocked) ? 0 : 1;
+        var block = (c.blocked) ? 0 : 1;
         console.log(b);
         console.log("block status gonderildi " + block)
         $scope.loadingdiv = true;
@@ -140,7 +140,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     };
 
     $scope.clearLocation = function() {
-        for(let i = 0; i < $scope.markers.length; i++) {
+        for(var i = 0; i < $scope.markers.length; i++) {
             $scope.markers[i].setMap(null);
         }
         if($scope.flightPath != null) {
@@ -182,12 +182,12 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
                 return;
             }
-            let l = $scope.locations;
+            var l = $scope.locations;
 
-            let flightPlanCoordinates = [];
+            var flightPlanCoordinates = [];
 
 
-            for(let i = 0; i < l.length; i++) {
+            for(var i = 0; i < l.length; i++) {
 
                 console.log("marker added");
                 l[i].lo = parseFloat(l[i].lo);
@@ -197,11 +197,11 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     map.setCenter({lat: l[i].la, lng: l[i].lo});
                 }
                 flightPlanCoordinates.push( {lat: l[i].la, lng: l[i].lo});
-                let time = $scope.stringUtil.toTime(parseInt(l[i].start));
+                var time = $scope.stringUtil.toTime(parseInt(l[i].start));
                 time = time.substring(time.length - 5);
 
                 if(true) {
-                    let marker = new google.maps.Marker({
+                    var marker = new google.maps.Marker({
                         position: {lat: l[i].la, lng: l[i].lo},
                         map: map,
                         label: {
@@ -221,7 +221,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 }
             }
 
-            let lineSymbol = {
+            var lineSymbol = {
                 path: 1,
                 strokeOpacity: 1
             };
@@ -326,12 +326,12 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 console.log("SendCommand Time out");
                 return;
             }
-            let t = [];
-            for(let i = 0; i < $scope.aa.length; i++) {
+            var t = [];
+            for(var i = 0; i < $scope.aa.length; i++) {
                 t[$scope.aa[i].package] = 1;
             }
-            let ans = [];
-            for(let i = 0; i < $scope.gunluk.length; i++) {
+            var ans = [];
+            for(var i = 0; i < $scope.gunluk.length; i++) {
                 if(t[$scope.gunluk[i].package] == undefined)continue;
                 $scope.gunluk[i].start = parseInt($scope.gunluk[i].start);
                 $scope.gunluk[i].end = parseInt($scope.gunluk[i].end);
@@ -377,7 +377,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 console.log("SendCommand Time out");
                 return;
             }
-            for(let i = 0; i < $scope.youtubes.length; i++) {
+            for(var i = 0; i < $scope.youtubes.length; i++) {
                 //https://www.youtube.com/results?search_query=the+show+must+go+on
                 $scope.youtubes[i].url = "www.youtube.com/results?search_query=" + encodeURI($scope.youtubes[i].name);
                 console.log($scope.youtubes[i].url)
@@ -389,14 +389,14 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     }
     $scope.openActivity = function(a) {
-        let ah = new ActivityHelper();
+        var ah = new ActivityHelper();
         ah.init($scope.gunluk);
         $scope.activityHelper = ah;
     }
     $scope.gpsIcaze = function(d) {
         $scope.gpsI = !$scope.gpsI;
         console.log($scope.gpsI);
-        let data = $scope.gpsI ? 1 : 0;
+        var data = $scope.gpsI ? 1 : 0;
         $http.get('https://lookin24.com/gpsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
@@ -407,7 +407,7 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.silIcaze = function(d) {
         $scope.silI = !$scope.silI;
         console.log($scope.silI);
-        let data = $scope.silI ? 1 : 0;
+        var data = $scope.silI ? 1 : 0;
         $http.get('https://lookin24.com/silIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
         }, function () {
@@ -434,21 +434,21 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         $scope.aa = d.data.apps;
                         $scope.gpsI = parseInt(d.data.gpsIcaze);
                         $scope.silI = parseInt(d.data.silIcaze);
-                        let activity = $scope.d.activity.data;
-                        let du = {};
-                        for(let i = 0; i < activity.length; i++) {
-                            let start = activity[i].start;
-                            let end = activity[i].end;
+                        var activity = $scope.d.activity.data;
+                        var du = {};
+                        for(var i = 0; i < activity.length; i++) {
+                            var start = activity[i].start;
+                            var end = activity[i].end;
                             if(end == -1)
                                 end = (new Date()).getTime();
-                            let d = end - start;
+                            var d = end - start;
                             if(du[activity[i].package] == undefined) {
                                 du[activity[i].package] = d;
                             }else {
                                 du[activity[i].package] += d;
                             }
                         }
-                        for(let i = 0; i < $scope.aa.length; i++) {
+                        for(var i = 0; i < $scope.aa.length; i++) {
                             if(du[$scope.aa[i].package] == undefined) {
                                 du[$scope.aa[i].package] = 0;
                             }
@@ -484,21 +484,21 @@ let app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.aa = d.data.apps;
             $scope.gpsI = parseInt(d.data.gpsIcaze);
             $scope.silI = parseInt(d.data.silIcaze);
-            let activity = $scope.d.activity.data;
-            let du = {};
-            for(let i = 0; i < activity.length; i++) {
-                let start = activity[i].start;
-                let end = activity[i].end;
+            var activity = $scope.d.activity.data;
+            var du = {};
+            for(var i = 0; i < activity.length; i++) {
+                var start = activity[i].start;
+                var end = activity[i].end;
                 if(end == -1)
                     end = (new Date()).getTime();
-                let d = end - start;
+                var d = end - start;
                 if(du[activity[i].package] == undefined) {
                     du[activity[i].package] = d;
                 }else {
                     du[activity[i].package] += d;
                 }
             }
-            for(let i = 0; i < $scope.aa.length; i++) {
+            for(var i = 0; i < $scope.aa.length; i++) {
                 if(du[$scope.aa[i].package] == undefined) {
                     du[$scope.aa[i].package] = 0;
                 }

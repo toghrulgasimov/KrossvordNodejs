@@ -2,188 +2,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/com.family.familyprotector.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="/com.family.familyprotector.png" />
+    <script src="js/stringUtil.js"></script>
 
-    <script src="https://code.angularjs.org/1.2.22/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.2.22/angular-cookies.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <style>
-        body {
-            padding-top: 90px;
-        }
-        .panel-login {
-            border-color: #ccc;
-            -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-            -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-            box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-        }
-        .panel-login>.panel-heading {
-            color: #00415d;
-            background-color: #fff;
-            border-color: #fff;
-            text-align:center;
-        }
-        .panel-login>.panel-heading a{
-            text-decoration: none;
-            color: #666;
-            font-weight: bold;
-            font-size: 15px;
-            -webkit-transition: all 0.1s linear;
-            -moz-transition: all 0.1s linear;
-            transition: all 0.1s linear;
-        }
-        .panel-login>.panel-heading a.active{
-            color: #029f5b;
-            font-size: 18px;
-        }
-        .panel-login>.panel-heading hr{
-            margin-top: 10px;
-            margin-bottom: 0px;
-            clear: both;
-            border: 0;
-            height: 1px;
-            background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
-            background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-            background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-            background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-        }
-        .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
-            height: 45px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            -webkit-transition: all 0.1s linear;
-            -moz-transition: all 0.1s linear;
-            transition: all 0.1s linear;
-        }
-        .panel-login input:hover,
-        .panel-login input:focus {
-            outline:none;
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            box-shadow: none;
-            border-color: #ccc;
-        }
-        .btn-login {
-            background-color: #59B2E0;
-            outline: none;
-            color: #fff;
-            font-size: 14px;
-            height: auto;
-            font-weight: normal;
-            padding: 14px 0;
-            text-transform: uppercase;
-            border-color: #59B2E6;
-        }
-        .btn-login:hover,
-        .btn-login:focus {
-            color: #fff;
-            background-color: #53A3CD;
-            border-color: #53A3CD;
-        }
-        .forgot-password {
-            text-decoration: underline;
-            color: #888;
-        }
-        .forgot-password:hover,
-        .forgot-password:focus {
-            text-decoration: underline;
-            color: #666;
-        }
+    <script src="js/angular-ui-scroll/dist/ui-scroll.min.js"></script>
+    <script src="js/angular-ui-scroll/dist/ui-scroll-grid.min.js"></script>
 
-        .btn-register {
-            background-color: #1CB94E;
-            outline: none;
-            color: #fff;
-            font-size: 14px;
-            height: auto;
-            font-weight: normal;
-            padding: 14px 0;
-            text-transform: uppercase;
-            border-color: #1CB94A;
-        }
-        .btn-register:hover,
-        .btn-register:focus {
-            color: #fff;
-            background-color: #1CA347;
-            border-color: #1CA347;
-        }
+    <link rel="stylesheet" href="css/scr.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
-    </style>
+
+    <script src="js/IntegerUtil.js"></script>
+    <script src="js/DateHelper.js"></script>
+    <script src="js/activityHelper.js"></script>
+    <script src="app.js"></script>
 </head>
 
 
 
-<body style="background:linear-gradient(#28a7458f, #305626bd); box-shadow: 0 1px 27px darkslategrey;" ng-app="app" ng-controller="myCtrl">
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40">
 
 
+<nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+    </button>
+    <a class="navbar-brand" href="#" style="color: white">Lookin24</a>
 
 
-<!------ Include the above in your HEAD tag ---------->
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" ng-click="curMenu='Istifadeler'; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: white; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" ng-click="curMenu='Gundelik';m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: white;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" ng-click="curMenu='Proqramlar';m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Proqramlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Xerite';m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: white;font-size: 20px;">Xerite</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"  ng-click="curMenu='Whatsapp';m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf(1);"style="color: white;font-size: 20px;">Whatsapp</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Youtube';m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact(1);"style="color: white;font-size: 20px;">Youtube</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Saytlar';m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: white;font-size: 20px;">Saytlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Icazeler';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">Icazeler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Aktivləşdir';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">Aktivləşdir</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">Çıxış</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!--<select  class="browser-default custom-select custom-select-lg mb-3" style="height: 40px">-->
+<!--    <option selected>Open this select menu</option>-->
+<!--    <option value="1">One</option>-->
+<!--    <option value="2">Two</option>-->
+<!--    <option value="3">Three</option>-->
+<!--</select>-->
 
 
+<div >
+
+
+
+    <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names"  style="margin:0 0 0px 0!important;background-color: #9ec5c0; position: fixed;top:56px;z-index: 3;border: none!important;border-radius: 0 !important;" class="browser-default custom-select custom-select-lg ">
+    </select>
+    <div style="background-color: #eceff3; padding-left: 18px; position: fixed;top:104px;width: 100%;z-index: 5;">
+        <span   ng-bind="curMenu" style="color: #485057;" ></span>
+    </div>
+
+
+    <div style="position: relative;top: 128px;">
+        <div id="map" ng-show="m" ></div>
+
+        <table class="table" ng-show="v">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in aa">
+                <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+                <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
+                    <h5 >{{m.name}}</h5>
+                    <h5>{{m[$index].blocked}}</h5>
+                </td>
+                <td style="padding-left: 0; vertical-align: middle;">
+                    <h5 >{{m.blocked == false?'Açıq':'Bağlı' }}</h5>
+                    <label class="switch" >
+                        <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="!aa[$index].blocked"   >
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table" ng-show="g">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in gunluk">
+                <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px"></td>
+                <td style="word-break: break-word; padding: 0.25rem">
+                    <h5 >{{m.name}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <h5>{{m[$index].blocked}}</h5>
+                </td>
+                <td>
+                    <p ng-style="m.end == 900719925474099 ? {'color':'green', 'font-size':'20px'} : {}">{{safariyegore(m)}}  </p>
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table" ng-show="y">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in youtubes">
+                <td><img ng-src="https://lookin24.com/com.google.android.youtube.png" style="width: 60px; height: 60px"></td>
+                <td>
+                    <h5 >{{m.name}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <!--                <h5>{{m[$index].blocked}}</h5>-->
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
+                    <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table" ng-show="w">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in websites">
+                <td><img ng-src="https://lookin24.com/com.android.chrome.png" style="width: 60px; height: 60px"></td>
+                <td>
+                    <h5 style="display: block;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{m.url}}</h5>
+                    <p>{{DateHelper.toTime(m.start)}}</p>
+                    <!--                <h5>{{m[$index].blocked}}</h5>-->
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark" ng-click="openy(m.url)" style="margin-top: 13px;background-color: #065e53d6;">Bax</button>
+                    <!--                <h5>{{m.end == 9007199254740992 ? 'Aktiv' : (toDuration(m.duration))}}  </h5>-->
+                    <!--                <label class="switch">-->
+                    <!--                    <input type="checkbox"  ng-click="block(scope, m.package, m, $event)"  ng-checked="aa[$index].blocked"  id="{{m.package}}" >-->
+                    <!--                    <span class="slider"></span>-->
+                    <!--                </label>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table" ng-show="whatsapp">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in whatsaps" ng-click="openc(m)">
+                <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>
+                <td style="word-break: break-word; font-size: 18px;">
+                    <span >{{::m.name}}
+
+                    </span>
+                    <br>
+                    <span style="width: 0px;white-space: nowrap;color: #5e5e5e; font-size: 14px">{{m.number}}</span>
+                    <p style="width: 0px;white-space: nowrap;color: #5e5e5e; padding-top: 4px;font-size: 16px;">{{::m.content}}</p>
+                </td>
+                <td >
+                    <p style="color: #5e5e5e;">{{toHour(m.start)}}</p>
+                    <!--                    <p>{{::m.con.length}} SMS</p>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%" ng-show="whatsappc">
+            <table id="ctable" class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
+                <thead>
+
+                </thead>
+                <tbody>
+                <tr ng-style="m.sender=='1'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="40" style="padding-top: 12px;" >
+                    <!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
+                    <td style="word-break: break-word">
+                        <h5 >{{m.sender == "1" ? selectedName.name : m.name}}</h5>
+                        <p>{{m.content}}</p>
+                    </td>
+                    <td>
+                        <!--                <p>{{toHour(m.con[m.con.length-1].time)}}</p>-->
+                        <p>{{DateHelper.toTime(m.start)}}</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table class="table" ng-show="icazeler">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem;vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;">Proqrami silməyə icazə ver</h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="silIcaze($event)"  ng-checked="silI">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem; vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;">GPS-i söndürməyə icazə ver</h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="gpsIcaze($event)"  ng-checked="gpsI">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div  ng-show="istifadeler" >
+
+            <!--        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%">-->
+            <!--            <label class="btn btn-secondary active">-->
+            <!--                <input type="radio" name="options" id="option1" autocomplete="off" checked class="btn-danger"> Bu gun-->
+            <!--            </label>-->
+            <!--            <label class="btn btn-secondary">-->
+            <!--                <input type="radio" name="options" id="option2" autocomplete="off"> Bu hefte-->
+            <!--            </label>-->
+            <!--        </div>-->
+            <!--        <p class="text-left">Left </p><p class="text-center">Left </p><p class="text-right">Left </p>-->
+            <p class="text-center" style="font-size: 25px; margin-bottom: 0px;background-color: #b8c9d4;color:#000000a6;">{{DateHelper.toDuration(activityHelper.todaySum)}}</p>
+            <table class="table">
+                <thead>
+
+                </thead>
+                <tbody>
+                <tr ng-repeat="m in activityHelper.day">
+                    <td><img ng-src="https://lookin24.com/{{m.pn}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
+                    <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
+                        <h5 >{{m.name}}</h5>
+                        <h5>{{DateHelper.toDuration(m.sum)}}</h5>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container-fluid text-center" ng-show="aktivleshdir">
+            <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="499"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="1" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="3" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
+            <form action="/checkout6" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="1999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="6" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="2999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="12" />
+            </form>
+
+            <!-- Default input -->
+            <label for="exampleForm2">Seria nomresi</label>
+            <input type="number" id="exampleForm2" class="form-control">
+            <button type="button" class="btn btn-success" style="margin-top: 12px; width: 100%;">Daxil et</button>
+
+        </div>
+
+        <div class="container-fluid fixed-bottom" ng-show="w || istifadeler || g || m || y" style="background-color: #9ec5c0;">
+            <div class="row">
+                <div class="col-4" text-left >
+                    <!--                    <p class="text-left">asd</p>-->
+                    <button type="button" class="btn btn-link" ng-click="gunuAzalt();" style="font-size: 22px;"> <- </button>
+                </div>
+                <div class="col-4" style="text-align: center">
+                    <div  style="text-align: center; padding-top: 4px; font-size: 21px;">{{DateHelper.toMonth(curDay)}}</div>
+                </div>
+                <div class="col-4 text-right">
+                    <button type="button" class="btn btn-link" ng-click="gunuArtir();"style="font-size: 22px;"> -> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center fixed-top" style="height: 0px" ng-show="loadingdiv">
+            <div class="spinner-grow text-center" role="status">
+                <span class="sr-only text-center">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT8fPfM4fsk3kwvoxbSn4340zV4Gi6rko&callback=initMap"
+        async defer></script>
 
 <script>
-    alert(123);
-    angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window,$cookies) {
-        alert(1234);
-        //$scope.message="Hello World";
-        $scope.ev = true;
-        $scope.rem = '';
-        $scope.lm = '';
-        $scope.firstTime = true;
-        $scope.login = function () {
-            $scope.lm = '';
-
-
-
-             data = {email:$scope.le, password: $scope.lp};
-
-        }
-
-        //$scope.login();
-    } )
-</script>
-
-<script>
-    alert("asaho")
-    $(function() {
-
-        $('#login-form-link').click(function(e) {
-            $("#login-form").delay(100).fadeIn(100);
-            $("#register-form").fadeOut(100);
-            $('#register-form-link').removeClass('active');
-            $(this).addClass('active');
-            e.preventDefault();
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.6506034, lng: 46.5340354},
+            zoom: 18,
+            gestureHandling: "greedy",
+            zoomControl: false
         });
-        $('#register-form-link').click(function(e) {
-            $("#register-form").delay(100).fadeIn(100);
-            $("#login-form").fadeOut(100);
-            $('#login-form-link').removeClass('active');
-            $(this).addClass('active');
-            e.preventDefault();
-        });
-
-        $('#login-form').submit(function (evt) {
-            evt.preventDefault();
-            //window.history.back();
-        });
-        $('#register-form').submit(function (evt) {
-            evt.preventDefault();
-            //window.history.back();
-        });
-
+    }
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
     });
-
-
 </script>
+
+
 </body>
 </html>
