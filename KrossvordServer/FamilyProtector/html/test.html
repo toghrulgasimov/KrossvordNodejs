@@ -182,52 +182,6 @@
             );
         }
 
-        $scope.registration = function () {
-            if($scope.re == undefined || ($scope.re != undefined && $scope.re.indexOf("@") == -1)) {
-                $scope.rem = 'Email daxil edin';
-                return;
-            }
-            if($scope.rp == undefined || $scope.rp.length == 0) {
-                $scope.rem = 'Shifre daxil edin';
-                return;
-            }
-
-            if($scope.rp == undefined ) {
-                $scope.rem = 'Sifre Daxil edin';
-                return;
-            }
-            if($scope.rp2 == undefined ) {
-                $scope.rem = 'Sifreni yeniden Daxil edin';
-                return;
-            }
-            if($scope.rp2 != $scope.rp ) {
-                $scope.rem = 'Sifreler ferqlidir';
-                return;
-            }
-
-            console.log("Valid Email");
-
-            let data = {email:$scope.re, password:$scope.rp};
-            $http.get("/registration", {params:data}).then(
-                function(res){
-                    console.log(res);
-                    if(res.data == "1") {
-                        if($cookies["parent"] == undefined) {
-                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
-                        }else {
-                            $window.location.href = 'https://www.lookin24.com/index3';
-                        }
-                    }else {
-                        //$window.location.href = 'https://www.lookin24.com/login.html';
-                        $scope.rem = 'Bu Email artiq movcuddur';
-                    }
-
-                },
-                function(response){
-                    $scope.rem = 'Server Error';
-                }
-            );
-        }
         //$scope.login();
     } )
 </script>
