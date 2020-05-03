@@ -852,7 +852,7 @@ async function f() {
             }
             let now = new Date().getTime();
             if(d.until == undefined || d.until < now) {
-                let s = await fs.readFileSync('./FamilyProtector/html/index3deactivate.html') + "";
+                let s = await fs.readFileSync('./FamilyProtector/html/index3deactive.html') + "";
             }
             let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
             res.send(s);
