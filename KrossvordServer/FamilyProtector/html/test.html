@@ -134,7 +134,13 @@
 <script>
     alert(123);
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window,$cookies) {
-
+        alert(1234);
+        //$scope.message="Hello World";
+        $scope.ev = true;
+        $scope.rem = '';
+        $scope.lm = '';
+        $scope.firstTime = true;
+        
     } )
 </script>
 
