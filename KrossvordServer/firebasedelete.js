@@ -666,7 +666,7 @@ async function f() {
                         )
                         .then(async () => {
                             let date = new Date();
-                            date.setMonth(date.getMonth()+1);
+                            date.setMinutes(date.getMinutes()+1);
                              await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
                             res.redirect("/");
                         })
