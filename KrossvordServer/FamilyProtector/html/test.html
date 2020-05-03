@@ -228,6 +228,12 @@
         });
 
         alert("yux");
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            // ... handle error ...
+            alert("error");
+            return false;
+        }
+
         var app = angular.module("app", []).controller("myCtrl", function($scope, $http, $interval, $window) {
             //$scope.message="Hello World";
 
