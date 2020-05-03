@@ -1,0 +1,219 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="/com.family.familyprotector.png" />
+    <script src="js/stringUtil.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/angular-ui-scroll/dist/ui-scroll.min.js"></script>
+    <script src="js/angular-ui-scroll/dist/ui-scroll-grid.min.js"></script>
+
+    <link rel="stylesheet" href="css/scr.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+
+    <script src="js/IntegerUtil.js"></script>
+    <script src="js/DateHelper.js"></script>
+    <script src="js/activityHelper.js"></script>
+    <script src="app.js"></script>
+</head>
+
+
+
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40">
+
+
+<nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+    </button>
+    <a class="navbar-brand" href="#" style="color: white">Lookin24</a>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Istifadeler'; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: #8e8d8d; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Gundelik';m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: #8e8d8d;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Proqramlar';m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">Proqramlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Xerite';m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: #8e8d8d;font-size: 20px;">Xerite</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"  ng-click="curMenu='Whatsapp';m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf(1);"style="color: #8e8d8d;font-size: 20px;">Whatsapp</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Youtube';m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact(1);"style="color: #8e8d8d;font-size: 20px;">Youtube</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Saytlar';m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: #8e8d8d;font-size: 20px;">Saytlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" ng-click="curMenu='Icazeler';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">Icazeler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="curMenu='Aktivləşdir';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">Aktivləşdir</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">Çıxış</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!--<select  class="browser-default custom-select custom-select-lg mb-3" style="height: 40px">-->
+<!--    <option selected>Open this select menu</option>-->
+<!--    <option value="1">One</option>-->
+<!--    <option value="2">Two</option>-->
+<!--    <option value="3">Three</option>-->
+<!--</select>-->
+
+
+<div >
+
+
+
+    <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names"  style="margin:0 0 0px 0!important;background-color: #9ec5c0; position: fixed;top:56px;z-index: 3;border: none!important;border-radius: 0 !important;" class="browser-default custom-select custom-select-lg ">
+    </select>
+    <div style="background-color: #eceff3; padding-left: 18px; position: fixed;top:104px;width: 100%;z-index: 5;">
+        <span    style="color: #485057;" >Aktivleshdir</span>
+    </div>
+
+
+    <div style="position: relative;top: 128px;">
+
+        <div class="container-fluid text-center" ng-show="true">
+            <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="499"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="1" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="3" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
+            <form action="/checkout6" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="1999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="6" />
+            </form>
+
+            <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
+            <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
+            <form action="/checkout" method="POST">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                        data-key="pk_test_XNdtLV27dmHTBeasvewgl3I200JEwgw1Ie"
+                        data-amount="2999"
+                        data-currency="EUR"
+                        data-name="Lookin24"
+                        data-description="Family Protector App"
+                        data-image="https://lookin24.com/com.family.familyprotector.png"
+                        data-locale="auto">
+                </script>
+                <input type="hidden" name="type" value="12" />
+            </form>
+
+            <!-- Default input -->
+            <label for="exampleForm2">Seria nomresi</label>
+            <input type="number" id="exampleForm2" class="form-control">
+            <button type="button" class="btn btn-success" style="margin-top: 12px; width: 100%;">Daxil et</button>
+
+        </div>
+
+
+
+        <div class="d-flex justify-content-center fixed-top" style="height: 0px" ng-show="loadingdiv">
+            <div class="spinner-grow text-center" role="status">
+                <span class="sr-only text-center">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT8fPfM4fsk3kwvoxbSn4340zV4Gi6rko&callback=initMap"
+        async defer></script>
+
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.6506034, lng: 46.5340354},
+            zoom: 18,
+            gestureHandling: "greedy",
+            zoomControl: false
+        });
+    }
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+</script>
+
+
+</body>
+</html>

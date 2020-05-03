@@ -647,8 +647,9 @@ async function f() {
             }
         });
 
-        app.post("/checkout", (req, res) => {
+        app.post("/checkout", async (req, res) => {
             console.log(req.body);
+
             if(req.body.type == "1") {
                 try {
                     stripe.customers
@@ -663,10 +664,15 @@ async function f() {
                                 customer: customer.id
                             })
                         )
-                        .then(() => res.send("DONE1"))
+                        .then(async () => {
+                            let date = new Date();
+                            date.setMonth(date.getMonth()+1);
+                             await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            res.redirect("/");
+                        })
                         .catch(err => {
                             console.log(err);
-                            res.send("Kartda yeterince pul yoxdur");
+                            res.redirect("/");
                         });
                 } catch (err) {
                     res.send(err);
@@ -685,7 +691,12 @@ async function f() {
                                 customer: customer.id
                             })
                         )
-                        .then(() => res.send("DONE3"))
+                        .then(async () => {
+                            let date = new Date();
+                            date.setMonth(date.getMonth()+3);
+                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            res.redirect("/");
+                        })
                         .catch(err => {
                             console.log(err);
                             res.send("Kartda yeterince pul yoxdur");
@@ -707,7 +718,12 @@ async function f() {
                                 customer: customer.id
                             })
                         )
-                        .then(() => res.send("DONE6"))
+                        .then(async () => {
+                            let date = new Date();
+                            date.setMonth(date.getMonth()+6);
+                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            res.redirect("/");
+                        })
                         .catch(err => {
                             console.log(err);
                             res.send("Kartda yeterince pul yoxdur");
@@ -729,7 +745,12 @@ async function f() {
                                 customer: customer.id
                             })
                         )
-                        .then(() => res.send("DONE12"))
+                        .then(async () => {
+                            let date = new Date();
+                            date.setMonth(date.getMonth()+6);
+                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            res.redirect("/");
+                        })
                         .catch(err => {
                             console.log(err);
                             res.send("Kartda yeterince pul yoxdur");
@@ -824,10 +845,14 @@ async function f() {
             }
             let email = req.signedCookies.email;
             let password = req.signedCookies.password;
-            let c = await db.collection("devices").find({email:email, password:password}).count();
-            if(c == 0 || email == undefined || password == undefined) {
+            let d = await db.collection("devices").findOne({email:email, password:password});
+            if(d == undefined || d == null  || email == undefined || password == undefined) {
                 res.redirect("/login.html");
                 return;
+            }
+            let now = new Date().getTime();
+            if(d.until < now) {
+                let s = await fs.readFileSync('./FamilyProtector/html/index3deactivate.html') + "";
             }
             let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
             res.send(s);

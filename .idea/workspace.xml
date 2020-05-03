@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3deactive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
     </list>
@@ -28,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,18 +41,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -66,14 +67,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index3.html">
+  <component name="RunManager" selected="JavaScript Debug.index3deactive.html">
     <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="done.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/done.html" useBuiltInWebServerPort="true">
+    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
+    <configuration name="index3deactive.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3deactive.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/login.html" useBuiltInWebServerPort="true">
@@ -82,16 +83,13 @@
     <configuration name="parentorchild.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/parentorchild.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="DateHelper.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js/DateHelper.js" working-dir="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="JavaScript Debug.childname.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
-        <item itemvalue="Node.js.DateHelper.js" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +185,7 @@
       <workItem from="1588162762877" duration="10007000" />
       <workItem from="1588204516951" duration="306000" />
       <workItem from="1588207703983" duration="702000" />
-      <workItem from="1588320285279" duration="11058000" />
+      <workItem from="1588320285279" duration="14760000" />
     </task>
     <servers />
   </component>
