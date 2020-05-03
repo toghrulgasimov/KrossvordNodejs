@@ -233,15 +233,13 @@
             return false;
         }
 
-        var app = angular.module("app", []).controller("myCtrl", function($scope, $http, $interval, $window) {
-            //$scope.message="Hello World";
 
-
-        } )
-        alert("col");
 
 
     });
+    angular.module("app", []).controller("HelloWorldCtrl", function($scope) {
+        $scope.message="Hello World"
+    } )
 
 
 
