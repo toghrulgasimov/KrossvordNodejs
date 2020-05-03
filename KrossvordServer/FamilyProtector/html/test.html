@@ -8,6 +8,11 @@
 <h1 ng-controller="HelloWorldCtrl">{{message}}</h1>
 <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
 <script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        // ... handle error ...
+        alert(msg);
+        return false;
+    }
     angular.module("app", []).controller("HelloWorldCtrl", function($scope) {
         $scope.message="Hello World"
     } )
