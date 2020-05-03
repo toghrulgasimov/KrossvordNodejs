@@ -124,6 +124,21 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+
+<script>
+    alert("jquery yuxari");
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        // ... handle error ...
+        alert(msg);
+        return false;
+    }
+
+
+
+
+
+</script>
+
 <script>
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window,$cookies) {
         //$scope.message="Hello World";
