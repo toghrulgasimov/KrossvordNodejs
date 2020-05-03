@@ -125,7 +125,9 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <script>
+    alert(123);
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window,$cookies) {
+        alert(1234);
         //$scope.message="Hello World";
         $scope.ev = true;
         $scope.rem = '';
@@ -324,7 +326,7 @@
         });
 
     });
-    alert(123);
+
 
 </script>
 </body>
