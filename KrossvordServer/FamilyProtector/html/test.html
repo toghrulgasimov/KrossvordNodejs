@@ -126,7 +126,7 @@
 
 <script>
     alert("yux");
-    var app = angular.module("app").controller("myCtrl", function($scope, $http, $interval, $window) {
+    var app = angular.module("app", []).controller("myCtrl", function($scope, $http, $interval, $window) {
         //$scope.message="Hello World";
 
 
