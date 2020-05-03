@@ -11,8 +11,14 @@
 </div>
 
 <script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        // ... handle error ...
+        alert(msg)
+        return false;
+    }
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope) {
+        alert('asdsd')
         $scope.firstName= "John";
         $scope.lastName= "Doe";
     });
