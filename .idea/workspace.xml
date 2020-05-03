@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/ssh" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,17 +38,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/pki-validation" />
       <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/ssh" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/css" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/missions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -181,7 +182,7 @@
       <workItem from="1588162762877" duration="10007000" />
       <workItem from="1588204516951" duration="306000" />
       <workItem from="1588207703983" duration="702000" />
-      <workItem from="1588320285279" duration="16207000" />
+      <workItem from="1588320285279" duration="16360000" />
     </task>
     <servers />
   </component>
