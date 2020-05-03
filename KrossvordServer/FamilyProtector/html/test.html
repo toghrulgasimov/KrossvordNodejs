@@ -142,20 +142,10 @@
         $scope.firstTime = true;
         $scope.login = function () {
             $scope.lm = '';
-            if($scope.firstTime == false) {
-                if($scope.le == undefined || $scope.le.indexOf("@") == -1) {
-                    $scope.lm = 'Email daxil edin.'
-                    return;
-                }
-                if($scope.lp == undefined || $scope.lp.length == 0) {
-                    $scope.lm = 'Sifre daxil edin.'
-                    return;
-                }
-            }
 
 
-            let data = {email:$scope.le, password: $scope.lp};
 
+            
         }
 
         //$scope.login();
