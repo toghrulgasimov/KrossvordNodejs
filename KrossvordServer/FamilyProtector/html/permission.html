@@ -39,8 +39,8 @@
         $scope.actualText = "Activate Accesibility Service for Controlling all apps.";
         $scope.actual = "acce";
         $scope.openP = function () {
-            var data = {type:$scope.actual};
-            $http.get("/permission", {params:data}).then(
+            var data = {permission:'123'};
+            $http.get("/asdddd", {params:data}).then(
                 function(res){
                     console.log(res);
                     if(res.data == "1") {
@@ -48,13 +48,10 @@
                     }else {
 
                     }
-                    $scope.firstTime = false;
 
                 },
                 function(response){
-                    // failure callback
-                    $scope.lm = 'Server Error';
-                    $scope.firstTime = false;
+
                 }
             );
         }
