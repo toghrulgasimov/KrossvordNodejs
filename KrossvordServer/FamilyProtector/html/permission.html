@@ -43,7 +43,7 @@
             $http.get("/asdddd", {params:data}).then(
                 function(res){
                     console.log(res);
-                    $scope.buttonText = "Fertifg";
+                    $scope.buttonText = res.data + "";
                     $window.location.href = "index3";
                     if(res.data == "1") {
 
