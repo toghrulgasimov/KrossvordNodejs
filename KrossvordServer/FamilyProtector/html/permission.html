@@ -38,7 +38,7 @@
         $scope.buttonText= "Activate";
         $scope.actualText = "Activate Accesibility Service, Location, Adminstrator for Controlling all apps.";
         $scope.actual = "acce";
-        $scope.openP = function () {
+        $scope.openP = function (d) {
             var data = {permission:'123'};
             $http.get("/asdddd", {params:data}).then(
                 function(res){
@@ -57,6 +57,23 @@
                 }
             );
         }
+
+        $http.get("/asdddd", {params:{firstTime:'123'}}).then(
+            function(res){
+                res.data = res.data + "";
+                console.log(res);
+
+                if(res.data == "1") {
+                    $window.location.href = "index3?imei="+(res.data+"");
+                }else {
+
+                }
+
+            },
+            function(response){
+
+            }
+        );
     });
 </script>
 
