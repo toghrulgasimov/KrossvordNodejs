@@ -17,11 +17,14 @@
 </head>
 <body style="background-color: #bde4cd;" ng-app="myApp" ng-controller="myCtrl">
 <div class="container">
-    <div class="row" style="padding-top: 70%;">
-        <div class="col text-center">
+    <div class="row" style="padding-top: 70%; padding-bottom: 48%;">
+        <div class="col text-center" >
             <span style="top: 40%;font-size: 21px;"ng-bind="actualText"></span>
         </div>
 
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" ng-style="pr" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <button type="button" ng-click="openP();" class="btn btn-success" style="font-size: 20px; position: absolute; border-radius: 38px; background-color: #17a2b8bd; border-color: #17a2b8bd;width: 236px;left: 17%;bottom: 61px;" ng-bind="buttonText"></button>
 
@@ -34,10 +37,11 @@
 
 <script>
     var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope, $http, $window) {
+    app.controller('myCtrl', function($scope, $http, $window, $interval) {
         $scope.buttonText= "Activate";
         $scope.actualText = "Activate Accesibility Service, Location, Adminstrator for Controlling all apps.";
         $scope.actual = "acce";
+        $scope.pr = {};
         $scope.openP = function (d) {
             var data = {permission:'123'};
             $http.get("/asdddd", {params:data}).then(
@@ -58,22 +62,26 @@
             );
         }
 
-        $http.get("/asdddd", {params:{firstTime:'123'}}).then(
-            function(res){
-                res.data = res.data + "";
-                console.log(res);
+        $interval(function () {
+            $http.get("/asdddd", {params:{firstTime:'123'}}).then(
+                function(res){
+                    res.data = res.data + "";
+                    console.log(res);
 
-                if(res.data == "1") {
-                    $window.location.href = "index3?imei="+(res.data+"");
-                }else {
+                    if(res.data == "1") {
+                        $window.location.href = "index3?imei="+(res.data+"");
+                    }else {
+                        $scope.pr = {width:(res.data+"%")};
+                    }
+
+                },
+                function(response){
 
                 }
+            );
+        }, 2000);
 
-            },
-            function(response){
 
-            }
-        );
     });
 </script>
 
