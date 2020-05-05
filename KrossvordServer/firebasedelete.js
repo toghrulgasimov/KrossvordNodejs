@@ -851,6 +851,11 @@ async function f() {
                 res.redirect("/login.html");
                 return;
             }
+            if(req.cookies.parent == "0") {
+                let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                res.send(s);
+                return;
+            }
             let now = new Date().getTime();
             if(d.until == undefined || d.until < now) {
                 let s = await fs.readFileSync('./FamilyProtector/html/index3deactive.html') + "";
