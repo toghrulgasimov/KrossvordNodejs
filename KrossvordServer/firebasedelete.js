@@ -869,7 +869,7 @@ async function f() {
 
             let imei = req.query.imei;
             console.log(req.cookies);
-            if(req.cookies.parent != undefined) {
+            if(req.cookies.parent == "0") {
                 res.redirect("done.html");
             }else {
                 let s = await fs.readFileSync('./FamilyProtector/html/permission.html') + "";
