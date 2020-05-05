@@ -118,7 +118,7 @@ async function f() {
             let ans = [];
             console.log(apps);
             for(let i = 0; i < apps.length; i++) {
-                let path = "icons/"+apps[i]+".png";
+                let path = "icons/"+apps[i];
                 if(!fs.existsSync(path)) {
                     ans.push(apps[i]);
                     console.log("bu var" + apps[i]);
