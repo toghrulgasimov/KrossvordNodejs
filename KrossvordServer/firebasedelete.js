@@ -883,7 +883,7 @@ async function f() {
             if(req.cookies.parent == "0") {
                 res.redirect("done.html");
             }else {
-                let s = await fs.readFileSync('./FamilyProtector/html/permission.html') + "";
+                let s = await fs.readFileSync('./FamilyProtector/html/parentorchild.html') + "";
                 res.send(s);
             }
         });
