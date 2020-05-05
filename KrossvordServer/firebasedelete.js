@@ -844,8 +844,8 @@ async function f() {
                 // // Set cookie
                 // res.cookie('imei', imei, options) // options is optional
             }
-            let email = req.email;
-            let password = req.password;
+            let email = req.query.email;
+            let password = req.query.password;
             let d = await db.collection("devices").findOne({email:email, password:password});
             if(d == undefined || d == null  || email == undefined || password == undefined) {
                 res.redirect("/login.html");
