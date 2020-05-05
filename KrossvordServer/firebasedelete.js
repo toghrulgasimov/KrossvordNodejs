@@ -865,6 +865,17 @@ async function f() {
                 res.send(s);
             }
         });
+        app.get("/permission", async function (req, res) {
+
+            let imei = req.query.imei;
+            console.log(req.cookies);
+            if(req.cookies.parent != undefined) {
+                res.redirect("done.html");
+            }else {
+                let s = await fs.readFileSync('./FamilyProtector/html/permission.html') + "";
+                res.send(s);
+            }
+        });
 
         app.get("/parent", async function (req, res) {
             let parent = req.query.parent;
