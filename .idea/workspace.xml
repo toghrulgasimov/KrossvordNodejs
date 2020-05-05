@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/permission.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/permission.html" afterDir="false" />
-    </list>
+    <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +182,7 @@
       <workItem from="1588162762877" duration="10007000" />
       <workItem from="1588204516951" duration="306000" />
       <workItem from="1588207703983" duration="702000" />
-      <workItem from="1588320285279" duration="45203000" />
+      <workItem from="1588320285279" duration="45461000" />
     </task>
     <servers />
   </component>
