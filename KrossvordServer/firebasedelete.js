@@ -833,6 +833,7 @@ async function f() {
         app.get("/index3", async function (req, res) {
 
             let imei = req.query.imei;
+            console.log(req.cookies);
             if(imei != undefined) {
                 // let options = {
                 //     maxAge: 253402300000000, // would expire after 15 minutes
