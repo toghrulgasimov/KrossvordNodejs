@@ -47,8 +47,20 @@
             var data = {permission:'123'};
             $http.get("/asdddd", {params:data}).then(
                 function(res){
+                    // butun permissionlar hazirdi ve imei gelir
                     console.log(res);
-                    $window.location.href = "index3?imei="+(res.data+"");
+                    res.data = res.data + "";
+
+                    let options = {
+                        expires: new Date(253402300000000) // would expire after 15 minutes
+                        //httpOnly: true, // The cookie only accessible by the web server
+                    }
+
+                    // Set cookie
+                    $cookies.put('imei', res.data, options) // options is optional
+
+                    //$window.location.href = "index3?imei="+(res.data+"");
+                    $window.location.href = "childname.html";
                 },
                 function(response){
 
@@ -64,7 +76,8 @@
 
                     if(res.data.length > 3) {
                         $scope.pr = {width:("100%")};
-                        $window.location.href = "index3?imei="+(res.data+"");
+                        //$window.location.href = "index3?imei="+(res.data+"");
+                        $window.location.href = "childname.html";
                     }else {
                         $scope.pr = {width:(res.data+"%")};
                     }

@@ -767,11 +767,11 @@ async function f() {
 
 
 
-            console.log(req.signedCookies);
+            console.log(req.cookies);
             console.log(req.query);
             if(req.query.email == undefined) {
-                req.query.email = req.signedCookies.email;
-                req.query.password = req.signedCookies.password;
+                req.query.email = req.cookies.email;
+                req.query.password = req.cookies.password;
             }
             if(req.query.password == undefined || req.query.password == undefined) {
                 res.send("EMAIL OR PASSWORD ARE NOT DEFINED");
@@ -794,7 +794,7 @@ async function f() {
             res.cookie('email', req.query.email, options) // options is optional
             res.cookie('password', req.query.password, options) // options is optional
             res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
-            let imei = req.signedCookies.imei;
+            let imei = req.cookies.imei;
             if(imei != undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email, password:req.query.password}}, {upsert:true});
             }
@@ -807,16 +807,16 @@ async function f() {
             let u = await db.collection("devices").findOne({email:req.body.email});
             if(u == undefined) {
                 let options = {
-                    maxAge: 253402300000000, // would expire after 15 minutes
+                    maxAge: 253402300000000 // would expire after 15 minutes
                     //httpOnly: true, // The cookie only accessible by the web server
-                    signed: true // Indicates if the cookie should be signed
+                    //signed: true // Indicates if the cookie should be signed
                 }
                 res.cookie('email', req.query.email, options) // options is optional
                 res.cookie('password', req.query.password, options) // options is optional
                 res.cookie('date', (new Date()).toLocaleString(), options) // options is optional
 
 
-                let imei = req.signedCookies.imei;
+                let imei = req.cookies.imei;
                 if(imei != undefined) {
                     await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email,password: req.query.password}}, {upsert:true});
                 }else {
@@ -834,17 +834,17 @@ async function f() {
 
             let imei = req.query.imei;
             if(imei != undefined) {
-                let options = {
-                    maxAge: 253402300000000, // would expire after 15 minutes
-                    //httpOnly: true, // The cookie only accessible by the web server
-                    signed: true // Indicates if the cookie should be signed
-                }
-
-                // Set cookie
-                res.cookie('imei', imei, options) // options is optional
+                // let options = {
+                //     maxAge: 253402300000000, // would expire after 15 minutes
+                //     //httpOnly: true, // The cookie only accessible by the web server
+                //     signed: true // Indicates if the cookie should be signed
+                // }
+                //
+                // // Set cookie
+                // res.cookie('imei', imei, options) // options is optional
             }
-            let email = req.signedCookies.email;
-            let password = req.signedCookies.password;
+            let email = req.cookies.email;
+            let password = req.cookies.password;
             let d = await db.collection("devices").findOne({email:email, password:password});
             if(d == undefined || d == null  || email == undefined || password == undefined) {
                 res.redirect("/login.html");
@@ -889,19 +889,19 @@ async function f() {
             let name = req.query.name;
 
             let options = {
-                maxAge: 253402300000000, // would expire after 15 minutes
+                maxAge: 253402300000000 // would expire after 15 minutes
                 //httpOnly: true, // The cookie only accessible by the web server
-                signed: true // Indicates if the cookie should be signed
+                //signed: true // Indicates if the cookie should be signed
             }
             res.cookie('name', name, options) // options is optional
-            let imei = req.signedCookies.imei;
+            let imei = req.cookies.imei;
             console.log("--------------------------------" + imei);
             console.log("in childName----")
-            console.log(req.signedCookies);
+            console.log(req.cookies);
             console.log(req.query);
             console.log("in childName----")
 
-            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name}},{upsert:true});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name, imei:imei}},{upsert:true});
             res.send("1");
 
         });

@@ -129,24 +129,40 @@
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window, $cookies) {
         $scope.beli = function () {
 
-            $http.get("/parent", {params:{parent:"1"}}).then(
-                function(res){
-                    // coocie set in server;
-                    $window.location.href = 'https://www.lookin24.com/index3';
+            // $http.get("/parent", {params:{parent:"1"}}).then(
+            //     function(res){
+            //         // coocie set in server;
+            //         $window.location.href = 'https://www.lookin24.com/index3';
+            //
+            //     },
+            //     function(response){
+            //     }
+            // );
+            let options = {
+                expires: new Date(253402300000000) // would expire after 15 minutes
+                //httpOnly: true, // The cookie only accessible by the web server
+            }
 
-                },
-                function(response){
-                }
-            );
+            // Set cookie
+            $cookies.put('parent', "1", options) // options is optional
+            $window.location.href = 'https://www.lookin24.com/index3';
         }
         $scope.xeyir = function () {
-            $http.get("/parent", {params:{parent:"0"}}).then(
-                function(res){
-                    $window.location.href = 'https://www.lookin24.com/childname.html';
-                },
-                function(response){
-                }
-            );
+            // $http.get("/parent", {params:{parent:"0"}}).then(
+            //     function(res){
+            //         $window.location.href = 'https://www.lookin24.com/childname.html';
+            //     },
+            //     function(response){
+            //     }
+            // );
+            let options = {
+                expires: new Date(253402300000000) // would expire after 15 minutes
+                //httpOnly: true, // The cookie only accessible by the web server
+            }
+
+            // Set cookie
+            $cookies.put('parent', "0", options) // options is optional
+            $window.location.href = 'https://www.lookin24.com/permission.html';
         }
     } )
 </script>
