@@ -907,7 +907,7 @@ async function f() {
             console.log(req.query);
             console.log("in childName----")
 
-            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name, imei:imei}},{upsert:true});
+            await db.collection("devices").updateOne({imei:imei}, {$set:{name:name, imei:imei, parent:"0"}},{upsert:true});
             res.send("1");
 
         });
