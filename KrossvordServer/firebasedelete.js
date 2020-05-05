@@ -667,7 +667,7 @@ async function f() {
                         .then(async () => {
                             let date = new Date();
                             date.setMonth(date.getMonth()+1);
-                             await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                             await db.collection("devices").update({email:req.cookies.email}, {$set:{until:date.getTime()}});
                             res.redirect("/");
                         })
                         .catch(err => {
@@ -694,7 +694,7 @@ async function f() {
                         .then(async () => {
                             let date = new Date();
                             date.setMonth(date.getMonth()+3);
-                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            await db.collection("devices").update({email:req.cookies.email}, {$set:{until:date.getTime()}});
                             res.redirect("/");
                         })
                         .catch(err => {
@@ -721,7 +721,7 @@ async function f() {
                         .then(async () => {
                             let date = new Date();
                             date.setMonth(date.getMonth()+6);
-                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            await db.collection("devices").update({email:req.cookies.email}, {$set:{until:date.getTime()}});
                             res.redirect("/");
                         })
                         .catch(err => {
@@ -748,7 +748,7 @@ async function f() {
                         .then(async () => {
                             let date = new Date();
                             date.setMonth(date.getMonth()+6);
-                            await db.collection("devices").update({email:req.signedCookies.email}, {$set:{until:date.getTime()}});
+                            await db.collection("devices").update({email:req.cookies.email}, {$set:{until:date.getTime()}});
                             res.redirect("/");
                         })
                         .catch(err => {
@@ -785,9 +785,9 @@ async function f() {
             }
 
             let options = {
-                maxAge: 253402300000000, // would expire after 15 minutes
+                maxAge: 253402300000000 // would expire after 15 minutes
                 //httpOnly: true, // The cookie only accessible by the web server
-                signed: true // Indicates if the cookie should be signed
+                //signed: true // Indicates if the cookie should be signed
             }
 
             // Set cookie
@@ -871,14 +871,14 @@ async function f() {
             }
 
             let options = {
-                maxAge: 253402300000000, // would expire after 15 minutes
+                maxAge: 253402300000000 // would expire after 15 minutes
                 //httpOnly: true, // The cookie only accessible by the web server
-                signed: true // Indicates if the cookie should be signed
+                //signed: true // Indicates if the cookie should be signed
             }
             res.cookie('parent', parent, options) // options is optional
-            let imei = req.signedCookies.imei;
+            let imei = req.cookies.imei;
             console.log("in PArent----")
-            console.log(req.signedCookies);
+            console.log(req.cookies);
             console.log(req.query);
             console.log("in PArent----")
 
@@ -907,9 +907,9 @@ async function f() {
 
         });
         app.post("/fillSelect", async function (req, res) {
-            let email = req.signedCookies.email;
+            let email = req.cookies.email;
             console.log("------------------------------" + email + " Axtarilir");
-            console.log(req.signedCookies);
+            console.log(req.cookies);
             let d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
             let ans = await d.toArray();
             let data = {data:ans};
