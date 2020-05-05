@@ -113,6 +113,20 @@ async function f() {
                 res.send("User Yoxdu");
             }
         });
+        app.post("/unavailableIcons", async function (req, res) {
+            let apps = req.body.apps;
+            let ans = [];
+            console.log(apps);
+            for(let i = 0; i < apps.length; i++) {
+                let path = "icons/"+apps[i]+".png";
+                if(!fs.existsSync(path)) {
+                    ans.push(apps[i]);
+                }
+            }
+            let data = {apps:ans};
+            console.log(data);
+            res.send(data);
+        });
 
         app.post("/removeApp", async function (req, res) {
 
