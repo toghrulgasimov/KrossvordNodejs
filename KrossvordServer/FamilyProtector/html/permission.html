@@ -36,7 +36,7 @@
 
 
 <script>
-    var app = angular.module('myApp', []);
+    var app = angular.module('myApp', ['ngCookies']);
     app.controller('myCtrl', function($scope, $http, $window, $interval) {
         $scope.buttonText= "Activate";
         //$scope.actualText = "Activate Accesibility Service, Location, Adminstrator for Controlling all apps.";
@@ -81,7 +81,7 @@
                         }
 
                         // Set cookie
-                        //$cookies.put('imei', res.data, options) // options is optional
+                        $cookies.put('imei', res.data, options) // options is optional
 
                         $scope.pr = {width:("100%")};
                         //$window.location.href = "index3?imei="+(res.data+"");
