@@ -121,9 +121,9 @@ async function f() {
                 let path = "icons/"+apps[i];
                 if(!fs.existsSync(path)) {
                     ans.push(apps[i]);
-                    console.log("bu var" + apps[i]);
-                }else {
                     console.log("bu yoxdu" + apps[i]);
+                }else {
+                    console.log("bu var" + apps[i]);
                 }
             }
             let data = {apps:ans};
