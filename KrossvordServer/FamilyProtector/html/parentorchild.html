@@ -161,6 +161,7 @@
             //     function(response){
             //     }
             // );
+            alert("xeyir cagrildi");
             let options = {
                 expires: new Date(253402300000000) // would expire after 15 minutes
                 //httpOnly: true, // The cookie only accessible by the web server
@@ -168,6 +169,7 @@
 
             // Set cookie
             $cookies.put('parent', "0", options) // options is optional
+            alert("coocki deyishdirildi");
             $window.location.href = 'https://www.lookin24.com/permission';
         }
     } )
