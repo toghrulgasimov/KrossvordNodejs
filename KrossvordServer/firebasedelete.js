@@ -852,7 +852,7 @@ async function f() {
                 return;
             }
             if(req.cookies.parent == "0") {
-                let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                let s = await fs.readFileSync('./FamilyProtector/html/done.html') + "";
                 res.send(s);
                 return;
             }
