@@ -821,7 +821,7 @@ async function f() {
 
             console.log(req.query);
 
-            let u = await db.collection("devices").findOne({email:req.body.email});
+            let u = await db.collection("devices").findOne({email:req.query.email});
             console.log(u);
             if(u == undefined) {
                 let options = {
