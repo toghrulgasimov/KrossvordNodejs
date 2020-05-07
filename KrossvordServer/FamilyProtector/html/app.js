@@ -332,7 +332,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var ans = [];
             for(var i = 0; i < $scope.gunluk.length; i++) {
-                //if(t[$scope.gunluk[i].package] == undefined)continue;
+                if(t[$scope.gunluk[i].package] == undefined)continue;
                 $scope.gunluk[i].start = parseInt($scope.gunluk[i].start);
                 $scope.gunluk[i].end = parseInt($scope.gunluk[i].end);
                 $scope.gunluk[i].duration = ($scope.gunluk[i].end == -1 ? (new Date()).getTime() : $scope.gunluk[i].end) - $scope.gunluk[i].start;
