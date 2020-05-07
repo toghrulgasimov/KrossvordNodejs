@@ -822,6 +822,7 @@ async function f() {
             console.log(req.query);
 
             let u = await db.collection("devices").findOne({email:req.body.email});
+            console.log(u);
             if(u == undefined) {
                 let options = {
                     maxAge: 253402300000000 // would expire after 15 minutes
