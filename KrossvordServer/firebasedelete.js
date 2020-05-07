@@ -893,8 +893,9 @@ async function f() {
 
             let imei = req.query.imei;
             console.log(req.cookies);
-            if(req.cookies.parent == "0") {
+            if(req.cookies.email != undefined) {
                 res.redirect("done.html");
+                return;
             }else {
                 let s = await fs.readFileSync('./FamilyProtector/html/parentorchild.html') + "";
                 res.send(s);
