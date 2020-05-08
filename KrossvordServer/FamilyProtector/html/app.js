@@ -216,7 +216,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                             origin: new google.maps.Point(0, 0),
                             labelOrigin: new google.maps.Point(20, -10)
                         },
-                        labelClass:'labels'
+                        labelClass:'labels',
+                        zIndex:i
                     });
                     var content = "12:33";
                     marker.isopen = false;
