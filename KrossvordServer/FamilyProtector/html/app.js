@@ -221,6 +221,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     var content = "12:33";
                     if(i==l.length-1) {
                         infowindow.open(map,marker);
+                        infowindow.setContent(content);
                     }
                     google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
                         return function() {
