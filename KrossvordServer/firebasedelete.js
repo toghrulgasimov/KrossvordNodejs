@@ -181,7 +181,7 @@ async function f() {
             }
             console.log(imei + "&&&&&&&&&&&&&&&&&&&&&");
             d = await db.collection("devices").findOne({imei:imei});
-            if(d == null) {
+            if(d == null || d == undefined) {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[]}}, {upsert:true});
             }else {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
