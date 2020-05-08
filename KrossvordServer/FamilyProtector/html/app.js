@@ -201,10 +201,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 time = time.substring(time.length - 5);
 
                 if(true) {
-                    var infowindow = new google.maps.InfoWindow({
+                    let infowindow = new google.maps.InfoWindow({
                         content: "salamlar"
                     });
-                    var marker = new google.maps.Marker({
+                    let marker = new google.maps.Marker({
                         position: {lat: l[i].la, lng: l[i].lo},
                         map: map,
                         label: {
