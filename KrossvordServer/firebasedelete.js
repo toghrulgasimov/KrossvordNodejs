@@ -457,6 +457,7 @@ async function f() {
             let t = 0;
             let f = setInterval(function () {
                 t++;
+                console.log(imei+cmd);
                 //console.log(t + " in sendCommand");
                 //console.log(CommandResults);
                 if(CommandResults[imei+cmd] != undefined) {
