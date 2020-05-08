@@ -219,6 +219,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         labelClass:'labels'
                     });
                     var content = "12:33";
+                    if(i==l.length-1) {
+                        infowindow.open(map,marker);
+                    }
                     google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
                         return function() {
                             infowindow.setContent(content);
