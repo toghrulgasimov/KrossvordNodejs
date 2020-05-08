@@ -201,10 +201,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 time = time.substring(time.length - 5);
 
                 if(true) {
-                    let infowindow = new google.maps.InfoWindow({
-                        content: "salamlar"
-                    });
-                    let marker = new google.maps.Marker({
+                    var infowindow = new google.maps.InfoWindow();
+                    var marker = new google.maps.Marker({
                         position: {lat: l[i].la, lng: l[i].lo},
                         map: map,
                         label: {
@@ -220,9 +218,13 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         },
                         labelClass:'labels'
                     });
-                    marker.addListener('click', function() {
-                        infowindow.open(map, marker);
-                    });
+                    
+                    google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+                        return function() {
+                            infowindow.setContent(content);
+                            infowindow.open(map,marker);
+                        };
+                    })(marker,content,infowindow));
                     $scope.markers.push(marker);
                 }
             }
