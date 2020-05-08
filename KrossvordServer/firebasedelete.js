@@ -908,7 +908,9 @@ async function f() {
 
             let imei = req.query.imei;
             console.log(req.cookies);
-            if(req.cookies.email != undefined) {
+            if(req.cookies.parent=="1") {
+                res.redirect("index3");
+            }else if(req.cookies.email != undefined) {
                 res.redirect("done.html");
                 return;
             }else {

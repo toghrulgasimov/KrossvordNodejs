@@ -150,8 +150,18 @@
             }
 
             // Set cookie
-            $cookies.put('parent', "1", options) // options is optional
-            $window.location.href = 'https://www.lookin24.com/index3';
+            //$cookies.put('parent', "1", options) // options is optional
+            //$window.location.href = 'https://www.lookin24.com/index3';
+            $http.get("/openinbrow", {params:{name:$scope.name}}).then(
+                function(res){
+                    // coocie set in server;
+
+
+
+                },
+                function(response){
+                }
+            );
         }
         $scope.xeyir = function () {
             // $http.get("/parent", {params:{parent:"0"}}).then(
@@ -161,7 +171,6 @@
             //     function(response){
             //     }
             // );
-            alert("xeyir cagrildi");
             var options = {
                 expires: new Date(253402300000000) // would expire after 15 minutes
                 //httpOnly: true, // The cookie only accessible by the web server
@@ -169,7 +178,6 @@
 
             // Set cookie
             $cookies.put('parent', "0", options) // options is optional
-            alert("coocki deyishdirildi");
             $window.location.href = 'https://www.lookin24.com/permission';
         }
     } )
