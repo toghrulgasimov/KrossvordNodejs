@@ -243,7 +243,6 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
 
             var lineSymbol = {
-                path: 1,
                 strokeOpacity: 1
             };
             $scope.flightPath = new google.maps.Polyline({
