@@ -269,7 +269,6 @@ async function f() {
             let imei = data.imei;
             //CommandResults[imei] = data;
             //console.log(data);
-            //console.log("-------in sendLocation");
             await db.collection("devices").updateOne({imei:imei}, {$set:{con:data.data}}, {upsert:true});
             //let d = await db.collection("devices").findOne({imei:imei});
             CommandResults[imei+'sendWhatsapp'] = data;
