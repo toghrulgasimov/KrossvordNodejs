@@ -219,7 +219,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         labelClass:'labels',
                         zIndex:i
                     });
-                    var content = "12:33";
+                    var content = time;
                     marker.isopen = false;
                     if(i==l.length-1) {
                         marker.isopen = true;
