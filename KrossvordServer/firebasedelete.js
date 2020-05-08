@@ -426,6 +426,7 @@ async function f() {
             }
             CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
+            console.log(CommandResults[imei+'sendLocation']);
 
             res.send("1");
         });
