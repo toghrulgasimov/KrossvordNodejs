@@ -211,7 +211,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         },
                         draggable:true,
                         icon: {
-                            url: 'https://lookin24.com/nomre/number_0.png',
+                            url: 'https://lookin24.com/nomre/number_15.png',
                             origin: new google.maps.Point(0, 0),
                             labelOrigin: new google.maps.Point(20, -10)
                         },
