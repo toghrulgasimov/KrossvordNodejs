@@ -466,6 +466,8 @@ async function f() {
 
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
+                        console.log("filter olunmus in command");
+                        console.log(of);
 
                     }
                     res.send(of);
