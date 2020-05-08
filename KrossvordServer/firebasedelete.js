@@ -905,7 +905,7 @@ async function f() {
             res.send(s);
         });
         app.get("/parentorchild", async function (req, res) {
-
+            console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
             if(req.cookies.parent=="1") {
