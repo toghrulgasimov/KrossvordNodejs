@@ -424,6 +424,9 @@ async function f() {
                 d.location = {};
                 d.location.data = [];
             }
+            if(le != undefined && le != null) {
+                d.location.data.push(le);
+            }
             CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
             console.log(CommandResults[imei+'sendLocation']);
