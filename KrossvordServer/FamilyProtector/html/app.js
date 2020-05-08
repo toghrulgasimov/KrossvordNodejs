@@ -205,11 +205,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     var marker = new google.maps.Marker({
                         position: {lat: l[i].la, lng: l[i].lo},
                         map: map,
-                        label: {
-                            text:  time,
-                            color: "#2c3e0f",
-                            fontSize: "20px"
-                        },
+                        // label: {
+                        //     text:  time,
+                        //     color: "#2c3e0f",
+                        //     fontSize: "20px"
+                        // },
                         draggable:true,
                         icon: {
                             url: 'https://lookin24.com/nomre/number_'+(i+1)+'.png',
@@ -252,7 +252,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 icons: [{
                     icon: lineSymbol,
                     offset: '100',
-                    repeat: '20px',
+                    repeat: 'opx',
                 }],
                 map: map,
                 strokeColor: 'rgb(255,0,5)'

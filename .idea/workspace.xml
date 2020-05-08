@@ -71,9 +71,6 @@
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index3deactive.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3deactive.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="parentorchild.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/parentorchild.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -83,13 +80,16 @@
     <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" working-dir="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index3.html" />
+        <item itemvalue="Node.js.app.js" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.permission.html" />
         <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="JavaScript Debug.index3deactive.html" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +188,7 @@
       <workItem from="1588320285279" duration="54495000" />
       <workItem from="1588857286459" duration="1546000" />
       <workItem from="1588880047932" duration="1091000" />
-      <workItem from="1588931664706" duration="2493000" />
+      <workItem from="1588931664706" duration="2799000" />
     </task>
     <servers />
   </component>
