@@ -835,10 +835,13 @@ async function f() {
 
 
                 let imei = req.cookies.imei;
+                let date = new Date();
+                date.setDate(date.getDate() + 1);
+
                 if(imei != undefined) {
-                    await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email,password: req.query.password}}, {upsert:true});
+                    await db.collection("devices").updateOne({imei:imei}, {$set:{email:req.query.email,password: req.query.password, until:date.getTime()}}, {upsert:true});
                 }else {
-                    await db.collection("devices").insertOne({email:req.query.email, password: req.query.password});
+                    await db.collection("devices").insertOne({email:req.query.email, password: req.query.password, until:date.getTime()});
                 }
                 res.send("1");
                 return;
