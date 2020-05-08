@@ -219,14 +219,22 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         labelClass:'labels'
                     });
                     var content = "12:33";
+                    marker.isopen = false;
                     if(i==l.length-1) {
+                        marker.isopen = true;
                         infowindow.open(map,marker);
                         infowindow.setContent(content);
                     }
+
                     google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
                         return function() {
-                            infowindow.setContent(content);
-                            infowindow.open(map,marker);
+                            if(!marker.isopen) {
+                                infowindow.setContent(content);
+                                infowindow.open(map,marker);
+                            }else {
+                                infowindow.close();
+                            }
+                            marker.isopen = !marker.isopen;
                         };
                     })(marker,content,infowindow));
                     $scope.markers.push(marker);
