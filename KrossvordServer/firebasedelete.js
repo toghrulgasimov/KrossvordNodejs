@@ -863,7 +863,7 @@ async function f() {
 
 
         app.get("/index3", async function (req, res) {
-
+            console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
             if(imei != undefined) {
