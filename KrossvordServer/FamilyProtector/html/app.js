@@ -253,6 +253,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     offset: '100',
                     repeat: 'opx',
                 }],
+                setStrokeWeight:12,
                 map: map,
                 strokeColor: 'rgb(255,0,5)'
             });
