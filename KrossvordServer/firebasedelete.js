@@ -399,7 +399,10 @@ async function f() {
                 //data.data = [];
                 await db.collection("devices").updateOne({imei:imei}, {$set:{location:data}}, {upsert:true});
             }else {
-
+                if(d.location == undefined) {
+                    d.location = {};
+                    d.location.data = [];
+                }
                 let ans = data.data.slice(0);
                 let le = ans.pop();
                 let M = {};
@@ -418,15 +421,17 @@ async function f() {
                 if(d.location.data.length == 0 && le != undefined) {
                     f.push(le);
                 }
+                if(le != undefined && le != null) {
+                    d.location.data.push(le);
+                }
                 await db.collection("devices").updateOne({imei:imei}, {$push:{"location.data":{$each:f}}});
             }
+
             if(d.location == undefined) {
                 d.location = {};
                 d.location.data = [];
             }
-            if(le != undefined && le != null) {
-                d.location.data.push(le);
-            }
+
             CommandResults[imei+'sendLocation'] = d.location;
             console.log(d.location);
             console.log(CommandResults[imei+'sendLocation']);
