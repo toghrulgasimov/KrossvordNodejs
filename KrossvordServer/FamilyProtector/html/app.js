@@ -557,9 +557,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 app.directive('whenScrolled', ['$timeout', function($timeout) {
     return function(scope, elm, attr) {
         var raw = elm[0];
+        console.log(raw);
 
         $timeout(function() {
-            //raw.scrollTop = raw.scrollHeight;
+            raw.scrollTop = raw.scrollHeight;
         });
         var lastscrolled = new Date().getTime();
         elm.bind('scroll', function() {
