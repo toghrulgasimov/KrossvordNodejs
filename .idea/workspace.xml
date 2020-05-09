@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/done.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/done.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +67,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
+  <component name="RunManager" selected="JavaScript Debug.done.html">
+    <configuration name="done.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/done.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -76,19 +80,16 @@
     <configuration name="permission.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/permission.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KrossvordNodejs/KrossvordServer/FamilyProtector/html/test.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" working-dir="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.done.html" />
         <item itemvalue="Node.js.app.js" />
         <item itemvalue="JavaScript Debug.permission.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
-        <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +188,7 @@
       <workItem from="1588320285279" duration="54495000" />
       <workItem from="1588857286459" duration="1546000" />
       <workItem from="1588880047932" duration="1091000" />
-      <workItem from="1588931664706" duration="16041000" />
+      <workItem from="1588931664706" duration="16195000" />
     </task>
     <servers />
   </component>
