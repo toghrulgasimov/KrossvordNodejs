@@ -30,7 +30,7 @@
 
 
 
-<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40" when-scrolled="loadMore()">
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40" >
 
 
 <nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
@@ -218,7 +218,7 @@
             </tbody>
         </table>
 
-        <div   style="height: 100%" ng-show="whatsappc">
+        <div   style="height: 100%;overflow: auto;" ng-show="whatsappc" when-scrolled="loadMore()">
             <table  class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
                 <thead>
 
