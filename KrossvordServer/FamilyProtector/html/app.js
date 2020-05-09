@@ -570,7 +570,7 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
             if (raw.scrollTop <= 50 && jetzt-lastscrolled >= 1000) { // load more items before you hit the top
                 var sh = raw.scrollHeight
                 scope.$apply(attr.whenScrolled);
-                console.log(raw.scrollHeight - sh);
+                console.log(sh);
                 raw.scrollTop = raw.scrollHeight - sh;
 
                 lastscrolled = jetzt;
