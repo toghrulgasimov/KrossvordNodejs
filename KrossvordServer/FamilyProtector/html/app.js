@@ -18,6 +18,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $timeout( function() {
             for (var i = 0; i < 15 && $scope.wpallindex < $scope.wpall.length; i++) {
                 $scope.wpitems.unshift($scope.wpall[$scope.wpallindex++]);
+
             }});
     };
     //infinitescroll
@@ -318,11 +319,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             console.log(d);
 
 
+
+
             $scope.wpall = [];
             $scope.wpitems = [];
             $scope.wpallindex = 0;
-
-
             //m.con = m.con.reverse();
             $scope.curConversation = m;
             $scope.wpall = d.data.data;
