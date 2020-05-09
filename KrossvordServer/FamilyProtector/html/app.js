@@ -561,13 +561,15 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
         $timeout(function() {
             raw.scrollTop = raw.scrollHeight;
         });
-
+        var lastscrolled = new Date().getTime();
         elm.bind('scroll', function() {
-            console.log("scroll function")
-            if (raw.scrollTop <= 100) { // load more items before you hit the top
+            var jetzt = new Date().getTime();
+            console.log("scroll function");
+            if (raw.scrollTop <= 100 && jetzt-lastscrolled >= 1000) { // load more items before you hit the top
                 var sh = raw.scrollHeight
                 scope.$apply(attr.whenScrolled);
                 raw.scrollTop = raw.scrollHeight - sh;
+                lastscrolled = jetzt;
             }
         });
     };
