@@ -878,7 +878,7 @@ async function f() {
             }
             let email = req.cookies.email;
             let password = req.cookies.password;
-            let d = await db.collection("devices").findOne({email:email, password:password});
+            let d = await db.collection("devices").findOne({email:email, password:password,until: { $exists: true }});
             console.log(d);
             if(d == undefined || d == null  || email == undefined || password == undefined) {
                 res.redirect("/login.html");
