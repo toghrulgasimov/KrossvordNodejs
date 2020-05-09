@@ -30,7 +30,7 @@
 
 
 
-<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40; overflow: hidden;" >
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40;" ng-style="bodystyle">
 
 
 <nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
@@ -101,7 +101,7 @@
     <div style="position: relative;top: 128px;">
         <div id="map" ng-show="m" ></div>
 
-        <table class="table" ng-show="v" style="overflow-y: scroll;height: 100%;display: block;">
+        <table class="table" ng-show="v">
             <thead>
 
             </thead>
@@ -124,7 +124,7 @@
             </tbody>
         </table>
 
-        <table class="table" style="overflow-y: scroll;height: 100%;display: block;" ng-show="g">
+        <table class="table" style="overflow: auto;" ng-show="g">
             <thead>
 
             </thead>
@@ -147,7 +147,7 @@
             </tbody>
         </table>
 
-        <table class="table" style="overflow-y: scroll;height: 100%;display: block;" ng-show="y">
+        <table class="table" ng-show="y">
             <thead>
 
             </thead>
@@ -171,7 +171,7 @@
             </tbody>
         </table>
 
-        <table class="table" ng-show="w" style="overflow-y: scroll;height: 100%;display: block;">
+        <table class="table" ng-show="w">
             <thead>
 
             </thead>
@@ -195,7 +195,7 @@
             </tbody>
         </table>
 
-        <table class="table" ng-show="whatsapp" style="overflow-y: scroll;height: 100%;display: block;">
+        <table class="table" ng-show="whatsapp">
             <thead>
 
             </thead>
