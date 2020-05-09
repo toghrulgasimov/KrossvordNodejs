@@ -31,7 +31,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $timeout( function() {
             for (var i = 0; i < 5; i++) {
                 $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
-                
+
             }}, 500);
     };
     $scope.loadMore();
@@ -320,29 +320,29 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }
     $scope.openc = function(m) {
         //console.log("Openc called");
-        console.log(m.con);
-        $scope.whatsapp = false;
-        $scope.whatsappc = true;
-        $scope.v = false;
-        $scope.w = false;
-        $scope.m = false;
-        $scope.g = false;
-        $scope.y = false;
-        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
-            $scope.loadingdiv = false;
-            console.log(d);
-
-
-            //m.con = m.con.reverse();
-            $scope.curConversation = m;
-            Server.data = d.data.data;
-            $scope.adapter.reload()
-            setTimeout(function () {
-                $( "body" ).scrollTop(1000000);
-            }, 100);
-        }, function () {
-
-        });
+        // console.log(m.con);
+        // $scope.whatsapp = false;
+        // $scope.whatsappc = true;
+        // $scope.v = false;
+        // $scope.w = false;
+        // $scope.m = false;
+        // $scope.g = false;
+        // $scope.y = false;
+        // $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
+        //     $scope.loadingdiv = false;
+        //     console.log(d);
+        //
+        //
+        //     //m.con = m.con.reverse();
+        //     $scope.curConversation = m;
+        //     Server.data = d.data.data;
+        //     $scope.adapter.reload()
+        //     setTimeout(function () {
+        //         $( "body" ).scrollTop(1000000);
+        //     }, 100);
+        // }, function () {
+        //
+        // });
 
 
     }
