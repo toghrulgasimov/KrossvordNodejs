@@ -305,7 +305,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     }
     $scope.bodystyle = function() {
-        if($scope.whatsappc) return {overflow:"hidden"};
+        if($scope.whatsappc == true) return {overflow:"hidden"};
         else return {};
     }
     $scope.openc = function(m) {
