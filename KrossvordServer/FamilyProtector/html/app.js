@@ -31,7 +31,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $timeout( function() {
             for (var i = 0; i < 5; i++) {
                 $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
-                counter += 10;
+                
             }}, 500);
     };
     $scope.loadMore();
