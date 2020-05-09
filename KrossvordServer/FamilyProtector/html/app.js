@@ -304,7 +304,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         });
 
     }
-    $scope.bodystyle = function() {
+    $scope.bodyst = function() {
         if($scope.whatsappc == true) return {overflow:"hidden"};
         else return {};
     }
