@@ -334,9 +334,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
             $scope.loadMore();
 
-            // setTimeout(function () {
-            //     $( "body" ).scrollTop(1000000);
-            // }, 100);
+            setTimeout(function () {
+                $( "#whatsappc" ).scrollTop(1000000);
+            }, 100);
         }, function () {
 
         });
