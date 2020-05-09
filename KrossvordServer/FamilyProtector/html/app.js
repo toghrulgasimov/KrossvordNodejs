@@ -566,7 +566,7 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
         var lastscrolled = new Date().getTime();
         elm.bind('scroll', function() {
             var jetzt = new Date().getTime();
-            console.log("scroll function");
+            console.log("scroll function" + raw.scrollTop);
             if (raw.scrollTop <= 50 && jetzt-lastscrolled >= 1000) { // load more items before you hit the top
                 var sh = raw.scrollHeight
                 scope.$apply(attr.whenScrolled);
