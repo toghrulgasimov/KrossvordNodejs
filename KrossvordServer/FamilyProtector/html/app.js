@@ -32,7 +32,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             for (var i = 0; i < 15; i++) {
                 $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
 
-            }}, 500);
+            }});
     };
     $scope.loadMore();
     //infinitescroll
@@ -566,7 +566,7 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
 
         elm.bind('scroll', function() {
             console.log("scroll function")
-            if (raw.scrollTop <= 150) { // load more items before you hit the top
+            if (raw.scrollTop <= 100) { // load more items before you hit the top
                 var sh = raw.scrollHeight
                 scope.$apply(attr.whenScrolled);
                 raw.scrollTop = raw.scrollHeight - sh;
