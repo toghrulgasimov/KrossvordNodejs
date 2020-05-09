@@ -30,10 +30,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         // simulate an ajax request
         $timeout( function() {
             for (var i = 0; i < 5; i++) {
-                $scope.items.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
+                $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
                 counter += 10;
             }}, 500);
     };
+    $scope.loadMore();
     //infinitescroll
 
 
@@ -552,20 +553,26 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
 
+
 } )
 
-app.directive('whenScrolled', function() {
+app.directive('whenScrolled', ['$timeout', function($timeout) {
     return function(scope, elm, attr) {
         var raw = elm[0];
 
+        $timeout(function() {
+            raw.scrollTop = raw.scrollHeight;
+        });
+
         elm.bind('scroll', function() {
-            if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+            if (raw.scrollTop <= 100) { // load more items before you hit the top
+                var sh = raw.scrollHeight
                 scope.$apply(attr.whenScrolled);
+                raw.scrollTop = raw.scrollHeight - sh;
             }
         });
     };
-
-});
+}]);
 
 
 var loadMe = angular.module('stringUtil',[]);

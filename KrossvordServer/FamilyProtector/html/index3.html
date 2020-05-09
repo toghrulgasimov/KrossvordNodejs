@@ -218,13 +218,13 @@
             </tbody>
         </table>
 
-        <div  id="viewport-tableScroller" ui-scroll-viewport style="height: 100%" ng-show="whatsappc">
-            <table id="ctable" class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
+        <div  when-scrolled="loadMore()" style="height: 100%" ng-show="whatsappc">
+            <table  class="table"  style="border-collapse: separate; border-spacing: 0px 3px; background-color: #e5ddd5">
                 <thead>
 
                 </thead>
                 <tbody>
-                <tr ng-style="m.sender=='1'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" class="item" ui-scroll="m in datasource" adapter="adapter" buffer-size="40" style="padding-top: 12px;" >
+                <tr ng-style="m.sender=='1'?{'background-color':'#dcf8c6'}:{'background-color':'#ffffff'}" ng-repeat="m in wpitems"  buffer-size="40" style="padding-top: 12px;" >
                     <!--            <td><img ng-src="https://lookin24.com/com.whatsapp.png" style="width: 60px; height: 60px"></td>-->
                     <td style="word-break: break-word">
                         <h5 >{{m.sender == "1" ? selectedName.name : m.name}}</h5>
