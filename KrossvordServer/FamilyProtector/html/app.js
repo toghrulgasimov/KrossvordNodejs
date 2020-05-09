@@ -7,34 +7,19 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.curMenu = 'Gundelik';
     $scope.aa = [];
     $scope.aktivleshdir = false;
-    //
-    var datasource = {};
-    var adapter = {};
-    Server.init();
-    datasource.get = function (index, count, success) {
-        console.log('index = ' + index + '; count = ' + count);
 
-        var start = index;
-        var end = Math.min(index + count - 1, Server.first);
-
-        Server.request(start, end).then(success);
-        var now = new Date();
-    };
-
-    $scope.datasource = datasource;
-    //
 
     //infinitescroll
+    $scope.wpall = [];
     $scope.wpitems = [];
+    $scope.wpallindex = 0;
     $scope.loadMore = function() {
         // simulate an ajax request
         $timeout( function() {
-            for (var i = 0; i < 15; i++) {
-                $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
-
+            for (var i = 0; i < 15 && $scope.wpallindex < $scope.wpall.length; i++) {
+                $scope.wpitems.unshift($scope.wpall[$scope.wpallindex++]);
             }});
     };
-    $scope.loadMore();
     //infinitescroll
 
 
@@ -328,21 +313,26 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.m = false;
         $scope.g = false;
         $scope.y = false;
-        // $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
-        //     $scope.loadingdiv = false;
-        //     console.log(d);
-        //
-        //
-        //     //m.con = m.con.reverse();
-        //     $scope.curConversation = m;
-        //     Server.data = d.data.data;
-        //     $scope.adapter.reload()
-        //     setTimeout(function () {
-        //         $( "body" ).scrollTop(1000000);
-        //     }, 100);
-        // }, function () {
-        //
-        // });
+        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
+            $scope.loadingdiv = false;
+            console.log(d);
+
+
+
+
+            $scope.wpallindex = 0;
+            //m.con = m.con.reverse();
+            $scope.curConversation = m;
+            $scope.wpall = d.data.data;
+
+            $scope.loadMore();
+
+            setTimeout(function () {
+                $( "body" ).scrollTop(1000000);
+            }, 100);
+        }, function () {
+
+        });
 
 
     }
