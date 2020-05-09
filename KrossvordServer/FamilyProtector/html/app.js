@@ -29,7 +29,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.loadMore = function() {
         // simulate an ajax request
         $timeout( function() {
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 15; i++) {
                 $scope.wpitems.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
 
             }}, 500);
