@@ -559,7 +559,7 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
         var raw = elm[0];
 
         $timeout(function() {
-            raw.scrollTop = raw.scrollHeight;
+            //raw.scrollTop = raw.scrollHeight;
         });
         var lastscrolled = new Date().getTime();
         elm.bind('scroll', function() {
