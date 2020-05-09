@@ -339,7 +339,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
     }
-    $scope.bodystyle={overflow:hidden};
+    $scope.bodystyle={overflow:"hidden"};
     $scope.gundelik = function(m) {
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
