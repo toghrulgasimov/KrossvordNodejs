@@ -1,4 +1,4 @@
-var app = angular.module("app", ['stringUtil', 'ui.scroll','whenScrolled']).controller("myCtrl", function($scope, $http, stringUtil,
+var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
                                                                                              $timeout, $interval, Server, $window) {
 
     //$scope.names = ["Emil", "Tobias", "Linus"];
@@ -553,6 +553,19 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll','whenScrolled']).cont
 
 
 } )
+
+app.directive('whenScrolled', function() {
+    return function(scope, elm, attr) {
+        var raw = elm[0];
+
+        elm.bind('scroll', function() {
+            if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+                scope.$apply(attr.whenScrolled);
+            }
+        });
+    };
+
+});
 
 
 var loadMe = angular.module('stringUtil',[]);
