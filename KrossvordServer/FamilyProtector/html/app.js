@@ -318,9 +318,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             console.log(d);
 
 
-
-
+            $scope.wpall = [];
+            $scope.wpitems = [];
             $scope.wpallindex = 0;
+
+            
             //m.con = m.con.reverse();
             $scope.curConversation = m;
             $scope.wpall = d.data.data;
