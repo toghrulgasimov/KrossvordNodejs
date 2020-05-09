@@ -572,7 +572,7 @@ app.directive('whenScrolled', ['$timeout', function($timeout) {
                 scope.$apply(attr.whenScrolled);
 
                 raw.scrollTop = raw.scrollHeight - sh;
-                console.log("scroll function-" + raw.scrollTop+"-"+raw.scrollHeigh);
+                console.log("scroll function-" + raw.scrollTop+"-"+sh);
 
                 lastscrolled = jetzt;
             }
