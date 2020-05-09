@@ -1,4 +1,4 @@
-var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl", function($scope, $http, stringUtil,
+var app = angular.module("app", ['stringUtil', 'ui.scroll','whenScrolled']).controller("myCtrl", function($scope, $http, stringUtil,
                                                                                              $timeout, $interval, Server, $window) {
 
     //$scope.names = ["Emil", "Tobias", "Linus"];
@@ -23,6 +23,18 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
     $scope.datasource = datasource;
     //
+
+    //infinitescroll
+    $scope.wpitems = [];
+    $scope.loadMore = function() {
+        // simulate an ajax request
+        $timeout( function() {
+            for (var i = 0; i < 5; i++) {
+                $scope.items.unshift({content: 'ccc', name:"Nigar", sender:"0", start:1588975080582, number:"012560"});
+                counter += 10;
+            }}, 500);
+    };
+    //infinitescroll
 
 
 
