@@ -6,7 +6,6 @@ Translation["password"] = {az:"Şifrə", en:"Password"};
 Translation["confirm"] = {az:"testiqleyin", en:"confirm"};
 var language = navigator.language || navigator.userLanguage;
 language = (language + "").toLocaleLowerCase();
-alert(language)
 if(language.startsWith("az")) {
     language = "az";
 }else if(language.startsWith("en")) {
