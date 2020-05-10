@@ -72,7 +72,7 @@ if(language.startsWith("az")) {
 }
 //language = "az";
 Translation.get = function (s) {
-    if(Translation[s] == undefined) return Translation[s]["en"];
+    if(Translation[s][language] == undefined) return Translation[s]["en"];
     else
     return Translation[s][language];
 }
