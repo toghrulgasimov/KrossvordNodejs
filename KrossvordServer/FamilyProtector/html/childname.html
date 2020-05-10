@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script src="./js/Translator.js"></script>
     <style>
         body {
             padding-top: 90px;
@@ -130,6 +130,10 @@
     angular.module("app", ['ngCookies']).controller("myCtrl", function($scope, $http, $interval, $window, $cookies) {
         $scope.em = '';
         $scope.name = '';
+        $scope.nameText = Translation.get("name");
+        $scope.childNameText = Translation.get("enterChildName");
+        $scope.nextText = Translation.get("next");
+
         $scope.daxilet = function () {
             console.log($scope.name);
             if($scope.name == '') {
@@ -162,18 +166,18 @@
 
                     <div class="row" >
                         <div class="col text-center">
-                            <span class="text-center" style="font-size: 20px;">Usagin adini daxil edin</span>
+                            <span class="text-center" style="font-size: 20px;" ng-bind="childNameText"></span>
                         </div>
                     </div>
                     <div class="row" style="padding-top: 20px;">
                         <div class="col text-center">
-                            <input ng-model="name" type="text" class="input-lg" id="exampleInputPassword1" style="text-align:center; width: 100%;" placeholder="Ad">
+                            <input ng-model="name" type="text" class="input-lg" id="exampleInputPassword1" style="text-align:center; width: 100%;" placeholder="{{nameText}}">
                         </div>
                     </div>
                     <p class="text-center" style="color: red" ng-bind="em"></p>
                     <div class="row" style="padding-top: 20px;">
                         <div class="col text-center">
-                            <button ng-click="daxilet()" type="button" class="btn btn-success btn-lg" style="width: 100%; margin-right: 10px; ">Daxil Et</button>
+                            <button ng-click="daxilet()" type="button" class="btn btn-success btn-lg" style="width: 100%; margin-right: 10px; "ng-bind="nextText"></button>
                         </div>
                     </div>
 

@@ -17,6 +17,19 @@ Translation["permissions"] = {az:"Activate Accesibility Service, Location, Admin
 Translation["activate"] = {az:"Aktivləşdir", en:"Activate"};
 
 
+Translation["no"] = {az:"Xeyr", en:"No"};
+Translation["yes"] = {az:"Bəli", en:"Yes"};
+Translation["isParent"] = {az:"Bu cihaz valideyinə aiddir?", en:"Does this device belong to a parent?"};
+
+
+
+
+Translation["name"] = {az:"Ad", en:"Name"};
+Translation["enterName"] = {az:"Ad daxil edin.", en:"Enter Name"};
+Translation["enterChildName"] = {az:"Uşağın adını daxil edin.", en:"Enter Child's Name."};
+Translation["next"] = {az:"Sonrakı", en:"Next"};
+
+
 
 
 
@@ -27,6 +40,7 @@ if(language.startsWith("az")) {
 }else if(language.startsWith("en")) {
     language = "en";
 }
+language = "az";
 Translation.get = function (s) {
     if(Translation[s] == undefined) return Translation[s]["en"];
     else
