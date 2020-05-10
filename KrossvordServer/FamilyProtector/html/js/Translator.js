@@ -13,7 +13,7 @@ Translation["theUserNameIsTaken"] = {az:"Bu Email mövcuddur.", en:"The username
 Translation["enterPasswordAgain"] = {az:"Şifrəni yenidən daxil edin.", en:"Enter Password again."};
 Translation["passwordIsDifferent"] = {az:"Şifrələr fərqlidir.", en:"Passwords are different."};
 
-Translation["permissions"] = {az:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps.", en:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps."};
+Translation["ppermissions"] = {az:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps.", en:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps."};
 Translation["activate"] = {az:"Aktivləşdir", en:"Activate"};
 
 
