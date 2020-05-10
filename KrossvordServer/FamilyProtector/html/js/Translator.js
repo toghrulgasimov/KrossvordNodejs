@@ -45,12 +45,13 @@ Translation["minute"] = {az:"Dəq.", en:"Min."};
 Translation["second"] = {az:"San.", en:"Sec."};
 Translation["hour"] = {az:"Saat", en:"H."};
 
-Translation["month1"] = {az:"Proqramı 1 ayliq aktivləşdir.", en:"Activate for 1 months."};
-Translation["month3"] = {az:"Proqramı 3 ayliq aktivləşdir.", en:"Activate for 3 months."};
-Translation["month6"] = {az:"Proqramı 6 ayliq aktivləşdir.", en:"Activate for 6 months."};
+Translation["month1"] = {az:"Proqramı 1 aylıq aktivləşdir.", en:"Activate for 1 months."};
+Translation["month3"] = {az:"Proqramı 3 aylıq aktivləşdir.", en:"Activate for 3 months."};
+Translation["month6"] = {az:"Proqramı 6 aylıq aktivləşdir.", en:"Activate for 6 months."};
 Translation["month12"] = {az:"Proqramı 1 illik aktivləşdir.", en:"Activate for 1 year."};
 Translation["price"] = {az:"Qiymət", en:"Price"};
 Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number"};
+
 
 
 
