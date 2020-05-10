@@ -7,8 +7,9 @@
     <script src="js/stringUtil.js"></script>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" crossorigin="anonymous"></script>
+    <!--    <script src="https://code.angularjs.org/1.2.22/angular-cookies.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.min.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
 
+    <script src="./js/Translator.js"></script>
     <script src="js/IntegerUtil.js"></script>
     <script src="js/DateHelper.js"></script>
     <script src="js/activityHelper.js"></script>
@@ -29,7 +31,7 @@
 
 
 
-<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40">
+<body ng-app="app" ng-controller="myCtrl" ng-init="aaloaded = false" style="background-color: #e9ecef40;" ng-style="bodyst();">
 
 
 <nav style="background-color: #075E54;" class="navbar navbar-expand-lg fixed-top navbar-light ">
@@ -42,17 +44,17 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item ">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Istifadeler'; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: #8e8d8d; font-size: 20px;" >Istifadeler <span class="sr-only">(current)</span></a>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="#" ng-click="curMenu=mostUsedText; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: #8e8d8d; font-size: 20px;" >{{mostUsedText}} <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Gundelik';m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: #8e8d8d;font-size: 20px;" >Gundelik <span class="sr-only">(current)</span></a>
+                <a class="nav-link disabled" href="#" ng-click="curMenu=activitiesText;m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: #8e8d8d;font-size: 20px;" >{{activitiesText}} <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Proqramlar';m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">Proqramlar</a>
+                <a class="nav-link disabled" href="#" ng-click="curMenu=appsText;m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">{{appsText}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Xerite';m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: #8e8d8d;font-size: 20px;">Xerite</a>
+                <a class="nav-link disabled" href="#" ng-click="curMenu=locationsText;m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: #8e8d8d;font-size: 20px;">{{locationsText}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#"  ng-click="curMenu='Whatsapp';m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf(1);"style="color: #8e8d8d;font-size: 20px;">Whatsapp</a>
@@ -62,16 +64,16 @@
                 <a class="nav-link disabled" href="#" ng-click="curMenu='Youtube';m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact(1);"style="color: #8e8d8d;font-size: 20px;">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Saytlar';m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: #8e8d8d;font-size: 20px;">Saytlar</a>
+                <a class="nav-link disabled" href="#" ng-click="curMenu=websitesText;m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: #8e8d8d;font-size: 20px;">{{websitesText}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" ng-click="curMenu='Icazeler';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">Icazeler</a>
+                <a class="nav-link disabled" href="#" ng-click="curMenu=permissionsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: #8e8d8d;font-size: 20px;">{{permissionsText}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="curMenu='Aktivləşdir';m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">Aktivləşdir</a>
+                <a class="nav-link " href="#" ng-click="curMenu=activateText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">{{activateText}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">Çıxış</a>
+                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">{{logoutText}}</a>
             </li>
         </ul>
 
@@ -93,15 +95,20 @@
     <select ng-change="selectChange();m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;" ng-model="selectedName" ng-options="item.name for item in names"  style="margin:0 0 0px 0!important;background-color: #9ec5c0; position: fixed;top:56px;z-index: 3;border: none!important;border-radius: 0 !important;" class="browser-default custom-select custom-select-lg ">
     </select>
     <div style="background-color: #eceff3; padding-left: 18px; position: fixed;top:104px;width: 100%;z-index: 5;">
-        <span    style="color: #485057;" >Aktivleshdir</span>
+        <span   ng-bind="curMenu" style="color: #485057;" ></span>
     </div>
 
 
     <div style="position: relative;top: 128px;">
+        <div id="map" ng-show="m" ></div>
+
+
+
+
 
         <div class="container-fluid text-center" ng-show="true">
-            <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
+            <p style="margin-bottom: 0;">{{month1Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 4.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -116,8 +123,8 @@
                 <input type="hidden" name="type" value="1" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
+            <p style="margin-bottom: 0;">{{month3Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 9.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -132,8 +139,8 @@
                 <input type="hidden" name="type" value="3" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
+            <p style="margin-bottom: 0;">{{month6Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 19.99 USD</p>
             <form action="/checkout6" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -148,8 +155,8 @@
                 <input type="hidden" name="type" value="6" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
+            <p style="margin-bottom: 0;">{{month12Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 29.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -165,13 +172,26 @@
             </form>
 
             <!-- Default input -->
-            <label for="exampleForm2">Seria nomresi</label>
+            <label for="exampleForm2">{{snumberText}}</label>
             <input type="number" id="exampleForm2" class="form-control">
-            <button type="button" class="btn btn-success" style="margin-top: 12px; width: 100%;">Daxil et</button>
+            <button type="button" class="btn btn-success" style="margin-top: 12px; width: 100%;">{{activateText}}</button>
 
         </div>
 
-
+        <div class="container-fluid fixed-bottom" ng-show="w || istifadeler || g || m || y" style="background-color: #9ec5c0;">
+            <div class="row">
+                <div class="col-4" text-left >
+                    <!--                    <p class="text-left">asd</p>-->
+                    <button type="button" class="btn btn-link" ng-click="gunuAzalt();" style="font-size: 22px;"> <- </button>
+                </div>
+                <div class="col-4" style="text-align: center">
+                    <div  style="text-align: center; padding-top: 4px; font-size: 21px;">{{DateHelper.toMonth(curDay)}}</div>
+                </div>
+                <div class="col-4 text-right">
+                    <button type="button" class="btn btn-link" ng-click="gunuArtir();"style="font-size: 22px;"> -> </button>
+                </div>
+            </div>
+        </div>
 
         <div class="d-flex justify-content-center fixed-top" style="height: 0px" ng-show="loadingdiv">
             <div class="spinner-grow text-center" role="status">
@@ -181,7 +201,7 @@
     </div>
 
 
-    </div>
+</div>
 
 
 
@@ -206,7 +226,8 @@
             center: {lat: 40.6506034, lng: 46.5340354},
             zoom: 18,
             gestureHandling: "greedy",
-            zoomControl: false
+            zoomControl: false,
+            streetViewControl: false
         });
     }
     $('.navbar-nav>li>a').on('click', function(){
