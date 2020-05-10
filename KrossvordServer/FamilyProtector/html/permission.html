@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" crossorigin="anonymous"></script>
     <!--    <script src="https://code.angularjs.org/1.2.22/angular-cookies.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.min.js" crossorigin="anonymous"></script>
-
+    <script src="./js/Translator.js"></script>
 
 </head>
 <body style="background-color: #bde4cd;" ng-app="myApp" ng-controller="myCtrl">
@@ -48,8 +48,8 @@
 <script>
     var app = angular.module('myApp', ['ngCookies']);
     app.controller('myCtrl', function($scope, $http, $window, $interval,$cookies) {
-        $scope.buttonText= "Activate";
-        $scope.actualText = "Activate Accesibility Service, Location, Adminstrator for Controlling all apps.";
+        $scope.buttonText= Translation.get("activate");
+        $scope.actualText = Translation.get("permissions");
         //$scope.actualText = "AAA";
         $scope.actual = "acce";
         $scope.pr = {};
