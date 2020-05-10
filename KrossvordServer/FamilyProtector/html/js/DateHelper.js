@@ -17,7 +17,7 @@ var DateHelper = {
             var s = IntegerUtil.divide(d,60);
             d = d % 60;
             var ans = "";
-            if(s > 0) ans = s  +" " + Translation.get("hour");
+            if(s > 0) ans = s  +" " + Translation.get("hour") + " ";
             if(d > 0) ans += (d + " " + Translation.get("minute"));
             return ans;
         }
