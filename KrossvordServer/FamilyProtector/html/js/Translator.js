@@ -66,10 +66,11 @@ Translation["bagli"] = {az:"Bağlı", en:"Closed"};
 
 
 var language = navigator.language || navigator.userLanguage;
+if(language == undefined) language = "";
 language = (language + "").toLocaleLowerCase();
 if(language.startsWith("az")) {
     language = "az";
-}else if(language.startsWith("en")) {
+}else {
     language = "en";
 }
 //language = "az";
