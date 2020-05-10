@@ -11,14 +11,14 @@ var DateHelper = {
     toDuration : function(d) {
         if(d < 60) {
             if(d == 0) d = 1;
-            return d + " San";
+            return d + " "+Translation.get("second");
         }else {
             d = IntegerUtil.divide(d, 60);
             var s = IntegerUtil.divide(d,60);
             d = d % 60;
             var ans = "";
-            if(s > 0) ans = s + " Saat ";
-            if(d > 0) ans += (d + " Dəq");
+            if(s > 0) ans = s  +" " + Translation.get("hour");
+            if(d > 0) ans += (d + " " + Translation.get("minute"));
             return ans;
         }
     },
@@ -42,19 +42,19 @@ var DateHelper = {
         if(h.length == 1) h = '0' + h;
         if(m.length == 1) m = '0' + m;
         if(this.isToday(t)) {
-            return "Bugün " + h + ":" + m;
+            return Translation.get("today")+" " + h + ":" + m;
         }
         if(this.isYesterday(t)) {
-            return "Dünən " + h + ":" + m;
+            return Translation.get("yesterday")+" " + h + ":" + m;
         }
         return stringUtil.toTime(d);
     },
     toMonth: function (d) {
         if(this.isToday(d)) {
-            return "Bugün";
+            return Translation.get("today");
         }
         if(this.isYesterday(d)) {
-            return "Dünən";
+            return Translation.get("yesterday");
         }
         var day = d.getDate()+"";
         var month = d.getMonth()+"";

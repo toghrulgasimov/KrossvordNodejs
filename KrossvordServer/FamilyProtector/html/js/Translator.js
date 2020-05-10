@@ -31,6 +31,35 @@ Translation["next"] = {az:"Sonrakı", en:"Next"};
 
 
 
+Translation["activities"] = {az:"Gündəlik", en:"Next"};
+Translation["mostUsed"] = {az:"Ən çox istifadə", en:"Next"};
+Translation["apps"] = {az:"Proqramlar", en:"Apps"};
+Translation["locations"] = {az:"Xəritə", en:"Locations"};
+Translation["websites"] = {az:"Saytlar", en:"Next"};
+Translation["permissions"] = {az:"İcazələr", en:"Permissions"};
+Translation["logout"] = {az:"Çıxış", en:"Logout"};
+
+Translation["today"] = {az:"Bugün", en:"Today"};
+Translation["yesterday"] = {az:"Dünən", en:"Yesterday"};
+Translation["minute"] = {az:"Dəq.", en:"Min."};
+Translation["second"] = {az:"San.", en:"Sec."};
+Translation["hour"] = {az:"Saat", en:"H."};
+
+Translation["month1"] = {az:"Proqramı 1 ayliq aktivləşdir.", en:"Activate for 1 months."};
+Translation["month3"] = {az:"Proqramı 3 ayliq aktivləşdir.", en:"Activate for 3 months."};
+Translation["month6"] = {az:"Proqramı 6 ayliq aktivləşdir.", en:"Activate for 6 months."};
+Translation["month12"] = {az:"Proqramı 1 illik aktivləşdir.", en:"Activate for 1 year."};
+Translation["price"] = {az:"Qiymət", en:"Price"};
+Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number"};
+
+
+
+
+
+
+
+
+
 
 
 var language = navigator.language || navigator.userLanguage;

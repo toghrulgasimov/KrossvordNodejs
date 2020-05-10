@@ -4,7 +4,31 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     //$scope.names = ["Emil", "Tobias", "Linus"];
     //$scope.selectedName = $scope.names[0];
 
-    $scope.curMenu = 'Gundelik';
+    //translation
+    $scope.activitiesText = Translation.get("activities");
+    $scope.mostUsedText = Translation.get("mostUsed");
+    $scope.appsText = Translation.get("apps");
+    $scope.locationsText = Translation.get("locations");
+    $scope.websitesText = Translation.get("websites");
+    $scope.permissionsText = Translation.get("permissions");
+    $scope.logoutText = Translation.get("logout");
+
+    $scope.todayText = Translation.get("today");
+    $scope.yesterdayText = Translation.get("yesterday");
+    $scope.minuteText = Translation.get("minute");
+    $scope.secondText = Translation.get("second");
+    $scope.hourText = Translation.get("hour");
+
+    $scope.month1Text = Translation.get("month1");
+    $scope.month3Text = Translation.get("month3");
+    $scope.month6Text = Translation.get("month6");
+    $scope.month12Text = Translation.get("month12");
+    $scope.priceText = Translation.get("price");
+    $scope.snumberText = Translation.get("snumber");
+    $scope.activateText = Translation.get("activate");
+    //translation
+
+    $scope.curMenu = $scope.activitiesText;
     $scope.aa = [];
     $scope.aktivleshdir = false;
 
@@ -503,7 +527,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     }
     $scope.selectChange = function() {
         console.log($scope.selectedName);
-        $scope.curMenu = 'Proqramlar';
+        $scope.curMenu = $scope.appsText;
         $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
             console.log(d.data.apps);
             if(d.data.apps == undefined) {
