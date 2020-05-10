@@ -919,6 +919,10 @@ async function f() {
                 res.send(s);
             }
         });
+        app.get("/getlanguage", async function (req, res) {
+            console.log(req.headers["accept-language"])
+            res.send(req.headers["accept-language"]);
+        });
 
         app.get("/parent", async function (req, res) {
             let parent = req.query.parent;
