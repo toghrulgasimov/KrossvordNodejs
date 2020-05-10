@@ -29,6 +29,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.snumberText = Translation.get("snumber");
     $scope.aciqText = Translation.get("aciq");
     $scope.bagliText = Translation.get("bagli");
+    $scope.inUsingText = Translation.get("inUsing");
+    $scope.baxText = Translation.get("bax");
     //translation
 
     $scope.curMenu = $scope.activitiesText;
@@ -473,7 +475,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         });
     }
     $scope.safariyegore = function(m) {
-        return (m.end == 900719925474099 ? 'Aktiv' : ($scope.DateHelper.toDuration(m.duration)))
+        return (m.end == 900719925474099 ? $scope.inUsingText : ($scope.DateHelper.toDuration(m.duration)))
     }
     $scope.fillSelect = function () {
         $http.post("/fillSelect", {parent:"1"}, { withCredentials: true }).then(

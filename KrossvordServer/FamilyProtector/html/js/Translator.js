@@ -55,6 +55,8 @@ Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number"};
 Translation["aciq"] = {az:"Açıq", en:"Open"};
 Translation["bagli"] = {az:"Bağlı", en:"Closed"};
 
+Translation["inUsing"] = {az:"Aktiv", en:"In Using"};
+Translation["bax"] = {az:"Bax", en:"Open"};
 
 
 
