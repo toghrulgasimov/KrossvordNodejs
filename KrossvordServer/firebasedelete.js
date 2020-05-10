@@ -895,6 +895,8 @@ async function f() {
                 res.send(s);
             }else {
                 let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                let index = s.indexOf("<head>");
+                let ans = s.substring(0, index) + "<script>var oslanguage="+req.headers["accept-language"]+"</script>" + s.substring(index);
                 res.send(s);
             }
         });
