@@ -302,8 +302,8 @@
         </div>
 
         <div class="container-fluid text-center" ng-show="aktivleshdir">
-            <p style="margin-bottom: 0;">Programi 1 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 4.99 USD</p>
+            <p style="margin-bottom: 0;">{{month1Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 4.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -318,8 +318,8 @@
                 <input type="hidden" name="type" value="1" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 3 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 9.99 USD</p>
+            <p style="margin-bottom: 0;">{{month3Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 9.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -334,8 +334,8 @@
                 <input type="hidden" name="type" value="3" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 6 ayliq aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 19.99 USD</p>
+            <p style="margin-bottom: 0;">{{month6Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 19.99 USD</p>
             <form action="/checkout6" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
@@ -350,8 +350,8 @@
                 <input type="hidden" name="type" value="6" />
             </form>
 
-            <p style="margin-bottom: 0;">Programi 1 illik aktivleshdir</p>
-            <p style="margin-bottom: 0;">Qiymet 29.99 USD</p>
+            <p style="margin-bottom: 0;">{{month12Text}}</p>
+            <p style="margin-bottom: 0;">{{priceText}} 29.99 USD</p>
             <form action="/checkout" method="POST">
                 <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button "
