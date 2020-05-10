@@ -27,6 +27,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.snumberText = Translation.get("snumber");
     $scope.activateText = Translation.get("activate");
     $scope.snumberText = Translation.get("snumber");
+    $scope.aciqText = Translation.get("aciq");
+    $scope.bagliText = Translation.get("bagli");
     //translation
 
     $scope.curMenu = $scope.activitiesText;
