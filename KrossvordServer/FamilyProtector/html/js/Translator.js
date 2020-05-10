@@ -52,8 +52,8 @@ Translation["month12"] = {az:"Proqramı 1 illik aktivləşdir.", en:"Activate fo
 Translation["price"] = {az:"Qiymət", en:"Price"};
 Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number"};
 
-Translation["aciq"] = {az:"Açıq", en:"On"};
-Translation["bagli"] = {az:"Bağlı", en:"Off"};
+Translation["aciq"] = {az:"Açıq", en:"Open"};
+Translation["bagli"] = {az:"Bağlı", en:"Closed"};
 
 
 
