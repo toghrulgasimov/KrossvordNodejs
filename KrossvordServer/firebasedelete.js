@@ -899,7 +899,7 @@ async function f() {
             }
         });
         app.get("/permission", async function (req, res) {
-
+            console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
             let s = await fs.readFileSync('./FamilyProtector/html/permission.html') + "";

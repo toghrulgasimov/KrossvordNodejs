@@ -31,11 +31,11 @@ Translation["next"] = {az:"Sonrakı", en:"Next"};
 
 
 
-Translation["activities"] = {az:"Gündəlik", en:"Next"};
-Translation["mostUsed"] = {az:"Ən çox istifadə", en:"Next"};
+Translation["activities"] = {az:"Gündəlik", en:"Activities"};
+Translation["mostUsed"] = {az:"Ən çox istifadə", en:"Most Used"};
 Translation["apps"] = {az:"Proqramlar", en:"Apps"};
 Translation["locations"] = {az:"Xəritə", en:"Locations"};
-Translation["websites"] = {az:"Saytlar", en:"Next"};
+Translation["websites"] = {az:"Saytlar", en:"Websites"};
 Translation["permissions"] = {az:"İcazələr", en:"Permissions"};
 Translation["logout"] = {az:"Çıxış", en:"Logout"};
 
@@ -70,7 +70,7 @@ if(language.startsWith("az")) {
 }else if(language.startsWith("en")) {
     language = "en";
 }
-language = "az";
+//language = "az";
 Translation.get = function (s) {
     if(Translation[s] == undefined) return Translation[s]["en"];
     else
