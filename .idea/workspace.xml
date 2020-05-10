@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index3deactive.html">
+  <component name="RunManager" selected="JavaScript Debug.index3.html">
     <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -84,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="JavaScript Debug.index3.html" />
+        <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="JavaScript Debug.childname.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.permission.html" />
@@ -188,7 +189,7 @@
       <workItem from="1588857286459" duration="1546000" />
       <workItem from="1588880047932" duration="1091000" />
       <workItem from="1588931664706" duration="24018000" />
-      <workItem from="1589117764537" duration="17112000" />
+      <workItem from="1589117764537" duration="17544000" />
     </task>
     <servers />
   </component>

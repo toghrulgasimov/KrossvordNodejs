@@ -45,16 +45,16 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="curMenu=mostUsedText; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: white; font-size: 20px;" >{{mostUsedText}} <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="curMenu=mostUsedText; m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=true;aktivleshdir=false;gundelik(1);" style="color: white; font-size: 20px;"ng-bind="mostUsedText" > <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#" ng-click="curMenu=activitiesText;m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: white;font-size: 20px;" >{{activitiesText}} <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" ng-click="curMenu=activitiesText;m=false;v=false;g=true;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;gundelik(1)" style="color: white;font-size: 20px;"ng-bind="activitiesText" > <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-click="curMenu=appsText;m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">{{appsText}}</a>
+                <a class="nav-link" href="#" ng-click="curMenu=appsText;m=false;v=true;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;"ng-bind="appsText"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="curMenu=locationsText;m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: white;font-size: 20px;">{{locationsText}}</a>
+                <a class="nav-link " href="#" ng-click="curMenu=locationsText;m=true;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;location(1);"style="color: white;font-size: 20px;"ng-bind="locationsText"></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"  ng-click="curMenu='Whatsapp';m=false;v=false;g=false;y=false;w=false;whatsapp=true;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false;whatsappf(1);"style="color: white;font-size: 20px;">Whatsapp</a>
@@ -64,16 +64,16 @@
                 <a class="nav-link " href="#" ng-click="curMenu='Youtube';m=false;v=false;g=false;y=true;w=false;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; yact(1);"style="color: white;font-size: 20px;">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="curMenu=websitesText;m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: white;font-size: 20px;">{{websitesText}}</a>
+                <a class="nav-link " href="#" ng-click="curMenu=websitesText;m=false;v=false;g=false;y=false;w=true;whatsapp=false;whatsappc=false;icazeler=false;istifadeler=false;aktivleshdir=false; Web(1);"style="color: white;font-size: 20px;"ng-bind="websitesText"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="curMenu=permissionsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;">{{permissionsText}}</a>
+                <a class="nav-link " href="#" ng-click="curMenu=permissionsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;"ng-bind="permissionsText"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="curMenu=activateText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;">{{activateText}}</a>
+                <a class="nav-link " href="#" ng-click="curMenu=activateText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false; aktivleshdir=true;"style="color: white;font-size: 20px;"ng-bind="activateText"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;">{{logoutText}}</a>
+                <a class="nav-link " href="#" ng-click="cixish();"style="color: white;font-size: 20px;" ng-bind="logoutText"></a>
             </li>
         </ul>
 
