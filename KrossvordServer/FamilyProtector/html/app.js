@@ -31,6 +31,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.bagliText = Translation.get("bagli");
     $scope.inUsingText = Translation.get("inUsing");
     $scope.baxText = Translation.get("bax");
+    $scope.uninstallPermissionText = Translation.get("uninstallPermission");
+    $scope.GPSPermissionText = Translation.get("GPSPermission");
     //translation
 
     $scope.curMenu = $scope.activitiesText;

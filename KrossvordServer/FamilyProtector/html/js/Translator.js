@@ -58,6 +58,8 @@ Translation["bagli"] = {az:"Bağlı", en:"Closed"};
 Translation["inUsing"] = {az:"Aktiv", en:"In Using"};
 Translation["bax"] = {az:"Bax", en:"Open"};
 
+Translation["uninstallPermission"] = {az:"Proqramı silməyə icazə ver", en:"Allow to uninstall"};
+Translation["GPSPermission"] = {az:"GPS-i söndürməyə icazə ver", en:"Allow to turn off GPS"};
 
 
 
