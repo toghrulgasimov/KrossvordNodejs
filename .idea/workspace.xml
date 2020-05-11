@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js/Translator.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js/Translator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +190,8 @@
       <workItem from="1588857286459" duration="1546000" />
       <workItem from="1588880047932" duration="1091000" />
       <workItem from="1588931664706" duration="24018000" />
-      <workItem from="1589117764537" duration="18049000" />
+      <workItem from="1589117764537" duration="18472000" />
+      <workItem from="1589203398403" duration="369000" />
     </task>
     <servers />
   </component>
