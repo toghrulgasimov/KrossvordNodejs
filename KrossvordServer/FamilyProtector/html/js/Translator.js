@@ -1,79 +1,59 @@
 var Translation = {};
-Translation["login"] = {az:"Daxil ol", en:"Login"};
-Translation["signUp"] = {az:"Qeydiyyat", en:"Sign Up"};
-Translation["forgotPassword"] = {az:"Parolu unutmusun?", en:"Forgot Password?"};
-Translation["password"] = {az:"Şifrə", en:"Password"};
-Translation["confirm"] = {az:"Şifrəni təkrarlayın", en:"confirm"};
-
-Translation["wrongEmailOrPassword"] = {az:'Email və ya şifre yanlışdır.', en:"Wrong Password or Email."};
-Translation["serverError"] = {az:"Server Error", en:"Server Error"};
-Translation["enterPassword"] = {az:"Şifrə daxil edin.", en:"Enter Password"};
-Translation["enterEmail"] = {az:'Email daxil edin.', en:"Enter Email"};
-Translation["theUserNameIsTaken"] = {az:"Bu Email mövcuddur.", en:"The username is taken. Try another."};
-Translation["enterPasswordAgain"] = {az:"Şifrəni yenidən daxil edin.", en:"Enter Password again."};
-Translation["passwordIsDifferent"] = {az:"Şifrələr fərqlidir.", en:"Passwords are different."};
-
-Translation["ppermissions"] = {az:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps.", en:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps."};
-Translation["activate"] = {az:"Aktivləşdir", en:"Activate"};
-
-
-Translation["no"] = {az:"Xeyr", en:"No"};
-Translation["yes"] = {az:"Bəli", en:"Yes"};
-Translation["isParent"] = {az:"Bu cihaz valideyinə aiddir?", en:"Does this device belong to a parent?"};
-
-
-
-
-Translation["name"] = {az:"Ad", en:"Name"};
-Translation["enterName"] = {az:"Ad daxil edin.", en:"Enter Name"};
-Translation["enterChildName"] = {az:"Uşağın adını daxil edin.", en:"Enter Child's Name."};
-Translation["next"] = {az:"Sonrakı", en:"Next"};
-
-
-
-Translation["activities"] = {az:"Gündəlik", en:"Activities"};
-Translation["mostUsed"] = {az:"Ən çox istifadə", en:"Most Used"};
-Translation["apps"] = {az:"Proqramlar", en:"Apps"};
-Translation["locations"] = {az:"Xəritə", en:"Locations"};
-Translation["websites"] = {az:"Saytlar", en:"Websites"};
-Translation["permissions"] = {az:"İcazələr", en:"Permissions"};
-Translation["logout"] = {az:"Çıxış", en:"Logout"};
-
-Translation["today"] = {az:"Bugün", en:"Today"};
-Translation["yesterday"] = {az:"Dünən", en:"Yesterday"};
-Translation["minute"] = {az:"Dəq.", en:"Min."};
-Translation["second"] = {az:"San.", en:"Sec."};
-Translation["hour"] = {az:"Saat", en:"H."};
-
-Translation["month1"] = {az:"Proqramı 1 aylıq aktivləşdir.", en:"Activate for 1 months."};
-Translation["month3"] = {az:"Proqramı 3 aylıq aktivləşdir.", en:"Activate for 3 months."};
-Translation["month6"] = {az:"Proqramı 6 aylıq aktivləşdir.", en:"Activate for 6 months."};
-Translation["month12"] = {az:"Proqramı 1 illik aktivləşdir.", en:"Activate for 1 year."};
-Translation["price"] = {az:"Qiymət", en:"Price"};
-Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number"};
-
-Translation["aciq"] = {az:"Açıq", en:"Open"};
-Translation["bagli"] = {az:"Bağlı", en:"Closed"};
-
-Translation["inUsing"] = {az:"Aktiv", en:"In Using"};
-Translation["bax"] = {az:"Bax", en:"Open"};
-
-Translation["uninstallPermission"] = {az:"Proqramı silməyə icazə ver", en:"Allow to uninstall"};
-Translation["GPSPermission"] = {az:"GPS-i söndürməyə icazə ver", en:"Allow to turn off GPS"};
-
-
-
-
-
-
-
-
+Translation["login"] = {az:"Daxil ol", en:"Login", tr:"Giriş", de:"Anmelden"};
+Translation["signUp"] = {az:"Qeydiyyat", en:"Sign Up", tr:"Kaydol", de:"Registrieren"};
+Translation["forgotPassword"] = {az:"Şifrəni unutmusun?", en:"Forgot Password?", tr:"Şifreni unuttunuz?", de:"Passwort vergessen?"};
+Translation["password"] = {az:"Şifrə", en:"Password", tr:"Şifre", de:"Passwort"};
+Translation["confirm"] = {az:"Şifrəni təkrarlayın", en:"confirm", tr:"Şifreni doğrula", de:"Passwort bestätigen"};
+Translation["wrongEmailOrPassword"] = {az:'Email və ya şifre yanlışdır.', en:"Wrong Password or Email.", tr:"Yanlış Şifre veya E-posta.", de:"Falsches Passwort oder falsche E-Mail."};
+Translation["serverError"] = {az:"Server Error", en:"Server Error", tr:"Server Error", de:"Server Error"};
+Translation["enterPassword"] = {az:"Şifrə daxil edin.", en:"Enter Password.", tr:"Parolanı Girin.", de:"Passwort eingeben."};
+Translation["enterEmail"] = {az:'Email daxil edin.', en:"Enter Email", tr:"E-posta Girin.", de:"Email eingeben"};
+Translation["theUserNameIsTaken"] = {az:"Bu Email mövcuddur.", en:"The username is taken. Try another.",tr:"Kullanıcı adı var. Başka birin deneyin.", de:"Der Benutzername ist vergeben. Versuche einen anderen."};
+Translation["enterPasswordAgain"] = {az:"Şifrəni yenidən daxil edin.", en:"Enter Password again.", tr:"Şifreni tekrar girin.", de:"Passwort erneut eingeben."};
+Translation["passwordIsDifferent"] = {az:"Şifrələr fərqlidir.", en:"Passwords are different.", tr:"Şifreler farklı.", de:"Passwörter sind unterschiedlich."};
+Translation["ppermissions"] = {az:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps.",
+    en:"Activate Accessibility Service, Location, Administrator for Controlling all apps.",
+    tr:"Tüm uygulamaları kontrol etmek için Erişilebilirlik,, Konum, ve Yönetici'yi aktiv edin.", de:"Aktivieren Sie Accessibility Service, Location, Administrator."};
+Translation["activate"] = {az:"Aktivləşdir", en:"Activate", de:"Aktivieren"};
+Translation["no"] = {az:"Xeyr", en:"No", tr:"Hayır", de:"Nein"};
+Translation["yes"] = {az:"Bəli", en:"Yes", tr:"Evet", de:"Ya"};
+Translation["isParent"] = {az:"Bu cihaz valideyinə aiddir?", en:"Does this device belong to a parent?", tr:"Bu cihaz anne babaya mi ait?", de:"Gehört dieses Gerät einem Eltern?"};
+Translation["name"] = {az:"Ad", en:"Name", tr:"Ad", de:"Name"};
+Translation["enterName"] = {az:"Ad daxil edin.", en:"Enter Name", tr:"Ad giriniz.", de:"Name eingeben"};
+Translation["enterChildName"] = {az:"Uşağın adını daxil edin.", en:"Enter Child's Name.", tr:"Çocuğun Adını girin.", de:"Geben Sie den Namen des Kindes ein."};
+Translation["next"] = {az:"Sonrakı", en:"Next",tr:"Sonraki", de:"Next"};
+Translation["activities"] = {az:"Gündəlik", en:"Activities",tr:"Faaliyetler", de:"Aktivitäten"};
+Translation["mostUsed"] = {az:"Ən çox istifadə", en:"Most Used",tr:"En çok kullanılan", de:"Am Meisten verwendet"};
+Translation["apps"] = {az:"Proqramlar", en:"Apps", tr:"Uygulamalar", de:"Apps"};
+Translation["locations"] = {az:"Xəritə", en:"Locations", tr:"Konumlar", de:"Standorte"};
+Translation["websites"] = {az:"Saytlar", en:"Websites", tr:"Web siteleri", de:"Webseiten"};
+Translation["permissions"] = {az:"İcazələr", en:"Permissions", tr:"İzinler", de:"Berechtigungen"};
+Translation["logout"] = {az:"Çıxış", en:"Logout",tr:"Çıkış", de:"Ausloggen"};
+Translation["today"] = {az:"Bugün", en:"Today", tr:"Bugün", de:"Heute"};
+Translation["yesterday"] = {az:"Dünən", en:"Yesterday", tr:"Dün", de:"Gestern"};
+Translation["minute"] = {az:"Dəq.", en:"Min.", tr:"D.", de:"Min."};
+Translation["second"] = {az:"San.", en:"Sec.", tr:"San.", de:"Sek."};
+Translation["hour"] = {az:"Saat", en:"Hr.", tr:"Saat", de:"Std."};
+Translation["month1"] = {az:"Proqramı 1 aylıq aktivləşdir.", en:"Activate for 1 months.", tr:"1 aylık al.", de:"1 Monat lang aktivieren."};
+Translation["month3"] = {az:"Proqramı 3 aylıq aktivləşdir.", en:"Activate for 3 months.", tr:"3 aylık al.", de:"3 Monate lang aktivieren."};
+Translation["month6"] = {az:"Proqramı 6 aylıq aktivləşdir.", en:"Activate for 6 months.", tr:"6 aylık al.", de:"6 Monate lang aktivieren."};
+Translation["month12"] = {az:"Proqramı 1 illik aktivləşdir.", en:"Activate for 1 year.", tr:"1 yıllık al.", de:"1 Jahr lang aktivieren."};
+Translation["price"] = {az:"Qiymət", en:"Price", tr:"Fiyat", de:"Preis"};
+Translation["snumber"] = {az:"Seria nömrəsi", en:"Serial number", tr:"Seri numarası", de:"Seriennummer"};
+Translation["aciq"] = {az:"Açıq", en:"Open", tr:"Açık", de:"On"};
+Translation["bagli"] = {az:"Bağlı", en:"Closed", tr:"Kapalı", de:"Off"};
+Translation["inUsing"] = {az:"Aktiv", en:"Using", tr:"Aktiv", de:"Active"};
+Translation["bax"] = {az:"Bax", en:"Open", tr:"Aç", de:"Öffnen"};
+Translation["uninstallPermission"] = {az:"Proqramı silməyə icazə ver", en:"Allow to uninstall", tr:"Programın silinmesine izin ver", de:"Programm löschen"};
+Translation["GPSPermission"] = {az:"GPS-i söndürməyə icazə ver", en:"Allow to turn off GPS", tr:"GPS'in kapatılmasına izin ver", de:"GPS"};
 
 var language = navigator.language || navigator.userLanguage;
 if(language == undefined) language = "";
 language = (language + "").toLocaleLowerCase();
 if(language.startsWith("az")) {
     language = "az";
+}else if(language.startsWith("tr")) {
+    language = "tr";
 }else {
     language = "en";
 }
