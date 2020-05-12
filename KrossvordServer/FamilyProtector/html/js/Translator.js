@@ -54,6 +54,8 @@ if(language.startsWith("az")) {
     language = "az";
 }else if(language.startsWith("tr")) {
     language = "tr";
+}else if(language.startsWith("de")) {
+    language = "de";
 }else {
     language = "en";
 }
