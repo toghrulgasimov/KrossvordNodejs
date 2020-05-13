@@ -81,27 +81,31 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
 
     $scope.addLimit = function(m) {
-        // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=a' +'&l='+d).then(function (d) {
-        //     console.log(d.data.apps + " " + $scope.imei);
-        //     $scope.loadingdiv = false;
-        //
-        // }, function () {
-        //
-        // });
+
         //m.l = {h:h, d:d};
         console.log(m);
         if(m.l != undefined) {
+            let h = 0, m = 0;
+            if(m.l.h != undefined) h = parseInt(m.l.h);
+            if(m.l.m != undefined) h = parseInt(m.l.m);
             m.limit = true;
+            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + m)).then(function (d) {
+                console.log(d.data.apps + " " + $scope.imei);
+                $scope.loadingdiv = false;
+
+            }, function () {
+
+            });
         }
     }
     $scope.removeLimit = function(m) {
-        // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=r').then(function (d) {
-        //     console.log(d.data.apps + " " + $scope.imei);
-        //     $scope.loadingdiv = false;
-        //
-        // }, function () {
-        //
-        // });
+        $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=r').then(function (d) {
+            console.log(d.data.apps + " " + $scope.imei);
+            $scope.loadingdiv = false;
+
+        }, function () {
+
+        });
         m.l.h = undefined;
         m.l.m = undefined;
         m.l = undefined;
