@@ -540,6 +540,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                             }
                         }
                         for(var i = 0; i < $scope.aa.length; i++) {
+                            if($scope.aa[i].limit != undefined) {
+                                $scope.aa[i].l = true;
+                            }
                             if(du[$scope.aa[i].package] == undefined) {
                                 du[$scope.aa[i].package] = 0;
                             }
