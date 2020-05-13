@@ -80,7 +80,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.DateHelper = DateHelper;
 
 
-    $scope.addLimit = function(m, p, h, d) {
+    $scope.addLimit = function(m) {
         // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=a' +'&l='+d).then(function (d) {
         //     console.log(d.data.apps + " " + $scope.imei);
         //     $scope.loadingdiv = false;
@@ -88,9 +88,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         // }, function () {
         //
         // });
-        m.l = {h:h, d:d};
+        //m.l = {h:h, d:d};
     }
-    $scope.removeLimit = function(m, p) {
+    $scope.removeLimit = function(m) {
         // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=r').then(function (d) {
         //     console.log(d.data.apps + " " + $scope.imei);
         //     $scope.loadingdiv = false;
