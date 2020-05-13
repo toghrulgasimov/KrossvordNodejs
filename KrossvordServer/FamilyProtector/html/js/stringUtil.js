@@ -1,4 +1,4 @@
-let stringUtil = {
+var stringUtil = {
     toTime: function(d) {
         d = parseInt(d);
         //console.log("TOTIME cagrildi --------------");
