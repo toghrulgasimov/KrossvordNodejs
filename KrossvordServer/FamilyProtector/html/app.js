@@ -89,6 +89,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         //
         // });
         //m.l = {h:h, d:d};
+        m.limit = true;
     }
     $scope.removeLimit = function(m) {
         // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=r').then(function (d) {
@@ -101,6 +102,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         m.l.h = undefined;
         m.l.m = undefined;
         m.l = undefined;
+        m.limit = false;
     }
     $scope.changeData = function() {
         if($scope.g) {
