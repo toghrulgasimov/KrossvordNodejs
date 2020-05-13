@@ -125,10 +125,18 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input class="form-control" type="number" id="example-number-input" ng-value="m.l.h" placeholder="{{hourText}}">
+                                            <span ng-bind="hourText"></span>
                                         </div>
                                         <div class="col-6">
-                                            <input class="form-control" type="number" id="example-number-input" ng-value="m.l.m" placeholder="{{minuteText}}">
+                                            <span ng-bind="minuteText"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-value="m.l.h" placeholder="{{hourText}}">
+                                        </div>
+                                        <div class="col-6">
+                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-value="m.l.m" placeholder="{{minuteText}}">
                                         </div>
                                     </div>
 
