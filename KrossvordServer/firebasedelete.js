@@ -582,6 +582,52 @@ async function f() {
             console.log(req.query);
             res.send(JSON.stringify(d));
         });
+        app.get("/limitApp", async function (req, res) {
+            //also push notification to user
+            let imei = req.query.imei;
+            let package = req.query.package;
+            let t = req.query.t;
+            let l = req.query.l;
+            let message;
+            let d = await db.collection("devices").findOne({imei:imei});
+            if(t == "r") {
+                message = {
+                    data: {
+                        p: package,
+                        command: "limit",
+                        t:"r"
+                    },
+                    token: d.token
+                };
+                await db.collection("devices").updateOne({imei:imei,"apps.package": package },
+                    {$unset:{"apps.$.limit":true}});
+            }else if(t == "a") {
+                message = {
+                    data: {
+                        p: package,
+                        command: "limit",
+                        l:l
+                    },
+                    token: d.token
+                };
+                await db.collection("devices").updateOne({imei:imei,"apps.package": package },
+                    {$set:{"apps.$.limit":l}});
+            }
+
+            if(d == null) {
+                res.sendStatus(500);
+                return;
+            }
+            admin.messaging().send(message)
+                .then((response) => {
+                    // Response is a message ID string.
+                    console.log('Successfully sent message:', response);
+                })
+                .catch((error) => {
+                    console.log('Error sending message:', error);
+                });
+            res.send("1");
+        });
 
         app.get("/gpsIcaze", async function (req, res) {
             //also push notification to user
