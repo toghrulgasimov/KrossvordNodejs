@@ -90,7 +90,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         // });
         //m.l = {h:h, d:d};
         console.log(m);
-        if(m.l.h != undefined || m.l.m != undefined) {
+        if(m.l != undefined) {
             m.limit = true;
         }
     }
