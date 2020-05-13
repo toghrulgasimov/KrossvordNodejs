@@ -85,11 +85,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         //m.l = {h:h, d:d};
         console.log(m);
         if(m.l != undefined) {
-            let h = 0, m = 0;
+            let h = 0, mi = 0;
             if(m.l.h != undefined) h = parseInt(m.l.h);
-            if(m.l.m != undefined) m = parseInt(m.l.m);
+            if(m.l.m != undefined) mi = parseInt(m.l.m);
             m.limit = true;
-            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + m)).then(function (d) {
+            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + mi)).then(function (d) {
                 console.log(d.data);
                 $scope.loadingdiv = false;
             }, function () {
