@@ -80,7 +80,26 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.DateHelper = DateHelper;
 
 
-
+    $scope.addLimit = function(m, p, d) {
+        // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=a' +'&l='+d).then(function (d) {
+        //     console.log(d.data.apps + " " + $scope.imei);
+        //     $scope.loadingdiv = false;
+        //
+        // }, function () {
+        //
+        // });
+        m.limit = d;
+    }
+    $scope.deleteLimit = function(m, p) {
+        // $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+p+'&t=r').then(function (d) {
+        //     console.log(d.data.apps + " " + $scope.imei);
+        //     $scope.loadingdiv = false;
+        //
+        // }, function () {
+        //
+        // });
+        m.limit = undefined;
+    }
     $scope.changeData = function() {
         if($scope.g) {
             $scope.gunluk = [];

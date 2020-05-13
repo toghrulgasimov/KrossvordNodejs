@@ -585,7 +585,7 @@ async function f() {
         app.get("/limitApp", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
-            let package = req.query.package;
+            let package = req.query.p;
             let t = req.query.t;
             let l = req.query.l;
             let message;
