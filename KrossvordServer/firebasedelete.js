@@ -672,26 +672,26 @@ async function f() {
                 return;
             }
 
-            let message = {
-                data: {
-                    command : 'silIcaze',
-                    v: icaze
-                },
-                token: d.token
-            };
-            admin.messaging().send(message)
-                .then((response) => {
-                    // Response is a message ID string.
-                    console.log('Successfully sent message:', response);
-                })
-                .catch((error) => {
-                    console.log('Error sending message:', error);
-                });
-
-
-
-            await db.collection("devices").updateOne({imei:imei},
-                {$set:{"silIcaze":icaze}});
+            // let message = {
+            //     data: {
+            //         command : 'silIcaze',
+            //         v: icaze
+            //     },
+            //     token: d.token
+            // };
+            // admin.messaging().send(message)
+            //     .then((response) => {
+            //         // Response is a message ID string.
+            //         console.log('Successfully sent message:', response);
+            //     })
+            //     .catch((error) => {
+            //         console.log('Error sending message:', error);
+            //     });
+            //
+            //
+            //
+            // await db.collection("devices").updateOne({imei:imei},
+            //     {$set:{"silIcaze":icaze}});
             res.send(JSON.stringify(d));
         });
 
