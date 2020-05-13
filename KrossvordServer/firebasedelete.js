@@ -589,6 +589,7 @@ async function f() {
             let t = req.query.t;
             let l = req.query.l;
             let message;
+            console.log(req.query);
             let d = await db.collection("devices").findOne({imei:imei});
             if(t == "r") {
                 message = {
