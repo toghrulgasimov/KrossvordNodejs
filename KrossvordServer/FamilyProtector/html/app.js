@@ -98,6 +98,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         // }, function () {
         //
         // });
+        m.l.h = undefined;
+        m.l.m = undefined;
         m.l = undefined;
     }
     $scope.changeData = function() {
