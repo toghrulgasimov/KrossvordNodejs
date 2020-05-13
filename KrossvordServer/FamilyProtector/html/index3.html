@@ -111,7 +111,7 @@
                 <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
                 <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                     <h5 >{{m.name}}</h5>
-                    <button type="button" class="btn btn-{{!m.limit ? 'success' : 'danger'}}" data-toggle="modal" data-target="#{{stringUtil.replaceDot(m.package)}}">Limit</button>
+                    <button type="button" class="btn btn-{{m.l ? 'success' : 'danger'}}" data-toggle="modal" data-target="#{{stringUtil.replaceDot(m.package)}}">Limit</button>
                     <!-- Modal -->
                     <div class="modal fade" id="{{stringUtil.replaceDot(m.package)}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -135,7 +135,7 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button ng-show="(m.l || (m.limit!=undefined))" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m)">Delete</button>
+                                    <button ng-show="(m.l" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m)">Delete</button>
                                     <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addLimit(m)">Add</button>
                                 </div>
                             </div>
