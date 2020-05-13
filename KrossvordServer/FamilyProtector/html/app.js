@@ -86,10 +86,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         console.log(m);
         if(m.l != undefined) {
             let h = 0, mi = 0;
-            if(m.l.h != undefined) h = parseInt(m.l.h);
-            if(m.l.m != undefined) mi = parseInt(m.l.m);
-            m.limit = true;
-            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + mi)).then(function (d) {
+            if(m.limit.h != undefined) h = parseInt(m.limit.h);
+            if(m.limit.m != undefined) mi = parseInt(m.limit.m);
+            m.l = true;
+            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60*60 + mi + )).then(function (d) {
                 console.log(d.data);
                 $scope.loadingdiv = false;
             }, function () {
@@ -105,10 +105,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         }, function () {
 
         });
-        m.l.h = undefined;
-        m.l.m = undefined;
-        m.l = undefined;
-        m.limit = false;
+        m.limit.h = undefined;
+        m.limit.m = undefined;
+        m.llimit = undefined;
+        m.l = false;
     }
     $scope.changeData = function() {
         if($scope.g) {

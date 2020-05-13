@@ -126,16 +126,16 @@
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-model="m.l.h" placeholder="{{hourText}}">
+                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-model="m.limit.h" placeholder="{{hourText}}">
                                         </div>
                                         <div class="col-6">
-                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-model="m.l.m" placeholder="{{minuteText}}">
+                                            <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-model="m.limit.m" placeholder="{{minuteText}}">
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button ng-show="(m.limit)" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m)">Delete</button>
+                                    <button ng-show="(m.l)" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m)">Delete</button>
                                     <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addLimit(m)">Add</button>
                                 </div>
                             </div>
