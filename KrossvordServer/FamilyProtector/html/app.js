@@ -84,7 +84,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         //m.l = {h:h, d:d};
         console.log(m);
-        if(m.l != undefined) {
+        if(m.limit != undefined) {
             let h = 0, mi = 0;
             if(m.limit.h != undefined) h = parseInt(m.limit.h);
             if(m.limit.m != undefined) mi = parseInt(m.limit.m);
@@ -107,7 +107,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         });
         m.limit.h = undefined;
         m.limit.m = undefined;
-        m.llimit = undefined;
+        m.limit = undefined;
         m.l = false;
     }
     $scope.changeData = function() {
