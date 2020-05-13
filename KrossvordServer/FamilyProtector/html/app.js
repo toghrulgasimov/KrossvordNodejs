@@ -87,7 +87,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         if(m.l != undefined) {
             let h = 0, m = 0;
             if(m.l.h != undefined) h = parseInt(m.l.h);
-            if(m.l.m != undefined) h = parseInt(m.l.m);
+            if(m.l.m != undefined) m = parseInt(m.l.m);
             m.limit = true;
             $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + m)).then(function (d) {
                 console.log(d.data);
