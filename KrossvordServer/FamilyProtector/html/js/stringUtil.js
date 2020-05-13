@@ -17,5 +17,8 @@ let stringUtil = {
         return someDate.getDate() == today.getDate() &&
             someDate.getMonth() == today.getMonth() &&
             someDate.getFullYear() == today.getFullYear()
+    },
+    replaceDot(s) {
+        return s.split(".").join("");
     }
 }
