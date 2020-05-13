@@ -111,7 +111,7 @@
                 <td><img ng-src="https://lookin24.com/{{m.package}}.png" style="width: 60px; height: 60px;vertical-align: middle;"></td>
                 <td style="word-break: break-word; padding: 0.25rem; vertical-align: middle">
                     <h5 >{{m.name}}</h5>
-                    <button type="button" class="btn btn-{{m.limit == undefined ? 'success' : 'danger'}}" data-toggle="modal" data-target="#{{stringUtil.replaceDot(m.package)}}">Limit</button>
+                    <button type="button" class="btn btn-{{m.l == undefined ? 'success' : 'danger'}}" data-toggle="modal" data-target="#{{stringUtil.replaceDot(m.package)}}">Limit</button>
                     <!-- Modal -->
                     <div class="modal fade" id="{{stringUtil.replaceDot(m.package)}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -123,7 +123,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    
+
                                     <div class="row">
                                         <div class="col-6">
                                             <input class="form-control" type="number" style="margin-top: 6px;" id="example-number-input" ng-value="m.l.h" placeholder="{{hourText}}">
@@ -135,7 +135,7 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button ng-show="(m.limit!=undefined)" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m, m.package)">Delete</button>
+                                    <button ng-show="(m.l!=undefined)" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m, m.package)">Delete</button>
                                     <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addLimit(m, m.package, 1)">Add</button>
                                 </div>
                             </div>
