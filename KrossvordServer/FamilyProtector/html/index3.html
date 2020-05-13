@@ -134,8 +134,8 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button ng-show="(m.limit!=undefined)" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
-                                    <button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+                                    <button ng-show="(m.limit!=undefined)" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="removeLimit(m, m.package)">Delete</button>
+                                    <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addLimit(m, m.package, 1)">Add</button>
                                 </div>
                             </div>
                         </div>
