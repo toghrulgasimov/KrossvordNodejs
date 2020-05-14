@@ -51,6 +51,12 @@ Translation["save"] = {az:"Yadda saxla", en:"Save", tr:"kayıt et", de:"Speicher
 Translation["delete"] = {az:"Sil", en:"Delete", tr:"Sil", de:"Löschen"};
 Translation["dailyLimit"] = {az:"Gündəlik limit", en:"Daily limit", tr:"Günlük limit", de:"Tägliches Limit"};
 
+window.onerror = function (msg, url, lineNo, columnNo, error) {
+    alert(msg);
+    alert(lineNo);
+    return false;
+}
+
 var language = navigator.language || navigator.userLanguage;
 if(language == undefined) language = "";
 language = (language + "").toLocaleLowerCase();
