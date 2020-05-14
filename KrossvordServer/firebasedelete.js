@@ -936,7 +936,7 @@ async function f() {
                 res.redirect("/login.html");
                 return;
             }
-            if(req.cookies.parent == "0") {
+            if(req.cookies.parent == "0" && req.cookies.email != undefine) {
                 let s = await fs.readFileSync('./FamilyProtector/html/done.html') + "";
                 res.send(s);
                 return;
@@ -1011,6 +1011,9 @@ async function f() {
                 //signed: true // Indicates if the cookie should be signed
             }
             res.cookie('name', name, options) // options is optional
+            res.clearCookie("email");
+            res.clearCookie("password");
+            //res.cookie('email', undefined, options) // options is optional
             let imei = req.cookies.imei;
             console.log("--------------------------------" + imei);
             console.log("in childName----")
