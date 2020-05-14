@@ -18,7 +18,7 @@ var stringUtil = {
             someDate.getMonth() == today.getMonth() &&
             someDate.getFullYear() == today.getFullYear()
     },
-    replaceDot(s) {
+    replaceDot: function(s) {
         return s.split(".").join("");
     }
 }
