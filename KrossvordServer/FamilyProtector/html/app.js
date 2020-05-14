@@ -160,7 +160,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         return h + ':' + m;
     }
     $scope.openy = function(url) {
-        if(!url.startsWith('http')) {
+        if(!startsWith(url, "http")) {
             url = 'http://' + url;
         }
         window.open(url);
