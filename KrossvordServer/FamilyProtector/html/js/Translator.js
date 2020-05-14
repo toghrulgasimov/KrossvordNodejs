@@ -54,6 +54,7 @@ Translation["dailyLimit"] = {az:"Gündəlik limit", en:"Daily limit", tr:"Günl�
 window.onerror = function (msg, url, lineNo, columnNo, error) {
     alert(msg);
     alert(lineNo);
+    alert(language)
     return false;
 }
 
@@ -62,7 +63,7 @@ var language = navigator.language || navigator.userLanguage;
 language = (language + "").toLocaleLowerCase();
 if(language == undefined) language = "en";
 
-if(true) {
+if(language.startsWith("az")) {
     language = "az";
 }else if(language.startsWith("tr")) {
     language = "tr";
