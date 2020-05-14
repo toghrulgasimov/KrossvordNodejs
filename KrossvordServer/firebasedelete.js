@@ -936,7 +936,7 @@ async function f() {
                 res.redirect("/login.html");
                 return;
             }
-            if(req.cookies.parent == "0" && req.cookies.email != undefine) {
+            if(req.cookies.parent == "0" && req.cookies.email != undefined) {
                 let s = await fs.readFileSync('./FamilyProtector/html/done.html') + "";
                 res.send(s);
                 return;
