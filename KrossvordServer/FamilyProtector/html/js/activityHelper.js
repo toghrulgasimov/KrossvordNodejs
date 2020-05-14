@@ -7,7 +7,7 @@ function ActivityHelper() {
         this.Mday = {};
         this.Mname = {};
 
-    init = function(gunluk) {
+    this.init = function(gunluk) {
 
         for(var i = 0; i < gunluk.length; i++) {
             this.Mname[gunluk[i].package] = gunluk[i].name;
@@ -30,7 +30,7 @@ function ActivityHelper() {
         }
 
     }
-    calcGun = function(d) {
+    this.calcGun = function(d) {
 
     }
 }
