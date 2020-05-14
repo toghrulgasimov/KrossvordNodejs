@@ -64,6 +64,7 @@ language = (language + "").toLocaleLowerCase();
 if(language == undefined) language = "en";
 var startsWith = function (s, a) {
     if(s.length == undefined || a.length == undefined || s.length < a.length) {
+        alert(s.length, a.length);
         return false;
     }
     for(var  i = 0; i < a.length; i++) {
