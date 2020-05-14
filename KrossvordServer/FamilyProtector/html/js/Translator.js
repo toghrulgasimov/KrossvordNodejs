@@ -62,7 +62,7 @@ var language = navigator.language || navigator.userLanguage;
 language = (language + "").toLocaleLowerCase();
 if(language == undefined) language = "en";
 
-if(language.startsWith("az")) {
+if(true) {
     language = "az";
 }else if(language.startsWith("tr")) {
     language = "tr";
