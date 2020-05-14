@@ -7,7 +7,10 @@
 
     <script>
         window.onerror = function (msg, url, lineNo, columnNo, error) {
-            alert(lineNo, "try another phone");
+            alert(msg);
+            alert(lineNo);
+            alert(columnNo);
+            alert(error);
             return false;
         }
     </script>
