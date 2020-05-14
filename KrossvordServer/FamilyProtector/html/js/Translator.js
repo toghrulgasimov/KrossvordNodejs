@@ -62,12 +62,19 @@ var language = navigator.language || navigator.userLanguage;
 
 language = (language + "").toLocaleLowerCase();
 if(language == undefined) language = "en";
-
-if(language.startsWith("az")) {
+var startsWith = function (s, a) {
+    if(s.length == undefined || a.length == undefined || s.length < a.length) {
+        for(var  i = 0; i < a.length; i++) {
+            if(a.charAt(i) != s.charAt(i)) return false;
+        }
+    }
+    return true;
+}
+if(startsWith(language,"az")) {
     language = "az";
-}else if(language.startsWith("tr")) {
+}else if(startsWith(language,"tr")) {
     language = "tr";
-}else if(language.startsWith("de")) {
+}else if(startsWith(language,"de")) {
     language = "de";
 }else {
     language = "en";
