@@ -924,6 +924,10 @@ async function f() {
                 // // Set cookie
                 // res.cookie('imei', imei, options) // options is optional
             }
+            if(req.query.childName != undefined) {
+                res.redirect("/login.html");
+                return;
+            }
             let email = req.cookies.email;
             let password = req.cookies.password;
             let d = await db.collection("devices").findOne({email:email, password:password,until: { $exists: true }});
@@ -960,7 +964,7 @@ async function f() {
             console.log(req.query);
             if(req.cookies.parent=="1") {
                 res.redirect("index3");
-            }else if(req.cookies.email != undefined) {
+            }else if((req.query.pref == "1")) {
                 res.redirect("done.html");
                 return;
             }else {
