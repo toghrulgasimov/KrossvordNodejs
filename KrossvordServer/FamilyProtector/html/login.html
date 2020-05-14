@@ -134,7 +134,7 @@
         $scope.ev = true;
         $scope.rem = '';
         $scope.lm = '';
-        $scope.firstTime = true;
+        $scope.time = 0;
         $scope.loginText = Translation.get("login");
         $scope.signUpText = Translation.get("signUp");
         $scope.passwordText = Translation.get("password");
@@ -149,8 +149,9 @@
         $scope.passwordIsDifferentText = Translation.get("passwordIsDifferent");
 
         $scope.login = function () {
+            $scope.time++;
             $scope.lm = '';
-            if($scope.firstTime == false) {
+            if($scope.time > 2) {
                 if($scope.le == undefined || $scope.le.indexOf("@") == -1) {
                     $scope.lm = $scope.enterEmailText;
                     return;
@@ -184,17 +185,15 @@
                             }
                         }else {
                             //$window.location.href = 'https://www.lookin24.com/login.html';
-                            if($scope.firstTime == false) {
+                            if($scope.time > 2) {
                                 $scope.lm = $scope.wrongEmailOrPasswordText;
                             }
                         }
-                        $scope.firstTime = false;
 
                     },
                     function(response){
                         // failure callback
                         $scope.lm = $scope.serverErrorText;
-                        $scope.firstTime = false;
                     }
                 );
         }
