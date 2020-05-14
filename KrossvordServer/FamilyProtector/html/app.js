@@ -89,7 +89,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             if(m.limit.h != undefined) h = parseInt(m.limit.h);
             if(m.limit.m != undefined) mi = parseInt(m.limit.m);
             m.l = true;
-            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60 + mi)).then(function (d) {
+            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60*60 + mi*60)).then(function (d) {
                 console.log(d.data);
                 $scope.loadingdiv = false;
             }, function () {
