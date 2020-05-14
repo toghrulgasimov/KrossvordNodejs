@@ -47,6 +47,10 @@ Translation["bax"] = {az:"Bax", en:"Open", tr:"Aç", de:"Öffnen"};
 Translation["uninstallPermission"] = {az:"Proqramı silməyə icazə ver", en:"Allow to uninstall", tr:"Programın silinmesine izin ver", de:"Programm löschen"};
 Translation["GPSPermission"] = {az:"GPS-i söndürməyə icazə ver", en:"Allow to turn off GPS", tr:"GPS'in kapatılmasına izin ver", de:"GPS"};
 
+Translation["save"] = {az:"Yadda saxla", en:"Save", tr:"kayıt et", de:"Speichern"};
+Translation["delete"] = {az:"Sil", en:"Delete", tr:"Sil", de:"Löschen"};
+Translation["dailyLimit"] = {az:"Gündəlik limit", en:"Daily limit", tr:"Günlük limit", de:"Tägliches Limit"};
+
 var language = navigator.language || navigator.userLanguage;
 if(language == undefined) language = "";
 language = (language + "").toLocaleLowerCase();
