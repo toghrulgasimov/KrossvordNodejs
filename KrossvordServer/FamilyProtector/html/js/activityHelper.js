@@ -1,5 +1,4 @@
-class ActivityHelper {
-    constructor() {
+function ActivityHelper() {
         this.todaySum = 0;
         this.weekSum = 0;
         this.day = [];
@@ -7,8 +6,8 @@ class ActivityHelper {
         this.month = [];
         this.Mday = {};
         this.Mname = {};
-    }
-    init(gunluk) {
+
+    init = function(gunluk) {
 
         for(var i = 0; i < gunluk.length; i++) {
             this.Mname[gunluk[i].package] = gunluk[i].name;
@@ -31,7 +30,7 @@ class ActivityHelper {
         }
 
     }
-    calcGun(d) {
+    calcGun = function(d) {
 
     }
 }

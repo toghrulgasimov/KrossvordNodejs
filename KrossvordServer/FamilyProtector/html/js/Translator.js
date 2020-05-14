@@ -1,8 +1,4 @@
-try {
-    "use strict";
-}catch (e) {
-
-}
+"use strict";
 var Translation = {};
 Translation["login"] = {az:"Daxil ol", en:"Login", tr:"Giriş", de:"Anmelden"};
 Translation["signUp"] = {az:"Qeydiyyat", en:"Sign Up", tr:"Kaydol", de:"Registrieren"};
