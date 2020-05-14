@@ -957,6 +957,7 @@ async function f() {
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
+            console.log(req.query);
             if(req.cookies.parent=="1") {
                 res.redirect("index3");
             }else if(req.cookies.email != undefined) {
