@@ -53,9 +53,7 @@ Translation["delete"] = {az:"Sil", en:"Delete", tr:"Sil", de:"Löschen"};
 Translation["dailyLimit"] = {az:"Gündəlik limit", en:"Daily limit", tr:"Günlük limit", de:"Tägliches Limit"};
 
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-    alert(msg);
-    alert(lineNo);
-    alert(language)
+    alert(msg, "try another phone");
     return false;
 }
 
