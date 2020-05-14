@@ -58,8 +58,9 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
 }
 
 var language = navigator.language || navigator.userLanguage;
-if(language == undefined) language = "en";
+
 language = (language + "").toLocaleLowerCase();
+if(language == undefined) language = "en";
 
 if(language.startsWith("az")) {
     language = "az";
