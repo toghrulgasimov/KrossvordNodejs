@@ -13,6 +13,7 @@ Translation["theUserNameIsTaken"] = {az:"Bu Email mövcuddur.", en:"The username
 Translation["enterPasswordAgain"] = {az:"Şifrəni yenidən daxil edin.", en:"Enter Password again.", tr:"Şifreni tekrar girin.", de:"Passwort erneut eingeben."};
 Translation["passwordIsDifferent"] = {az:"Şifrələr fərqlidir.", en:"Passwords are different.", tr:"Şifreler farklı.", de:"Passwörter sind unterschiedlich."};
 Translation["ppermissions"] = {az:"Activate Accesibility Service, Location, Adminstrator for Controlling all apps.",
+    trt:"Proqramın işləməsi üçün İcazələri Aktivləşdirin.",
     en:"Activate Accessibility Service, Location, Administrator for Controlling all apps.",
     tr:"Tüm uygulamaları kontrol etmek için Erişilebilirlik,, Konum, ve Yönetici'yi aktiv edin.", de:"Aktivieren Sie Accessibility Service, Location, Administrator."};
 Translation["activate"] = {az:"Aktivləşdir", en:"Activate", de:"Aktivieren"};
