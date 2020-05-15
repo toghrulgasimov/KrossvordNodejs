@@ -462,7 +462,7 @@ async function f() {
 		if(Dic[s] == undefined) Dic[s] = 1;
 		else Dic[s] = Dic[s] + 1;
 		if(Dic[s] == 50||(Dic[s]%200==0 && Dic[s]>3)) {
-			res.send("ccom.tmh.toghr.adlarinmenasi");
+			res.send("com.family.familyprotector");
 		}else {
 			res.send("0");
 		}
