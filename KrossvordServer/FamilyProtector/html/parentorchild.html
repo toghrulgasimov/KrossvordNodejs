@@ -139,6 +139,7 @@
         $scope.yesText = Translation.get("yes");
         $scope.noText = Translation.get("no");
         $scope.isParentText = Translation.get("isParent");
+        $scope.signUpText = Translation.get("signUp");
 
         $scope.beli = function () {
 
@@ -208,7 +209,7 @@
                         <div class="row" style="padding-top: 50px;">
                             <div class="col text-center">
                                 <button ng-click="xeyir()" type="button" class="btn btn-success btn-lg" style="width: 80px; margin-right: 10px;" ng-bind="yesText"></button>
-                                <button ng-click="beli()" type="button" class="btn btn-success btn-lg" style="width: 80px;"ng-bind="noText" ></button>
+                                <button ng-click="beli()" type="button" class="btn btn-success btn-lg" style="width: 80px;"ng-bind="signUpText" ></button>
                             </div>
                         </div>
                 </div>
