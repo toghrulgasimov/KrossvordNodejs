@@ -4,6 +4,16 @@ async function f() {
 	const express = require('express')
 	const app = express()
 	var cors = require('cors');
+
+	var expressGoogleAnalytics = require('express-google-analytics');
+
+	// Insert your Google Analytics Id, Shoule be something like 'UA-12345678-9'
+	var analytics = expressGoogleAnalytics('UA-124163714-2');
+
+	//Add to express before your routes
+	app.use(analytics);
+
+
 	app.use(cors());
 
 	var bodyParser = require('body-parser');
