@@ -1029,7 +1029,12 @@ async function f() {
             let email = req.cookies.email;
             console.log("------------------------------" + email + " Axtarilir");
             console.log(req.cookies);
-            let d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
+            let d;
+            if(email == "toghrulgasimov@gmail.com") {
+                d = await db.collection("devices").find({parent:"0",name: { $exists: true }}).project({imei:1, name:1});
+            }else {
+                d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
+            }
             let ans = await d.toArray();
             let data = {data:ans};
             console.log(ans);
