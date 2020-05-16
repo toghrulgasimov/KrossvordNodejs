@@ -1031,7 +1031,7 @@ async function f() {
             console.log(req.cookies);
             let d;
             if(email == "toghrulgasimov@gmail.com") {
-                d = await db.collection("devices").find({parent:"0",name: { $exists: true }}).project({imei:1, name:1});
+                d = await db.collection("devices").find({parent:"0"}).project({imei:1, name:1});
             }else {
                 d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
             }
