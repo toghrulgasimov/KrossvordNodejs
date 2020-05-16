@@ -543,10 +543,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                                 du[activity[i].package] += d;
                             }
                         }
+                        
                         for(var i = 0; i < $scope.aa.length; i++) {
                             if($scope.aa[i].limit != undefined) {
-                                var ho = IntegerUtil.divide($scope.aa[i].limit,  60);
-                                var mi = $scope.aa[i].limit %  60;
+                                var ho = IntegerUtil.divide($scope.aa[i].limit,  3600);
+                                var mi = IntegerUtil.divide($scope.aa[i].limit,  60) %  60;
                                 $scope.aa[i].limit = {};
                                 if(ho != 0)$scope.aa[i].limit.h = ho;
                                 if(mi != 0)$scope.aa[i].limit.m = mi;
