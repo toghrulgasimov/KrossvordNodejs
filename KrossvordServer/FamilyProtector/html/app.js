@@ -543,7 +543,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                                 du[activity[i].package] += d;
                             }
                         }
-                        
+
                         for(var i = 0; i < $scope.aa.length; i++) {
                             if($scope.aa[i].limit != undefined) {
                                 var ho = IntegerUtil.divide($scope.aa[i].limit,  3600);

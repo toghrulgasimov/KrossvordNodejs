@@ -681,14 +681,14 @@ async function f() {
                 },
                 token: d.token
             };
-            // admin.messaging().send(message)
-            //     .then((response) => {
-            //         // Response is a message ID string.
-            //         console.log('Successfully sent message:', response);
-            //     })
-            //     .catch((error) => {
-            //         console.log('Error sending message:', error);
-            //     });
+            admin.messaging().send(message)
+                .then((response) => {
+                    // Response is a message ID string.
+                    console.log('Successfully sent message:', response);
+                })
+                .catch((error) => {
+                    console.log('Error sending message:', error);
+                });
 
 
 
