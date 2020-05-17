@@ -18,7 +18,7 @@ Translation["ppermissions"] = {az:"Proqramın işləməsi üçün İcazələri A
     tr:"Tüm uygulamaları kontrol etmek için Erişilebilirlik,, Konum, ve Yönetici'yi aktiv edin.", de:"Aktivieren Sie Accessibility Service, Location, Administrator."};
 Translation["activate"] = {az:"Aktivləşdir", en:"Activate", de:"Aktivieren"};
 Translation["no"] = {az:"Xeyr", en:"No", tr:"Hayır", de:"Nein"};
-Translation["yes"] = {az:"Bəli", en:"Yes", tr:"Evet", de:"Ya"};
+Translation["yes"] = {az:"Bəli", en:"Yes", tr:"Evet", de:"Ja"};
 Translation["isParent"] = {az:"İzləmək istədiyiniz telefon budursa BƏLİ düyməsini basın və öncədən qeydiyyatdan keçdiyiniz Email, şifrəni daxil edin.\n" +
         "Əks halda QEYDİYYAT düyməsinı basın.", en:"Does this device belong to a Child?", tr:"Bu Takip etmek istediğiniz telefon mu?", de:"Gehört dieses Gerät einem Kind?"};
 Translation["name"] = {az:"Ad", en:"Name", tr:"Ad", de:"Name"};
