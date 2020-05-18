@@ -190,6 +190,28 @@ async function f() {
 
             res.send("1");
         });
+        app.post("/updateFirebaseToken2", async function (req, res) {
+            console.log("ddddan cagrildi");
+            console.log(req.body.PostData);
+            let o = req.body;
+            console.log(o);
+            let imei = o.i;
+            let token = o.t;
+            if(imei == "erorrororororroro") {
+                res.send("Imei null gelmishdi");
+                return;
+            }
+            console.log(imei + "&&&&&&&&&&&&&&&&&&&&&");
+            d = await db.collection("devices").findOne({imei:imei});
+            if(d == null || d == undefined) {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token, apps:[]}}, {upsert:true});
+            }else {
+                await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
+            }
+
+
+            res.send("1");
+        });
 
 
         app.post("/initApp", async function (req, res) {
