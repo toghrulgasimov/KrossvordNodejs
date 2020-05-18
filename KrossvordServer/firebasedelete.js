@@ -212,6 +212,13 @@ async function f() {
 
             res.send("1");
         });
+        app.post("/accessibiltyinfo", async function (req, res) {
+            console.log("ddddan cagrildi");
+            console.log(req.body.PostData);
+            let o = req.body;
+            console.log(o);
+            res.send("1");
+        });
 
 
         app.post("/initApp", async function (req, res) {
