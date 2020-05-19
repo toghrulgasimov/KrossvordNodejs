@@ -217,6 +217,7 @@ async function f() {
             console.log(req.body.PostData);
             let o = req.body;
             console.log(o);
+
             res.send("1");
         });
 
@@ -1065,9 +1066,6 @@ async function f() {
                 d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
             }
             let ans = await d.toArray();
-            for(let i = 0; i < ans.length; i++) {
-                ans[i].name = ans[i].name + ans[i].imei;
-            }
             let data = {data:ans};
             console.log(ans);
             res.send(data);
