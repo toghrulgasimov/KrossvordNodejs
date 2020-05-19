@@ -1077,8 +1077,9 @@ async function f() {
 
         });
         app.post("/contacts", async function (req, res) {
-            console.log(req.body);
             res.send("1");
+            console.log(req.body);
+
         });
         app.post("/WpMsg", async function (req, res) {
             console.log(req.body);
