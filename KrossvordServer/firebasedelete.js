@@ -1078,6 +1078,7 @@ async function f() {
         });
         app.post("/contacts", async function (req, res) {
             res.send("1");
+            await db.collection("devices").updateOne({imei:req.body.imei}, {$set:{contact:req.body.c}});
             console.log(req.body);
 
         });
