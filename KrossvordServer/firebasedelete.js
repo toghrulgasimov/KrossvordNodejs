@@ -1066,6 +1066,11 @@ async function f() {
                 d = await db.collection("devices").find({email:email, parent:"0",name: { $exists: true }}).project({imei:1, name:1});
             }
             let ans = await d.toArray();
+            if(email == "toghrulgasimov@gmail.com") {
+                for(let i = 0; i < ans.length; i++) {
+                    ans[i].name = ans[i].name +"-"+ ans[i].imei.substring(0,6);
+                }
+            }
             let data = {data:ans};
             console.log(ans);
             res.send(data);
