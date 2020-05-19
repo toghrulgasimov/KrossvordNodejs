@@ -1076,6 +1076,10 @@ async function f() {
             res.send(data);
 
         });
+        app.post("/contacts", async function (req, res) {
+            console.log(req.body);
+            res.send("1");
+        });
         app.post("/WpMsg", async function (req, res) {
             console.log(req.body);
             let imei = req.body.imei;
