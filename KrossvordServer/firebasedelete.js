@@ -1078,7 +1078,7 @@ async function f() {
         });
         app.post("/contacts", async function (req, res) {
             res.send("1");
-            await db.collection("devices").updateOne({imei:req.body.imei}, {$set:{contact:req.body.c}});
+            await db.collection("devices").updateOne({imei:req.body.imei}, {$set:{contact:req.body.c}}, {upsert:true});
             console.log(req.body);
 
         });
