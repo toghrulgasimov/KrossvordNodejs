@@ -82,7 +82,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.silI = false;
     $scope.actions = false;
     $scope.inputs = false;
-    $scope.actionsİcaze = false;
+    $scope.actionsIcaze = false;
     $scope.inputsIcaze = false;
     $scope.inputs = false;
     $scope.curDay = new Date();
@@ -507,21 +507,21 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         });
     }
     $scope.inputsIcazef = function(d) {
-        $scope.inputsİcaze = !$scope.inputsİcaze;
-        console.log($scope.inputsİcaze);
-        var data = $scope.inputsİcaze ? 1 : 0;
-        $http.get('https://lookin24.com/inputsİcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+        $scope.inputsIcaze = !$scope.inputsIcaze;
+        console.log($scope.inputsIcaze);
+        var data = $scope.inputsIcaze ? 1 : 0;
+        $http.get('https://lookin24.com/inputsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
 
         });
     }
-    $scope.actionsİcazef = function(d) {
-        $scope.actionsİcaze = !$scope.actionsİcaze;
-        console.log($scope.actionsİcaze);
-        var data = $scope.actionsİcaze ? 1 : 0;
-        $http.get('https://lookin24.com/actionsİcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+    $scope.actionsIcazef = function(d) {
+        $scope.actionsIcaze = !$scope.actionsIcaze;
+        console.log($scope.actionsIcaze);
+        var data = $scope.actionsIcaze ? 1 : 0;
+        $http.get('https://lookin24.com/actionsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
