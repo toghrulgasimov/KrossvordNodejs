@@ -80,6 +80,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.loadingdiv = false;
     $scope.gpsI = false;
     $scope.silI = false;
+    $scope.actions = false;
+    $scope.inputs = false;
+    $scope.actionsİcaze = false;
+    $scope.inputsIcaze = false;
+    $scope.inputs = false;
     $scope.curDay = new Date();
 
     $scope.stringUtil = stringUtil;
@@ -495,6 +500,28 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         console.log($scope.gpsI);
         var data = $scope.gpsI ? 1 : 0;
         $http.get('https://lookin24.com/gpsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+            console.log(d.data.data);
+
+        }, function () {
+
+        });
+    }
+    $scope.inputsIcazef = function(d) {
+        $scope.inputsİcaze = !$scope.inputsİcaze;
+        console.log($scope.inputsİcaze);
+        var data = $scope.inputsİcaze ? 1 : 0;
+        $http.get('https://lookin24.com/inputsİcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+            console.log(d.data.data);
+
+        }, function () {
+
+        });
+    }
+    $scope.actionsİcazef = function(d) {
+        $scope.actionsİcaze = !$scope.actionsİcaze;
+        console.log($scope.actionsİcaze);
+        var data = $scope.actionsİcaze ? 1 : 0;
+        $http.get('https://lookin24.com/actionsİcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
