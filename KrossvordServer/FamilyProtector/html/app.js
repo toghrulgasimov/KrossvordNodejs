@@ -36,6 +36,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.saveText = Translation.get("save");
     $scope.deleteText = Translation.get("delete");
     $scope.dailyLimitText = Translation.get("dailyLimit");
+    $scope.actionsText = Translation.get("actions");
+    $scope.inputsText = Translation.get("inputs");
 
     //translation
 

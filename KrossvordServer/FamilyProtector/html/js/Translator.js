@@ -54,6 +54,9 @@ Translation["save"] = {az:"Yadda saxla", en:"Save", tr:"kayıt et", de:"Speicher
 Translation["delete"] = {az:"Sil", en:"Delete", tr:"Sil", de:"Löschen"};
 Translation["dailyLimit"] = {az:"Gündəlik limit", en:"Daily limit", tr:"Günlük limit", de:"Tägliches Limit"};
 
+Translation["actions"] = {az:"Fəaliyyətlər", en:"Actions", tr:"Eylemler", de:"Aktionen"};
+Translation["inputs"] = {az:"Daxil edilənlər", en:"İnputs", tr:"Girişler", de:"Eingaben"};
+
 
 
 var language = navigator.language || navigator.userLanguage;
