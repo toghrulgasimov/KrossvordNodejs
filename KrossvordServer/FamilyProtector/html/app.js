@@ -558,6 +558,12 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         $scope.aa = d.data.apps;
                         $scope.gpsI = parseInt(d.data.gpsIcaze);
                         $scope.silI = parseInt(d.data.silIcaze);
+                        if(d.data.inputsIcaze != undefined) {
+                            $scope.inputsIcaze = parseInt(d.data.inputsIcaze);
+                        }
+                        if(d.data.actionsIcaze != undefined) {
+                            $scope.actionsIcaze = parseInt(d.data.actionsIcaze);
+                        }
                         var activity = $scope.d.activity.data;
                         var du = {};
                         for(var i = 0; i < activity.length; i++) {
