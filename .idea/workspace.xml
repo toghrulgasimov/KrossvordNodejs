@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/done.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/done.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/FamilyProtector" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -193,7 +194,8 @@
       <workItem from="1589203398403" duration="44316000" />
       <workItem from="1589756476906" duration="4498000" />
       <workItem from="1589926037192" duration="6550000" />
-      <workItem from="1590134528684" duration="1278000" />
+      <workItem from="1590134528684" duration="3272000" />
+      <workItem from="1590342418227" duration="148000" />
     </task>
     <servers />
   </component>
