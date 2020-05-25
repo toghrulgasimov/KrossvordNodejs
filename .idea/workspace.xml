@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.insanlar.js">
+  <component name="RunManager" selected="JavaScript Debug.index3deactive.html">
     <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -86,9 +86,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="Node.js.insanlar.js" />
         <item itemvalue="JavaScript Debug.index3.html" />
-        <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="JavaScript Debug.childname.html" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
       </list>
@@ -195,7 +195,7 @@
       <workItem from="1589756476906" duration="4498000" />
       <workItem from="1589926037192" duration="6550000" />
       <workItem from="1590134528684" duration="3272000" />
-      <workItem from="1590342418227" duration="3879000" />
+      <workItem from="1590342418227" duration="4222000" />
     </task>
     <servers />
   </component>
