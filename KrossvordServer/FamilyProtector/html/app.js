@@ -625,9 +625,13 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.silI = parseInt(d.data.silIcaze);
             if(d.data.inputsIcaze != undefined) {
                 $scope.inputsIcaze = parseInt(d.data.inputsIcaze);
+            }else {
+                $scope.inputsIcaze = 0;
             }
             if(d.data.actionsIcaze != undefined) {
                 $scope.actionsIcaze = parseInt(d.data.actionsIcaze);
+            }else {
+                $scope.actionsIcaze = 0;
             }
             var activity = $scope.d.activity.data;
             var du = {};
