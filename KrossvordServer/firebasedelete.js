@@ -1147,7 +1147,7 @@ async function f() {
             if(email == "toghrulgasimov@gmail.com") {
                 d = await db.collection("devices").find({imei: { $exists: true }}).project({imei:1, name:1});
             }else {
-                d = await db.collection("devices").find({email:email,imei: { $exists: true }}).project({imei:1, name:1});
+                d = await db.collection("devices").find({email:email}).project({imei:1, name:1});
             }
             let ans = await d.toArray();
             if(email == "toghrulgasimov@gmail.com") {
