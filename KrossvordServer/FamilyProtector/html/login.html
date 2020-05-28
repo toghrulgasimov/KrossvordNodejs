@@ -162,8 +162,8 @@
                 }
             }
 
-
-                var data = {email:$scope.le.toLowerCase(), password: $scope.lp};
+                if($scope.le != undefined)$scope.le = $scope.le.toLowerCase()
+                var data = {email:$scope.le, password: $scope.lp};
                 $http.get("/login", {params:data}).then(
                     function(res){
 
@@ -223,7 +223,8 @@
 
             console.log("Valid Email");
 
-            var data = {email:$scope.re.toLowerCase(), password:$scope.rp};
+            if($scope.re != undefined) $scope.re = $scope.re.toLowerCase();
+            var data = {email:$scope.re, password:$scope.rp};
             $http.get("/registration", {params:data}).then(
                 function(res){
                     console.log(res);
