@@ -4,6 +4,7 @@
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/parentorchild.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,10 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.login.html">
-    <configuration name="childname.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/childname.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.parentorchild.html">
     <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -81,16 +79,19 @@
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/login.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="parentorchild.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/parentorchild.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="insanlar.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/insanlar.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="JavaScript Debug.index3deactive.html" />
         <item itemvalue="Node.js.insanlar.js" />
         <item itemvalue="JavaScript Debug.index3.html" />
-        <item itemvalue="JavaScript Debug.childname.html" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +198,7 @@
       <workItem from="1590134528684" duration="3272000" />
       <workItem from="1590342418227" duration="6882000" />
       <workItem from="1590568560683" duration="655000" />
-      <workItem from="1590605015261" duration="6857000" />
+      <workItem from="1590605015261" duration="8628000" />
     </task>
     <servers />
   </component>
