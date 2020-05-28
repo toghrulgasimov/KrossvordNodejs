@@ -747,7 +747,7 @@ async function f() {
                 {$set:{"silIcaze":icaze}});
             res.send(JSON.stringify(d));
         });
-        app.get("/actionsIcaze", async function (req, res) {
+        app.get("/Icaze", async function (req, res) {
             //also push notification to user
             let imei = req.query.imei;
             let icaze = req.query.icaze;
@@ -758,7 +758,7 @@ async function f() {
             }
             let message = {
                 data: {
-                    command : 'actionsIcaze',
+                    command : 'Icaze',
                     v: icaze
                 },
                 token: d.token
@@ -775,7 +775,7 @@ async function f() {
 
 
             await db.collection("devices").updateOne({imei:imei},
-                {$set:{"actionsIcaze":icaze}});
+                {$set:{"Icaze":icaze}});
             res.send(JSON.stringify(d));
         });
         app.get("/inputsIcaze", async function (req, res) {
@@ -1060,7 +1060,12 @@ async function f() {
                 let s = await fs.readFileSync('./FamilyProtector/html/index3deactive.html') + "";
                 res.send(s);
             }else {
-                let s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                let s;
+                if(email != 'toghrulgasimov@gmail.com') {
+                    s = await fs.readFileSync('./FamilyProtector/html/index3.html') + "";
+                }else {
+                    s = await fs.readFileSync('./FamilyProtector/html/index3admin.html') + "";
+                }
                 res.send(s);
             }
         });

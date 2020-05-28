@@ -82,7 +82,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.silI = false;
     $scope.actions = false;
     $scope.inputs = false;
-    $scope.actionsIcaze = false;
+    $scope.Icaze = false;
     $scope.inputsIcaze = false;
     $scope.inputs = false;
     $scope.curDay = new Date();
@@ -517,11 +517,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
 
         });
     }
-    $scope.actionsIcazef = function(d) {
-        $scope.actionsIcaze = !$scope.actionsIcaze;
-        console.log($scope.actionsIcaze);
-        var data = $scope.actionsIcaze ? 1 : 0;
-        $http.get('https://lookin24.com/actionsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+    $scope.Icazef = function(d) {
+        $scope.Icaze = !$scope.Icaze;
+        console.log($scope.Icaze);
+        var data = $scope.Icaze ? 1 : 0;
+        $http.get('https://lookin24.com/Icaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
@@ -563,10 +563,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         }else {
                             $scope.inputsIcaze = 1;
                         }
-                        if(d.data.actionsIcaze != undefined) {
-                            $scope.actionsIcaze = parseInt(d.data.actionsIcaze);
+                        if(d.data.Icaze != undefined) {
+                            $scope.Icaze = parseInt(d.data.Icaze);
                         }else {
-                            $scope.actionsIcaze = 0;
+                            $scope.Icaze = 0;
                         }
                         var activity = $scope.d.activity.data;
                         var du = {};
@@ -632,10 +632,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }else {
                 $scope.inputsIcaze = 1;
             }
-            if(d.data.actionsIcaze != undefined) {
-                $scope.actionsIcaze = parseInt(d.data.actionsIcaze);
+            if(d.data.Icaze != undefined) {
+                $scope.Icaze = parseInt(d.data.Icaze);
             }else {
-                $scope.actionsIcaze = 0;
+                $scope.Icaze = 0;
             }
             var activity = $scope.d.activity.data;
             var du = {};
