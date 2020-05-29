@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js/Translator.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/js/Translator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +197,7 @@
       <workItem from="1590134528684" duration="3272000" />
       <workItem from="1590342418227" duration="6882000" />
       <workItem from="1590568560683" duration="655000" />
-      <workItem from="1590605015261" duration="13956000" />
+      <workItem from="1590605015261" duration="14367000" />
     </task>
     <servers />
   </component>
