@@ -14,7 +14,7 @@ Translation["enterPasswordAgain"] = {az:"Şifrəni yenidən daxil edin.", en:"En
 Translation["passwordIsDifferent"] = {az:"Şifrələr fərqlidir.", en:"Passwords are different.", tr:"Şifreler farklı.", de:"Passwörter sind unterschiedlich."};
 Translation["ppermissions"] = {az:"Proqramın işləməsi üçün İcazələri Aktivləşdirin.",
 
-    en:"Activate Accessibility Service, Location, Administrator for Controlling all apps.",
+    en:"Activate Accessibility Service, Location,Contact, Administrator permissions.",
     tr:"Tüm uygulamaları kontrol etmek için Erişilebilirlik,, Konum, ve Yönetici'yi aktiv edin.", de:"Aktivieren Sie Accessibility Service, Location, Administrator."};
 Translation["activate"] = {az:"Aktivləşdir", en:"Activate", de:"Aktivieren"};
 Translation["no"] = {az:"Xeyr", en:"No", tr:"Hayır", de:"Nein"};
