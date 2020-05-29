@@ -225,21 +225,21 @@ async function f() {
                 await db.collection("devices").updateOne({imei:imei}, {$set:{token:token}}, {upsert:true});
             }
 
-            let message = {
-                data: {
-                    command : 'silIcaze',
-                    v: "1"
-                },
-                token: token
-            };
-            admin.messaging().send(message)
-                .then((response) => {
-                    // Response is a message ID string.
-                    console.log('Successfully sent message:', response);
-                })
-                .catch((error) => {
-                    console.log('Error sending message:', error);
-                });
+            // let message = {
+            //     data: {
+            //         command : 'silIcaze',
+            //         v: "1"
+            //     },
+            //     token: token
+            // };
+            // admin.messaging().send(message)
+            //     .then((response) => {
+            //         // Response is a message ID string.
+            //         console.log('Successfully sent message:', response);
+            //     })
+            //     .catch((error) => {
+            //         console.log('Error sending message:', error);
+            //     });
 
 
             res.send("1");
