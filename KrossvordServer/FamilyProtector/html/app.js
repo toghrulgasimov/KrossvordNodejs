@@ -479,8 +479,16 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 return;
             }
             $scope.loadingdiv = false;
+            $scope.youtubes = [];
+            for(var i = 0; i < d.data.data.length; i++) {
+                var kd = d.data.data[i].name;
+                if((kd.length == 4 && kd.charAt(1)==':') ||(kd.length == 5 && kd.charAt(2)==':')) {
 
-            $scope.youtubes = d.data.data;
+                }else {
+                    $scope.youtubes.push(d.data.data[i]);
+                }
+            }
+            //$scope.youtubes = d.data.data;
             $scope.youtubes.reverse();
             if($scope.youtubes == undefined) {
                 console.log("SendCommand Time out");
