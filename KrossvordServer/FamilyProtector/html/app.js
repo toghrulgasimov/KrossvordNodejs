@@ -171,6 +171,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         if(!startsWith(url, "http")) {
             url = 'http://' + url;
         }
+        console.log(url);
         window.open(url);
     };
 
