@@ -168,9 +168,11 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         return h + ':' + m;
     }
     $scope.openy = function(url) {
+        console.log(url.charAt(0) + "salam")
         if(!startsWith(url, "http")) {
             url = 'https://' + url;
         }
+
         console.log(url);
         window.open(url);
     };
