@@ -1216,9 +1216,9 @@ async function f() {
                     ans.push(ar[i]);
                 }
             }
-            if(req.cookies.email != 'toghrulgasimov@gmail.com') {
-                res.status(400).send("0");
-            }else
+            // if(req.cookies.email != 'toghrulgasimov@gmail.com') {
+            //     res.status(400).send("0");
+            // }else
             res.send({data:ans});
 
 
