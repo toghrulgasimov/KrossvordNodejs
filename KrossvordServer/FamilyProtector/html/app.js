@@ -168,6 +168,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         return h + ':' + m;
     }
     $scope.openy = function(url) {
+        url = url.replace(/\u200e/g, '');
         console.log(url.charAt(0) + "salam")
         if(!startsWith(url, "http")) {
             url = 'https://' + url;
