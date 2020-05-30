@@ -10,6 +10,9 @@ function ActivityHelper() {
     this.init = function(gunluk) {
 
         for(var i = 0; i < gunluk.length; i++) {
+            if(gunluk[i].package == 'com.android.systemui'){
+                continue;
+            }
             this.Mname[gunluk[i].package] = gunluk[i].name;
             if(this.Mday[gunluk[i].package] == undefined) {
                 this.Mday[gunluk[i].package] = gunluk[i].duration;
