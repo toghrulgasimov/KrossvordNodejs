@@ -646,6 +646,8 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         var activity = $scope.d.activity.data;
                         var du = {};
                         for(var i = 0; i < activity.length; i++) {
+                            if(activity[i].package == 'com.android.systemui')
+                                continue;
                             var start = activity[i].start;
                             var end = activity[i].end;
                             if(end == -1)
