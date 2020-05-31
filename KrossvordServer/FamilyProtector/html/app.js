@@ -527,17 +527,29 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var ans2 = [];
             console.log(ans);
-            // for(var i = 0; i < ans.length; i++) {
-            //     var va = ans[i].l[0];
-            //     ans[i].l.shift();
-            //     if(ans2.length == 0 || ans2[ans2.length-1].package != va.pn) {
-            //         ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]});
-            //     }else {
-            //         ans2[ans2.length-1].l.push(va);
-            //     }
-            //     ans2.push(ans[i]);
-            // }
-            $scope.ians = ans;
+            for(var i = 0; i < ans.length - 1; i++) {
+                ans2.push(ans[i]);
+                var va = ans[i].l[0];
+                ans[i].l.shift();
+
+                if(va.pn != ans[i+1].package) {
+                    ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]})
+                }else {
+                    ans[i+1].l.push(va);
+                }
+                //axrinci yaddan cixmasin
+            }
+            var last = ans[ans.length-1];
+            var va = last.l[0];
+            last.l.shift();
+            ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]})
+            var ans3 = [];
+            for(var i = 0; i < ans2.length; i++) {
+                if(ans2[i].l.length > 0) {
+                    ans3.push(ans2[i]);
+                }
+            }
+            $scope.ians = ans3;
             console.log($scope.ians);
             //$scope.openActivity(1);
 
