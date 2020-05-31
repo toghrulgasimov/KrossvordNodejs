@@ -510,7 +510,14 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             var ans = [];
             for(var i = 0; i < $scope.inputlar.length; i++) {
                 if($scope.inputlar[i].l.length == 0) continue;
-                var c = $scope.inputlar[i]
+                var c = $scope.inputlar[i];
+                var nl = [];
+                for(var j = 0; j < c.l.length; j++) {
+                    if(c.l[j].t != "") {
+                        nl.push(c.l[j]);
+                    }
+                }
+                c.l = nl;
                 ans.push(c);
             }
             $scope.ians = ans;
