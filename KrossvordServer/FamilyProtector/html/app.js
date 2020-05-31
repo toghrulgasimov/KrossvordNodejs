@@ -540,11 +540,12 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 //axrinci yaddan cixmasin
             }
             var last = ans[ans.length-1];
+            ans2.push(last);
             var va = last.l[0];
-            console.log(last);
-            console.log(ans2);
             last.l.shift();
             ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]})
+            console.log(last);
+            console.log(ans2);
             var ans3 = [];
             for(var i = 0; i < ans2.length; i++) {
                 if(ans2[i].l.length > 0) {
