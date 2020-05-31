@@ -446,10 +446,10 @@
         </div>
         <div class="container-fluid" ng-show="inputs">
             <div class="row" ng-repeat="x in ians">
-                <div class="col-4 .text-break"><span class=".text-break">{{x.name}}</span></div>
+                <div class="col-4"><span style="word-wrap: break-word;">{{x.name}}</span></div>
                 <div class="col-8">
-                    <div class="row .text-break" ng-repeat="xx in x.l">
-                        <span class=".text-break">-{{xx.t}}</span>
+                    <div class="row" ng-repeat="xx in x.l">
+                        <span style="word-wrap: break-word;">-{{xx.t}}</span>
                     </div>
                 </div>
             </div>
