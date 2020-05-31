@@ -438,9 +438,10 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var ans = [];
             for(var i = 0; i < $scope.gunluk.length; i++) {
-                if( $scope.gunluk[i].package == 'com.android.systemui') {
-                    continue;
-                }
+                // if( $scope.gunluk[i].package == 'com.android.systemui') {
+                //     continue;
+                // }
+
                 //if(t[$scope.gunluk[i].package] == undefined)continue;
                 $scope.gunluk[i].start = parseInt($scope.gunluk[i].start);
                 $scope.gunluk[i].end = parseInt($scope.gunluk[i].end);
