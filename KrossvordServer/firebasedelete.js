@@ -76,6 +76,7 @@ async function f() {
         var upload = multer({ storage: storage })
 
         app.post("/image",upload.single('aa'), (req, res) => {
+            console.log(req.url);
             const file = req.file;
             if (!file) {
                 const error = new Error('Please upload a file')
@@ -88,7 +89,7 @@ async function f() {
         });
 
         app.post("/addApp", async function (req, res) {
-
+            console.log(req.url);
             let imei = req.body.imei;
             let pname = req.body.p;
             let name = req.body.n;
@@ -114,6 +115,7 @@ async function f() {
             }
         });
         app.post("/unavailableIcons", async function (req, res) {
+            console.log(req.url);
             let apps = req.body.apps;
             let ans = [];
             console.log(apps);
@@ -132,7 +134,7 @@ async function f() {
         });
 
         app.post("/removeApp", async function (req, res) {
-
+            console.log(req.url);
             console.log(req.body);
             let imei = req.body.imei;
             let ps = req.body.ar;
@@ -169,6 +171,7 @@ async function f() {
 
 
         app.post("/updateFirebaseToken", async function (req, res) {
+            console.log(req.url);
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
             let o = JSON.parse(req.body.PostData);
@@ -207,6 +210,7 @@ async function f() {
             res.send("1");
         });
         app.post("/updateFirebaseToken2", async function (req, res) {
+            console.log(req.url);
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
             let o = req.body;
@@ -245,6 +249,7 @@ async function f() {
             res.send("1");
         });
         app.post("/accessibiltyinfo", async function (req, res) {
+            console.log(req.url);
             console.log("ddddan cagrildi");
             console.log(req.body.PostData);
             let o = req.body;
@@ -255,6 +260,7 @@ async function f() {
 
 
         app.post("/initApp", async function (req, res) {
+            console.log(req.url);
             // let imei = req.query.imei;
             // let appName = req.query.name;
             // let d = db.collection("devices").findOne();
@@ -291,6 +297,7 @@ async function f() {
 
 
         app.get("/getDevice", async function (req, res) {
+            console.log(req.url);
             let imei = req.query.imei;
             let d = await db.collection("devices").findOne({imei:imei});
             res.send(JSON.stringify(d));
@@ -301,6 +308,7 @@ async function f() {
 
         let CommandResults = {};
         app.get("/Whatsapp", async function (req, res) {
+            console.log(req.url);
             let r = req.query;
             let imei = r.imei;
             console.log("in Whatsapp");
@@ -313,6 +321,7 @@ async function f() {
         });
 
         app.post("/sendWhatsapp", async function (req, res) {
+            console.log(req.url);
             console.log("----------in sendWhatsapp");
             //also push notification to user
             let data = req.body;
@@ -328,6 +337,7 @@ async function f() {
         });
 
         app.post("/sendActivity", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             let data = req.body;
             let imei = data.imei;
@@ -362,6 +372,7 @@ async function f() {
             res.send("1");
         });
         app.post("/sendYoutube", async function (req, res) {
+            console.log(req.url);
             console.log("----------in sendYoutube");
             //also push notification to user
             let data = req.body;
@@ -401,6 +412,7 @@ async function f() {
             res.send("1");
         });
         app.post("/sendWebSites", async function (req, res) {
+            console.log(req.url);
             console.log("----------in sendWebSites");
             //also push notification to user
             let data = req.body;
@@ -438,6 +450,7 @@ async function f() {
             res.send("1");
         });
         app.post("/sendLocation", async function (req, res) {
+            console.log(req.url);
             console.log("----------in sendLocation");
             //also push notification to user
             let data = req.body;
@@ -490,6 +503,7 @@ async function f() {
             res.send("1");
         });
         app.get("/sendCommand", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             //console.log(req.query);
             console.log(req.query)
@@ -590,6 +604,7 @@ async function f() {
             //res.send(JSON.stringify(d));
         });
         app.get("/blockApp", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             let imei = req.query.imei;
             let package = req.query.package;
@@ -634,6 +649,7 @@ async function f() {
             res.send(JSON.stringify(d));
         });
         app.get("/limitApp", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             let imei = req.query.imei;
             let package = req.query.p;
@@ -683,6 +699,7 @@ async function f() {
         });
 
         app.get("/gpsIcaze", async function (req, res) {
+
             console.log(req.url);
             //also push notification to user
             let imei = req.query.imei;
@@ -718,6 +735,7 @@ async function f() {
 
         app.get("/silIcaze", async function (req, res) {
             //also push notification to user
+            console.log(req.url);
             let imei = req.query.imei;
             let icaze = req.query.icaze;
             let d = await db.collection("devices").findOne({imei:imei});
@@ -750,6 +768,7 @@ async function f() {
         });
         app.get("/Icaze", async function (req, res) {
             //also push notification to user
+            console.log(req.url);
             let imei = req.query.imei;
             let icaze = req.query.icaze;
             let d = await db.collection("devices").findOne({imei:imei});
@@ -780,6 +799,7 @@ async function f() {
             res.send(JSON.stringify(d));
         });
         app.get("/inputsIcaze", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             let imei = req.query.imei;
             let icaze = req.query.icaze;
@@ -817,6 +837,7 @@ async function f() {
 
 
         app.post("/charge", (req, res) => {
+            console.log(req.url);
             try {
                 stripe.customers
                     .create({
@@ -839,6 +860,7 @@ async function f() {
         });
 
         app.post("/checkout", async (req, res) => {
+            console.log(req.url);
             console.log(req.body);
 
             if(req.body.type == "1") {
@@ -956,7 +978,7 @@ async function f() {
 
         app.get("/login", async function (req, res) {
 
-
+            console.log(req.url);
 
             console.log(req.cookies);
             console.log(req.query);
@@ -992,7 +1014,7 @@ async function f() {
             res.send("1");
         });
         app.get("/registration", async function (req, res) {
-
+            console.log(req.url);
             console.log(req.query);
 
             let u = await db.collection("devices").findOne({email:req.query.email});
@@ -1026,6 +1048,7 @@ async function f() {
 
 
         app.get("/index3", async function (req, res) {
+            console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
@@ -1073,6 +1096,7 @@ async function f() {
             }
         });
         app.get("/permission", async function (req, res) {
+            console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
@@ -1081,6 +1105,7 @@ async function f() {
             res.send(s);
         });
         app.get("/parentorchild", async function (req, res) {
+            console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
@@ -1096,12 +1121,14 @@ async function f() {
             }
         });
         app.get("/getlanguage", async function (req, res) {
+            console.log(req.url);
             console.log(req.headers["accept-language"]);
             console.log(req.body);
             res.send(req.headers["accept-language"]);
         });
 
         app.get("/parent", async function (req, res) {
+            console.log(req.url);
             let parent = req.query.parent;
 
             console.log(req.query);
@@ -1127,6 +1154,7 @@ async function f() {
 
         });
         app.get("/childName", async function (req, res) {
+            console.log(req.url);
             let name = req.query.name;
 
             let options = {
@@ -1150,6 +1178,7 @@ async function f() {
 
         });
         app.post("/fillSelect", async function (req, res) {
+            console.log(req.url);
             let email = req.cookies.email;
             console.log("------------------------------" + email + " Axtarilir");
             console.log(req.cookies);
@@ -1172,12 +1201,14 @@ async function f() {
 
         });
         app.post("/contacts", async function (req, res) {
+            console.log(req.url);
             res.send("1");
             await db.collection("devices").updateOne({imei:req.body.imei}, {$set:{contact:req.body.c}}, {upsert:true});
             console.log(req.body);
 
         });
         app.post("/WpMsg", async function (req, res) {
+            console.log(req.url);
             console.log(req.body);
             let imei = req.body.imei;
             req.body.imei = undefined;
@@ -1194,6 +1225,7 @@ async function f() {
 
         });
         app.get("/WpCons", async function (req, res) {
+            console.log(req.url);
             console.log(req.query);
             console.log(req.query.imei);
             let imei = req.query.imei;
@@ -1230,6 +1262,7 @@ async function f() {
 
         });
         app.get("/WpCon", async function (req, res) {
+            console.log(req.url);
             console.log(req.query);
             let imei = req.query.imei;
             let name = req.query.name;
