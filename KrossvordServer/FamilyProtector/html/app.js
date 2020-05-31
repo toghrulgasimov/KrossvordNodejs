@@ -481,19 +481,19 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.loadingdiv = false;
             console.log(d.data.data);
 
-            $scope.inputar = d.data.data;
+            $scope.inputlar = d.data.data;
 
-            for(var i = 0; i < $scope.inputar.length; i++) {
+            for(var i = 0; i < $scope.inputlar.length; i++) {
                 // if( $scope.gunluk[i].package == 'com.android.systemui') {
                 //     continue;
                 // }
 
                 //if(t[$scope.gunluk[i].package] == undefined)continue;
-                $scope.inputar[i].start = parseInt($scope.gunluk[i].start);
-                $scope.inputar[i].duration = ($scope.inputar[i].end == -1 ? (new Date()).getTime() : $scope.inputar[i].end) - $scope.inputar[i].start;
-                $scope.inputar[i].duration = $scope.divide($scope.inputar[i].duration, 1000);
-                if($scope.inputar[i].end == -1) {
-                    $scope.inputar[i].end = 900719925474099;
+                $scope.inputlar[i].start = parseInt($scope.gunluk[i].start);
+                $scope.inputlar[i].duration = ($scope.inputlar[i].end == -1 ? (new Date()).getTime() : $scope.inputlar[i].end) - $scope.inputlar[i].start;
+                //$scope.inputlar[i].duration = $scope.divide($scope.inputlar[i].duration, 1000);
+                if($scope.inputlar[i].end == -1) {
+                    $scope.inputlar[i].end = 900719925474099;
                     //$scope.gunluk[i] = 9007199254740992;
 
                 }
@@ -505,9 +505,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 return b.end-a.end;
             })
             var ans = [];
-            for(var i = 0; i < $scope.inputar.length; i++) {
-                if($scope.inputar[i].l.length == 0) continue;
-                var c = $scope.inputar[i]
+            for(var i = 0; i < $scope.inputlar.length; i++) {
+                if($scope.inputlar[i].l.length == 0) continue;
+                var c = $scope.inputlar[i]
                 ans.push(c);
             }
             $scope.ians = ans;
