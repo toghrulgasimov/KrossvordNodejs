@@ -552,7 +552,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                     ans3.push(ans2[i]);
                 }
             }
-            $scope.ians = ans2;
+            $scope.ians = ans3;
             console.log($scope.ians);
             //$scope.openActivity(1);
 
