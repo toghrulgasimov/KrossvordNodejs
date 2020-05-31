@@ -527,16 +527,16 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var ans2 = [];
             console.log(ans);
-            for(var i = 0; i < ans.length; i++) {
-                var va = ans[i].l[0];
-                ans[i].l.shift();
-                if(ans2.length == 0 || ans2[ans2.length-1].package != va.pn) {
-                    ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]});
-                }else {
-                    ans2[ans2.length-1].l.push(va);
-                }
-                ans2.push(ans[i]);
-            }
+            // for(var i = 0; i < ans.length; i++) {
+            //     var va = ans[i].l[0];
+            //     ans[i].l.shift();
+            //     if(ans2.length == 0 || ans2[ans2.length-1].package != va.pn) {
+            //         ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]});
+            //     }else {
+            //         ans2[ans2.length-1].l.push(va);
+            //     }
+            //     ans2.push(ans[i]);
+            // }
             $scope.ians = ans;
             console.log($scope.ians);
             //$scope.openActivity(1);
