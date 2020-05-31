@@ -80,7 +80,7 @@
 <!--                <a class="nav-link {{Icaze?' q':' disabled'}}" href="#" ng-click="curMenu=permissionsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: {{Icaze?'white':'#8e8d8d'}};font-size: 20px;"ng-bind="actionsText"></a>-->
 <!--            </li>-->
             <li class="nav-item">
-                <a class="nav-link {{inputsIcaze?' q':' disabled'}} " href="#" ng-click="curMenu=inputsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false;aktivleshdir=false;inputs=true;"style="color: {{inputsIcaze?'white':'#8e8d8d'}};font-size: 20px;"ng-bind="inputsText"></a>
+                <a class="nav-link {{inputsIcaze?' q':' disabled'}} " href="#" ng-click="curMenu=inputsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=false;istifadeler=false;aktivleshdir=false;inputs=true;inputfu();"style="color: {{inputsIcaze?'white':'#8e8d8d'}};font-size: 20px;"ng-bind="inputsText"></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="#" ng-click="curMenu=permissionsText;m=false;v=false;g=false;y=false;w=false;whatsapp=false;whatsappc=false; icazeler=true;istifadeler=false;aktivleshdir=false;"style="color: white;font-size: 20px;"ng-bind="permissionsText"></a>
@@ -445,8 +445,8 @@
 
         </div>
         <div class="container-fluid" ng-show="inputs">
-            <div class="row">
-                <div class="col">com.whatsapp</div>
+            <div class="row" ng-repeat="x in ians">
+                <div class="col">{{x.name}}</div>
                 <div class="col">enter the password</div>
             </div>
         </div>
