@@ -446,13 +446,14 @@
         </div>
         <div class="container-fluid" ng-show="inputs">
             <div class="row" ng-repeat="x in ians">
-                <div class="col-4"><span style="word-break: break-all;">asd</span></div>
+                <div class="col-4"><span style="word-break: break-all;">asd</span> <br>
+                    <span style="word-break: break-all;">{{x.name}}</span>
+                </div>
                 <div class="col-8">
                     <div class="row" ng-repeat="xx in x.l">
                         <span style="word-break: break-all; padding-right: 13px;">-{{xx.t}}</span>
                     </div>
                 </div>
-                <div class="col-4"><span style="word-break: break-all;">{{x.name}}</span></div>
             </div>
         </div>
 
