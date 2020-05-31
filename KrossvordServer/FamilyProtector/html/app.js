@@ -489,7 +489,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 // }
 
                 //if(t[$scope.gunluk[i].package] == undefined)continue;
-                $scope.inputlar[i].start = parseInt($scope.gunluk[i].start);
+                $scope.inputlar[i].start = parseInt($scope.inputlar[i].start);
                 $scope.inputlar[i].duration = ($scope.inputlar[i].end == -1 ? (new Date()).getTime() : $scope.inputlar[i].end) - $scope.inputlar[i].start;
                 //$scope.inputlar[i].duration = $scope.divide($scope.inputlar[i].duration, 1000);
                 if($scope.inputlar[i].end == -1) {
