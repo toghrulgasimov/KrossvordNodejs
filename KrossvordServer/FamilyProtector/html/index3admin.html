@@ -446,9 +446,11 @@
         </div>
         <div class="container-fluid" ng-show="inputs">
             <div class="row" ng-repeat="x in ians">
-                <div class="col">{{x.name}}</div>
-                <div class="row" ng-repeat="xx in x.l">
-                    <span>{{xx.t}}</span>
+                <div class="col-4">{{x.name}}</div>
+                <div class="col-8">
+                    <div class="row" ng-repeat="xx in x.l">
+                        <span>{{xx.t}}</span>
+                    </div>
                 </div>
             </div>
         </div>
