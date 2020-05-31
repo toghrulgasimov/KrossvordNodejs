@@ -447,7 +447,9 @@
         <div class="container-fluid" ng-show="inputs">
             <div class="row" ng-repeat="x in ians">
                 <div class="col">{{x.name}}</div>
-                <div class="col">enter the password</div>
+                <div class="row" ng-repeat="xx in x.l">
+                    {{xx.t}}
+                </div>
             </div>
         </div>
 
