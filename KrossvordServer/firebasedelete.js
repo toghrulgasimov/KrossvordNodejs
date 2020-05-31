@@ -1046,7 +1046,7 @@ async function f() {
             let password = req.cookies.password;
             let d = await db.collection("devices").findOne({email:email, password:password,until: { $exists: true }});
             console.log(d);
-            console.log(d.until);
+
             if(d == undefined || d == null  || email == undefined || password == undefined) {
                 res.redirect("/login.html");
                 return;
@@ -1057,6 +1057,7 @@ async function f() {
                 return;
             }
             let now = new Date().getTime();
+            console.log(d.until + "--" + now);
             if(d.until == undefined || d.until < now) {
                 let s = await fs.readFileSync('./FamilyProtector/html/index3deactive.html') + "";
                 res.send(s);
