@@ -442,7 +442,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var ans = [];
             for(var i = 0; i < $scope.gunluk.length; i++) {
-                if(m == 1 && $scope.gunluk[i].package == 'com.android.systemui') {
+                if(m == 1 || m == undefined && $scope.gunluk[i].package == 'com.android.systemui') {
                     continue;
                 }
 
@@ -646,8 +646,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         var activity = $scope.d.activity.data;
                         var du = {};
                         for(var i = 0; i < activity.length; i++) {
-                            if(activity[i].package == 'com.android.systemui')
+                            if(activity[i].package == 'com.android.systemui') {
                                 continue;
+                            }
                             var start = activity[i].start;
                             var end = activity[i].end;
                             if(end == -1)
