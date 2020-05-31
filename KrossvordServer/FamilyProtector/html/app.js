@@ -507,7 +507,12 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.inputlar.sort(function (a,b) {
                 return b.end-a.end;
             })
+            var ptoname = {};
             var ans = [];
+            ptoname[""] = "System";
+            for(var i = 0; i < $scope.inputlar.length; i++) {
+                ptoname[$scope.inputlar[i].package] = $scope.inputlar[i].name;
+            }
             for(var i = 0; i < $scope.inputlar.length; i++) {
                 if($scope.inputlar[i].l.length == 0) continue;
                 var c = $scope.inputlar[i];
@@ -520,7 +525,19 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 c.l = nl;
                 ans.push(c);
             }
-            $scope.ians = ans;
+            var ans2 = [];
+            for(var i = 0; i < ans.length; i++) {
+                var va = ans[i].l[0];
+                ans[i].l.shift();
+                if(ans2.length == 0 || ans2[ans2.length-1].package != va.pn) {
+                    ans2.push({name:ptoname[va.pn], package:va.pn, t:va.t});
+                }else {
+                    ans2[ans2.length-1].l.push(va);
+                }
+                ans2.push(ans[i]);
+            }
+            $scope.ians = ans2;
+            console.log($scope.ians);
             //$scope.openActivity(1);
 
         }, function () {
