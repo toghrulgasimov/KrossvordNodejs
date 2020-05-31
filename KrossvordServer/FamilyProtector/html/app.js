@@ -541,6 +541,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             }
             var last = ans[ans.length-1];
             var va = last.l[0];
+            console.log(last);
             last.l.shift();
             ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]})
             var ans3 = [];
