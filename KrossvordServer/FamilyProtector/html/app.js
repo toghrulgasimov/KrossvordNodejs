@@ -518,7 +518,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 var c = $scope.inputlar[i];
                 var nl = [];
                 for(var j = 0; j < c.l.length; j++) {
-                    if(c.l[j].t != "") {
+                    if(c.l[j].t != "" && !c.l[j].t != "QWEREQWERWQ") {
                         nl.push(c.l[j]);
                     }
                 }
