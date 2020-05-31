@@ -683,6 +683,7 @@ async function f() {
         });
 
         app.get("/gpsIcaze", async function (req, res) {
+            console.log(req.url);
             //also push notification to user
             let imei = req.query.imei;
             let icaze = req.query.icaze;
@@ -1075,6 +1076,7 @@ async function f() {
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
             console.log(req.cookies);
+            console.log(req.query);
             let s = await fs.readFileSync('./FamilyProtector/html/permission.html') + "";
             res.send(s);
         });
@@ -1094,7 +1096,8 @@ async function f() {
             }
         });
         app.get("/getlanguage", async function (req, res) {
-            console.log(req.headers["accept-language"])
+            console.log(req.headers["accept-language"]);
+            console.log(req.body);
             res.send(req.headers["accept-language"]);
         });
 
@@ -1150,6 +1153,7 @@ async function f() {
             let email = req.cookies.email;
             console.log("------------------------------" + email + " Axtarilir");
             console.log(req.cookies);
+            console.log(req.body);
             let d;
             if(email == "toghrulgasimov@gmail.com") {
                 d = await db.collection("devices").find({imei: { $exists: true }}).project({imei:1, name:1});
