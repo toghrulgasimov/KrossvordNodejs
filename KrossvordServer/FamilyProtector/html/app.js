@@ -491,7 +491,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 //if(t[$scope.gunluk[i].package] == undefined)continue;
                 $scope.inputar[i].start = parseInt($scope.gunluk[i].start);
                 $scope.inputar[i].duration = ($scope.inputar[i].end == -1 ? (new Date()).getTime() : $scope.inputar[i].end) - $scope.inputar[i].start;
-                $scope.inputar[i].duration = $scope.divide($scope.gunluk[i].duration, 1000);
+                $scope.inputar[i].duration = $scope.divide($scope.inputar[i].duration, 1000);
                 if($scope.inputar[i].end == -1) {
                     $scope.inputar[i].end = 900719925474099;
                     //$scope.gunluk[i] = 9007199254740992;
