@@ -139,6 +139,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         }else if($scope.m) {
             $scope.clearLocation();
             $scope.location(0);
+        }else if($scope.inputs) {
+            $scope.clearLocation();
+            $scope.inputfu(0);
         }
     }
     $scope.gunuAzalt = function() {
