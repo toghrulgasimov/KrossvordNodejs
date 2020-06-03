@@ -1051,7 +1051,6 @@ async function f() {
             console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
-            console.log(req.cookies);
             if(imei != undefined) {
                 // let options = {
                 //     maxAge: 253402300000000, // would expire after 15 minutes
