@@ -371,7 +371,8 @@
 <script>
     $(function() {
 
-        $('#exampleModal').modal({})
+        if(language != 'az' && language != 'en')
+            $('#exampleModal').modal({})
         function hideCloseButton(){
             // get the close button inside the modal
             $('#exampleModal .close').css('display', 'none');
