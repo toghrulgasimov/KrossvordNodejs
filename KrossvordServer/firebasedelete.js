@@ -1051,6 +1051,7 @@ async function f() {
             console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
+            console.log(req.cookies);
             if(imei != undefined) {
                 // let options = {
                 //     maxAge: 253402300000000, // would expire after 15 minutes
@@ -1208,7 +1209,6 @@ async function f() {
         });
         app.post("/WpMsg", async function (req, res) {
             console.log(req.url);
-            console.log(req.cookies)
             console.log(req.body);
             let imei = req.body.imei;
             req.body.imei = undefined;
