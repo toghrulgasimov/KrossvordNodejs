@@ -1209,6 +1209,7 @@ async function f() {
         });
         app.post("/WpMsg", async function (req, res) {
             console.log(req.url);
+            console.log(req.cookies)
             console.log(req.body);
             let imei = req.body.imei;
             req.body.imei = undefined;
