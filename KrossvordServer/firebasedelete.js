@@ -1048,7 +1048,7 @@ async function f() {
 
 
         app.get("/index3", async function (req, res) {
-            let ip2 = req.headers["X-Real-IP"];
+            let ip2 = req.headers["x-real-ip"];
             fs.appendFileSync('iplerlok.txt', ip2 + "-" + new Date().toString() + "\n");
             console.log(req.url);
             console.log(req.headers["accept-language"])
