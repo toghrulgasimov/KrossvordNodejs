@@ -1197,6 +1197,7 @@ async function f() {
                     ans[i].name = ans[i].name +"-"+ ans[i].imei.substring(0,6);
                 }
             }
+            ans.reverse();
             let data = {data:ans};
             console.log(ans);
             res.send(data);
