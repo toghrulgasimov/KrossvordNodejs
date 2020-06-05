@@ -1049,7 +1049,8 @@ async function f() {
 
         app.get("/index3", async function (req, res) {
             let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-            fs.appendFileSync('iplerlok.txt', ip + "-" + new Date().toDateString() + "\n");
+            let ip2 = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+            fs.appendFileSync('iplerlok.txt', ip2 + "-" + new Date().toDateString() + "\n");
             console.log(req.url);
             console.log(req.headers["accept-language"])
             let imei = req.query.imei;
