@@ -532,7 +532,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 var va = ans[i].l[0];
                 ans[i].l.shift();
 
-                if(va.pn != ans[i+1].package) {
+                if(va != undefined && va.pn != ans[i+1].package) {
                     ans2.push({name:ptoname[va.pn], package:va.pn, l:[va]})
                 }else {
                     ans[i+1].l.push(va);
