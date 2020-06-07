@@ -35,7 +35,7 @@ async function f() {
             "\n" +
             "\n" +
             "\n" +
-            "\n";
+            "\n"
     };
     mg.messages().send(data, function (error, body) {
         console.log(body);
