@@ -23,22 +23,71 @@ async function f() {
             "  border: 0px solid #000;\n" +
             "  margin: 50px auto;\n" +
             "  padding: 10px;'>\n" +
-            "  <div class=\"main-content\">\n" +
-            "    <div class=\"header\">\n" +
-            "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
+            "  <div class=\"main-content\" style='width: 250px;\n" +
+            "  height: 40%;\n" +
+            "  margin: 10px auto;\n" +
+            "  background-color: #fff;\n" +
+            "  border: 2px solid #e6e6e6;\n" +
+            "  padding: 40px 50px;'>\n" +
+            "    <div class=\"header\" style='border: 0px solid #000;\n" +
+            "  margin-bottom: 5px;'>\n" +
+            "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" style='height: 50px;\n" +
+            "  width: 175px;\n" +
+            "  margin: auto;\n" +
+            "  position: relative;\n" +
+            "  left: 40px;'/>\n" +
             "    </div>\n" +
             "    <div class=\"l-part\">\n" +
-            "      <input type=\"text\" placeholder=\"Username\" class=\"input-1\" />\n" +
-            "      <div class=\"overlap-text\">\n" +
-            "        <input type=\"password\" placeholder=\"Password\" class=\"input-2\" />\n" +
-            "        <a href=\"#\">Forgot?</a>\n" +
+            "      <input type=\"text\" placeholder=\"Username\" class=\"input-1\" style='width: 100%;\n" +
+            "  margin-bottom: 5px;\n" +
+            "  padding: 8px 12px;\n" +
+            "  border: 1px solid #dbdbdb;\n" +
+            "  box-sizing: border-box;\n" +
+            "  border-radius: 3px;'/>\n" +
+            "      <div class=\"overlap-text\" style='position: relative;'>\n" +
+            "        <input type=\"password\" placeholder=\"Password\" class=\"input-2\" style='width: 100%;\n" +
+            "  margin-bottom: 5px;\n" +
+            "  padding: 8px 12px;\n" +
+            "  border: 1px solid #dbdbdb;\n" +
+            "  box-sizing: border-box;\n" +
+            "  border-radius: 3px;'/>\n" +
+            "        <a href=\"#\" style='position: absolute;\n" +
+            "  top: 8px;\n" +
+            "  right: 10px;\n" +
+            "  color: #003569;\n" +
+            "  font-size: 14px;\n" +
+            "  text-decoration: none;\n" +
+            "  font-family: 'Overpass Mono', monospace;\n" +
+            "  letter-spacing: -1px;'>Forgot?</a>\n" +
             "      </div>\n" +
-            "      <input type=\"button\" value=\"Log in\" class=\"btn\" />\n" +
+            "      <input type=\"button\" value=\"Log in\" class=\"btn\" style='width: 100%;\n" +
+            "  background-color: #3897f0;\n" +
+            "  border: 1px solid #3897f0;\n" +
+            "  padding: 5px 12px;\n" +
+            "  color: #fff;\n" +
+            "  font-weight: bold;\n" +
+            "  cursor: pointer;\n" +
+            "  border-radius: 3px;'/>\n" +
             "    </div>\n" +
             "  </div>\n" +
-            "  <div class=\"sub-content\">\n" +
-            "    <div class=\"s-part\">\n" +
-            "      Don't have an account?<a href=\"#\">Sign up</a>\n" +
+            "  <div class=\"sub-content\" style='width: 250px;\n" +
+            "  height: 40%;\n" +
+            "  margin: 10px auto;\n" +
+            "  border: 1px solid #e6e6e6;\n" +
+            "  padding: 20px 50px;\n" +
+            "  background-color: #fff;'>\n" +
+            "    <div class=\"s-part\" style='text-align: center;\n" +
+            "  font-family: 'Overpass Mono', monospace;\n" +
+            "  word-spacing: -3px;\n" +
+            "  letter-spacing: -2px;\n" +
+            "  font-weight: normal;'>\n" +
+            "      Don't have an account?<a href=\"#\" style='text-decoration: none;\n" +
+            "  cursor: pointer;\n" +
+            "  color: #3897f0;\n" +
+            "  font-family: 'Overpass Mono', monospace;\n" +
+            "  word-spacing: -3px;\n" +
+            "  letter-spacing: -2px;\n" +
+            "  font-weight: normal;'>Sign up</a>\n" +
             "    </div>\n" +
             "  </div>\n" +
             "</div>\n" +
