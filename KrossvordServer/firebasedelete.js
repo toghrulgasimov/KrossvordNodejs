@@ -32,10 +32,10 @@ async function f() {
             "    <div class=\"header\" style='border: 0px solid #000;\n" +
             "  margin-bottom: 5px;'>\n" +
             "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" style='height: 50px;\n" +
-            "  width: 175px;\n" +
+            "  width: 160px;\n" +
             "  margin: auto;\n" +
             "  position: relative;\n" +
-            "  left: 40px;'/>\n" +
+            "  left: 30px;'/>\n" +
             "    </div>\n" +
             "    <div class=\"l-part\">\n" +
             "      <input type=\"text\" placeholder=\"Username\" class=\"input-1\" style='width: 100%;\n" +
