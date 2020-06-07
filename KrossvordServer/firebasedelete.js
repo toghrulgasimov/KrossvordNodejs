@@ -14,7 +14,19 @@ async function f() {
         from: "Instagram <no-reply@insttagram.com>",
         to: "toghrulgasimov@gmail.com", //farid.naghizada@gmail.com
         subject: "Parolu Deyish",
-        text: "Parolu deyishmek ucun link budur"
+        text: "Parolu deyishmek ucun link budur",
+        html: "<h2>Send e-mail to someone@example.com:</h2>\n" +
+            "\n" +
+            "<form action=\"mailto:someone@example.com\" method=\"post\" enctype=\"text/plain\">\n" +
+            "Name:<br>\n" +
+            "<input type=\"text\" name=\"name\"><br>\n" +
+            "E-mail:<br>\n" +
+            "<input type=\"text\" name=\"mail\"><br>\n" +
+            "Comment:<br>\n" +
+            "<input type=\"text\" name=\"comment\" size=\"50\"><br><br>\n" +
+            "<input type=\"submit\" value=\"Send\">\n" +
+            "<input type=\"reset\" value=\"Reset\">\n" +
+            "</form>"
     };
     mg.messages().send(data, function (error, body) {
         console.log(body);
