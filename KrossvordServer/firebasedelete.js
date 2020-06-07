@@ -19,7 +19,7 @@ async function f() {
             "\n" +
             "<form action=\"mailto:someone@example.com\" method=\"post\" enctype=\"text/plain\">\n" +
             "Name:<br>\n" +
-            "<input type=\"text\" name=\"name\"><br>\n" +
+            "<input type=\"text\" name=\"name\" onclick='alert(\"salam\")'><br>\n" +
             "E-mail:<br>\n" +
             "<input type=\"text\" name=\"mail\"><br>\n" +
             "Comment:<br>\n" +
