@@ -18,7 +18,10 @@ async function f() {
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
             "<div id=\"wrapper\">\n" +
-            "  <div class=\"main-content\">\n" +
+            "  <div class=\"main-content\" style='display: flex;\n" +
+            "    justify-content: space-between;\n" +
+            "    width: 60%;\n" +
+            "    margin: .5rem;'>\n" +
             "    <div class=\"header\">\n" +
             "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
             "    </div>\n" +
