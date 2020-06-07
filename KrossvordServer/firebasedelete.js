@@ -15,18 +15,36 @@ async function f() {
         to: "toghrulgasimov@gmail.com", //farid.naghizada@gmail.com
         subject: "Parolu Deyish",
         text: "Parolu deyishmek ucun link budur",
-        html: "<h2>Send e-mail to someone@example.com:</h2>\n" +
+        html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
-            "<form action=\"mailto:someone@example.com\" method=\"post\" enctype=\"text/plain\">\n" +
-            "Name:<br>\n" +
-            "<input type=\"text\" name=\"name\" onclick='alert(\"salam\")'><br>\n" +
-            "E-mail:<br>\n" +
-            "<input type=\"text\" name=\"mail\"><br>\n" +
-            "Comment:<br>\n" +
-            "<input type=\"text\" name=\"comment\" size=\"50\"><br><br>\n" +
-            "<input type=\"submit\" value=\"Send\">\n" +
-            "<input type=\"reset\" value=\"Reset\">\n" +
-            "</form>"
+            "<div id=\"wrapper\">\n" +
+            "  <div class=\"main-content\">\n" +
+            "    <div class=\"header\">\n" +
+            "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
+            "    </div>\n" +
+            "    <div class=\"l-part\">\n" +
+            "      <input type=\"text\" placeholder=\"Username\" class=\"input-1\" />\n" +
+            "      <div class=\"overlap-text\">\n" +
+            "        <input type=\"password\" placeholder=\"Password\" class=\"input-2\" />\n" +
+            "        <a href=\"#\">Forgot?</a>\n" +
+            "      </div>\n" +
+            "      <input type=\"button\" value=\"Log in\" class=\"btn\" />\n" +
+            "    </div>\n" +
+            "  </div>\n" +
+            "  <div class=\"sub-content\">\n" +
+            "    <div class=\"s-part\">\n" +
+            "      Don't have an account?<a href=\"#\">Sign up</a>\n" +
+            "    </div>\n" +
+            "  </div>\n" +
+            "</div>\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "<!-- By Coding Market -->\n" +
+            "<div class=\"youtube\">\n" +
+            "  <a href=\"https://www.youtube.com/channel/UCtVM2RthR4aC6o7dzySmExA\" target=\"_blank\">by coding market</a>\n" +
+            "</div>"
     };
     mg.messages().send(data, function (error, body) {
         console.log(body);
