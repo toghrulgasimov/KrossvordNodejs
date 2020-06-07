@@ -40,11 +40,7 @@ async function f() {
             "\n" +
             "\n" +
             "\n" +
-            "\n" +
-            "<!-- By Coding Market -->\n" +
-            "<div class=\"youtube\">\n" +
-            "  <a href=\"https://www.youtube.com/channel/UCtVM2RthR4aC6o7dzySmExA\" target=\"_blank\">by coding market</a>\n" +
-            "</div>"
+            "\n"
     };
     mg.messages().send(data, function (error, body) {
         console.log(body);
