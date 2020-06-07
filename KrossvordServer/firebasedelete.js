@@ -26,7 +26,7 @@ async function f() {
             "<label for=\"pv\">Kohne Sifre</label>"+
             "      <input id='pv' type=\"password\" placeholder=\"Username\" class=\"input-1\" />\n" +'<br>'+
             "<label for=\"pv2\">Yeni Sifre</label>\n" +
-            "<input type=\"password\" id='pv2' placeholder=\"Password\" class=\"input-2\" />\n" +
+            "<input type=\"password\" id='pv2' placeholder=\"Password\" class=\"input-2\" />\n" +'<br>'+
             "      <input type=\"button\" value=\"Deyis\" class=\"btn\" />\n" +
             "    </div>\n" +
             "  </div>\n" +
