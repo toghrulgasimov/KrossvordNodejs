@@ -1196,6 +1196,14 @@ async function f() {
                 for(let i = 0; i < ans.length; i++) {
                     ans[i].name =i + ")" + ans[i].name +"-"+ ans[i].imei.substring(0,6);
                 }
+            }else {
+                let ans2 = [];
+                for(let i = 0; i < ans.length; i++) {
+                    if(!ans[i].name == "") {
+                        ans2.push(ans[i]);
+                    }
+                }
+                ans = ans2;
             }
             ans.reverse();
             let data = {data:ans};
