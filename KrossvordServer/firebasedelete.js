@@ -17,7 +17,12 @@ async function f() {
         text: "Parolu deyishmek ucun link budur",
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
-            "<div id=\"wrapper\">\n" +
+            "<div id=\"wrapper\" style='width: 500px;\n" +
+            "  height: 50%;\n" +
+            "  overflow: hidden;\n" +
+            "  border: 0px solid #000;\n" +
+            "  margin: 50px auto;\n" +
+            "  padding: 10px;'>\n" +
             "  <div class=\"main-content\">\n" +
             "    <div class=\"header\">\n" +
             "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
