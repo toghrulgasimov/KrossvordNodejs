@@ -28,16 +28,11 @@ async function f() {
             "      <div class=\"overlap-text\">\n" +
             "<label for=\"pv2\">Yeni Sifre</label>\n" +
             "<input type=\"password\" id='pv2' placeholder=\"Password\" class=\"input-2\" />\n" +
-            "        <a href=\"#\">Forgot?</a>\n" +
             "      </div>\n" +
-            "      <input type=\"button\" value=\"Log in\" class=\"btn\" />\n" +
+            "      <input type=\"button\" value=\"Deyis\" class=\"btn\" />\n" +
             "    </div>\n" +
             "  </div>\n" +
-            "  <div class=\"sub-content\">\n" +
-            "    <div class=\"s-part\">\n" +
-            "      Don't have an account?<a href=\"#\">Sign up</a>\n" +
-            "    </div>\n" +
-            "  </div>\n" +
+
             "</div>\n" +
             "\n" +
             "\n" +
