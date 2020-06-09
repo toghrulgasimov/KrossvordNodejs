@@ -553,7 +553,7 @@ async function f() {
 
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
-                        if((d.email+"") == 'sexybothways314@gmail.com' && cmd =='sendActivity') {
+                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
                             res.send("1");
                             return;
                         }
@@ -570,7 +570,7 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
-                        if((d.email+"") == 'sexybothways314@gmail.com' && cmd =='sendActivity') {
+                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
                             res.send("1");
                             return;
                         }
