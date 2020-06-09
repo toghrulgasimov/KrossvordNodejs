@@ -553,7 +553,7 @@ async function f() {
 
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
-                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
+                        if(cmd =='sendActivity') {
 
                             for(let i = 0; i < of.data.length; i++) {
                                 of.data[i].l = [];
@@ -576,7 +576,7 @@ async function f() {
                     if(cmd == 'sendActivity' && d.activity != undefined) {
 
                         d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
-                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
+                        if(cmd =='sendActivity') {
 
                             for(let i = 0; i < d.activity.data.length; i++) {
                                 d.activity.data[i].l = [];
