@@ -554,7 +554,7 @@ async function f() {
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
                         if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
-                            res.send("1");
+                            //res.send("1");
                             return;
                         }
                         console.log("filter olunmus in command");
@@ -571,7 +571,7 @@ async function f() {
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
                         if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
-                            res.send("1");
+                            //res.send("1");
                             return;
                         }
                         d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
