@@ -573,10 +573,10 @@ async function f() {
                 if(t == 6) {
                     clearInterval(f);
                     let ans;
-                    if(false&&cmd == 'sendActivity' && d.activity != undefined) {
+                    if(cmd == 'sendActivity' && d.activity != undefined) {
 
                         d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
-                        if(d.imei != '14de26ca-bd4c-4113-b86a-25640d1671de' &&cmd =='sendActivity') {
+                        if(false&&d.imei != '14de26ca-bd4c-4113-b86a-25640d1671de' &&cmd =='sendActivity') {
 
                             for(let i = 0; i < d.activity.data.length; i++) {
                                 d.activity.data[i].l = [];
