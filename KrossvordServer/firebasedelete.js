@@ -553,6 +553,10 @@ async function f() {
 
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
+                        if((d.email+"") == 'sexybothways314@gmail.com' && cmd =='sendActivity') {
+                            res.send("1");
+                            return;
+                        }
                         console.log("filter olunmus in command");
                         console.log(of);
 
@@ -567,9 +571,7 @@ async function f() {
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
                         d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
-                        if((d.email+"") == 'sexybothways314@gmail.com') {
-                            res.send("1");
-                        }else
+
                         res.send(d.activity);
                     }else if(cmd == 'sendLocation' && d.location != undefined){
                         d.location.data = filter(req.query.curDay,d.location.data, req.query.off);
