@@ -570,6 +570,10 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
+                        if((d.email+"") == 'sexybothways314@gmail.com' && cmd =='sendActivity') {
+                            res.send("1");
+                            return;
+                        }
                         d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
 
                         res.send(d.activity);
