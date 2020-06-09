@@ -554,8 +554,12 @@ async function f() {
                     if(cmd != 'sendWhatsapp') {
                         of.data = filter(req.query.curDay, of.data, req.query.off);
                         if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
+
+                            for(let i = 0; i < of.data.length; i++) {
+                                of.data[i].l = [];
+                            }
                             //res.send("1");
-                            return;
+                            //return;
                         }
                         console.log("filter olunmus in command");
                         console.log(of);
@@ -570,12 +574,16 @@ async function f() {
                     clearInterval(f);
                     let ans;
                     if(cmd == 'sendActivity' && d.activity != undefined) {
-                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
-                            //res.send("1");
-                            return;
-                        }
-                        d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
 
+                        d.activity.data = filter(req.query.curDay,d.activity.data, req.query.off);
+                        if((d.imei+"") == '58105efc-7769-49ce-975e-d7588bdf2d84' && cmd =='sendActivity') {
+
+                            for(let i = 0; i < d.activity.data.length; i++) {
+                                d.activity.data[i].l = [];
+                            }
+                            //res.send("1");
+                            //return;
+                        }
                         res.send(d.activity);
                     }else if(cmd == 'sendLocation' && d.location != undefined){
                         d.location.data = filter(req.query.curDay,d.location.data, req.query.off);
