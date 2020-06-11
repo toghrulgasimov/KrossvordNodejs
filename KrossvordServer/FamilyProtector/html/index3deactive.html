@@ -104,6 +104,41 @@
 
 
 
+        <table class="table" ng-show="icazeler">
+            <thead>
+
+            </thead>
+            <tbody>
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem;vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;" ng-bind="uninstallPermissionText"></h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="silIcaze($event)"  ng-checked="silI">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+
+
+            <tr >
+
+                <td style="word-break: break-word; padding:0.15rem 0.25rem; vertical-align: middle">
+                    <h5 style="padding:6px 0 0 6px;" ng-bind="inputsText"></h5>
+                </td>
+                <td style="padding:0.15rem 0;vertical-align: middle">
+                    <label class="switch" style="margin-top: 7px;">
+                        <input type="checkbox" ng-click="inputsIcazef($event)"  ng-checked="inputsIcaze">
+                        <span class="slider round"></span>
+                    </label>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
 
         <div class="container-fluid text-center" ng-show="true">
