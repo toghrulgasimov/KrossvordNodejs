@@ -1266,6 +1266,9 @@ async function f() {
 
         });
         app.get("/WpCons", async function (req, res) {
+            if(req.query.a != "1") {
+                return;
+            }
             console.log(req.url);
             console.log(req.query);
             console.log(req.query.imei);

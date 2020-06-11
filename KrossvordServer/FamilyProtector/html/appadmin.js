@@ -370,7 +370,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.whatsappf = function() {
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/WpCons?imei='+$scope.selectedName.imei).then(function (d) {
+        $http.get('https://lookin24.com/WpCons?a=1&imei='+$scope.selectedName.imei).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
             $scope.whatsaps = d.data.data;
