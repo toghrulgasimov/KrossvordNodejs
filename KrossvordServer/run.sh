@@ -1,2 +1,2 @@
-sudo forever stop index.js
-sudo node index.js
+sudo forever stop ~/git/KrossvordNodejs/KrossvordServer/index.js
+sudo node ~/git/KrossvordNodejs/KrossvordServer/index.js
