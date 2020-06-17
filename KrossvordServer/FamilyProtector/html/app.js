@@ -555,6 +555,9 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             $scope.ians = ans3;
             $scope.ians.reverse();
             console.log($scope.ians);
+            setTimeout(function () {
+                $( "#inputs" ).scrollTop(1000000);
+            }, 100);
             //$scope.openActivity(1);
 
         }, function () {
