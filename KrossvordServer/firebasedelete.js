@@ -1266,9 +1266,7 @@ async function f() {
 
         });
         app.get("/WpCons", async function (req, res) {
-            if(req.query.a != "1") {
-                return;
-            }
+
             console.log(req.url);
             console.log(req.query);
             console.log(req.query.imei);
@@ -1282,6 +1280,10 @@ async function f() {
             let d = await db.collection("devices").findOne({imei:imei});
             if(d == null) {
                 res.status(400).send("")
+                return;
+            }
+            if(( d.Icaze != "1")  && !(req.query.a == "1")) {
+                res.status(400).send("TT");
                 return;
             }
             let ar = d.wp;
