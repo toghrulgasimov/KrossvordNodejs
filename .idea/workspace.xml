@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/ca_bundle.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/certificate.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/private.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/appadmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html/appadmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrossvordServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/pki-validation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/KrossvordServer/ssh" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,19 +44,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
-      <recent name="$PROJECT_DIR$/KrossvordServer" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/ssh" />
-      <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/KrossvordServer/ssh" />
       <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/pki-validation" />
       <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
       <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
       <recent name="$PROJECT_DIR$/KrossvordServer/icons" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/KrossvordServer/ssh" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/pki-validation" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/FamilyProtector/html" />
+      <recent name="$PROJECT_DIR$/KrossvordServer" />
+      <recent name="$PROJECT_DIR$/KrossvordServer/googleadmob/.well-known/acme-challenge" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -215,6 +217,7 @@
       <workItem from="1591910845291" duration="1302000" />
       <workItem from="1592081997908" duration="1153000" />
       <workItem from="1592416584703" duration="1747000" />
+      <workItem from="1598219782205" duration="540000" />
     </task>
     <servers />
   </component>
