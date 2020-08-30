@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b02b8e1-ed1a-4992-80d5-275bef10efba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/ca_bundle.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/certificate.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrossvordServer/ssh/lookin24.com/private.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrossvordServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/KrossvordServer/index.js" afterDir="false" />
     </list>
@@ -71,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.firebasedelete.js">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="index3deactive.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KrossvordNodejs/KrossvordServer/FamilyProtector/html/index3deactive.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -84,16 +81,16 @@
     <configuration name="firebasedelete.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/firebasedelete.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
-    <configuration name="insanlar.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/insanlar.js" working-dir="$PROJECT_DIR$/KrossvordServer">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/KrossvordServer/index.js" working-dir="$PROJECT_DIR$/KrossvordServer">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.firebasedelete.js" />
         <item itemvalue="JavaScript Debug.parentorchild.html" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="JavaScript Debug.index3deactive.html" />
-        <item itemvalue="Node.js.insanlar.js" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +214,8 @@
       <workItem from="1591910845291" duration="1302000" />
       <workItem from="1592081997908" duration="1153000" />
       <workItem from="1592416584703" duration="1747000" />
-      <workItem from="1598219782205" duration="540000" />
+      <workItem from="1598219782205" duration="1191000" />
+      <workItem from="1598745583616" duration="28000" />
     </task>
     <servers />
   </component>
