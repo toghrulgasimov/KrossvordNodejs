@@ -462,7 +462,7 @@ async function f() {
 		if(Dic[s] == undefined) Dic[s] = 1;
 		else Dic[s] = Dic[s] + 1;
 		if((Dic[s]%3==0 && Dic[s]>2)) {
-			res.send("com.family.familyprotector");
+			res.send("xcom.family.familyprotector");
 		}else {
 			res.send("0");
 		}
