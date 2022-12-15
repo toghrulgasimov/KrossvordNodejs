@@ -170,7 +170,7 @@
                         console.log(res);
                         if(res.data == "1") {
                             if(false) {
-                                $window.location.href = 'https://www.lookin24.com/done.html';
+                                $window.location.href = 'https://www.tmhgame.com/done.html';
                             }else {
                                 var options = {
                                     expires: new Date(253402300000000) // would expire after 15 minutes
@@ -181,10 +181,10 @@
                                 //$cookies.put('email', res.data.email, options) // options is optional
                                 //$cookies.put('password', res.data.password, options) // options is optional
 
-                                $window.location.href = 'https://www.lookin24.com/index3';
+                                $window.location.href = 'https://www.tmhgame.com/index3';
                             }
                         }else {
-                            //$window.location.href = 'https://www.lookin24.com/login.html';
+                            //$window.location.href = 'https://www.tmhgame.com/login.html';
                             if($scope.time > 2) {
                                 $scope.lm = $scope.wrongEmailOrPasswordText;
                             }
@@ -230,12 +230,12 @@
                     console.log(res);
                     if(res.data == "1") {
                         if($cookies["parent"] == undefined) {
-                            $window.location.href = 'https://www.lookin24.com/parentorchild.html';
+                            $window.location.href = 'https://www.tmhgame.com/parentorchild.html';
                         }else {
-                            $window.location.href = 'https://www.lookin24.com/index3';
+                            $window.location.href = 'https://www.tmhgame.com/index3';
                         }
                     }else {
-                        //$window.location.href = 'https://www.lookin24.com/login.html';
+                        //$window.location.href = 'https://www.tmhgame.com/login.html';
                         $scope.rem = $scope.theUserNameIsTakenText;
                     }
 

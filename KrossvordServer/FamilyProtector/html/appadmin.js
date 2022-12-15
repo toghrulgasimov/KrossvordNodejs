@@ -101,7 +101,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             if(m.limit.h != undefined) h = parseInt(m.limit.h);
             if(m.limit.m != undefined) mi = parseInt(m.limit.m);
             m.l = true;
-            $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60*60 + mi*60)).then(function (d) {
+            $http.get('https://tmhgame.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=a' +'&l='+(h * 60*60 + mi*60)).then(function (d) {
                 console.log(d.data);
                 $scope.loadingdiv = false;
             }, function () {
@@ -110,7 +110,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         }
     }
     $scope.removeLimit = function(m) {
-        $http.get('https://lookin24.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=r').then(function (d) {
+        $http.get('https://tmhgame.com/limitApp?imei='+$scope.selectedName.imei+'&p='+m.package+'&t=r').then(function (d) {
             console.log(d.data);
             $scope.loadingdiv = false;
 
@@ -195,7 +195,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
             var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
             document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
-        $window.location.href = 'https://www.lookin24.com/login.html';
+        $window.location.href = 'https://www.tmhgame.com/login.html';
     }
 
 
@@ -205,7 +205,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         console.log("block status gonderildi " + block)
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/blockApp?imei='+$scope.selectedName.imei+'&package='+b+'&block='+block).then(function (d) {
+        $http.get('https://tmhgame.com/blockApp?imei='+$scope.selectedName.imei+'&package='+b+'&block='+block).then(function (d) {
             console.log(d.data.apps + " " + $scope.imei);
             $scope.loadingdiv = false;
 
@@ -231,7 +231,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.loadingdiv = true;
         console.log("Location Called");
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://tmhgame.com/sendCommand?imei='+$scope.selectedName.imei+'&sendLocation=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             $scope.clearLocation();
             $scope.loadingdiv = false;
@@ -290,7 +290,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                         // },
                         draggable:true,
                         icon: {
-                            url: 'https://lookin24.com/nomre/number_'+(i+1)+'.png',
+                            url: 'https://tmhgame.com/nomre/number_'+(i+1)+'.png',
                             origin: new google.maps.Point(0, 0),
                             labelOrigin: new google.maps.Point(20, -10)
                         },
@@ -349,7 +349,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.Web = function(m) {
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://tmhgame.com/sendCommand?imei='+$scope.selectedName.imei+'&sendWebsites=1&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             $scope.loadingdiv = false;
             if(d.data.data == undefined) {
@@ -370,7 +370,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.whatsappf = function() {
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/WpCons?a=1&imei='+$scope.selectedName.imei).then(function (d) {
+        $http.get('https://tmhgame.com/WpCons?a=1&imei='+$scope.selectedName.imei).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
             $scope.whatsaps = d.data.data;
@@ -397,7 +397,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.m = false;
         $scope.g = false;
         $scope.y = false;
-        $http.get('https://lookin24.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
+        $http.get('https://tmhgame.com/WpCon?imei='+$scope.selectedName.imei + '&name='+m.name + '&num='+m.number).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d);
 
@@ -427,7 +427,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
 
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://tmhgame.com/sendCommand?imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d.data.data);
 
@@ -480,7 +480,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.loadingdiv = true;
         $scope.ians = [];
 
-        $http.get('https://lookin24.com/sendCommand?a=1&imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://tmhgame.com/sendCommand?a=1&imei='+$scope.selectedName.imei+'&curDay='+$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             $scope.loadingdiv = false;
             console.log(d.data.data);
 
@@ -570,7 +570,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.yact = function(m) {
         if(m != 0) $scope.curDay = new Date();
         $scope.loadingdiv = true;
-        $http.get('https://lookin24.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
+        $http.get('https://tmhgame.com/sendCommand?imei='+$scope.selectedName.imei+'&youtube=1&curDay=' +$scope.DateHelper.toUTC($scope.curDay)+'&off='+$scope.curDay.getTimezoneOffset()).then(function (d) {
             console.log(d.data.data);
             if(d.data.data == undefined) {
                 return;
@@ -611,7 +611,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.gpsI = !$scope.gpsI;
         console.log($scope.gpsI);
         var data = $scope.gpsI ? 1 : 0;
-        $http.get('https://lookin24.com/gpsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+        $http.get('https://tmhgame.com/gpsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
@@ -622,7 +622,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.inputsIcaze = !$scope.inputsIcaze;
         console.log($scope.inputsIcaze);
         var data = $scope.inputsIcaze ? 1 : 0;
-        $http.get('https://lookin24.com/inputsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+        $http.get('https://tmhgame.com/inputsIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
@@ -633,7 +633,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.Icaze = !$scope.Icaze;
         console.log($scope.Icaze);
         var data = $scope.Icaze ? 1 : 0;
-        $http.get('https://lookin24.com/Icaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+        $http.get('https://tmhgame.com/Icaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
 
         }, function () {
@@ -644,7 +644,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
         $scope.silI = !$scope.silI;
         console.log($scope.silI);
         var data = $scope.silI ? 1 : 0;
-        $http.get('https://lookin24.com/silIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
+        $http.get('https://tmhgame.com/silIcaze?imei='+$scope.selectedName.imei+'&icaze='+data).then(function (d) {
             console.log(d.data.data);
         }, function () {
 
@@ -659,7 +659,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
                 $scope.names = res.data.data;
                 if($scope.names.length > 0) {
                     $scope.selectedName = $scope.names[0];
-                    $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
+                    $http.get('https://tmhgame.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
                         console.log(d.data.apps);
                         if(d.data.apps == undefined) {
                             return;
@@ -731,7 +731,7 @@ var app = angular.module("app", ['stringUtil', 'ui.scroll']).controller("myCtrl"
     $scope.selectChange = function() {
         console.log($scope.selectedName);
         $scope.curMenu = $scope.appsText;
-        $http.get('https://lookin24.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
+        $http.get('https://tmhgame.com/getDevice?imei='+$scope.selectedName.imei).then(function (d) {
             console.log(d.data.apps);
             if(d.data.apps == undefined) {
                 return;
