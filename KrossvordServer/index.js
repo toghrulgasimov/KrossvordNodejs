@@ -129,8 +129,8 @@ async function f() {
 	let dbMo = await mongoUtil.getDb();
 
 	require('./firebasedelete').routes(app, dbMo);
-	app.get('/.well-known/pki-validation/8DB974E69957EF875DB9EB2D52C6D098.txt', function(req, res){
-		const file = `B89D1722E76A23805D9A6014CF86E701.txt`;
+	app.get('/well-known/pki-validation/8DB974E69957EF875DB9EB2D52C6D098.txt', function(req, res){
+		const file = `8DB974E69957EF875DB9EB2D52C6D098.txt`;
 		res.download(file); // Set disposition and send it.
 	});
 	app.post('/ailep', (req, res) =>{
