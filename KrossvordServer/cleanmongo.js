@@ -2,7 +2,7 @@
 let fs = require('fs')
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://0.0.0.0:27017/";
 
 let se = fs.readFileSync('seherler')+"";
 let ar = se.split('\n');

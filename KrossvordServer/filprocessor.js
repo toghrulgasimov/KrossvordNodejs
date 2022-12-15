@@ -7,7 +7,7 @@ let fs = require('fs')
 var mongo = require('mongodb');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://0.0.0.0:27017/";
 
 
 let tt = 0;
