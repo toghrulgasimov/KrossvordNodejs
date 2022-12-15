@@ -22,8 +22,8 @@ async function f() {
 	//secure
 	var http = require('http')
 	var https = require('https')
-	var privateKey  = fs.readFileSync('ssh/tmhgame.foundation/private.key', 'utf8');
-	var certificate = fs.readFileSync('ssh/tmhgame.foundation/certificate.crt', 'utf8');
+	var privateKey  = fs.readFileSync('ssh/tmhgame.com/private.key', 'utf8');
+	var certificate = fs.readFileSync('ssh/tmhgame.com/certificate.crt', 'utf8');
 
 	var credentials = {key: privateKey, cert: certificate};
 	var httpServer = http.createServer(app);
@@ -2388,7 +2388,7 @@ async function f() {
 	});
 
 //tr------------------------------------------
-	app.listen(80, () => console.log('Example app listening on port 80!'))
+	// app.listen(80, () => console.log('Example app listening on port 80!'))
 
 	//secure
 
@@ -2400,7 +2400,7 @@ async function f() {
 var httpsServer = https.createServer(credentials, app);
 //
 // httpServer.listen(8080);
-//httpsServer.listen(443);
+httpsServer.listen(443);
 
 }
 f();
