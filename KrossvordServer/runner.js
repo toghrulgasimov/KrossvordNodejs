@@ -22,8 +22,8 @@ async function  puts(error, stdout, stderr) {
 setInterval(async function () {
 
     try {
-//http://35.202.245.19/
-        var res = request('GET', 'http://35.202.245.19/versia' , {timeout:3000});
+//http://34.125.242.46/
+        var res = request('GET', 'http://34.125.242.46/versia' , {timeout:3000});
         let s = res.getBody() + "";
         console.log(s);
     }catch (e) {

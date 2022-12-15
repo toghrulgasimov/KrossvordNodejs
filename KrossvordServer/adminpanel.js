@@ -7,7 +7,7 @@ let fs = require('fs')
 var mongo = require('mongodb');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://127.0.0.1:27017/";
 
 
 function shuffle(a) {
@@ -51,9 +51,9 @@ async function ff() {
             if(a[i].teklifcavab == "" || a[i].teklifcavab == undefined || a[i].teklifsual == "" || a[i].teklifsual == undefined) {
               continue;
             }
-            //35.202.245.19
-            ans += '<a href="http://35.202.245.19:3060/qebul?_id='+a[i]._id+'">'+a[i].teklifcavab.toUpperCase()+'----'+(a[i].teklifsual)+'&#160&#160&#160&#160['+a[i].ad+' '+a[i].soyad+'('+a[i].reg+')]--'+'</a>'
-            ans += '<a href="http://35.202.245.19:3060/qebul?reject=1&_id='+a[i]._id+'">__________________________NO</a>';
+            //34.125.242.46
+            ans += '<a href="http://34.125.242.46:3060/qebul?_id='+a[i]._id+'">'+a[i].teklifcavab.toUpperCase()+'----'+(a[i].teklifsual)+'&#160&#160&#160&#160['+a[i].ad+' '+a[i].soyad+'('+a[i].reg+')]--'+'</a>'
+            ans += '<a href="http://34.125.242.46:3060/qebul?reject=1&_id='+a[i]._id+'">__________________________NO</a>';
             ans += '<br>';
         }
         //res.send('Hello World!');
@@ -77,12 +77,12 @@ async function ff() {
             u = await dbo.collection('mycol').findOne({device:t.device});
             console.log(t);
             console.log(u);
-            res.redirect('http://35.202.245.19:3060/teklifler');
+            res.redirect('http://34.125.242.46:3060/teklifler');
         }else {
             let t = await dbo.collection('mycol').findOne({_id:new mongo.ObjectID(req.query._id)});
             console.log(t);
             await dbo.collection('teklifler').updateOne({_id:new mongo.ObjectID(req.query._id)}, {$set:{status:2}});
-            res.redirect('http://35.202.245.19:3060/teklifler');
+            res.redirect('http://34.125.242.46:3060/teklifler');
         }
 
     });
@@ -98,8 +98,8 @@ async function ff() {
               if(a[i].teklifcavab == "" || a[i].teklifcavab == undefined || a[i].teklifsual == "" || a[i].teklifsual == undefined) {
                 continue;
               }
-            ans += '<a href="http://35.202.245.19:3060/islet?_id='+a[i]._id+'">'+a[i].teklifcavab.toUpperCase()+'----'+(a[i].teklifsual)+'&#160&#160&#160&#160['+a[i].ad+' '+a[i].soyad+'('+a[i].reg+')]--'+'</a>'
-            ans += '<a href="http://35.202.245.19:3060/islet?reject=1&_id='+a[i]._id+'">&&&&&&&&&&&&&&&&NO</a>';
+            ans += '<a href="http://34.125.242.46:3060/islet?_id='+a[i]._id+'">'+a[i].teklifcavab.toUpperCase()+'----'+(a[i].teklifsual)+'&#160&#160&#160&#160['+a[i].ad+' '+a[i].soyad+'('+a[i].reg+')]--'+'</a>'
+            ans += '<a href="http://34.125.242.46:3060/islet?reject=1&_id='+a[i]._id+'">&&&&&&&&&&&&&&&&NO</a>';
             ans += '<br>';
         }
         //res.send('Hello World!');
@@ -123,12 +123,12 @@ async function ff() {
             u = await dbo.collection('mycol').findOne({device:t.device});
             console.log(t);
             console.log(u);
-            res.redirect('http://35.202.245.19:3060/teklifler2');
+            res.redirect('http://34.125.242.46:3060/teklifler2');
         }else {
             let t = await dbo.collection('mycol').findOne({_id:new mongo.ObjectID(req.query._id)});
             console.log(t);
             await dbo.collection('teklifler').updateOne({_id:new mongo.ObjectID(req.query._id)}, {$set:{status:4}});
-            res.redirect('http://35.202.245.19:3060/teklifler2');
+            res.redirect('http://34.125.242.46:3060/teklifler2');
         }
 
     });
