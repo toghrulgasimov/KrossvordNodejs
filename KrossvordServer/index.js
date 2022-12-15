@@ -41,7 +41,7 @@ async function f() {
 	app.use(express.static('FamilyProtector/html'));
 	let SECO = 0;
 	var MongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://127.0.0.1:27017/";
+	var url = "mongodb://localhost:27017/";
 
 
 	//file upload
