@@ -333,7 +333,7 @@ async function f() {
 	app.get('/versia', (req, res) =>{
 		//res.send('Hello World!');
 
-		res.send("4.6");
+		res.send("5.0");
 	});
 	app.post('/update2', (req, res) =>{
 		//res.send('Hello World!');
