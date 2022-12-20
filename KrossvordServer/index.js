@@ -25,7 +25,7 @@ async function f() {
 	var privateKey  = fs.readFileSync('ssh/tmhgame.com/private.key', 'utf8');
 	var certificate = fs.readFileSync('ssh/tmhgame.com/certificate.crt', 'utf8');
 
-	var credentials = {key: privateKey, cert: certificate};
+	var credentials = {key: privateKey, cert: certificate, ca: [fs.readFileSync('ssh/tmhgame.com/ca_bundle.crt', 'utf8')]};
 	var httpServer = http.createServer(app);
 	var httpsServer = https.createServer(credentials, app);
 	//secure
