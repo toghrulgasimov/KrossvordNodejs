@@ -66,11 +66,10 @@ async function f() {
     module.exports.routes = function(app, db){
         app.use(cookieParser('secreteee'));
         let admin = require('firebase-admin');
-        let serviceAccount = require("./familyprotector-9fc7b-firebase-adminsdk-39knv-e27615e365.json");
+        let serviceAccount = require("./familyp-a85ed-firebase-adminsdk-j7fq6-b9291d4634.json");
 
         admin.initializeApp({
-            credential: admin.credential.cert(serviceAccount),
-            databaseURL: "https://familyprotector-9fc7b.firebaseio.com"
+            credential: admin.credential.cert(serviceAccount)
         });
 
 
