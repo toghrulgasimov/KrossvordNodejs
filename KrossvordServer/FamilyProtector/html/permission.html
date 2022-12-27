@@ -35,6 +35,10 @@
         <button type="button" ng-click="openP();" class="btn btn-success" style="font-size: 20px;  border-radius: 38px; background-color: #17a2b8bd; border-color: #17a2b8bd;width: 236px;" ng-bind="buttonText"></button>
 
     </div>
+    <div class="text-center" style="padding-top: 3%;">
+        <button type="button" ng-click="openP2();" class="btn btn-success" style="font-size: 20px;  border-radius: 38px; background-color: #17a2b8bd; border-color: #17a2b8bd;width: 236px;" ng-bind="buttonText2"></button>
+
+    </div>
 
 
 
@@ -49,6 +53,7 @@
     var app = angular.module('myApp', ['ngCookies']);
     app.controller('myCtrl', function($scope, $http, $window, $interval,$cookies) {
         $scope.buttonText= Translation.get("activate");
+        $scope.buttonText= Translation.get("childname");
         $scope.actualText = Translation.get("ppermissions");
         //$scope.actualText = "AAA";
         $scope.actual = "acce";
@@ -76,6 +81,10 @@
 
                 }
             );
+        }
+
+        $scope.openP2 = function (d) {
+            $window.location.href = "childname.html";
         }
 
         $interval(function () {
