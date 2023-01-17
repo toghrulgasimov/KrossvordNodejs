@@ -979,8 +979,8 @@ async function f() {
 				' Gündəlik hərəkətlərin və yatmağın analizi,\n'+
 				' Hədiyyələr poçt filiallarına göndəriləcək.\n';
 			//' 1,2,3,4,5-ci yerə KROSSVORD KÖYNƏKLƏRİ hədiyyə.\n'
-			s += "\nƏlaqə tmhgde@gmail.com\n";
-			s += "\n\n\nQalibler afaq1985, YASİN ƏKBƏROV.\n";
+			s += "\nƏlaqə t.gasimo@crosssoft.de\n";
+			s += "\n\n\nQalibler Gülər, Hacıyev.\n";
 			s += "\n\nİlk 30 İştirakçı.\n"+
 				' 1.Gülər(Masallı) 99 Xal\n'+
 				' 2.Hacıyev(Lerik) 99 Xal\n'+
