@@ -1010,7 +1010,7 @@ async function f() {
 				' 26.Qalib(Bakı) 99 Xal\n'+
 				' 27.Turan(Ucar) 99 Xal\n'+
 				' 28.Gultekin(Ağsu) 99 Xal\n'+
-				' 29.Qəbəbələ(Bakı) 99 Xal\n'+
+				' 29.Tural12(Bakı) 99 Xal\n'+
 				' 30.M.Nigar(Bakı) 99 Xal\n';
 			res.send(s);
 		}
