@@ -772,6 +772,8 @@ async function f() {
 						if((o.name+"") == ("EMIL.GULMAMEDOV1982@GMAIL.COM")) {
 							o.name = "EMIL.GULMAMEDOV1982"
 						}
+						o.name = o.name.trim();
+						
 						//if(obj[o.name] != undefined) o.name = o.name+ ""+obj[o.name];
 						if(o.reg != undefined) o.name += "("+o.reg+")";
 						ans += o.name + "^" + o.score + "^";
