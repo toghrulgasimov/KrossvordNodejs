@@ -1004,12 +1004,12 @@ async function f() {
 				' 20.Turan 2007(Şəki) 99 Xal\n'+
 				' 21.Mahir483(Bakı) 99 Xal\n'+
 				' 22.Murad.(Masallı) 99 Xal\n'+
-				' 23.yusi6111(Samux) 99 Xal\n'+
+				' 23.Aynure(Samux) 99 Xal\n'+
 				' 24.Ramile88(Bakı) 99 Xal\n'+
 				' 25.Muzeffer(Bakı) 99 Xal\n'+
 				' 26.Qalib(Bakı) 99 Xal\n'+
 				' 27.Turan(Ucar) 99 Xal\n'+
-				' 28.mickymouse(Ağsu) 99 Xal\n'+
+				' 28.Gultekin(Ağsu) 99 Xal\n'+
 				' 29.Qəbəbələ(Bakı) 99 Xal\n'+
 				' 30.M.Nigar(Bakı) 99 Xal\n';
 			res.send(s);
