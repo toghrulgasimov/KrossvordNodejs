@@ -959,7 +959,7 @@ async function f() {
 		let path = './yarish';
 		let xx = fs.existsSync(path)
 		let NOMRE = "1\n";
-		if (false) {
+		if (true) {
 			let s = NOMRE+fs.readFileSync(path)+"";
 			res.send(s);
 		}else {
