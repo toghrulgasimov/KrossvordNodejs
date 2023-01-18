@@ -966,9 +966,9 @@ async function f() {
 			res.send(s);
 		}else {
 			let s =//' Hər hansı bir problemlə üzləkdikdə\n'+
-				' Növbəti Yarış 2023 18 Yanvar(20:00	)\n'+
-				' Yarış 2023 18 Yanvar(21:00) bitir\n'+
-				' Nəticələr 2023 18 Yanvar(21:05) elan edilir,\n'+
+				' Növbəti Yarış 2023 18 Yanvar(19:00	)\n'+
+				' Yarış 2023 18 Yanvar(20:00) bitir\n'+
+				' Nəticələr 2023 18 Yanvar(20:10) elan edilir,\n'+
 				' 1-ci, 2-ci Yerə Ağıllı saatlar hədiyyə.\n'+
 				' 		Saatların funksiyası\n'+
 				' Telefonla əlaqə, QR-KOD scanner, Sensor,\n'+
