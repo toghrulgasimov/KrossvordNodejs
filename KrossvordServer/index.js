@@ -979,7 +979,7 @@ async function f() {
 				' Gündəlik hərəkətlərin və yatmağın analizi,\n'+
 				' Hədiyyələr poçt filiallarına göndəriləcək.\n';
 			//' 1,2,3,4,5-ci yerə KROSSVORD KÖYNƏKLƏRİ hədiyyə.\n'
-			s += "\nƏlaqə t.gasimov@crosssoft.de\n";
+			s += "\nƏlaqə krossvordaz@gmail.com\n";
 			s += "\n\n\nQalibler Ayten, Selim.M.\n";
 			s += "\n\nİlk 30 İştirakçı.\n"+
 				' 1.Ayten(Bakı) 44 Xal\n'+
