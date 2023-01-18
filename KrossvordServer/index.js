@@ -961,14 +961,14 @@ async function f() {
 		let path = './yarish';
 		let xx = fs.existsSync(path)
 		let NOMRE = "1\n";
-		if (true) {
+		if (false) {
 			let s = NOMRE+fs.readFileSync(path)+"";
 			res.send(s);
 		}else {
 			let s =//' Hər hansı bir problemlə üzləkdikdə\n'+
-				' Növbəti Yarış 2023 18 Yanvar(19:00	)\n'+
-				' Yarış 2023 18 Yanvar(20:00) bitir\n'+
-				' Nəticələr 2023 18 Yanvar(20:10) elan edilir,\n'+
+				' Növbəti Yarış 2023 19 Yanvar(19:00	)\n'+
+				' Yarış 2023 19 Yanvar(20:00) bitir\n'+
+				' Nəticələr 2023 19 Yanvar(20:10) elan edilir,\n'+
 				' 1-ci, 2-ci Yerə Ağıllı saatlar hədiyyə.\n'+
 				' 		Saatların funksiyası\n'+
 				' Telefonla əlaqə, QR-KOD scanner, Sensor,\n'+
@@ -980,38 +980,38 @@ async function f() {
 				' Hədiyyələr poçt filiallarına göndəriləcək.\n';
 			//' 1,2,3,4,5-ci yerə KROSSVORD KÖYNƏKLƏRİ hədiyyə.\n'
 			s += "\nƏlaqə t.gasimov@crosssoft.de\n";
-			s += "\n\n\nQalibler Gülər, Hacıyev.\n";
+			s += "\n\n\nQalibler Ayten, Selim.M.\n";
 			s += "\n\nİlk 30 İştirakçı.\n"+
-				' 1.Gülər(Masallı) 99 Xal\n'+
-				' 2.Hacıyev(Lerik) 99 Xal\n'+
-				' 3.Ferid24(Gəncə) 99 Xal\n'+
-				' 4.Gunay95(Bakı) 99 Xal\n'+
-				' 5.Sema(Bakı) 99 Xal\n'+
-				' 6.Salman(Bakı) 99 Xal\n'+
-				' 7.Gulanere22(Goranboy) 99 Xal\n'+
-				' 8.Əfsunə Babayev(Quba) 99 Xal\n'+
-				' 9.Dr İsmail(Naxçıvan) 99 Xal\n'+
-				' 10.Nigar37(Sumqayıt) 99 Xal\n'+
-				' 11.Əli Qasimov(Mingəçevir) 99 Xal\n'+
-				' 12.Camal40(Quba) 99 Xal\n'+
-				' 13.Deniz1993(Sumqayıt) 99 Xal\n'+
-				' 14.Esmer12(Lənkəran) 99 Xal\n'+
-				' 15.Vusal(Bakı) 99 Xal\n'+
-				' 16.Krossvord(Qəbələ) 99 Xal\n'+
-				' 17.Fidan(Zaqatala) 99 Xal\n'+
-				' 18.Xumar12(Ağdam) 99 Xal\n'+
-				' 19.Emıl(Gədəbəy) 99 Xal\n'+
-				' 20.Turan 2007(Şəki) 99 Xal\n'+
-				' 21.Mahir483(Bakı) 99 Xal\n'+
-				' 22.Murad.(Masallı) 99 Xal\n'+
-				' 23.Aynure(Samux) 99 Xal\n'+
-				' 24.Ramile88(Bakı) 99 Xal\n'+
-				' 25.Muzeffer(Bakı) 99 Xal\n'+
-				' 26.Qalib(Bakı) 99 Xal\n'+
-				' 27.Turan(Ucar) 99 Xal\n'+
-				' 28.Gultekin(Ağsu) 99 Xal\n'+
-				' 29.Tural12(Bakı) 99 Xal\n'+
-				' 30.M.Nigar(Bakı) 99 Xal\n';
+				' 1.Ayten(Bakı) 44 Xal\n'+
+				' 2.Selim.M(Ağdam) 44 Xal\n'+
+				' 3.Afaq1991(Gəncə) 44 Xal\n'+
+				' 4.Fatime_Gence(Gəncə) 44 Xal\n'+
+				' 5.Seva Eliyev(Bakı) 44 Xal\n'+
+				' 6.Salman(Bakı) 44 Xal\n'+
+				' 7.Gulanere22(Goranboy) 44 Xal\n'+
+				' 8.Qeribov(Şəki) 44 Xal\n'+
+				' 9.Camal(Naxçıvan) 44 Xal\n'+
+				' 10.Arif333(Sumqayıt) 44 Xal\n'+
+				' 11.Əli Qasimov(Mingəçevir) 44 Xal\n'+
+				' 12.Camal40(Şəki) 44 Xal\n'+
+				' 13.Deniz1993(Sumqayıt) 44 Xal\n'+
+				' 14.Esmer12(Lənkəran) 44 Xal\n'+
+				' 15.Vusal(Bakı) 44 Xal\n'+
+				' 16.Affa(Qəbələ) 44 Xal\n'+
+				' 17.Fidan99(Zaqatala) 44 Xal\n'+
+				' 18.Eliheyder(Ağdam) 44 Xal\n'+
+				' 19.Emilya(Gədəbəy) 44 Xal\n'+
+				' 20.Reqsane(Şəki) 44 Xal\n'+
+				' 21.Baki...(Bakı) 44 Xal\n'+
+				' 22.Murad.(Zaqatala) 44 Xal\n'+
+				' 23.Aynure(Samux) 44 Xal\n'+
+				' 24.Samire Qarayev(Bakı) 44 Xal\n'+
+				' 25.Cavid21(Bakı) 44 Xal\n'+
+				' 26.Qezenfer(Bakı) 44 Xal\n'+
+				' 27.Samir_Sayar(Ucar) 44 Xal\n'+
+				' 28.Kifayyet(Sumqayıt) 44 Xal\n'+
+				' 29.oyuncu(Bakı) 44 Xal\n'+
+				' 30.Esmer123(Bakı) 44 Xal\n';
 			res.send(s);
 		}
 	});
