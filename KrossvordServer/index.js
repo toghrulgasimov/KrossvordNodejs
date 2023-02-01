@@ -827,7 +827,7 @@ async function f() {
 				dbo.collection("mycol").find().sort(mysort).toArray(function(err, result) {
 					if (err){ if(db != null)db.close(); return;}
 
-					let ans =res+ "^";
+					let ans =res+ "";
 					for(let i = 0; i < result.length; i++) {
 						let o = result[i];
 						if(o.name == null) continue;
@@ -840,7 +840,7 @@ async function f() {
 						
 						//if(obj[o.name] != undefined) o.name = o.name+ ""+obj[o.name];
 						if(o.reg != undefined) o.name += "("+o.reg+")";
-						ans += o.name + "^" + o.score + "^";
+						ans += (i + 1) + ". " + o.name + "^" + o.score + "^";
 						ans += "<br>"
 					}
 					resserver.send(ans+"");
