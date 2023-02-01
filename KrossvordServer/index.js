@@ -786,6 +786,71 @@ async function f() {
 		});
 	});
 
+	app.get('/countaz2', (req, res) =>{
+		let resserver = res;
+		let score = parseInt(req.query.score);
+
+
+		MongoClient.connect(url, async function(err, db) {
+			if (err){ if(db != null)db.close(); return;}
+			var dbo = db.db("mydb");
+
+
+
+			var mysort = { score: -1 };
+
+
+			let name = req.query.name;
+			let newv = {};
+			if(name != undefined) {
+				if(req.query.device!= undefined) newv.device = req.query.device;
+				await dbo.collection("mycol").updateOne({name:name}, {$set:{device:newv.device}},{upsert:true})
+			}
+
+
+			dbo.collection("mycol").count({"score" : { $gt: score} },async function(err, result){
+				if (err){ if(db != null)db.close(); return;}
+				if(score == 0) {
+					// result = 400 * Math.random();
+					// result = Math.ceil(result);
+				}
+				console.log("menu : count " + result + "::"+req.connection.remoteAddress);
+				let u = await dbo.collection("mycol").findOne({ name: req.query.name });
+				if(u != undefined && u != null) {
+					console.log(u.name+" "+u.reg + " S: " + u.score + " L: " + u.level + " SC: "+u.missiascore );
+				}
+				fs.appendFile('log',new Date().getTime()+"&&"+ result.toString()+"::"+req.connection.remoteAddress+"\n", function (err) {
+					if (err){ if(db != null)db.close(); return;}
+				});
+				let res = result;
+
+				dbo.collection("mycol").find().sort(mysort).toArray(function(err, result) {
+					if (err){ if(db != null)db.close(); return;}
+
+					let ans =res+ "^";
+					for(let i = 0; i < result.length; i++) {
+						let o = result[i];
+						if(o.name == null) continue;
+						let s = replace(o.name, " ", "");
+						let obj = {};
+						if((o.name+"") == ("EMIL.GULMAMEDOV1982@GMAIL.COM")) {
+							o.name = "EMIL.GULMAMEDOV1982"
+						}
+						o.name = o.name.trim();
+						
+						//if(obj[o.name] != undefined) o.name = o.name+ ""+obj[o.name];
+						if(o.reg != undefined) o.name += "("+o.reg+")";
+						ans += o.name + "^" + o.score + "^";
+						ans += "<br>"
+					}
+					resserver.send(ans+"");
+					if(db != null)db.close();
+				});
+			})
+
+		});
+	});
+
 
 	app.get('/countregaz', (req, res) =>{
 		let resserver = res;
